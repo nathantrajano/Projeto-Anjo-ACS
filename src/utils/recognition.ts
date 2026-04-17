@@ -11,7 +11,8 @@ export const getSpeechRecognition = () => {
 
   const recognition = new SpeechRecognition();
   recognition.lang = 'pt-BR';
-  recognition.continuous = false;
+  // continuous: true garante que o motor não pare ao detectar o primeiro silêncio
+  recognition.continuous = true;
   recognition.interimResults = true;
 
   return recognition;
