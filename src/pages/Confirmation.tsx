@@ -1,11 +1,19 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { Check, ArrowRight, ArrowLeft } from "lucide-react";
 import { Intent } from "@/types";
+import { useEffect } from "react";
+import { speak } from "@/utils/speech";
 
 const Confirmation = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const intent = location.state?.intent as Intent;
+
+  useEffect(() => {
+    if (intent) {
+      speak(`Entendi. Você quer saber como ${intent.title}. Posso continuar para o guia?`);
+    }
+  }, [intent]);
 
   if (!intent) {
     navigate('/');

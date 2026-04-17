@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { CheckCircle2, Home, MessageSquare, Volume2 } from "lucide-react";
+import { CheckCircle2, Home, MessageSquare } from "lucide-react";
+import { AudioButton } from "@/components/AudioButton";
 
 const HelpSuccess = () => {
   const navigate = useNavigate();
@@ -18,10 +19,11 @@ const HelpSuccess = () => {
         </p>
       </div>
 
-      <button className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[#1B4332] bg-emerald-50 px-4 py-2 rounded-full border border-emerald-100">
-        <Volume2 size={16} />
-        Ouvir confirmação
-      </button>
+      <AudioButton 
+        text="Sua mensagem foi enviada. Responderemos em breve. Obrigado." 
+        label="Ouvir confirmação"
+        variant="ghost"
+      />
 
       <div className="w-full flex flex-col gap-3 mt-4">
         <button 
@@ -38,11 +40,6 @@ const HelpSuccess = () => {
           <MessageSquare size={20} />
           Enviar nova dúvida
         </button>
-      </div>
-
-      <div className="mt-8 p-4 bg-white/50 rounded-2xl border border-white/80 text-center">
-        <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Aviso</p>
-        <p className="text-xs text-gray-500 font-medium mt-1 italic">Nossa equipe de suporte técnico está trabalhando para te atender o mais rápido possível.</p>
       </div>
     </div>
   );
