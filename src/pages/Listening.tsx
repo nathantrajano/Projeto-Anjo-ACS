@@ -12,7 +12,10 @@ const Listening = () => {
     "Como cadastrar uma nova família?",
     "Preciso registrar uma visita domiciliar.",
     "O e-SUS está dando erro na hora de sincronizar.",
-    "Onde encontro a ficha de cadastro individual?"
+    "Tem uma gestante nova na minha microárea.",
+    "Preciso fazer a pesagem do Bolsa Família.",
+    "Como registrar a pressão do seu João?",
+    "A dona Maria está com o açúcar alto, o que eu faço?"
   ];
 
   useEffect(() => {
