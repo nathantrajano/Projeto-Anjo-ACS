@@ -1,6 +1,7 @@
 import { useParams, useNavigate } from "react-router-dom";
 import { GUIDES } from "@/data/mockData";
-import { ArrowLeft, Play, ChevronRight, HelpCircle } from "lucide-react";
+import { ArrowLeft, ChevronRight, HelpCircle } from "lucide-react";
+import { AudioButton } from "@/components/AudioButton";
 
 const GuideSteps = () => {
   const { id } = useParams();
@@ -16,6 +17,10 @@ const GuideSteps = () => {
     );
   }
 
+  // Prepara o texto para leitura completa
+  const fullGuideText = `Guia para ${guide.title}. ${guide.summary}. ` + 
+    guide.steps.map(s => `Passo ${s.id}: ${s.title}. ${s.description}`).join(". ");
+
   return (
     <div className="px-6 flex flex-col gap-6 animate-in slide-in-from-right-4 duration-300 pb-32">
       <div className="flex items-center gap-2 pt-4">
@@ -27,10 +32,11 @@ const GuideSteps = () => {
         <h3 className="text-2xl font-black leading-tight">{guide.title}</h3>
         <p className="text-emerald-100 text-sm mt-2 font-medium leading-relaxed">{guide.summary}</p>
         
-        <button className="mt-6 w-full py-3 bg-white/10 hover:bg-white/20 rounded-xl flex items-center justify-center gap-2 text-sm font-bold border border-white/20">
-          <Play size={16} fill="white" />
-          Ouvir orientação
-        </button>
+        <AudioButton 
+          text={fullGuideText} 
+          label="Ouvir guia completo" 
+          className="mt-6 w-full justify-center !bg-white/10 !text-white border border-white/20" 
+        />
       </div>
 
       <div className="flex flex-col gap-4 mt-2">
@@ -39,8 +45,15 @@ const GuideSteps = () => {
             <div className="w-8 h-8 rounded-full bg-[#B7E4C7] text-[#1B4332] flex items-center justify-center font-black shrink-0 text-sm">
               {step.id}
             </div>
-            <div className="flex flex-col gap-1">
-              <h4 className="font-bold text-[#1B4332]">{step.title}</h4>
+            <div className="flex-1 flex flex-col gap-1">
+              <div className="flex justify-between items-start">
+                <h4 className="font-bold text-[#1B4332]">{step.title}</h4>
+                <AudioButton 
+                  text={`${step.title}. ${step.description}`} 
+                  variant="icon" 
+                  className="-mt-1 -mr-2" 
+                />
+              </div>
               <p className="text-sm text-gray-500 font-medium leading-relaxed">{step.description}</p>
             </div>
           </div>
