@@ -11,6 +11,7 @@ import GuideSteps from "./pages/GuideSteps";
 import HelpCenter from "./pages/HelpCenter";
 import HelpSuccess from "./pages/HelpSuccess";
 import Motivational from "./pages/Motivational";
+import SuccessGuide from "./pages/SuccessGuide";
 import Manual from "./pages/Manual";
 import NotFound from "./pages/NotFound";
 import { AppHeader } from "./components/AppHeader";
@@ -18,11 +19,10 @@ import { BottomNav } from "./components/BottomNav";
 
 const queryClient = new QueryClient();
 
-// Layout wrapper to handle conditional rendering of header/nav
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
-  const hideHeaderPaths = ['/confirmacao', '/ouvir'];
-  const hideBottomNavPaths = ['/ouvir', '/ajuda/sucesso'];
+  const hideHeaderPaths = ['/confirmacao', '/ouvir', '/sucesso-guia'];
+  const hideBottomNavPaths = ['/ouvir', '/ajuda/sucesso', '/sucesso-guia'];
   
   const shouldHideHeader = hideHeaderPaths.includes(location.pathname);
   const shouldHideBottomNav = hideBottomNavPaths.some(path => location.pathname.startsWith(path));
@@ -51,6 +51,7 @@ const App = () => (
             <Route path="/selecionar-intencao" element={<IntentSelection />} />
             <Route path="/confirmacao" element={<Confirmation />} />
             <Route path="/guia/:id" element={<GuideSteps />} />
+            <Route path="/sucesso-guia" element={<SuccessGuide />} />
             <Route path="/ajuda" element={<HelpCenter />} />
             <Route path="/ajuda/sucesso" element={<HelpSuccess />} />
             <Route path="/motivacional" element={<Motivational />} />

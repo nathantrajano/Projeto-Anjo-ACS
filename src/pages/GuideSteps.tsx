@@ -17,7 +17,6 @@ const GuideSteps = () => {
     );
   }
 
-  // Prepara o texto para leitura completa
   const fullGuideText = `Guia para ${guide.title}. ${guide.summary}. ` + 
     guide.steps.map(s => `Passo ${s.id}: ${s.title}. ${s.description}`).join(". ");
 
@@ -61,7 +60,10 @@ const GuideSteps = () => {
       </div>
 
       <div className="flex flex-col gap-3 mt-4">
-        <button className="pill-button bg-[#1B4332] text-white">
+        <button 
+          onClick={() => navigate('/sucesso-guia')}
+          className="pill-button bg-[#1B4332] text-white"
+        >
           Pronto
           <ChevronRight size={20} />
         </button>
