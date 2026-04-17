@@ -62,7 +62,7 @@ const GuideSteps = () => {
 
       <div className="flex flex-col gap-3 mt-4">
         <button className="pill-button bg-[#1B4332] text-white">
-          Próximo passo
+          Pronto
           <ChevronRight size={20} />
         </button>
         <button 
