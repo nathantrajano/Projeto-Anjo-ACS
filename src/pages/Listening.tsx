@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useMemo } from "react";
 import { Mic, X, ArrowRight, Paperclip, Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { resolveIntent } from "@/utils/decisionEngine";
@@ -8,16 +8,6 @@ const Listening = () => {
   const navigate = useNavigate();
   const [text, setText] = useState("");
   const [isListening, setIsListening] = useState(true);
-  
-  const simulationPhrases = [
-    "Como cadastrar uma nova família?",
-    "Preciso registrar uma visita domiciliar.",
-    "O e-SUS está dando erro na hora de sincronizar.",
-    "Tem uma gestante nova na minha microárea.",
-    "Preciso fazer a pesagem do Bolsa Família.",
-    "Como registrar a pressão do seu João?",
-    "A dona Maria está com o açúcar alto, o que eu faço?"
-  ];
 
   // Filtra sugestões baseadas no que está sendo digitado
   const suggestions = useMemo(() => {
@@ -29,19 +19,10 @@ const Listening = () => {
     ).slice(0, 3);
   }, [text]);
 
-  useEffect(() => {
-    let timeout: NodeJS.Timeout;
-    if (isListening && text === "") {
-      timeout = setTimeout(() => {
-        setText(simulationPhrases[Math.floor(Math.random() * simulationPhrases.length)]);
-        setIsListening(false);
-      }, 2000);
-    }
-    return () => clearTimeout(timeout);
-  }, [isListening]);
-
   const handleProceed = (selectedText?: string) => {
     const finalIteration = selectedText || text;
+    if (!finalIteration.trim()) return;
+    
     const intent = resolveIntent(finalIteration);
     if (intent) {
       navigate('/confirmacao', { state: { intent } });
@@ -75,14 +56,15 @@ const Listening = () => {
                 setText(e.target.value);
                 if (isListening) setIsListening(false);
               }}
-              placeholder="Aguardando fala ou digite aqui..."
+              placeholder="Diga ou digite sua dúvida aqui..."
               className="w-full bg-transparent border-none focus:ring-0 text-lg font-bold text-[#1B4332] resize-none placeholder:text-gray-300"
               rows={3}
+              autoFocus
             />
             <div className="flex justify-between items-center border-t border-gray-100 pt-3">
                <button className="text-gray-400 p-2"><Paperclip size={20} /></button>
                <span className="text-[10px] font-bold text-gray-300 uppercase italic">
-                 {isListening ? "Transcrição em tempo real" : "Edição manual"}
+                 {isListening ? "Aguardando áudio..." : "Edição manual"}
                </span>
             </div>
           </div>
@@ -113,7 +95,7 @@ const Listening = () => {
       <div className="pb-8 flex flex-col gap-3 mt-4">
         <button 
           onClick={() => handleProceed()}
-          disabled={!text}
+          disabled={!text.trim()}
           className="pill-button bg-[#1B4332] text-white disabled:opacity-50"
         >
           Prosseguir
