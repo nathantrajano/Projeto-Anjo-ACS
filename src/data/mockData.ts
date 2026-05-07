@@ -242,7 +242,7 @@ export const GUIDES: Guide[] = [
     category: "Saúde",
     summary: "Acompanhamento de pacientes com doenças graves em terminalidade.",
     steps: [
-      { id: 1, title: "Conforto e Dor", description: "Pergunte sobre a intensidade da dor e se a medicação está aliviando." },
+      { id: 1, title: "Conforto e Pain", description: "Pergunte sobre a intensidade da dor e se a medicação está aliviando." },
       { id: 2, title: "Prevenção de Lesões", description: "Oriente a família sobre a mudança de decúbito (virar o paciente) a cada 2h." },
       { id: 3, title: "Higiene e Nutrição", description: "Auxilie com dicas para banho no leito e alimentação pastosa/líquida." },
       { id: 4, title: "Apoio ao Cuidador", description: "Observe se o cuidador está exausto e ofereça escuta emocional." }
@@ -259,6 +259,71 @@ export const GUIDES: Guide[] = [
       { id: 2, title: "Dados do Animal", description: "Identifique se o animal é conhecido e pode ser observado por 10 dias." },
       { id: 3, title: "Encaminhamento Rápido", description: "Envie o paciente à UBS para avaliar a necessidade de vacina ou soro." },
       { id: 4, title: "Notificação", description: "Registre o caso de agressão por animal no sistema de vigilância." }
+    ]
+  },
+  {
+    id: "g21",
+    slug: "saude-homem",
+    title: "Saúde do Homem",
+    category: "Ciclos de Vida",
+    summary: "Ações de prevenção e rastreamento para a população masculina.",
+    steps: [
+      { id: 1, title: "Rastreamento", description: "Oriente sobre a importância dos exames de rotina (PA, glicemia, colesterol)." },
+      { id: 2, title: "Prevenção de Câncer", description: "Fale sobre o câncer de próstata e pênis (higiene e sinais de alerta)." },
+      { id: 3, title: "Saúde Sexual", description: "Aborde o uso de preservativos e o teste rápido para ISTs." },
+      { id: 4, title: "Acesso à UBS", description: "Estimule o comparecimento à unidade, mesmo sem sintomas agudos." }
+    ]
+  },
+  {
+    id: "g22",
+    slug: "reducao-danos",
+    title: "Álcool e Drogas (Redução de Danos)",
+    category: "Saúde Mental",
+    summary: "Apoio e orientações para usuários de substâncias.",
+    steps: [
+      { id: 1, title: "Vínculo e Escuta", description: "Aproxime-se sem julgamentos para entender o padrão de uso." },
+      { id: 2, title: "Hidratação e Alimentação", description: "Oriente sobre cuidados básicos para diminuir o impacto físico." },
+      { id: 3, title: "Rede de Cuidado", description: "Informe sobre o CAPS AD e grupos de apoio na comunidade." },
+      { id: 4, title: "Segurança", description: "Em caso de overdose ou abstinência grave, saiba como acionar o SAMU." }
+    ]
+  },
+  {
+    id: "g23",
+    slug: "prevencao-cancer",
+    title: "Prevenção de Câncer Feminino",
+    category: "Prevenção",
+    summary: "Orientações sobre Papanicolau e Mamografia.",
+    steps: [
+      { id: 1, title: "Autoexame", description: "Ensine a mulher a observar as mamas e identificar alterações." },
+      { id: 2, title: "Preventivo", description: "Verifique se o Papanicolau está em dia (recomendado a cada 1 a 3 anos)." },
+      { id: 3, title: "Critérios de Idade", description: "Oriente sobre a mamografia para mulheres entre 50 e 69 anos." },
+      { id: 4, title: "Encaminhamento", description: "Agende ou direcione para a coleta na Unidade de Saúde." }
+    ]
+  },
+  {
+    id: "g24",
+    slug: "sintomas-gripais",
+    title: "Sintomas Gripais e COVID",
+    category: "Urgências",
+    summary: "Como agir em casos de febre, tosse e falta de ar.",
+    steps: [
+      { id: 1, title: "Isolamento", description: "Oriente o afastamento de outras pessoas e o uso de máscara em casa." },
+      { id: 2, title: "Sinais de Gravidade", description: "Monitore se há falta de ar, cansaço extremo ou febre persistente." },
+      { id: 3, title: "Testagem", description: "Informe sobre onde e quando realizar o teste (COVID ou Influenza)." },
+      { id: 4, title: "Notificação", description: "Registre o caso como suspeito na planilha de monitoramento da equipe." }
+    ]
+  },
+  {
+    id: "g25",
+    slug: "desenvolvimento-infantil",
+    title: "Desenvolvimento Infantil",
+    category: "Ciclos de Vida",
+    summary: "Marcos de crescimento e aprendizagem da criança.",
+    steps: [
+      { id: 1, title: "Puericultura", description: "Verifique se as consultas de rotina no médico/enfermeiro estão em dia." },
+      { id: 2, title: "Marcos Motores", description: "Observe se a criança já senta, engatinha ou anda conforme a idade." },
+      { id: 3, title: "Linguagem", description: "Note se a criança interage, balbucia ou já fala palavras simples." },
+      { id: 4, title: "Estímulos", description: "Oriente os pais sobre a importância de brincar e conversar com o bebê." }
     ]
   }
 ];
@@ -283,15 +348,20 @@ export const INTENTS: Intent[] = [
   { id: "i17", title: "Violência", keywords: ["apanhou", "violência", "bater", "abuso", "hematoma", "medo", "agressão", "doméstica"], guideId: "g17" },
   { id: "i18", title: "Riscos Ambientais", keywords: ["lixo", "esgoto", "água", "rato", "escorpião", "entulho", "fossa", "poluição"], guideId: "g18" },
   { id: "i19", title: "Cuidados Paliativos", keywords: ["cama", "leito", "morrer", "terminal", "câncer", "ferida", "conforto", "paliativo"], guideId: "g19" },
-  { id: "i20", title: "Mordida de Animal", keywords: ["mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva"], guideId: "g20" }
+  { id: "i20", title: "Mordida de Animal", keywords: ["mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva"], guideId: "g20" },
+  { id: "i21", title: "Saúde do Homem", keywords: ["homem", "próstata", "novembro azul", "ereção", "exame homem", "masculino"], guideId: "g21" },
+  { id: "i22", title: "Drogas e Álcool", keywords: ["bebida", "droga", "cachaça", "vício", "alcoolismo", "redução de danos", "fumando"], guideId: "g22" },
+  { id: "i23", title: "Prevenção Câncer", keywords: ["preventivo", "papanicolau", "mama", "mamografia", "câncer de mama", "câncer de colo"], guideId: "g23" },
+  { id: "i24", title: "Gripe e COVID", keywords: ["gripe", "covid", "tosse", "falta de ar", "resfriado", "corona", "catarro"], guideId: "g24" },
+  { id: "i25", title: "Puericultura", keywords: ["desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar"], guideId: "g25" }
 ];
 
 export const CATEGORIES: Category[] = [
   { id: "c1", title: "Cadastro e Visitas", icon: "UserPlus", intents: ["i1", "i2", "i10"] },
-  { id: "c2", title: "Saúde Materno-Infantil", icon: "Home", intents: ["i4", "i7", "i14"] },
-  { id: "c3", title: "Doenças e Endemias", icon: "Tablet", intents: ["i5", "i8", "i15", "i18", "i20"] },
-  { id: "c4", title: "Social e Mental", icon: "FileText", intents: ["i6", "i9", "i17"] },
-  { id: "c5", title: "Ciclos e Prevenção", icon: "FileText", intents: ["i11", "i12", "i13", "i16", "i19"] },
+  { id: "c2", title: "Saúde Materno-Infantil", icon: "Home", intents: ["i4", "i7", "i14", "i25"] },
+  { id: "c3", title: "Doenças e Endemias", icon: "Tablet", intents: ["i5", "i8", "i15", "i18", "i20", "i24"] },
+  { id: "c4", title: "Social e Mental", icon: "FileText", intents: ["i6", "i9", "i17", "i22"] },
+  { id: "c5", title: "Ciclos e Prevenção", icon: "FileText", intents: ["i11", "i12", "i13", "i16", "i19", "i21", "i23"] },
   { id: "c6", title: "Suporte e-SUS", icon: "Tablet", intents: ["i3"] }
 ];
 
