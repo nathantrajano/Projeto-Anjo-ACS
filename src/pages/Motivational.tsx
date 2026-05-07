@@ -44,9 +44,9 @@ const Motivational = () => {
         </p>
       </div>
 
-      {/* Card da Mensagem Principal */}
+      {/* Card da Mensagem Principal - CORRIGIDO: Removido glass-card e garantido bg sólido */}
       <div className="w-full relative animate-in slide-in-from-bottom-6 duration-700 delay-300 fill-mode-both">
-        <div className="glass-card bg-[#1B4332] text-white p-10 text-center relative overflow-hidden shadow-2xl border-none">
+        <div className="bg-[#1B4332] text-white p-10 rounded-[2.5rem] text-center relative overflow-hidden shadow-2xl border-none">
           <div className="absolute -top-10 -right-10 p-4 opacity-10 rotate-12">
              <Sun size={180} />
           </div>
@@ -58,7 +58,7 @@ const Motivational = () => {
               text={randomMsg} 
               label="Ouvir Mensagem"
               variant="ghost"
-              className="!bg-white/20 !text-white border border-white/30 !py-2 !px-6"
+              className="!bg-white/20 !text-white border border-white/30 !py-2 !px-6 hover:!bg-white/30"
             />
           </div>
         </div>
@@ -66,7 +66,7 @@ const Motivational = () => {
 
       {/* Player de Áudio do Dia (Simulado) */}
       <div className="w-full animate-in slide-in-from-bottom-8 duration-700 delay-500 fill-mode-both">
-        <div className="glass-card p-5 flex items-center gap-5 bg-white border border-gray-100 shadow-lg">
+        <div className="p-6 flex items-center gap-5 bg-white rounded-[2rem] border border-emerald-100 shadow-xl shadow-emerald-900/5">
           <button 
             onClick={() => setIsPlayingAudio(!isPlayingAudio)}
             className={cn(
