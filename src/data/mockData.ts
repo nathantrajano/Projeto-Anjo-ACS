@@ -130,6 +130,58 @@ export const GUIDES: Guide[] = [
       { id: 3, title: "Campos Críticos", description: "Atualize telefone, endereço e a composição familiar (quem saiu/entrou)." },
       { id: 4, title: "Finalizar", description: "Salve e sincronize para que a UBS receba os dados atualizados." }
     ]
+  },
+  {
+    id: "g11",
+    slug: "saude-idoso",
+    title: "Saúde do Idoso",
+    category: "Ciclos de Vida",
+    summary: "Avaliação de fragilidade e riscos no domicílio do idoso.",
+    steps: [
+      { id: 1, title: "Risco de Queda", description: "Observe tapetes soltos, falta de corrimão e iluminação precária." },
+      { id: 2, title: "Polifarmácia", description: "Verifique se o idoso toma mais de 5 medicamentos e se há confusão nas doses." },
+      { id: 3, title: "Caderneta do Idoso", description: "Atualize os dados de saúde na Caderneta da Pessoa Idosa." },
+      { id: 4, title: "Atividades Diárias", description: "Avalie se o idoso consegue comer, tomar banho e se vestir sozinho." }
+    ]
+  },
+  {
+    id: "g12",
+    slug: "vacinacao-atraso",
+    title: "Vacinação em Atraso",
+    category: "Imunização",
+    summary: "Como proceder ao identificar crianças com vacinas pendentes.",
+    steps: [
+      { id: 1, title: "Conferir Caderneta", description: "Compare as vacinas tomadas com o calendário nacional vigente." },
+      { id: 2, title: "Identificar Faltosas", description: "Anote quais doses estão atrasadas (Ex: Penta, VIP/VOP, SCR)." },
+      { id: 3, title: "Orientar Família", description: "Explique a importância da proteção e os riscos das doenças." },
+      { id: 4, title: "Encaminhamento", description: "Direcione a família imediatamente à sala de vacina da UBS de referência." }
+    ]
+  },
+  {
+    id: "g13",
+    slug: "planejamento-familiar",
+    title: "Planejamento Familiar",
+    category: "Saúde Sexual",
+    summary: "Orientações sobre métodos contraceptivos e saúde reprodutiva.",
+    steps: [
+      { id: 1, title: "Abordagem", description: "Inicie a conversa sobre o desejo de ter filhos ou evitar gravidez no momento." },
+      { id: 2, title: "Métodos Disponíveis", description: "Informe sobre camisinha, pílula, injetável, DIU e métodos definitivos no SUS." },
+      { id: 3, title: "Grupo de Apoio", description: "Convide o casal para as reuniões de planejamento familiar na unidade." },
+      { id: 4, title: "Distribuição", description: "Lembre que preservativos podem ser retirados livremente na UBS." }
+    ]
+  },
+  {
+    id: "g14",
+    slug: "puerperio",
+    title: "Cuidados no Puerpério",
+    category: "Materno-Infantil",
+    summary: "Acompanhamento da saúde da mulher após o parto.",
+    steps: [
+      { id: 1, title: "Sinais de Infecção", description: "Observe febre, dor intensa ou sangramento com odor forte (loquiação)." },
+      { id: 2, title: "Saúde Mental", description: "Identifique sinais de tristeza profunda ou desinteresse pelo bebê (Depressão Pós-parto)." },
+      { id: 3, title: "Exame Ginecológico", description: "Garanta que a consulta de revisão (42 dias) esteja agendada." },
+      { id: 4, title: "Amamentação", description: "Avalie a saúde das mamas (fissuras ou mastite) e apoie a puérpera." }
+    ]
   }
 ];
 
@@ -143,15 +195,20 @@ export const INTENTS: Intent[] = [
   { id: "i7", title: "Recém-nascido", keywords: ["bebê", "rn", "recém-nascido", "umbigo", "pezinho", "puerpério", "nasceu", "maternidade"], guideId: "g7" },
   { id: "i8", title: "Dengue e Focos", keywords: ["dengue", "mosquito", "larva", "água parada", "quintal", "zika", "chikungunya", "febre"], guideId: "g8" },
   { id: "i9", title: "Saúde Mental", keywords: ["depressão", "tristeza", "ansiedade", "surto", "caps", "remédio controlado", "saúde mental", "sofrimento"], guideId: "g9" },
-  { id: "i10", title: "Atualizar cadastro", keywords: ["mudou", "telefone", "endereço", "trocou", "atualizar", "mudar", "corrigir"], guideId: "g10" }
+  { id: "i10", title: "Atualizar cadastro", keywords: ["mudou", "telefone", "endereço", "trocou", "atualizar", "mudar", "corrigir"], guideId: "g10" },
+  { id: "i11", title: "Saúde do Idoso", keywords: ["velho", "vovó", "vovô", "idoso", "queda", "remédios", "esquecimento", "fragilidade"], guideId: "g11" },
+  { id: "i12", title: "Vacina atrasada", keywords: ["vacina", "atrasada", "gotinha", "injeção", "calendário", "faltando", "imunização"], guideId: "g12" },
+  { id: "i13", title: "Planejamento Familiar", keywords: ["filho", "evitar", "camisinha", "anticoncepcional", "laqueadura", "vasectomia", "diu"], guideId: "g13" },
+  { id: "i14", title: "Pós-parto / Puerpério", keywords: ["pós-parto", "puerpério", "resguardo", "quarentena", "depressão pós-parto", "sangramento"], guideId: "g14" }
 ];
 
 export const CATEGORIES: Category[] = [
   { id: "c1", title: "Cadastro e Visitas", icon: "UserPlus", intents: ["i1", "i2", "i10"] },
-  { id: "c2", title: "Saúde Materno-Infantil", icon: "Home", intents: ["i4", "i7"] },
+  { id: "c2", title: "Saúde Materno-Infantil", icon: "Home", intents: ["i4", "i7", "i14"] },
   { id: "c3", title: "Doenças e Endemias", icon: "Tablet", intents: ["i5", "i8"] },
   { id: "c4", title: "Social e Mental", icon: "FileText", intents: ["i6", "i9"] },
-  { id: "c5", title: "Suporte e-SUS", icon: "Tablet", intents: ["i3"] }
+  { id: "c5", title: "Ciclos e Prevenção", icon: "FileText", intents: ["i11", "i12", "i13"] },
+  { id: "c6", title: "Suporte e-SUS", icon: "Tablet", intents: ["i3"] }
 ];
 
 export const MANUALS: Manual[] = [
