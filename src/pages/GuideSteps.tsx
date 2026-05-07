@@ -26,24 +26,27 @@ const GuideSteps = () => {
   return (
     <div className="px-6 flex flex-col gap-6 animate-in slide-in-from-right-4 duration-300 pb-32">
       <div className="flex items-center gap-2 pt-4">
-        <button onClick={() => navigate(-1)} className="p-2 -ml-2 text-[#1B4332]"><ArrowLeft size={24} /></button>
+        <button onClick={() => navigate(-1)} className="p-2 -ml-2 text-[#1B4332] active:scale-90 transition-transform">
+          <ArrowLeft size={24} />
+        </button>
         <h2 className="text-xl font-extrabold text-[#1B4332]">Como fazer</h2>
       </div>
 
-      <div className="glass-card bg-[#1B4332] text-white">
-        <h3 className="text-2xl font-black leading-tight">{guide.title}</h3>
-        <p className="text-emerald-100 text-sm mt-2 font-medium leading-relaxed">{guide.summary}</p>
+      {/* CORRIGIDO: Removido glass-card e garantido fundo sólido escuro */}
+      <div className="bg-[#1B4332] text-white p-8 rounded-[2rem] shadow-xl relative overflow-hidden">
+        <h3 className="text-2xl font-black leading-tight relative z-10">{guide.title}</h3>
+        <p className="text-emerald-100 text-sm mt-3 font-medium leading-relaxed relative z-10">{guide.summary}</p>
         
         <AudioButton 
           text={fullGuideText} 
           label="Ouvir guia completo" 
-          className="mt-6 w-full justify-center !bg-white/10 !text-white border border-white/20" 
+          className="mt-6 w-full justify-center !bg-white/20 !text-white border border-white/20 hover:!bg-white/30" 
         />
       </div>
 
       <div className="flex flex-col gap-4 mt-2">
         {guide.steps.map((step, index) => (
-          <div key={step.id} className="bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 animate-in slide-in-from-bottom-4" style={{ animationDelay: `${index * 100}ms` }}>
+          <div key={step.id} className="bg-white p-5 rounded-2xl border border-gray-100 flex gap-4 animate-in slide-in-from-bottom-4 shadow-sm" style={{ animationDelay: `${index * 100}ms` }}>
             <div className="w-8 h-8 rounded-full bg-[#B7E4C7] text-[#1B4332] flex items-center justify-center font-black shrink-0 text-sm">
               {step.id}
             </div>
@@ -65,14 +68,14 @@ const GuideSteps = () => {
       <div className="flex flex-col gap-3 mt-4">
         <button 
           onClick={() => navigate(`/feedback-duvida/${id}`)}
-          className="pill-button bg-[#1B4332] text-white"
+          className="pill-button bg-[#1B4332] text-white shadow-lg active:scale-95"
         >
           Pronto
           <ChevronRight size={20} />
         </button>
         <button 
           onClick={() => navigate('/ajuda')}
-          className="flex items-center justify-center gap-2 py-4 text-[#1B4332] font-bold text-sm"
+          className="flex items-center justify-center gap-2 py-4 text-[#1B4332] font-bold text-sm active:opacity-70"
         >
           <HelpCircle size={18} />
           Ainda com dúvidas? Fale conosco

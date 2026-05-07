@@ -16,7 +16,8 @@ export const AudioButton = ({ text, label = "Ouvir", className, variant = 'pill'
     return () => stopSpeaking();
   }, []);
 
-  const handleToggle = () => {
+  const handleToggle = (e: React.MouseEvent) => {
+    e.stopPropagation();
     if (isPlaying) {
       stopSpeaking();
       setIsPlaying(false);
@@ -34,7 +35,7 @@ export const AudioButton = ({ text, label = "Ouvir", className, variant = 'pill'
     return (
       <button 
         onClick={handleToggle}
-        className={`p-2 rounded-full transition-all active:scale-90 ${isPlaying ? 'bg-[#1B4332] text-white' : 'text-[#1B4332] hover:bg-emerald-50'} ${className}`}
+        className={`p-2 rounded-full transition-all active:scale-90 ${isPlaying ? 'bg-[#1B4332] text-white shadow-md' : 'text-[#1B4332] hover:bg-emerald-50'} ${className}`}
       >
         {isPlaying ? <VolumeX size={18} /> : <Volume2 size={18} />}
       </button>
@@ -45,8 +46,8 @@ export const AudioButton = ({ text, label = "Ouvir", className, variant = 'pill'
     return (
       <button 
         onClick={handleToggle}
-        className={`flex items-center gap-1 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full transition-all ${
-          isPlaying ? 'bg-[#1B4332] text-white' : 'text-[#2D6A4F] bg-[#B7E4C7]'
+        className={`flex items-center gap-2 text-xs font-bold uppercase tracking-wider px-4 py-2 rounded-full transition-all active:scale-95 ${
+          isPlaying ? 'bg-rose-500 text-white' : 'text-[#1B4332] bg-emerald-50'
         } ${className}`}
       >
         {isPlaying ? <VolumeX size={14} /> : <Volume2 size={14} />}
@@ -58,12 +59,12 @@ export const AudioButton = ({ text, label = "Ouvir", className, variant = 'pill'
   return (
     <button 
       onClick={handleToggle}
-      className={`pill-button !py-3 !px-6 ${
-        isPlaying ? 'bg-red-500 text-white' : 'bg-[#1B4332] text-white'
+      className={`pill-button flex items-center gap-2 !py-3 !px-6 transition-all active:scale-95 ${
+        isPlaying ? 'bg-rose-500 text-white' : 'bg-[#1B4332] text-white'
       } ${className}`}
     >
       {isPlaying ? <VolumeX size={18} /> : <Volume2 size={18} />}
-      {isPlaying ? "Parar Áudio" : label}
+      <span className="font-bold">{isPlaying ? "Parar Áudio" : label}</span>
     </button>
   );
 };
