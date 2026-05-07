@@ -44,7 +44,7 @@ export const GUIDES: Guide[] = [
     id: "g4",
     slug: "pre-natal",
     title: "Acompanhamento de Pré-natal",
-    category: "Saúde da Mulher",
+    category: "Materno-Infantil",
     summary: "Rotina de captação e acompanhamento de gestantes na comunidade.",
     steps: [
       { id: 1, title: "Identificar Gestante", description: "Confirme a suspeita de gravidez e a data da última menstruação (DUM)." },
@@ -78,6 +78,58 @@ export const GUIDES: Guide[] = [
       { id: 3, title: "Vacinação", description: "Verifique se o calendário vacinal das crianças está em dia." },
       { id: 4, title: "Mapa de Acompanhamento", description: "Lance os dados no sistema ou preencha o mapa físico do Bolsa Família." }
     ]
+  },
+  {
+    id: "g7",
+    slug: "visita-recem-nascido",
+    title: "Visita ao Recém-nascido",
+    category: "Materno-Infantil",
+    summary: "Primeira visita após o nascimento (até o 5º dia de vida).",
+    steps: [
+      { id: 1, title: "Teste do Pezinho", description: "Verifique se o teste foi realizado entre o 3º e 5º dia." },
+      { id: 2, title: "Coto Umbilical", description: "Oriente sobre a limpeza com álcool 70% e observe sinais de infecção." },
+      { id: 3, title: "Amamentação", description: "Observe a pega e oriente sobre o aleitamento materno exclusivo." },
+      { id: 4, title: "Agendamento", description: "Garanta que a primeira consulta de puericultura esteja marcada na UBS." }
+    ]
+  },
+  {
+    id: "g8",
+    slug: "combate-dengue",
+    title: "Prevenção de Arboviroses",
+    category: "Endemias",
+    summary: "Ações de campo para controle de Dengue, Zika e Chikungunya.",
+    steps: [
+      { id: 1, title: "Inspeção de Quintal", description: "Procure por recipientes que acumulem água parada." },
+      { id: 2, title: "Vedação de Caixas", description: "Verifique se as caixas d'água estão devidamente tampadas." },
+      { id: 3, title: "Sinais e Sintomas", description: "Oriente a família sobre febre alta, dores no corpo e manchas vermelhas." },
+      { id: 4, title: "Registro de Foco", description: "Caso encontre larvas, notifique imediatamente a equipe de endemias." }
+    ]
+  },
+  {
+    id: "g9",
+    slug: "saude-mental",
+    title: "Saúde Mental na Comunidade",
+    category: "Saúde Mental",
+    summary: "Apoio e identificação de sofrimento psíquico.",
+    steps: [
+      { id: 1, title: "Escuta Qualificada", description: "Dê espaço para o cidadão falar sobre seus sentimentos sem julgamentos." },
+      { id: 2, title: "Identificar Crise", description: "Observe sinais de isolamento, choro frequente ou ideação suicida." },
+      { id: 3, title: "Rede de Apoio", description: "Verifique se o paciente frequenta o CAPS ou se tem acompanhamento médico." },
+      { id: 4, title: "Vínculo Familiar", description: "Oriente a família sobre a importância do acolhimento no ambiente doméstico." }
+    ]
+  },
+  {
+    id: "g10",
+    slug: "atualizar-cadastro",
+    title: "Atualizar Dados Cadastrais",
+    category: "Cadastro",
+    summary: "Como proceder quando o cidadão muda de endereço ou telefone.",
+    steps: [
+      { id: 1, title: "Localizar Cadastro", description: "Busque pelo CPF ou CNS no e-SUS Território." },
+      { id: 2, title: "Editar Ficha", description: "Toque no ícone de lápis para abrir a edição da ficha individual." },
+      { id: 3, title: "Campos Críticos", description: "Atualize telefone, endereço e a composição familiar (quem saiu/entrou)." },
+      { id: 4, title: "Finalizar", description: "Salve e sincronize para que a UBS receba os dados atualizados." }
+    ]
   }
 ];
 
@@ -87,25 +139,33 @@ export const INTENTS: Intent[] = [
   { id: "i3", title: "Erro no e-SUS", keywords: ["erro", "problema", "nao funciona", "sincronizar", "trava", "sus", "esus"], guideId: "g3" },
   { id: "i4", title: "Pré-natal", keywords: ["gestante", "grávida", "gravida", "gravidez", "prenatal", "pré-natal", "buchuda", "neném", "bebê"], guideId: "g4" },
   { id: "i5", title: "Hiperdia", keywords: ["pressão", "diabetes", "açúcar", "hipertenso", "diabético", "hiperdia", "insulina", "remédio"], guideId: "g5" },
-  { id: "i6", title: "Bolsa Família", keywords: ["bolsa família", "bolsa familia", "pesagem", "peso", "medir", "benefício", "auxílio", "pobreza"], guideId: "g6" }
+  { id: "i6", title: "Bolsa Família", keywords: ["bolsa família", "bolsa familia", "pesagem", "peso", "medir", "benefício", "auxílio", "pobreza"], guideId: "g6" },
+  { id: "i7", title: "Recém-nascido", keywords: ["bebê", "rn", "recém-nascido", "umbigo", "pezinho", "puerpério", "nasceu", "maternidade"], guideId: "g7" },
+  { id: "i8", title: "Dengue e Focos", keywords: ["dengue", "mosquito", "larva", "água parada", "quintal", "zika", "chikungunya", "febre"], guideId: "g8" },
+  { id: "i9", title: "Saúde Mental", keywords: ["depressão", "tristeza", "ansiedade", "surto", "caps", "remédio controlado", "saúde mental", "sofrimento"], guideId: "g9" },
+  { id: "i10", title: "Atualizar cadastro", keywords: ["mudou", "telefone", "endereço", "trocou", "atualizar", "mudar", "corrigir"], guideId: "g10" }
 ];
 
 export const CATEGORIES: Category[] = [
-  { id: "c1", title: "Cadastro e Visitas", icon: "UserPlus", intents: ["i1", "i2"] },
-  { id: "c2", title: "Programas de Saúde", icon: "Home", intents: ["i4", "i5"] },
-  { id: "c3", title: "Programas Sociais", icon: "FileText", intents: ["i6"] },
-  { id: "c4", title: "Suporte e-SUS", icon: "Tablet", intents: ["i3"] }
+  { id: "c1", title: "Cadastro e Visitas", icon: "UserPlus", intents: ["i1", "i2", "i10"] },
+  { id: "c2", title: "Saúde Materno-Infantil", icon: "Home", intents: ["i4", "i7"] },
+  { id: "c3", title: "Doenças e Endemias", icon: "Tablet", intents: ["i5", "i8"] },
+  { id: "c4", title: "Social e Mental", icon: "FileText", intents: ["i6", "i9"] },
+  { id: "c5", title: "Suporte e-SUS", icon: "Tablet", intents: ["i3"] }
 ];
 
 export const MANUALS: Manual[] = [
   { id: "m1", title: "Manual e-SUS Território v4.1", description: "Guia oficial do Ministério da Saúde para o uso do aplicativo.", fileSize: "4.2 MB", category: "Oficial" },
   { id: "m2", title: "Atribuições do ACS", description: "Documento com as competências legais e rotinas de campo.", fileSize: "1.8 MB", category: "Carreira" },
-  { id: "m3", title: "Guia de Vacinação 2024", description: "Calendário nacional e orientações de busca ativa.", fileSize: "2.5 MB", category: "Saúde" }
+  { id: "m3", title: "Guia de Vacinação 2024", description: "Calendário nacional e orientações de busca ativa.", fileSize: "2.5 MB", category: "Saúde" },
+  { id: "m4", title: "Protocolo de Dengue 2024", description: "Diretrizes para manejo clínico e controle vetorial.", fileSize: "3.1 MB", category: "Endemias" }
 ];
 
 export const MOTIVATIONAL_MESSAGES = [
   "Seu trabalho salva vidas todos os dias.",
   "Você é o elo fundamental entre a comunidade e a saúde.",
   "Cada cadastro é uma história que você ajuda a cuidar.",
-  "Obrigado por sua dedicação à saúde pública brasileira."
+  "Obrigado por sua dedicação à saúde pública brasileira.",
+  "Sua presença na casa das pessoas traz esperança e cuidado.",
+  "O SUS acontece através das suas mãos e dos seus pés no campo."
 ];
