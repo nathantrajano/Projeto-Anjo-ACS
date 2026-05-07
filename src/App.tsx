@@ -13,6 +13,7 @@ import HelpSuccess from "./pages/HelpSuccess";
 import Motivational from "./pages/Motivational";
 import SuccessGuide from "./pages/SuccessGuide";
 import Manual from "./pages/Manual";
+import OCRScanner from "./pages/OCRScanner";
 import NotFound from "./pages/NotFound";
 import { AppHeader } from "./components/AppHeader";
 import { BottomNav } from "./components/BottomNav";
@@ -21,8 +22,8 @@ const queryClient = new QueryClient();
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
-  const hideHeaderPaths = ['/confirmacao', '/ouvir', '/sucesso-guia'];
-  const hideBottomNavPaths = ['/ouvir', '/ajuda/sucesso', '/sucesso-guia'];
+  const hideHeaderPaths = ['/confirmacao', '/ouvir', '/sucesso-guia', '/ocr'];
+  const hideBottomNavPaths = ['/ouvir', '/ajuda/sucesso', '/sucesso-guia', '/ocr'];
   
   const shouldHideHeader = hideHeaderPaths.includes(location.pathname);
   const shouldHideBottomNav = hideBottomNavPaths.some(path => location.pathname.startsWith(path));
@@ -56,6 +57,7 @@ const App = () => (
             <Route path="/ajuda/sucesso" element={<HelpSuccess />} />
             <Route path="/motivacional" element={<Motivational />} />
             <Route path="/manual" element={<Manual />} />
+            <Route path="/ocr" element={<OCRScanner />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppLayout>

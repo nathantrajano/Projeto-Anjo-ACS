@@ -1,4 +1,4 @@
-import { Mic } from "lucide-react";
+import { Mic, Scan } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
@@ -15,18 +15,33 @@ const Home = () => {
         </p>
       </div>
 
-      <button 
-        onClick={() => navigate('/ouvir')}
-        className="glass-card w-full flex flex-col items-center justify-center gap-6 py-12 group active:scale-95 transition-transform"
-      >
-        <div className="w-24 h-24 bg-[#1B4332] rounded-full flex items-center justify-center shadow-2xl shadow-emerald-900/20 group-hover:scale-105 transition-transform">
-          <Mic size={40} className="text-white" />
-        </div>
-        <div className="text-center">
-          <h3 className="text-xl font-bold text-[#1B4332]">Falar com o Anjo</h3>
-          <p className="text-sm text-gray-500 font-medium">Toque para dizer sua dúvida</p>
-        </div>
-      </button>
+      <div className="flex flex-col gap-4">
+        <button 
+          onClick={() => navigate('/ouvir')}
+          className="glass-card w-full flex items-center gap-6 py-8 px-6 group active:scale-95 transition-transform"
+        >
+          <div className="w-16 h-16 bg-[#1B4332] rounded-full flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform shrink-0">
+            <Mic size={28} className="text-white" />
+          </div>
+          <div className="text-left">
+            <h3 className="text-lg font-bold text-[#1B4332]">Falar com o Anjo</h3>
+            <p className="text-xs text-gray-500 font-medium">Toque para dizer sua dúvida</p>
+          </div>
+        </button>
+
+        <button 
+          onClick={() => navigate('/ocr')}
+          className="glass-card w-full flex items-center gap-6 py-8 px-6 group active:scale-95 transition-transform border-emerald-100 bg-emerald-50/50"
+        >
+          <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center shadow-xl group-hover:scale-105 transition-transform shrink-0">
+            <Scan size={28} className="text-white" />
+          </div>
+          <div className="text-left">
+            <h3 className="text-lg font-bold text-[#1B4332]">Ler Documento</h3>
+            <p className="text-xs text-gray-500 font-medium">Foto de manuais ou telas</p>
+          </div>
+        </button>
+      </div>
 
       <div className="grid grid-cols-2 gap-4">
         <button 
