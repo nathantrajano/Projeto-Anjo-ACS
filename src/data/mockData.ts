@@ -182,6 +182,84 @@ export const GUIDES: Guide[] = [
       { id: 3, title: "Exame Ginecológico", description: "Garanta que a consulta de revisão (42 dias) esteja agendada." },
       { id: 4, title: "Amamentação", description: "Avalie a saúde das mamas (fissuras ou mastite) e apoie a puérpera." }
     ]
+  },
+  {
+    id: "g15",
+    slug: "busca-ativa-tb-hanseniase",
+    title: "Sintomáticos Respiratórios e Pele",
+    category: "Doenças Crônicas",
+    summary: "Busca ativa de Tuberculose e Hanseníase no território.",
+    steps: [
+      { id: 1, title: "Identificar Tosse", description: "Questione sobre tosse por 3 semanas ou mais (Tuberculose)." },
+      { id: 2, title: "Manchas na Pele", description: "Observe manchas claras ou avermelhadas com perda de sensibilidade (Hanseníase)." },
+      { id: 3, title: "Contatos Próximos", description: "Identifique se familiares de casos confirmados estão sendo avaliados." },
+      { id: 4, title: "Encaminhamento", description: "Direcione para coleta de escarro ou avaliação médica na UBS." }
+    ]
+  },
+  {
+    id: "g16",
+    slug: "saude-bucal",
+    title: "Orientações de Saúde Bucal",
+    category: "Prevenção",
+    summary: "Promoção da higiene oral e identificação de lesões.",
+    steps: [
+      { id: 1, title: "Higiene Diária", description: "Oriente sobre escovação após as refeições e uso do fio dental." },
+      { id: 2, title: "Bebês e Crianças", description: "Explique que a limpeza deve começar antes mesmo dos primeiros dentes." },
+      { id: 3, title: "Lesões Suspeitas", description: "Observe feridas na boca que não cicatrizam em 15 dias (risco de câncer)." },
+      { id: 4, title: "Próteses", description: "Oriente idosos sobre a limpeza correta e retirada da dentadura para dormir." }
+    ]
+  },
+  {
+    id: "g17",
+    slug: "identificar-violencia",
+    title: "Identificação de Violência",
+    category: "Social",
+    summary: "Como agir em casos suspeitos de violência doméstica ou infantil.",
+    steps: [
+      { id: 1, title: "Sinais Físicos", description: "Observe hematomas em locais incomuns ou marcas de queimadura." },
+      { id: 2, title: "Comportamento", description: "Note isolamento repentino, medo excessivo ou regressão no desenvolvimento." },
+      { id: 3, title: "Escuta Protegida", description: "Não force o relato; acolha o que for dito voluntariamente." },
+      { id: 4, title: "Notificação", description: "Informe imediatamente à sua enfermeira supervisora para conduta sigilosa." }
+    ]
+  },
+  {
+    id: "g18",
+    slug: "riscos-ambientais",
+    title: "Saneamento e Meio Ambiente",
+    category: "Endemias",
+    summary: "Vigilância de riscos no entorno do domicílio.",
+    steps: [
+      { id: 1, title: "Água e Esgoto", description: "Verifique a origem da água e o destino dos dejetos (fossa ou rede)." },
+      { id: 2, title: "Lixo e Entulho", description: "Oriente sobre o descarte correto para evitar ratos e escorpiões." },
+      { id: 3, title: "Animais Sinantrópicos", description: "Observe presença de morcegos, barbeiros ou caramujos africanos." },
+      { id: 4, title: "Manejo Ambiental", description: "Sugira soluções simples como telar ralos e manter quintais limpos." }
+    ]
+  },
+  {
+    id: "g19",
+    slug: "cuidados-paliativos",
+    title: "Apoio em Cuidados Paliativos",
+    category: "Saúde",
+    summary: "Acompanhamento de pacientes com doenças graves em terminalidade.",
+    steps: [
+      { id: 1, title: "Conforto e Dor", description: "Pergunte sobre a intensidade da dor e se a medicação está aliviando." },
+      { id: 2, title: "Prevenção de Lesões", description: "Oriente a família sobre a mudança de decúbito (virar o paciente) a cada 2h." },
+      { id: 3, title: "Higiene e Nutrição", description: "Auxilie com dicas para banho no leito e alimentação pastosa/líquida." },
+      { id: 4, title: "Apoio ao Cuidador", description: "Observe se o cuidador está exausto e ofereça escuta emocional." }
+    ]
+  },
+  {
+    id: "g20",
+    slug: "mordedura-animais",
+    title: "Mordedura e Raiva Humana",
+    category: "Urgências",
+    summary: "Primeiros cuidados após ataques de animais.",
+    steps: [
+      { id: 1, title: "Lavagem Imediata", description: "Oriente lavar o ferimento abundantemente com água e sabão." },
+      { id: 2, title: "Dados do Animal", description: "Identifique se o animal é conhecido e pode ser observado por 10 dias." },
+      { id: 3, title: "Encaminhamento Rápido", description: "Envie o paciente à UBS para avaliar a necessidade de vacina ou soro." },
+      { id: 4, title: "Notificação", description: "Registre o caso de agressão por animal no sistema de vigilância." }
+    ]
   }
 ];
 
@@ -199,15 +277,21 @@ export const INTENTS: Intent[] = [
   { id: "i11", title: "Saúde do Idoso", keywords: ["velho", "vovó", "vovô", "idoso", "queda", "remédios", "esquecimento", "fragilidade"], guideId: "g11" },
   { id: "i12", title: "Vacina atrasada", keywords: ["vacina", "atrasada", "gotinha", "injeção", "calendário", "faltando", "imunização"], guideId: "g12" },
   { id: "i13", title: "Planejamento Familiar", keywords: ["filho", "evitar", "camisinha", "anticoncepcional", "laqueadura", "vasectomia", "diu"], guideId: "g13" },
-  { id: "i14", title: "Pós-parto / Puerpério", keywords: ["pós-parto", "puerpério", "resguardo", "quarentena", "depressão pós-parto", "sangramento"], guideId: "g14" }
+  { id: "i14", title: "Pós-parto / Puerpério", keywords: ["pós-parto", "puerpério", "resguardo", "quarentena", "depressão pós-parto", "sangramento"], guideId: "g14" },
+  { id: "i15", title: "TB e Hanseníase", keywords: ["tosse", "pulmão", "escarro", "mancha", "pele", "hanseníase", "tuberculose", "perda de força"], guideId: "g15" },
+  { id: "i16", title: "Saúde Bucal", keywords: ["dente", "boca", "limpeza", "escova", "ferida na boca", "dentadura", "prótese", "gengiva"], guideId: "g16" },
+  { id: "i17", title: "Violência", keywords: ["apanhou", "violência", "bater", "abuso", "hematoma", "medo", "agressão", "doméstica"], guideId: "g17" },
+  { id: "i18", title: "Riscos Ambientais", keywords: ["lixo", "esgoto", "água", "rato", "escorpião", "entulho", "fossa", "poluição"], guideId: "g18" },
+  { id: "i19", title: "Cuidados Paliativos", keywords: ["cama", "leito", "morrer", "terminal", "câncer", "ferida", "conforto", "paliativo"], guideId: "g19" },
+  { id: "i20", title: "Mordida de Animal", keywords: ["mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva"], guideId: "g20" }
 ];
 
 export const CATEGORIES: Category[] = [
   { id: "c1", title: "Cadastro e Visitas", icon: "UserPlus", intents: ["i1", "i2", "i10"] },
   { id: "c2", title: "Saúde Materno-Infantil", icon: "Home", intents: ["i4", "i7", "i14"] },
-  { id: "c3", title: "Doenças e Endemias", icon: "Tablet", intents: ["i5", "i8"] },
-  { id: "c4", title: "Social e Mental", icon: "FileText", intents: ["i6", "i9"] },
-  { id: "c5", title: "Ciclos e Prevenção", icon: "FileText", intents: ["i11", "i12", "i13"] },
+  { id: "c3", title: "Doenças e Endemias", icon: "Tablet", intents: ["i5", "i8", "i15", "i18", "i20"] },
+  { id: "c4", title: "Social e Mental", icon: "FileText", intents: ["i6", "i9", "i17"] },
+  { id: "c5", title: "Ciclos e Prevenção", icon: "FileText", intents: ["i11", "i12", "i13", "i16", "i19"] },
   { id: "c6", title: "Suporte e-SUS", icon: "Tablet", intents: ["i3"] }
 ];
 
