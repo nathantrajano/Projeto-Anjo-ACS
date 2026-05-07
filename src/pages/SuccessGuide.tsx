@@ -54,14 +54,13 @@ const SuccessGuide = () => {
           </button>
         </div>
         
-        {/* Rodapé Institucional Reconstruído */}
+        {/* Rodapé Institucional com Imagem Local */}
         <div className="w-full mt-12 pt-8 border-t border-emerald-100 flex flex-col items-center gap-4">
            <div className="bg-white px-4 py-2 rounded-lg shadow-sm border border-gray-50 flex items-center justify-center">
              <img 
-               src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_do_SUS.svg" 
+               src="/logoSUS.png" 
                alt="Logo SUS" 
-               className="h-10 w-auto block"
-               style={{ minHeight: '40px' }}
+               className="h-12 w-auto block object-contain"
              />
            </div>
            <div className="text-center space-y-1">
