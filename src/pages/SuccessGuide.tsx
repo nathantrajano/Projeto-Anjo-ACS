@@ -54,12 +54,16 @@ const SuccessGuide = () => {
           </button>
         </div>
         
-        <div className="flex flex-col items-center gap-2 mt-8 opacity-40">
-           {/* Logo do SUS estável do Wikimedia */}
+        <div className="flex flex-col items-center gap-2 mt-10 opacity-60">
+           {/* Usando uma URL de imagem mais direta e removendo grayscale para garantir visibilidade */}
            <img 
-             src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Logo_do_SUS.svg/1200px-Logo_do_SUS.svg.png" 
+             src="https://upload.wikimedia.org/wikipedia/commons/4/4c/Logo_do_SUS.svg" 
              alt="Logo SUS" 
-             className="h-10 grayscale object-contain" 
+             className="h-12 w-auto object-contain" 
+             onError={(e) => {
+               // Fallback caso o SVG falhe
+               (e.target as HTMLImageElement).src = "https://logodownload.org/wp-content/uploads/2018/10/sus-logo.png";
+             }}
            />
            <div className="text-center">
              <p className="text-[10px] text-[#1B4332] font-black uppercase tracking-[0.2em]">
