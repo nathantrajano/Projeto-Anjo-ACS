@@ -1,3 +1,6 @@
+"use client";
+
+import React from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -14,6 +17,8 @@ import Motivational from "./pages/Motivational";
 import SuccessGuide from "./pages/SuccessGuide";
 import Manual from "./pages/Manual";
 import OCRScanner from "./pages/OCRScanner";
+import FeedbackDoubt from "./pages/FeedbackDoubt";
+import DetailedGuide from "./pages/DetailedGuide";
 import NotFound from "./pages/NotFound";
 import { AppHeader } from "./components/AppHeader";
 import { BottomNav } from "./components/BottomNav";
@@ -22,10 +27,10 @@ const queryClient = new QueryClient();
 
 const AppLayout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
-  const hideHeaderPaths = ['/confirmacao', '/ouvir', '/sucesso-guia', '/ocr'];
-  const hideBottomNavPaths = ['/ouvir', '/ajuda/sucesso', '/sucesso-guia', '/ocr'];
+  const hideHeaderPaths = ['/confirmacao', '/ouvir', '/sucesso-guia', '/ocr', '/feedback-duvida'];
+  const hideBottomNavPaths = ['/ouvir', '/ajuda/sucesso', '/sucesso-guia', '/ocr', '/feedback-duvida', '/guia-detalhado'];
   
-  const shouldHideHeader = hideHeaderPaths.includes(location.pathname);
+  const shouldHideHeader = hideHeaderPaths.some(path => location.pathname.startsWith(path));
   const shouldHideBottomNav = hideBottomNavPaths.some(path => location.pathname.startsWith(path));
 
   return (
@@ -52,6 +57,8 @@ const App = () => (
             <Route path="/selecionar-intencao" element={<IntentSelection />} />
             <Route path="/confirmacao" element={<Confirmation />} />
             <Route path="/guia/:id" element={<GuideSteps />} />
+            <Route path="/feedback-duvida/:id" element={<FeedbackDoubt />} />
+            <Route path="/guia-detalhado/:id" element={<DetailedGuide />} />
             <Route path="/sucesso-guia" element={<SuccessGuide />} />
             <Route path="/ajuda" element={<HelpCenter />} />
             <Route path="/ajuda/sucesso" element={<HelpSuccess />} />

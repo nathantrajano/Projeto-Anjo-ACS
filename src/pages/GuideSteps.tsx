@@ -1,3 +1,6 @@
+"use client";
+
+import React from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { GUIDES } from "@/data/mockData";
 import { ArrowLeft, ChevronRight, HelpCircle } from "lucide-react";
@@ -61,7 +64,7 @@ const GuideSteps = () => {
 
       <div className="flex flex-col gap-3 mt-4">
         <button 
-          onClick={() => navigate('/sucesso-guia')}
+          onClick={() => navigate(`/feedback-duvida/${id}`)}
           className="pill-button bg-[#1B4332] text-white"
         >
           Pronto
