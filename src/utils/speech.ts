@@ -1,40 +1,32 @@
 /**
- * Motor de Áudio do Anjo ACS - Customizado para MP3
+ * Motor de Voz do Anjo ACS
  */
 
-// MP3 padrão amigável (um som de meditação/relaxamento instrumental curto)
-const DEFAULT_MP3 = "https://assets.mixkit.co/active_storage/sfx/2568/2568-84.wav"; 
-
-export const getCustomMp3Url = (): string => {
-  return localStorage.getItem("custom_mp3_url") || DEFAULT_MP3;
-};
-
-export const setCustomMp3Url = (url: string) => {
-  localStorage.setItem("custom_mp3_url", url);
-};
-
-let currentAudio: HTMLAudioElement | null = null;
-
 export const speak = (text: string) => {
-  // Para qualquer áudio que esteja tocando no momento
-  stopSpeaking();
+  if (!('speechSynthesis' in window)) return;
 
-  const url = getCustomMp3Url();
+  // Cancela falas anteriores para não encavalar
+  window.speechSynthesis.cancel();
+
+  const utterance = new SpeechSynthesisUtterance(text);
   
-  try {
-    currentAudio = new Audio(url);
-    currentAudio.play().catch(err => {
-      console.warn("Erro ao reproduzir o MP3. Verifique se a URL é válida e pública:", err);
-    });
-  } catch (error) {
-    console.error("Erro ao inicializar o áudio:", error);
+  // Tenta encontrar uma voz em Português do Brasil
+  const voices = window.speechSynthesis.getVoices();
+  const ptBRVoice = voices.find(v => v.lang === 'pt-BR' || v.lang === 'pt_BR');
+
+  if (ptBRVoice) {
+    utterance.voice = ptBRVoice;
   }
+
+  utterance.lang = 'pt-BR';
+  utterance.rate = 1.0; 
+  utterance.pitch = 1.1; // Tom levemente amigável
+
+  window.speechSynthesis.speak(utterance);
 };
 
 export const stopSpeaking = () => {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
-    currentAudio = null;
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
   }
 };
