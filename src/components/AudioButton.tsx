@@ -22,12 +22,11 @@ export const AudioButton = ({ text, label = "Ouvir", className, variant = 'pill'
       stopSpeaking();
       setIsPlaying(false);
     } else {
-      speak(text);
       setIsPlaying(true);
-      
-      // Resetar estado manualmente após um tempo baseado no texto (estimativa)
-      const duration = text.length * 80; 
-      setTimeout(() => setIsPlaying(false), duration);
+      // Passamos o callback para desligar o estado de reprodução assim que o MP3 terminar
+      speak(text, () => {
+        setIsPlaying(false);
+      });
     }
   };
 
