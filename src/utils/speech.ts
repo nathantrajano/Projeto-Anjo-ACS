@@ -1,47 +1,32 @@
 /**
- * Motor de Voz do Anjo ACS - Reprodução de MP3 correspondente ao texto
+ * Motor de Voz do Anjo ACS
  */
 
-let currentAudio: HTMLAudioElement | null = null;
-let onEndedCallback: (() => void) | null = null;
+export const speak = (text: string) => {
+  if (!('speechSynthesis' in window)) return;
 
-export const speak = (text: string, onEnded?: () => void) => {
-  // Interrompe qualquer áudio que esteja tocando no momento
-  stopSpeaking();
+  // Cancela falas anteriores para não encavalar
+  window.speechSynthesis.cancel();
 
-  try {
-    // Geramos a URL do arquivo MP3 correspondente ao texto usando o serviço de TTS (retorna um MP3 real)
-    const encodedText = encodeURIComponent(text.substring(0, 250)); // Limite seguro de caracteres
-    const mp3Url = `https://translate.google.com/translate_tts?ie=UTF-8&tl=pt-BR&client=tw-ob&q=${encodedText}`;
-    
-    currentAudio = new Audio(mp3Url);
-    
-    if (onEnded) {
-      onEndedCallback = onEnded;
-      currentAudio.addEventListener('ended', () => {
-        onEnded();
-        onEndedCallback = null;
-      });
-    }
+  const utterance = new SpeechSynthesisUtterance(text);
+  
+  // Tenta encontrar uma voz em Português do Brasil
+  const voices = window.speechSynthesis.getVoices();
+  const ptBRVoice = voices.find(v => v.lang === 'pt-BR' || v.lang === 'pt_BR');
 
-    currentAudio.play().catch(err => {
-      console.warn("Erro ao reproduzir o arquivo MP3:", err);
-      if (onEnded) onEnded();
-    });
-  } catch (error) {
-    console.error("Erro ao inicializar o áudio MP3:", error);
-    if (onEnded) onEnded();
+  if (ptBRVoice) {
+    utterance.voice = ptBRVoice;
   }
+
+  utterance.lang = 'pt-BR';
+  utterance.rate = 1.0; 
+  utterance.pitch = 1.1; // Tom levemente amigável
+
+  window.speechSynthesis.speak(utterance);
 };
 
 export const stopSpeaking = () => {
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio.currentTime = 0;
-    currentAudio = null;
-  }
-  if (onEndedCallback) {
-    onEndedCallback();
-    onEndedCallback = null;
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
   }
 };
