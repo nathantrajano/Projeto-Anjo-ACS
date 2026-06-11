@@ -14,40 +14,47 @@ export const setAudioPlayingCallback = (callback: (isPlaying: boolean) => void) 
 };
 
 /**
- * Reproduz um arquivo de áudio MP3
+ * Reproduz um arquivo de áudio MP3 e retorna uma Promise
+ * A Promise resolve quando o áudio termina ou ocorre erro
  * @param audioPath - Caminho relativo ao /public/audios/
- * @example playAudio('confirmacao/entendi.mp3')
+ * @returns Promise que resolve quando áudio termina
+ * @example await playAudio('confirmacao/entendi.mp3')
  */
-export const playAudio = (audioPath: string) => {
-  // Cancela áudio anterior
-  stopAudio();
+export const playAudio = (audioPath: string): Promise<void> => {
+  return new Promise((resolve) => {
+    // Cancela áudio anterior
+    stopAudio();
 
-  const audioElement = new Audio(`/audios/${audioPath}`);
-  
-  audioElement.addEventListener('play', () => {
-    onPlayingCallback?.(true);
-  });
+    const audioElement = new Audio(`/audios/${audioPath}`);
+    
+    audioElement.addEventListener('play', () => {
+      onPlayingCallback?.(true);
+    });
 
-  audioElement.addEventListener('ended', () => {
-    onPlayingCallback?.(false);
-    currentAudioPlayer = null;
-  });
+    audioElement.addEventListener('ended', () => {
+      onPlayingCallback?.(false);
+      currentAudioPlayer = null;
+      resolve(); // Resolve quando áudio termina
+    });
 
-  audioElement.addEventListener('pause', () => {
-    onPlayingCallback?.(false);
-  });
+    audioElement.addEventListener('pause', () => {
+      onPlayingCallback?.(false);
+    });
 
-  audioElement.addEventListener('error', (e) => {
-    console.error(`Erro ao reproduzir áudio: ${audioPath}`, e);
-    onPlayingCallback?.(false);
-    currentAudioPlayer = null;
-  });
+    audioElement.addEventListener('error', (e) => {
+      console.error(`Erro ao reproduzir áudio: ${audioPath}`, e);
+      onPlayingCallback?.(false);
+      currentAudioPlayer = null;
+      resolve(); // Resolve também em caso de erro para não travar
+    });
 
-  currentAudioPlayer = audioElement;
-  audioElement.play().catch(err => {
-    console.error(`Erro ao iniciar reprodução: ${audioPath}`, err);
-    onPlayingCallback?.(false);
-    currentAudioPlayer = null;
+    currentAudioPlayer = audioElement;
+    audioElement.play().catch(err => {
+      console.error(`Erro ao iniciar reprodução: ${audioPath}`, err);
+      onPlayingCallback?.(false);
+      currentAudioPlayer = null;
+      resolve(); // Resolve em caso de erro de play
+    });
   });
 };
 

@@ -1,15 +1,19 @@
 "use client";
 
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { GUIDES } from "@/data/mockData";
 import { ArrowLeft, ChevronRight, HelpCircle } from "lucide-react";
 import { AudioButton } from "@/components/AudioButton";
+import { getAudioPath } from "@/utils/audioMappings";
+import { playAudio, stopAudio } from "@/utils/audioManager";
 
 const GuideSteps = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const guide = GUIDES.find(g => g.id === id);
+  const [isPlayingFullGuide, setIsPlayingFullGuide] = useState(false);
+  const shouldContinueRef = useRef(true);
 
   if (!guide) {
     return (
@@ -20,8 +24,66 @@ const GuideSteps = () => {
     );
   }
 
-  const fullGuideText = `Guia para ${guide.title}. ${guide.summary}. ` + 
-    guide.steps.map(s => `Passo ${s.id}: ${s.title}. ${s.description}`).join(". ");
+  /**
+   * Reproduz o guia completo em sequência:
+   * 1. Título do guia
+   * 2. Resumo do guia
+   * 3. Cada passo (título + descrição)
+   * 
+   * Aguarda cada áudio terminar antes de iniciar o próximo
+   */
+  const playFullGuideSequence = async () => {
+    shouldContinueRef.current = true;
+    setIsPlayingFullGuide(true);
+    
+    try {
+      const textsToPlay = [
+        `${guide.title}`, // Título
+        guide.summary,    // Resumo
+        ...guide.steps.map(s => `${s.title}. ${s.description}`), // Cada passo
+      ];
+
+      console.log(`[Audio] Iniciando sequência com ${textsToPlay.length} itens`);
+
+      for (let i = 0; i < textsToPlay.length; i++) {
+        if (!shouldContinueRef.current) {
+          console.log(`[Audio] Sequência cancelada pelo usuário`);
+          break;
+        }
+        
+        const text = textsToPlay[i];
+        let audioPath = getAudioPath(text);
+        
+        // Se não encontrar, tenta um padrão derivado para passos
+        if (!audioPath && i >= 2) {
+          const stepIndex = i - 2 + 1; // Primeiro passo é índice 2
+          audioPath = `passos/${guide.id}_step${stepIndex}.mp3`;
+        }
+        
+        console.log(`[Audio] Passo ${i + 1}/${textsToPlay.length}: "${text.substring(0, 50)}..." → ${audioPath || "MAPEAMENTO NÃO ENCONTRADO"}`);
+        
+        if (audioPath) {
+          // playAudio() retorna uma Promise que resolve quando o áudio termina
+          await playAudio(audioPath);
+        } else {
+          console.warn(`[Audio] Nenhum áudio mapeado para: "${text}"`);
+        }
+      }
+      
+      console.log(`[Audio] Sequência concluída!`);
+    } catch (error) {
+      console.error(`[Audio] Erro durante sequência:`, error);
+    } finally {
+      setIsPlayingFullGuide(false);
+      shouldContinueRef.current = false;
+    }
+  };
+
+  const stopFullGuideSequence = () => {
+    shouldContinueRef.current = false;
+    stopAudio();
+    setIsPlayingFullGuide(false);
+  };
 
   return (
     <div className="px-6 flex flex-col gap-6 animate-in slide-in-from-right-4 duration-300 pb-32">
@@ -37,11 +99,12 @@ const GuideSteps = () => {
         <h3 className="text-2xl font-black leading-tight relative z-10">{guide.title}</h3>
         <p className="text-emerald-100 text-sm mt-3 font-medium leading-relaxed relative z-10">{guide.summary}</p>
         
-        <AudioButton 
-          text={fullGuideText} 
-          label="Ouvir guia completo" 
-          className="mt-6 w-full justify-center !bg-white/20 !text-white border border-white/20 hover:!bg-white/30" 
-        />
+        <button 
+          onClick={() => isPlayingFullGuide ? stopFullGuideSequence() : playFullGuideSequence()}
+          className="mt-6 w-full justify-center !bg-white/20 !text-white border border-white/20 hover:!bg-white/30 px-4 py-2 rounded-lg font-medium transition-all active:scale-95"
+        >
+          {isPlayingFullGuide ? "⏸ Parando..." : "🔊 Ouvir guia completo"}
+        </button>
       </div>
 
       <div className="flex flex-col gap-4 mt-2">
