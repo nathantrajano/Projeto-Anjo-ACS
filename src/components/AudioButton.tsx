@@ -1,6 +1,7 @@
 import { Volume2, VolumeX } from "lucide-react";
 import { useState, useEffect } from "react";
 import { speak, stopSpeaking } from "@/utils/speech";
+import { setAudioPlayingCallback, getAudioDuration } from "@/utils/audioManager";
 
 interface AudioButtonProps {
   text: string;
@@ -13,6 +14,11 @@ export const AudioButton = ({ text, label = "Ouvir", className, variant = 'pill'
   const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
+    // Registra callback para atualizar estado de reprodução
+    setAudioPlayingCallback((playing) => {
+      setIsPlaying(playing);
+    });
+
     return () => stopSpeaking();
   }, []);
 
@@ -26,8 +32,12 @@ export const AudioButton = ({ text, label = "Ouvir", className, variant = 'pill'
       setIsPlaying(true);
       
       // Resetar estado manualmente após um tempo baseado no texto (estimativa)
-      const duration = text.length * 80; 
-      setTimeout(() => setIsPlaying(false), duration);
+      const duration = getAudioDuration(text.length); 
+      setTimeout(() => {
+        if (isPlaying) {
+          setIsPlaying(false);
+        }
+      }, duration);
     }
   };
 
