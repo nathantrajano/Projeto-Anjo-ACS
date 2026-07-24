@@ -24,56 +24,56 @@ export const audioMappings: AudioMapping = {
   "\"Você está no Anjo ACS, seu assistente digital. Como posso ajudar você hoje?\"":
     "header/welcome.mp3",
 
-  // === CONFIRMAÇÃO - Confirmação de Intenção (baseado em INTENTS.title) ===
-  "\"Entendi. Você quer saber como Cadastrar família. Posso continuar para o guia?\"":
+  // === CONFIRMAÇÃO - Confirmação de Intenção (baseado em INTENTS) ===
+  "\"Entendi. Você quer saber como cadastrar família. Posso continuar para o guia?\"":
     "confirmacao/cadastro-familia.mp3",
-  "\"Entendi. Você quer saber como Registrar visita. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber como registrar visita. Posso continuar para o guia?\"":
     "confirmacao/visita-domiciliar.mp3",
-  "\"Entendi. Você quer saber como Erro no e-SUS. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber como resolver erro no e-SUS. Posso continuar para o guia?\"":
     "confirmacao/e-sus-problemas.mp3",
-  "\"Entendi. Você quer saber como Pré-natal. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre o pré-natal. Posso continuar para o guia?\"":
     "confirmacao/pre-natal.mp3",
-  "\"Entendi. Você quer saber como Hiperdia. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre o Hiperdia. Posso continuar para o guia?\"":
     "confirmacao/hiperdia.mp3",
-  "\"Entendi. Você quer saber como Bolsa Família. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre o Bolsa Família. Posso continuar para o guia?\"":
     "confirmacao/bolsa-familia.mp3",
-  "\"Entendi. Você quer saber como Recém-nascido. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre a visita ao recém-nascido. Posso continuar para o guia?\"":
     "confirmacao/visita-recem-nascido.mp3",
-  "\"Entendi. Você quer saber como Dengue e Focos. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre dengue e focos. Posso continuar para o guia?\"":
     "confirmacao/combate-dengue.mp3",
-  "\"Entendi. Você quer saber como Saúde Mental. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre saúde mental. Posso continuar para o guia?\"":
     "confirmacao/saude-mental.mp3",
-  "\"Entendi. Você quer saber como Atualizar cadastro. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber como atualizar cadastro. Posso continuar para o guia?\"":
     "confirmacao/atualizar-cadastro.mp3",
-  "\"Entendi. Você quer saber como Saúde do Idoso. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre a saúde do idoso. Posso continuar para o guia?\"":
     "confirmacao/saude-idoso.mp3",
-  "\"Entendi. Você quer saber como Vacina atrasada. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre vacina atrasada. Posso continuar para o guia?\"":
     "confirmacao/vacinacao-atraso.mp3",
-  "\"Entendi. Você quer saber como Planejamento Familiar. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre planejamento familiar. Posso continuar para o guia?\"":
     "confirmacao/planejamento-familiar.mp3",
-  "\"Entendi. Você quer saber como Pós-parto / Puerpério. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre pós-parto e puerpério. Posso continuar para o guia?\"":
     "confirmacao/puerperio.mp3",
-  "\"Entendi. Você quer saber como TB e Hanseníase. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre tuberculose e hanseníase. Posso continuar para o guia?\"":
     "confirmacao/busca-ativa-tb-hanseniase.mp3",
-  "\"Entendi. Você quer saber como Saúde Bucal. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre saúde bucal. Posso continuar para o guia?\"":
     "confirmacao/saude-bucal.mp3",
-  "\"Entendi. Você quer saber como Violência. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre identificação de violência. Posso continuar para o guia?\"":
     "confirmacao/identificar-violencia.mp3",
-  "\"Entendi. Você quer saber como Riscos Ambientais. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre riscos ambientais. Posso continuar para o guia?\"":
     "confirmacao/riscos-ambientais.mp3",
-  "\"Entendi. Você quer saber como Cuidados Paliativos. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre cuidados paliativos. Posso continuar para o guia?\"":
     "confirmacao/cuidados-paliativos.mp3",
-  "\"Entendi. Você quer saber como Mordida de Animal. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre mordida de animal. Posso continuar para o guia?\"":
     "confirmacao/mordedura-animais.mp3",
-  "\"Entendi. Você quer saber como Saúde do Homem. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre a saúde do homem. Posso continuar para o guia?\"":
     "confirmacao/saude-homem.mp3",
-  "\"Entendi. Você quer saber como Drogas e Álcool. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?\"":
     "confirmacao/reducao-danos.mp3",
-  "\"Entendi. Você quer saber como Prevenção Câncer. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?\"":
     "confirmacao/prevencao-cancer.mp3",
-  "\"Entendi. Você quer saber como Gripe e COVID. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?\"":
     "confirmacao/sintomas-gripais.mp3",
-  "\"Entendi. Você quer saber como Puericultura. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?\"":
     "confirmacao/desenvolvimento-infantil.mp3",
 
 
@@ -256,7 +256,7 @@ export const audioMappings: AudioMapping = {
   "Mapa de Acompanhamento. Lance os dados no sistema ou preencha o mapa físico do Bolsa Família.": "passos/g6_step4.mp3",
 
   // G7 - Visita ao Recém-nascido
-  "Teste do Pezinho. Verifique se o teste foi realizado entre o 3º e 5º dia.": "passos/g7_step1.mp3",
+  "Teste do Pezinho. Verifique se o teste foi realizado entre o 3º e o 5º dia.": "passos/g7_step1.mp3",
   "Coto Umbilical. Oriente sobre a limpeza com álcool 70% e observe sinais de infecção.": "passos/g7_step2.mp3",
   "Amamentação. Observe a pega e oriente sobre o aleitamento materno exclusivo.": "passos/g7_step3.mp3",
   "Agendamento. Garanta que a primeira consulta de puericultura esteja marcada na UBS.": "passos/g7_step4.mp3",
@@ -328,7 +328,7 @@ export const audioMappings: AudioMapping = {
   "Manejo Ambiental. Sugira soluções simples como telar ralos e manter quintais limpos.": "passos/g18_step4.mp3",
 
   // G19 - Apoio em Cuidados Paliativos
-  "Conforto e Pain. Pergunte sobre a intensidade da dor e se a medicação está aliviando.": "passos/g19_step1.mp3",
+  "Conforto e Dor. Pergunte sobre a intensidade da dor e se a medicação está aliviando.": "passos/g19_step1.mp3",
   "Prevenção de Lesões. Oriente a família sobre a mudança de decúbito (virar o paciente) a cada 2h.": "passos/g19_step2.mp3",
   "Higiene e Nutrição. Auxilie com dicas para banho no leito e alimentação pastosa/líquida.": "passos/g19_step3.mp3",
   "Apoio ao Cuidador. Observe se o cuidador está exausto e ofereça escuta emocional.": "passos/g19_step4.mp3",

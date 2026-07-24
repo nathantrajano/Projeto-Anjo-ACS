@@ -11,7 +11,8 @@ const Confirmation = () => {
 
   useEffect(() => {
     if (intent) {
-      speak(`Entendi. Você quer saber como ${intent.title}. Posso continuar para o guia?`);
+      const phrase = intent.confirmationPhrase || `Entendi. Você quer saber como ${intent.title}. Posso continuar para o guia?`;
+      speak(phrase);
     }
   }, [intent]);
 

@@ -28,6 +28,7 @@ export interface Intent {
   title: string;
   keywords: string[];
   guideId: string;
+  confirmationPhrase?: string;
 }
 
 export interface Category {

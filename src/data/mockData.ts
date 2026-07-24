@@ -86,7 +86,7 @@ export const GUIDES: Guide[] = [
     category: "Materno-Infantil",
     summary: "Primeira visita após o nascimento (até o 5º dia de vida).",
     steps: [
-      { id: 1, title: "Teste do Pezinho", description: "Verifique se o teste foi realizado entre o 3º e 5º dia." },
+      { id: 1, title: "Teste do Pezinho", description: "Verifique se o teste foi realizado entre o 3º e o 5º dia." },
       { id: 2, title: "Coto Umbilical", description: "Oriente sobre a limpeza com álcool 70% e observe sinais de infecção." },
       { id: 3, title: "Amamentação", description: "Observe a pega e oriente sobre o aleitamento materno exclusivo." },
       { id: 4, title: "Agendamento", description: "Garanta que a primeira consulta de puericultura esteja marcada na UBS." }
@@ -242,7 +242,7 @@ export const GUIDES: Guide[] = [
     category: "Saúde",
     summary: "Acompanhamento de pacientes com doenças graves em terminalidade.",
     steps: [
-      { id: 1, title: "Conforto e Pain", description: "Pergunte sobre a intensidade da dor e se a medicação está aliviando." },
+      { id: 1, title: "Conforto e Dor", description: "Pergunte sobre a intensidade da dor e se a medicação está aliviando." },
       { id: 2, title: "Prevenção de Lesões", description: "Oriente a família sobre a mudança de decúbito (virar o paciente) a cada 2h." },
       { id: 3, title: "Higiene e Nutrição", description: "Auxilie com dicas para banho no leito e alimentação pastosa/líquida." },
       { id: 4, title: "Apoio ao Cuidador", description: "Observe se o cuidador está exausto e ofereça escuta emocional." }
@@ -329,31 +329,31 @@ export const GUIDES: Guide[] = [
 ];
 
 export const INTENTS: Intent[] = [
-  { id: "i1", title: "Cadastrar família", keywords: ["família", "familia", "cadastrar", "novo cadastro", "casa nova"], guideId: "g1" },
-  { id: "i2", title: "Registrar visita", keywords: ["visita", "visitar", "atendimento", "casa", "domiciliar"], guideId: "g2" },
-  { id: "i3", title: "Erro no e-SUS", keywords: ["erro", "problema", "nao funciona", "sincronizar", "trava", "sus", "esus"], guideId: "g3" },
-  { id: "i4", title: "Pré-natal", keywords: ["gestante", "grávida", "gravida", "gravidez", "prenatal", "pré-natal", "buchuda", "neném", "bebê"], guideId: "g4" },
-  { id: "i5", title: "Hiperdia", keywords: ["pressão", "diabetes", "açúcar", "hipertenso", "diabético", "hiperdia", "insulina", "remédio"], guideId: "g5" },
-  { id: "i6", title: "Bolsa Família", keywords: ["bolsa família", "bolsa familia", "pesagem", "peso", "medir", "benefício", "auxílio", "pobreza"], guideId: "g6" },
-  { id: "i7", title: "Recém-nascido", keywords: ["bebê", "rn", "recém-nascido", "umbigo", "pezinho", "puerpério", "nasceu", "maternidade"], guideId: "g7" },
-  { id: "i8", title: "Dengue e Focos", keywords: ["dengue", "mosquito", "larva", "água parada", "quintal", "zika", "chikungunya", "febre"], guideId: "g8" },
-  { id: "i9", title: "Saúde Mental", keywords: ["depressão", "tristeza", "ansiedade", "surto", "caps", "remédio controlado", "saúde mental", "sofrimento"], guideId: "g9" },
-  { id: "i10", title: "Atualizar cadastro", keywords: ["mudou", "telefone", "endereço", "trocou", "atualizar", "mudar", "corrigir"], guideId: "g10" },
-  { id: "i11", title: "Saúde do Idoso", keywords: ["velho", "vovó", "vovô", "idoso", "queda", "remédios", "esquecimento", "fragilidade"], guideId: "g11" },
-  { id: "i12", title: "Vacina atrasada", keywords: ["vacina", "atrasada", "gotinha", "injeção", "calendário", "faltando", "imunização"], guideId: "g12" },
-  { id: "i13", title: "Planejamento Familiar", keywords: ["filho", "evitar", "camisinha", "anticoncepcional", "laqueadura", "vasectomia", "diu"], guideId: "g13" },
-  { id: "i14", title: "Pós-parto / Puerpério", keywords: ["pós-parto", "puerpério", "resguardo", "quarentena", "depressão pós-parto", "sangramento"], guideId: "g14" },
-  { id: "i15", title: "TB e Hanseníase", keywords: ["tosse", "pulmão", "escarro", "mancha", "pele", "hanseníase", "tuberculose", "perda de força"], guideId: "g15" },
-  { id: "i16", title: "Saúde Bucal", keywords: ["dente", "boca", "limpeza", "escova", "ferida na boca", "dentadura", "prótese", "gengiva"], guideId: "g16" },
-  { id: "i17", title: "Violência", keywords: ["apanhou", "violência", "bater", "abuso", "hematoma", "medo", "agressão", "doméstica"], guideId: "g17" },
-  { id: "i18", title: "Riscos Ambientais", keywords: ["lixo", "esgoto", "água", "rato", "escorpião", "entulho", "fossa", "poluição"], guideId: "g18" },
-  { id: "i19", title: "Cuidados Paliativos", keywords: ["cama", "leito", "morrer", "terminal", "câncer", "ferida", "conforto", "paliativo"], guideId: "g19" },
-  { id: "i20", title: "Mordida de Animal", keywords: ["mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva"], guideId: "g20" },
-  { id: "i21", title: "Saúde do Homem", keywords: ["homem", "próstata", "novembro azul", "ereção", "exame homem", "masculino"], guideId: "g21" },
-  { id: "i22", title: "Drogas e Álcool", keywords: ["bebida", "droga", "cachaça", "vício", "alcoolismo", "redução de danos", "fumando"], guideId: "g22" },
-  { id: "i23", title: "Prevenção Câncer", keywords: ["preventivo", "papanicolau", "mama", "mamografia", "câncer de mama", "câncer de colo"], guideId: "g23" },
-  { id: "i24", title: "Gripe e COVID", keywords: ["gripe", "covid", "tosse", "falta de ar", "resfriado", "corona", "catarro"], guideId: "g24" },
-  { id: "i25", title: "Puericultura", keywords: ["desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar"], guideId: "g25" }
+  { id: "i1", title: "Cadastrar família", keywords: ["família", "familia", "cadastrar", "novo cadastro", "casa nova"], guideId: "g1", confirmationPhrase: "Entendi. Você quer saber como cadastrar família. Posso continuar para o guia?" },
+  { id: "i2", title: "Registrar visita", keywords: ["visita", "visitar", "atendimento", "casa", "domiciliar"], guideId: "g2", confirmationPhrase: "Entendi. Você quer saber como registrar visita. Posso continuar para o guia?" },
+  { id: "i3", title: "Erro no e-SUS", keywords: ["erro", "problema", "nao funciona", "sincronizar", "trava", "sus", "esus"], guideId: "g3", confirmationPhrase: "Entendi. Você quer saber como resolver erro no e-SUS. Posso continuar para o guia?" },
+  { id: "i4", title: "Pré-natal", keywords: ["gestante", "grávida", "gravida", "gravidez", "prenatal", "pré-natal", "buchuda", "neném", "bebê"], guideId: "g4", confirmationPhrase: "Entendi. Você quer saber sobre o pré-natal. Posso continuar para o guia?" },
+  { id: "i5", title: "Hiperdia", keywords: ["pressão", "diabetes", "açúcar", "hipertenso", "diabético", "hiperdia", "insulina", "remédio"], guideId: "g5", confirmationPhrase: "Entendi. Você quer saber sobre o Hiperdia. Posso continuar para o guia?" },
+  { id: "i6", title: "Bolsa Família", keywords: ["bolsa família", "bolsa familia", "pesagem", "peso", "medir", "benefício", "auxílio", "pobreza"], guideId: "g6", confirmationPhrase: "Entendi. Você quer saber sobre o Bolsa Família. Posso continuar para o guia?" },
+  { id: "i7", title: "Recém-nascido", keywords: ["bebê", "rn", "recém-nascido", "umbigo", "pezinho", "puerpério", "nasceu", "maternidade"], guideId: "g7", confirmationPhrase: "Entendi. Você quer saber sobre a visita ao recém-nascido. Posso continuar para o guia?" },
+  { id: "i8", title: "Dengue e Focos", keywords: ["dengue", "mosquito", "larva", "água parada", "quintal", "zika", "chikungunya", "febre"], guideId: "g8", confirmationPhrase: "Entendi. Você quer saber sobre dengue e focos. Posso continuar para o guia?" },
+  { id: "i9", title: "Saúde Mental", keywords: ["depressão", "tristeza", "ansiedade", "surto", "caps", "remédio controlado", "saúde mental", "sofrimento"], guideId: "g9", confirmationPhrase: "Entendi. Você quer saber sobre saúde mental. Posso continuar para o guia?" },
+  { id: "i10", title: "Atualizar cadastro", keywords: ["mudou", "telefone", "endereço", "trocou", "atualizar", "mudar", "corrigir"], guideId: "g10", confirmationPhrase: "Entendi. Você quer saber como atualizar cadastro. Posso continuar para o guia?" },
+  { id: "i11", title: "Saúde do Idoso", keywords: ["velho", "vovó", "vovô", "idoso", "queda", "remédios", "esquecimento", "fragilidade"], guideId: "g11", confirmationPhrase: "Entendi. Você quer saber sobre a saúde do idoso. Posso continuar para o guia?" },
+  { id: "i12", title: "Vacina atrasada", keywords: ["vacina", "atrasada", "gotinha", "injeção", "calendário", "faltando", "imunização"], guideId: "g12", confirmationPhrase: "Entendi. Você quer saber sobre vacina atrasada. Posso continuar para o guia?" },
+  { id: "i13", title: "Planejamento Familiar", keywords: ["filho", "evitar", "camisinha", "anticoncepcional", "laqueadura", "vasectomia", "diu"], guideId: "g13", confirmationPhrase: "Entendi. Você quer saber sobre planejamento familiar. Posso continuar para o guia?" },
+  { id: "i14", title: "Pós-parto / Puerpério", keywords: ["pós-parto", "puerpério", "resguardo", "quarentena", "depressão pós-parto", "sangramento"], guideId: "g14", confirmationPhrase: "Entendi. Você quer saber sobre pós-parto e puerpério. Posso continuar para o guia?" },
+  { id: "i15", title: "TB e Hanseníase", keywords: ["tosse", "pulmão", "escarro", "mancha", "pele", "hanseníase", "tuberculose", "perda de força"], guideId: "g15", confirmationPhrase: "Entendi. Você quer saber sobre tuberculose e hanseníase. Posso continuar para o guia?" },
+  { id: "i16", title: "Saúde Bucal", keywords: ["dente", "boca", "limpeza", "escova", "ferida na boca", "dentadura", "prótese", "gengiva"], guideId: "g16", confirmationPhrase: "Entendi. Você quer saber sobre saúde bucal. Posso continuar para o guia?" },
+  { id: "i17", title: "Violência", keywords: ["apanhou", "violência", "bater", "abuso", "hematoma", "medo", "agressão", "doméstica"], guideId: "g17", confirmationPhrase: "Entendi. Você quer saber sobre identificação de violência. Posso continuar para o guia?" },
+  { id: "i18", title: "Riscos Ambientais", keywords: ["lixo", "esgoto", "água", "rato", "escorpião", "entulho", "fossa", "poluição"], guideId: "g18", confirmationPhrase: "Entendi. Você quer saber sobre riscos ambientais. Posso continuar para o guia?" },
+  { id: "i19", title: "Cuidados Paliativos", keywords: ["cama", "leito", "morrer", "terminal", "câncer", "ferida", "conforto", "paliativo"], guideId: "g19", confirmationPhrase: "Entendi. Você quer saber sobre cuidados paliativos. Posso continuar para o guia?" },
+  { id: "i20", title: "Mordida de Animal", keywords: ["mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva"], guideId: "g20", confirmationPhrase: "Entendi. Você quer saber sobre mordida de animal. Posso continuar para o guia?" },
+  { id: "i21", title: "Saúde do Homem", keywords: ["homem", "próstata", "novembro azul", "ereção", "exame homem", "masculino"], guideId: "g21", confirmationPhrase: "Entendi. Você quer saber sobre a saúde do homem. Posso continuar para o guia?" },
+  { id: "i22", title: "Drogas e Álcool", keywords: ["bebida", "droga", "cachaça", "vício", "alcoolismo", "redução de danos", "fumando"], guideId: "g22", confirmationPhrase: "Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?" },
+  { id: "i23", title: "Prevenção Câncer", keywords: ["preventivo", "papanicolau", "mama", "mamografia", "câncer de mama", "câncer de colo"], guideId: "g23", confirmationPhrase: "Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?" },
+  { id: "i24", title: "Gripe e COVID", keywords: ["gripe", "covid", "tosse", "falta de ar", "resfriado", "corona", "catarro"], guideId: "g24", confirmationPhrase: "Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?" },
+  { id: "i25", title: "Puericultura", keywords: ["desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar"], guideId: "g25", confirmationPhrase: "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?" }
 ];
 
 export const CATEGORIES: Category[] = [
