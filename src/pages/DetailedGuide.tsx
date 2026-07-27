@@ -3,7 +3,7 @@
 import React from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { GUIDES } from "@/data/mockData";
-import { ArrowLeft, ChevronRight, MousePointer2 } from "lucide-react";
+import { ArrowLeft, ChevronRight, MousePointer2, Heart } from "lucide-react";
 import { AudioButton } from "@/components/AudioButton";
 
 const DetailedGuide = () => {
@@ -13,11 +13,33 @@ const DetailedGuide = () => {
 
   if (!guide) return null;
 
+  const comfortingMessage = "Calma, tá tudo bem! É super comum ter dúvidas na rotina de campo. Vamos ver juntos esse passo a passo mais detalhado para te ajudar!";
+
   return (
     <div className="px-6 flex flex-col gap-6 animate-in slide-in-from-right-4 duration-300 pb-32">
       <div className="flex items-center gap-2 pt-4">
         <button onClick={() => navigate(-1)} className="p-2 -ml-2 text-[#1B4332]"><ArrowLeft size={24} /></button>
         <h2 className="text-xl font-extrabold text-[#1B4332]">Passo a Passo Visual</h2>
+      </div>
+
+      {/* Banner com frase acalentadora ao topo */}
+      <div className="w-full bg-emerald-50 border border-emerald-200/80 rounded-2xl p-4 text-center shadow-sm flex flex-col items-center gap-2">
+        <div className="flex items-center gap-2 text-[#1B4332] font-semibold text-sm">
+          <Heart size={20} className="text-emerald-600 fill-emerald-600 animate-pulse" />
+          <span>Você não está sozinho(a)!</span>
+        </div>
+        <p className="text-[#1B4332] font-medium text-xs sm:text-sm leading-relaxed">
+          "{comfortingMessage}"
+        </p>
+        <div className="mt-1">
+          <AudioButton 
+            text={comfortingMessage} 
+            label="Ouvir mensagem" 
+            variant="ghost" 
+            size="sm" 
+            className="text-emerald-700 hover:bg-emerald-100/50 text-xs py-1 px-3 h-auto"
+          />
+        </div>
       </div>
 
       <div className="bg-[#1B4332] p-4 rounded-2xl text-white">
