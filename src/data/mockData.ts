@@ -378,5 +378,13 @@ export const MOTIVATIONAL_MESSAGES = [
   "Cada cadastro é uma história que você ajuda a cuidar.",
   "Obrigado por sua dedicação à saúde pública brasileira.",
   "Sua presença na casa das pessoas traz esperança e cuidado.",
-  "O SUS acontece através das suas mãos e dos seus pés no campo."
+  "O SUS acontece através das suas mãos e dos seus pés no campo.",
+  "Oxente, você é porreta demais! Mais uma tarefa concluída.",
+  "Eita que deu certo! Missão cumprida com sucesso.",
+  "Arretado (a)! Você acaba de ter mais uma visita registrada.",
+  "Tá fazendo bonito no território, viu?. Parabéns.",
+  "É disso que o povo gosta! Meta alcançada.",
+  "Bora cuidar que ainda tem chão, mas você tá no rumo certo.",
+  "Tá deixando tudo nos trinques.",
+  "Se organização fosse forró, você era o sanfoneiro."
 ];
