@@ -130,12 +130,21 @@ const GuideSteps = () => {
 
       <div className="flex flex-col gap-3 mt-4">
         <button 
-          onClick={() => navigate(`/feedback-duvida/${id}`)}
+          onClick={() => navigate('/sucesso-guia')}
           className="pill-button bg-[#1B4332] text-white shadow-lg active:scale-95"
         >
           Pronto
           <ChevronRight size={20} />
         </button>
+        
+        <button 
+          onClick={() => navigate(`/guia-detalhado/${id}`)}
+          className="pill-button bg-white border-2 border-[#1B4332] text-[#1B4332] shadow-none active:scale-95 flex items-center justify-center gap-2"
+        >
+          Ir para guia detalhado
+          <ChevronRight size={20} />
+        </button>
+
         <button 
           onClick={() => navigate('/ajuda')}
           className="flex items-center justify-center gap-2 py-4 text-[#1B4332] font-bold text-sm active:opacity-70"

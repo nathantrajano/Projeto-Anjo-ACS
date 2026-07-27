@@ -3,6 +3,8 @@ export interface Step {
   title: string;
   description: string;
   icon?: string;
+  image?: string;
+  visualTip?: string;
 }
 
 export interface Guide {

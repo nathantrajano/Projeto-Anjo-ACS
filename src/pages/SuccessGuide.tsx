@@ -1,14 +1,18 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { Heart, Home, Award, Star, CheckCircle2 } from "lucide-react";
 import { AudioButton } from "@/components/AudioButton";
+import { MOTIVATIONAL_MESSAGES } from "@/data/mockData";
 
 const SuccessGuide = () => {
   const navigate = useNavigate();
   
-  const motivationText = "Missão cumprida! O Ministério da Saúde agradece seu empenho. Você é a peça fundamental que leva o SUS para dentro da casa dos brasileiros. Seu trabalho de hoje garante um futuro com mais saúde para toda a sua comunidade. Orgulhe-se de ser ACS!";
+  // Seleciona uma mensagem/ditado motivacional aleatório a cada acesso
+  const motivationText = useMemo(() => {
+    return MOTIVATIONAL_MESSAGES[Math.floor(Math.random() * MOTIVATIONAL_MESSAGES.length)];
+  }, []);
 
   return (
     <div className="px-6 min-h-[90vh] flex flex-col items-center justify-center gap-8 animate-in zoom-in-95 duration-500 pb-12">
@@ -40,7 +44,7 @@ const SuccessGuide = () => {
       <div className="flex flex-col items-center gap-4 w-full">
         <AudioButton 
           text={motivationText} 
-          label="Ouvir reconhecimento oficial"
+          label="Ouvir mensagem motivacional"
           className="w-full"
         />
         
