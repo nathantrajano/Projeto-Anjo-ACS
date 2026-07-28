@@ -1,50 +1,296 @@
 import { Guide, Manual, Intent, Category } from '../types';
 
 export const GUIDES: Guide[] = [
+  // ==========================================
+  // GUIAS 1 A 20: 20 PERGUNTAS MAIS PROVÁVEIS DO ACS (CONFORME DOCUMENTO ANJO ACS)
+  // ==========================================
+
+  // 1. Cadastro de Domicílio
   {
     id: "g1",
-    slug: "cadastrar-familia",
-    title: "Cadastrar Nova Família",
-    category: "Cadastro",
-    summary: "Guia passo a passo para realizar o cadastro completo de uma nova família no e-SUS Território.",
+    slug: "cadastrar-casa-nova",
+    title: "Cadastrar Casa Nova no Sistema",
+    category: "Cadastro de Domicílio",
+    summary: "Passo a passo para realizar o cadastro inicial de um novo domicílio no e-SUS Território.",
     steps: [
-      { id: 1, title: "Acesse o Território", description: "Abra o aplicativo e-SUS Território no seu tablet ou celular.", image: "/images/guides/g1-step1.png", visualTip: "Toque no ícone oficial do e-SUS Território na tela inicial do seu dispositivo." },
-      { id: 2, title: "Novo Domicílio", description: "Toque no ícone '+' e selecione 'Adicionar Domicílio'.", image: "/images/guides/g1-step2.png", visualTip: "Selecione o botão verde de adição '+' localizado no canto inferior direito da tela." },
-      { id: 3, title: "Dados da Família", description: "Preencha as informações do responsável familiar primeiro.", image: "/images/guides/g1-step3.png", visualTip: "Preencha o CPF ou CNS do responsável familiar e verifique a numeração do logradouro." },
-      { id: 4, title: "Membros", description: "Adicione os demais membros vinculando-os ao responsável.", image: "/images/guides/g1-step4.png", visualTip: "Clique em 'Adicionar Membro' para incluir dependentes e especificar a relação de parentesco." },
-      { id: 5, title: "Sincronizar", description: "Ao finalizar, não esqueça de sincronizar os dados com a base.", image: "/images/guides/g1-step5.png", visualTip: "Abra a aba 'Sincronização' no menu lateral e confirme o envio de fichas pendentes." }
+      { id: 1, title: "Acesse o Território", description: "Abra o aplicativo e-SUS Território no tablet e selecione a aba Domicílios.", image: "/images/guides/g1-step1.png", visualTip: "Toque no ícone oficial do e-SUS Território e vá no menu de Domicílios." },
+      { id: 2, title: "Novo Domicílio", description: "Toque no botão '+' e selecione a opção 'Adicionar Domicílio'.", image: "/images/guides/g1-step2.png", visualTip: "Clique no botão verde de adição '+' no canto inferior da tela." },
+      { id: 3, title: "Endereço e Número", description: "Informe o CEP, logradouro, número do imóvel e complemento se houver.", image: "/images/guides/g1-step3.png", visualTip: "Confira se o nome da rua coincide com o mapa oficial da microárea." },
+      { id: 4, title: "Características do Imóvel", description: "Preencha o tipo de imóvel, abastecimento de água e destino do lixo.", image: "/images/guides/g1-step4.png", visualTip: "Marque as condições habitacionais observadas no local." },
+      { id: 5, title: "Salvar Cadastro", description: "Confirme os dados e toque em Salvar para registrar o domicílio na base local.", image: "/images/guides/g1-step5.png", visualTip: "Certifique-se de que a mensagem de sucesso seja exibida." }
     ]
   },
   {
     id: "g2",
-    slug: "visita-domiciliar",
-    title: "Registrar Visita Domiciliar",
-    category: "Visitas",
-    summary: "Como registrar corretamente uma visita de rotina ou busca ativa.",
+    slug: "verificar-duplicacao-domicilio",
+    title: "Verificar Duplicação de Domicílio",
+    category: "Cadastro de Domicílio",
+    summary: "Como checar se uma casa já foi cadastrada antes de criar um novo registro no e-SUS.",
     steps: [
-      { id: 1, title: "Localizar Família", description: "Busque a família ou indivíduo na sua lista de microárea.", image: "/images/guides/g2-step1.png", visualTip: "Utilize o filtro por microárea ou digite o nome/CPF na barra de pesquisa no topo." },
-      { id: 2, title: "Iniciar Visita", description: "Toque no botão 'Registrar Visita' dentro da ficha do cidadão.", image: "/images/guides/g2-step2.png", visualTip: "Toque no botão azul 'Registrar Visita' destacado no cartão do cidadão." },
-      { id: 3, title: "Motivo da Visita", description: "Selecione o motivo (Ex: Acompanhamento, Egresso de Hospital).", image: "/images/guides/g2-step3.png", visualTip: "Marque as caixas correspondentes aos motivos principais da visita realizada." },
-      { id: 4, title: "Desfecho", description: "Marque se a visita foi realizada, recusada ou se o morador estava ausente.", image: "/images/guides/g2-step4.png", visualTip: "Selecione o desfecho correto e toque em 'Salvar Visita' para confirmar." }
+      { id: 1, title: "Pesquisar Endereço", description: "Na aba Domicílios, use a barra de busca e digite o nome da rua e o número da casa.", image: "/images/guides/g2-step1.png", visualTip: "Digite o número exato do imóvel na barra de pesquisa no topo." },
+      { id: 2, title: "Conferir Complemento", description: "Verifique se o imóvel possui complementos como casa A, casa B ou bloco.", image: "/images/guides/g2-step2.png", visualTip: "Confira se o número do imóvel tem diferenciação por letra ou bloco." },
+      { id: 3, title: "Consultar Lista da Microárea", description: "Filtre a busca pela sua microárea para listar todas as casas da quadra.", image: "/images/guides/g2-step3.png", visualTip: "Selecione o filtro por microárea para visualizar os vizinhos." },
+      { id: 4, title: "Confirmar Antes de Criar", description: "Se a casa já aparecer na lista, abra a ficha existente em vez de cadastrar novamente.", image: "/images/guides/g2-step4.png", visualTip: "Evite cadastrar duas vezes a mesma casa no sistema." }
     ]
   },
   {
     id: "g3",
-    slug: "e-sus-problemas",
-    title: "Problemas no e-SUS",
-    category: "Suporte Técnico",
-    summary: "Resolução de erros comuns de sincronização e login.",
+    slug: "corrigir-erro-endereco-cep",
+    title: "Corrigir Erro de Endereço ou CEP",
+    category: "Cadastro de Domicílio",
+    summary: "O que fazer quando a rua, o bairro ou o CEP não aparecem corretamente no aplicativo.",
     steps: [
-      { id: 1, title: "Verificar Conexão", description: "Certifique-se de que o Wi-Fi ou dados móveis estão ativos.", image: "/images/guides/g3-step1.png", visualTip: "Deslize a barra de notificações do Android e confira os ícones de Wi-Fi e Dados Móveis." },
-      { id: 2, title: "Limpar Cache", description: "Vá nas configurações do Android > Apps > e-SUS > Limpar Cache.", image: "/images/guides/g3-step2.png", visualTip: "Em Configurações > Armazenamento do app, clique em 'Limpar Cache' sem apagar os dados da base." },
-      { id: 3, title: "Versão do App", description: "Verifique na Play Store se há atualizações pendentes.", image: "/images/guides/g3-step3.png", visualTip: "Procure por 'e-SUS Território' na Play Store e clique no botão verde 'Atualizar'." }
+      { id: 1, title: "Buscar por Nome Similar", description: "Digite parte do nome da rua na busca de logradouro para localizar a grafia cadastrada.", image: "/images/guides/g3-step1.png", visualTip: "Digite apenas o nome principal da rua sem o termo 'Rua' ou 'Avenida'." },
+      { id: 2, title: "Usar CEP Geral do Município", description: "Se o CEP específico não funcionar, tente o CEP geral da cidade cadastrado na UBS.", image: "/images/guides/g3-step2.png", visualTip: "Consulte o código de CEP de referência da sua equipe de saúde." },
+      { id: 3, title: "Editar Ficha de Domicílio", description: "Se o erro for em casa existente, abra o domicílio e toque no lápis para atualizar o endereço.", image: "/images/guides/g3-step3.png", visualTip: "Clique no ícone de lápis de edição no cabeçalho da ficha do imóvel." },
+      { id: 4, title: "Anotar Logradouro Ausente", description: "Caso a rua não exista na lista oficial, anote e informe à coordenação para atualização da base.", image: "/images/guides/g3-step4.png", visualTip: "Repasse o nome correto da rua nova à supervisão da UBS." }
+    ]
+  },
+
+  // 2. Cadastro de Moradores
+  {
+    id: "g4",
+    slug: "cadastrar-morador-domicilio",
+    title: "Cadastrar Morador no Domicílio",
+    category: "Cadastro de Moradores",
+    summary: "Passo a passo para incluir e vincular um novo morador a um domicílio já existente.",
+    steps: [
+      { id: 1, title: "Abrir o Domicílio", description: "Localize a casa no aplicativo e toque na ficha do domicílio correspondente.", image: "/images/guides/g4-step1.png", visualTip: "Selecione o cartão da casa na sua lista de imóveis." },
+      { id: 2, title: "Adicionar Morador", description: "Toque na opção 'Adicionar Família' ou 'Adicionar Morador' dentro da casa.", image: "/images/guides/g4-step2.png", visualTip: "Clique no botão de adição de moradores no rodapé da ficha." },
+      { id: 3, title: "Preencher Dados Pessoais", description: "Insira nome completo, data de nascimento, sexo e nome da mãe.", image: "/images/guides/g4-step3.png", visualTip: "Digite os dados exatamente como constam no documento oficial." },
+      { id: 4, title: "Vincular ao Responsável", description: "Defina o parentesco do morador em relação ao responsável familiar.", image: "/images/guides/g4-step4.png", visualTip: "Selecione a opção de parentesco correta no menu suspenso." },
+      { id: 5, title: "Salvar Morador", description: "Confirme as informações e salve para concluir a inclusão do morador.", image: "/images/guides/g4-step5.png", visualTip: "Clique em Salvar no final do formulário." }
     ]
   },
   {
-    id: "g4",
+    id: "g5",
+    slug: "cadastrar-morador-sem-cpf-cns",
+    title: "Cadastrar Morador sem CPF ou CNS",
+    category: "Cadastro de Moradores",
+    summary: "Como cadastrar um cidadão que não possui CPF nem Cartão do SUS no momento da visita.",
+    steps: [
+      { id: 1, title: "Prosseguir sem Documento", description: "Sim, é possível realizar o cadastro no e-SUS mesmo sem o CPF ou CNS do morador.", image: "/images/guides/g5-step1.png", visualTip: "Avance no formulário deixando o campo de documento em branco se necessário." },
+      { id: 2, title: "Usar CNS se Houver", description: "Se a pessoa não tiver CPF, verifique se ela possui o Cartão Nacional do SUS.", image: "/images/guides/g5-step2.png", visualTip: "Digite a numeração de 15 dígitos do Cartão SUS se disponível." },
+      { id: 3, title: "Preencher Nome e Nascimento", description: "Se não houver nenhum documento, registre com precisão o nome completo e a data de nascimento.", image: "/images/guides/g5-step3.png", visualTip: "Preencha a data de nascimento e o nome da mãe completo." },
+      { id: 4, title: "Solicitar Atualização Posterior", description: "Oriente a família a providenciar o documento e levar à unidade para atualizar depois.", image: "/images/guides/g5-step4.png", visualTip: "Anote o compromisso de atualização no seu diário de campo." }
+    ]
+  },
+  {
+    id: "g6",
+    slug: "verificar-duplicacao-cidadao",
+    title: "Verificar Duplicação de Cidadão",
+    category: "Cadastro de Moradores",
+    summary: "Como buscar e confirmar se a pessoa já possui cadastro no sistema antes de criar outro.",
+    steps: [
+      { id: 1, title: "Buscar por CPF ou CNS", description: "Utilize o campo de busca digitando o CPF ou o número do Cartão SUS da pessoa.", image: "/images/guides/g6-step1.png", visualTip: "O CPF é a forma mais rápida e segura de localizar um cadastro existente." },
+      { id: 2, title: "Buscar por Nome e Nascimento", description: "Se não tiver o documento, busque pelo nome completo e data de nascimento.", image: "/images/guides/g6-step2.png", visualTip: "Digite o nome completo sem abreviações na caixa de busca." },
+      { id: 3, title: "Conferir Nome da Mãe", description: "Compare o nome da mãe no cadastro encontrado para confirmar se é a mesma pessoa.", image: "/images/guides/g6-step3.png", visualTip: "Verifique o nome da mãe para evitar confundir pessoas com nomes iguais." },
+      { id: 4, title: "Vincular Cadastro Existente", description: "Se o cadastro for encontrado, apenas vincule a pessoa ao domicílio atual.", image: "/images/guides/g6-step4.png", visualTip: "Evite duplicar registros atrelando a pessoa já existente ao endereço." }
+    ]
+  },
+  {
+    id: "g7",
+    slug: "cadastrar-recem-nascido",
+    title: "Cadastrar Recém-Nascido",
+    category: "Cadastro de Moradores",
+    summary: "Orientações para cadastrar um recém-nascido no e-SUS Território vinculando-o à família.",
+    steps: [
+      { id: 1, title: "Abrir a Ficha Familiar", description: "Acesse o domicílio cadastrado onde a mãe ou responsável reside.", image: "/images/guides/g7-step1.png", visualTip: "Localize a casa da mãe da criança no aplicativo." },
+      { id: 2, title: "Adicionar Novo Membro", description: "Toque em Adicionar Morador e selecione a opção de dependente ou filho.", image: "/images/guides/g7-step2.png", visualTip: "Clique no botão de adicionar membro da família." },
+      { id: 3, title: "Preencher Registro de Nascimento", description: "Informe a data de nascimento, peso ao nascer e a Declaração de Nascido Vivo se houver.", image: "/images/guides/g7-step3.png", visualTip: "Insira os dados da certidão de nascimento ou da folha de alta da maternidade." },
+      { id: 4, title: "Vincular à Mãe", description: "Selecione o cadastro da mãe no campo correspondente para garantir o vínculo.", image: "/images/guides/g7-step4.png", visualTip: "Marque a mãe cadastrada como responsável direta pelo bebê." },
+      { id: 5, title: "Salvar e Agendar Visita", description: "Salve a ficha do recém-nascido e já programe a primeira visita de puericultura.", image: "/images/guides/g7-step5.png", visualTip: "Confirme o registro e agende o acompanhamento neonatal." }
+    ]
+  },
+
+  // 3. Atualização de Dados da Família
+  {
+    id: "g8",
+    slug: "registrar-mudanca-morador",
+    title: "Registrar Mudança de Morador (Saída)",
+    category: "Atualização de Dados",
+    summary: "Como atualizar o sistema quando um morador se muda do domicílio ou da microárea.",
+    steps: [
+      { id: 1, title: "Acesse o Cadastro do Cidadão", description: "Localize o morador dentro da ficha do domicílio atual.", image: "/images/guides/g8-step1.png", visualTip: "Abra a lista de moradores da casa correspondente." },
+      { id: 2, title: "Opções do Morador", description: "Toque nos três pontinhos ou no ícone de edição ao lado do nome da pessoa.", image: "/images/guides/g8-step2.png", visualTip: "Clique no botão de opções ao lado do nome do cidadão." },
+      { id: 3, title: "Selecionar Mudança de Território", description: "Escolha a opção 'Mudou-se' ou 'Saída do Domicílio'.", image: "/images/guides/g8-step3.png", visualTip: "Selecione o motivo de saída 'Mudança de Território'." },
+      { id: 4, title: "Confirmar Desvinculação", description: "Confirme a alteração para desvincular o morador daquela residência.", image: "/images/guides/g8-step4.png", visualTip: "Toque em Confirmar para atualizar a composição familiar." }
+    ]
+  },
+  {
+    id: "g9",
+    slug: "atualizar-novo-morador-familia",
+    title: "Atualizar Novo Morador na Família",
+    category: "Atualização de Dados",
+    summary: "Passo a passo para incluir um morador recém-chegado à composição familiar.",
+    steps: [
+      { id: 1, title: "Localizar a Residência", description: "Abra a ficha da casa onde o novo morador passou a residir.", image: "/images/guides/g9-step1.png", visualTip: "Selecione o domicílio na lista da sua microárea." },
+      { id: 2, title: "Verificar se já tem Cadastro", description: "Pesquise se a pessoa veio de outro bairro e já possui registro no sistema.", image: "/images/guides/g9-step2.png", visualTip: "Busque pelo CPF para puxar o cadastro pré-existente se houver." },
+      { id: 3, title: "Adicionar ou Transferir", description: "Se já tiver cadastro, faça a transferência de endereço; se não tiver, crie um novo.", image: "/images/guides/g9-step3.png", visualTip: "Escolha entre vincular morador existente ou criar nova ficha." },
+      { id: 4, title: "Atualizar Relação Familiar", description: "Ajuste o grau de parentesco e salve a nova formação da família.", image: "/images/guides/g9-step4.png", visualTip: "Defina o parentesco do novo integrante e clique em Salvar." }
+    ]
+  },
+  {
+    id: "g10",
+    slug: "registrar-obito-sistema",
+    title: "Registrar Óbito no Sistema",
+    category: "Atualização de Dados",
+    summary: "Como proceder para dar baixa por óbito na ficha do cidadão com respeito e precisão.",
+    steps: [
+      { id: 1, title: "Localizar Ficha do Cidadão", description: "Busque pelo nome ou CPF da pessoa falecida no aplicativo.", image: "/images/guides/g10-step1.png", visualTip: "Abra a ficha do cidadão no e-SUS Território." },
+      { id: 2, title: "Editar Cadastro Individual", description: "Toque no ícone de lápis para alterar os dados da ficha.", image: "/images/guides/g10-step2.png", visualTip: "Clique no botão de edição de cadastro do indivíduo." },
+      { id: 3, title: "Marcar Opção Óbito", description: "Selecione o campo de saída por 'Óbito' e informe a data do falecimento se solicitada.", image: "/images/guides/g10-step3.png", visualTip: "Marque a caixa de seleção de Óbito nas opções de saída." },
+      { id: 4, title: "Salvar e Notificar Equipe", description: "Salve a ficha e comunique a equipe de saúde para encerramento de acompanhamentos.", image: "/images/guides/g10-step4.png", visualTip: "Confirme a alteração para atualizar o histórico da UBS." }
+    ]
+  },
+
+  // 4. Registro da Visita Domiciliar
+  {
+    id: "g11",
+    slug: "registrar-visita-domiciliar",
+    title: "Registrar Visita Domiciliar",
+    category: "Registro de Visitas",
+    summary: "Como registrar corretamente uma visita domiciliar realizada no dia a dia.",
+    steps: [
+      { id: 1, title: "Localizar Cidadão ou Família", description: "Busque a pessoa ou a casa na sua lista de microárea.", image: "/images/guides/g11-step1.png", visualTip: "Selecione o morador visitado no aplicativo." },
+      { id: 2, title: "Iniciar Ficha de Visita", description: "Toque no botão 'Registrar Visita' no perfil do cidadão.", image: "/images/guides/g11-step2.png", visualTip: "Clique no botão azul de registro de visita." },
+      { id: 3, title: "Marcar Motivos e Ações", description: "Selecione os motivos da visita e ações realizadas no momento.", image: "/images/guides/g11-step3.png", visualTip: "Marque as caixas de acompanhamento correspondentes." },
+      { id: 4, title: "Salvar Visita", description: "Confirme o desfecho como 'Visita Realizada' e toque em Salvar.", image: "/images/guides/g11-step4.png", visualTip: "Confirme o salvamento no final da tela." }
+    ]
+  },
+  {
+    id: "g12",
+    slug: "selecionar-motivo-visita",
+    title: "Selecionar Motivo da Visita Domiciliar",
+    category: "Registro de Visitas",
+    summary: "Orientações sobre qual motivo de visita marcar de acordo com o foco do atendimento.",
+    steps: [
+      { id: 1, title: "Cadastramento e Atualização", description: "Marque 'Cadastramento/Atualização' quando o foco for coletar dados cadastrais.", image: "/images/guides/g12-step1.png", visualTip: "Selecione esta opção ao preencher fichas novas ou atualizar dados." },
+      { id: 2, title: "Acompanhamento Continuado", description: "Marque 'Gestante', 'Hipertensão', 'Diabetes' ou 'Criança' conforme o público atendido.", image: "/images/guides/g12-step2.png", visualTip: "Escolha os grupos prioritários acompanhados na visita." },
+      { id: 3, title: "Busca Ativa e Convites", description: "Marque 'Busca Ativa' para vacinas atrasadas, consultas faltosas ou exames pendentes.", image: "/images/guides/g12-step3.png", visualTip: "Marque busca ativa quando for reconvocar o paciente para a UBS." },
+      { id: 4, title: "Controle Ambiental", description: "Marque 'Controle de Vetores' ao realizar inspeções de dengue e saneamento.", image: "/images/guides/g12-step4.png", visualTip: "Selecione a opção ambiental caso inspecione o quintal." }
+    ]
+  },
+  {
+    id: "g13",
+    slug: "registrar-visita-ausente-recusada",
+    title: "Registrar Visita com Morador Ausente ou Recusada",
+    category: "Registro de Visitas",
+    summary: "Como registrar a tentativa de visita quando a casa está fechada ou o morador recusa.",
+    steps: [
+      { id: 1, title: "Sim, Deve Registrar", description: "É essencial registrar no sistema mesmo quando não encontrar ninguém em casa.", image: "/images/guides/g13-step1.png", visualTip: "Registrar ausências comprova o deslocamento e a cobertura da microárea." },
+      { id: 2, title: "Abrir Ficha de Visita", description: "Selecione o domicílio ou o cidadão que tentou visitar.", image: "/images/guides/g13-step2.png", visualTip: "Clique em Registrar Visita normalmente." },
+      { id: 3, title: "Selecionar Desfecho Ausente", description: "No campo Desfecho, escolha a opção 'Ausente' se o imóvel estiver fechado.", image: "/images/guides/g13-step3.png", visualTip: "Selecione 'Ausente' no menu de desfecho da visita." },
+      { id: 4, title: "Selecionar Desfecho Recusada", description: "Se o morador não quiser atender, escolha a opção 'Recusada' e salve.", image: "/images/guides/g13-step4.png", visualTip: "Marque 'Recusada' com respeito à opção do cidadão e salve." }
+    ]
+  },
+
+  // 5. Problemas de Duplicação
+  {
+    id: "g14",
+    slug: "mensagem-cadastro-duplicado",
+    title: "Mensagem de Cadastro Duplicado",
+    category: "Problemas de Duplicação",
+    summary: "Entenda o alerta de cadastro duplicado e saiba como resolver sem perdas de dados.",
+    steps: [
+      { id: 1, title: "Compreender o Alerta", description: "Esta mensagem indica que o CPF ou CNS digitado já existe na base de dados da UBS.", image: "/images/guides/g14-step1.png", visualTip: "O sistema impede a criação de duas fichas para a mesma pessoa." },
+      { id: 2, title: "Não Criar Novo Cadastro", description: "Não tente forçar um novo cadastro alterando letras do nome ou números.", image: "/images/guides/g14-step2.png", visualTip: "Evite alterar dados reais para burlar o aviso do sistema." },
+      { id: 3, title: "Buscar Cadastro Existente", description: "Volte à tela de busca e pesquise pelo CPF para carregar a ficha oficial.", image: "/images/guides/g14-step3.png", visualTip: "Busque pelo CPF para abrir a ficha que já existia." },
+      { id: 4, title: "Vincular à Família", description: "Abra a ficha encontrada e apenas atualize o endereço para o domicílio atual.", image: "/images/guides/g14-step4.png", visualTip: "Reative ou mude o endereço da pessoa para a casa correta." }
+    ]
+  },
+  {
+    id: "g15",
+    slug: "diferenciar-pessoas-mesmo-nome",
+    title: "Diferenciar Pessoas com Mesmo Nome (Homônimos)",
+    category: "Problemas de Duplicação",
+    summary: "Como conferir data de nascimento, mãe e documentos para diferenciar cadastros homônimos.",
+    steps: [
+      { id: 1, title: "Verificar Data de Nascimento", description: "Compare a data de nascimento exata dos dois cadastros para conferir se são pessoas diferentes.", image: "/images/guides/g15-step1.png", visualTip: "Confira dia, mês e ano de nascimento na certidão ou RG." },
+      { id: 2, title: "Conferir Nome da Mãe", description: "Examine o nome completo da mãe registrado em cada uma das fichas.", image: "/images/guides/g15-step2.png", visualTip: "O nome da mãe é o principal elemento diferenciador de homônimos." },
+      { id: 3, title: "Checar Número de CPF e CNS", description: "Verifique o número do CPF ou do Cartão do SUS de cada cidadão.", image: "/images/guides/g15-step3.png", visualTip: "O CPF é único para cada brasileiro e tira a dúvida." },
+      { id: 4, title: "Confirmar Endereço do Imóvel", description: "Certifique-se em qual casa e microárea cada um dos homônimos reside.", image: "/images/guides/g15-step4.png", visualTip: "Valide o endereço de residência atual." }
+    ]
+  },
+  {
+    id: "g16",
+    slug: "escolher-logradouro-ruas-semelhantes",
+    title: "Escolher Logradouro em Ruas Semelhantes",
+    category: "Problemas de Duplicação",
+    summary: "Orientações para selecionar a rua correta quando houver nomes parecidos na lista oficial.",
+    steps: [
+      { id: 1, title: "Evitar Abreviações", description: "Procure o nome por extenso na lista de logradouros em vez de usar siglas incomuns.", image: "/images/guides/g16-step1.png", visualTip: "Busque por 'São José' em vez de 'S. Jose'." },
+      { id: 2, title: "Conferir o Bairro", description: "Verifique a qual bairro a rua pertence na lista de opções exibida.", image: "/images/guides/g16-step2.png", visualTip: "Confirme se o bairro associado à rua bate com o território." },
+      { id: 3, title: "Padronizar com a Equipe", description: "Consulte os colegas ACS da mesma microárea para usar o mesmo padrão de rua.", image: "/images/guides/g16-step3.png", visualTip: "Alinhe com a equipe qual opção de rua todos estão selecionando." },
+      { id: 4, title: "Selecionar Código de Logradouro", description: "Escolha a rua que possui o código CEP oficial cadastrado na UBS.", image: "/images/guides/g16-step4.png", visualTip: "Selecione o logradouro padrão indicado pela supervisão." }
+    ]
+  },
+
+  // 6. Problemas de Inconsistência
+  {
+    id: "g17",
+    slug: "entender-inconsistencia-sistema",
+    title: "Entender Inconsistência no Sistema",
+    category: "Problemas de Inconsistência",
+    summary: "O que é uma inconsistência de dados no e-SUS Território e como identificá-la.",
+    steps: [
+      { id: 1, title: "O que é Inconsistência?", description: "Inconsistência ocorre quando faltam dados obrigatórios ou há dados conflitantes na ficha.", image: "/images/guides/g17-step1.png", visualTip: "Exemplo: morador sem sexo informado ou data de nascimento futura." },
+      { id: 2, title: "Exemplos Comuns", description: "CPF inválido, responsável familiar não indicado ou ausência de vínculo de parentesco.", image: "/images/guides/g17-step2.png", visualTip: "Campos obrigatórios em branco geram inconsistência no PEC." },
+      { id: 3, title: "Impacto no Trabalho", description: "Fichas com inconsistência não são validadas pelo Ministério da Saúde até serem corrigidas.", image: "/images/guides/g17-step3.png", visualTip: "Inconsistências impedem a contabilização dos seus relatórios." },
+      { id: 4, title: "Como Identificar", description: "O aplicativo exibe um alerta amarelo ou vermelho indicando a ficha com pendência.", image: "/images/guides/g17-step4.png", visualTip: "Fique atento aos símbolos de aviso ao lado dos nomes." }
+    ]
+  },
+  {
+    id: "g18",
+    slug: "corrigir-erro-pos-sincronizacao",
+    title: "Corrigir Erro Pós-Sincronização",
+    category: "Problemas de Inconsistência",
+    summary: "Passo a passo para localizar e corrigir fichas com erro devolvidas após sincronizar.",
+    steps: [
+      { id: 1, title: "Verificar Relatório de Sincronização", description: "Após sincronizar, abra a aba Sincronização e veja a lista de fichas rejeitadas.", image: "/images/guides/g18-step1.png", visualTip: "Confira as mensagens marcadas como Erro ou Rejeitada." },
+      { id: 2, title: "Ler a Mensagem do Erro", description: "Toque na ficha rejeitada para ler exatamente qual campo precisa de correção.", image: "/images/guides/g18-step2.png", visualTip: "Leia a instrução emitida pelo sistema sobre a pendência." },
+      { id: 3, title: "Editar os Campos Indicados", description: "Abra a ficha do cidadão ou domicílio e corrija a informação incorreta.", image: "/images/guides/g18-step3.png", visualTip: "Preencha o campo ausente ou corrija o número inválido." },
+      { id: 4, title: "Sincronizar Novamente", description: "Após salvar as correções, faça uma nova sincronização para reenviar as fichas.", image: "/images/guides/g18-step4.png", visualTip: "Envie novamente os dados para validação no PEC da unidade." }
+    ]
+  },
+
+  // 7. Problemas de Sincronização
+  {
+    id: "g19",
+    slug: "cadastros-ausentes-sistema-unidade",
+    title: "Cadastros Ausentes no Sistema da Unidade",
+    category: "Problemas de Sincronização",
+    summary: "Por que cadastros feitos no tablet ainda não aparecem no PEC da unidade e como resolver.",
+    steps: [
+      { id: 1, title: "Verificar Fichas Pendentes", description: "Abra o menu Sincronização no tablet e confira se há fichas acumuladas sem enviar.", image: "/images/guides/g19-step1.png", visualTip: "Veja se o contador de fichas pendentes está maior que zero." },
+      { id: 2, title: "Checar Conexão Wi-Fi da UBS", description: "Certifique-se de que o tablet está conectado à rede de internet oficial da UBS.", image: "/images/guides/g19-step2.png", visualTip: "Verifique se o Wi-Fi da unidade está ativo e funcionando." },
+      { id: 3, title: "Aguardar Processamento do PEC", description: "O sistema da unidade pode levar alguns minutos para importar o lote recebido.", image: "/images/guides/g19-step3.png", visualTip: "Dê um tempo para o computador da unidade processar a carga." },
+      { id: 4, title: "Solicitar Reimportação", description: "Se as fichas foram enviadas mas não aparecem, peça ao digitador ou enfermeiro para checar o lote no PEC.", image: "/images/guides/g19-step4.png", visualTip: "Peça à supervisão para verificar a aba de recepção de fichas no PEC." }
+    ]
+  },
+  {
+    id: "g20",
+    slug: "sincronizar-dados-tablet-unidade",
+    title: "Sincronizar Dados do Tablet com a Unidade",
+    category: "Problemas de Sincronização",
+    summary: "Passo a passo completo para sincronizar os dados do tablet com o PEC da unidade.",
+    steps: [
+      { id: 1, title: "Conectar ao Wi-Fi da UBS", description: "Ao chegar na Unidade de Saúde, ligue o Wi-Fi do tablet e conecte à rede autorizada.", image: "/images/guides/g20-step1.png", visualTip: "Confira se a conexão com a internet ou rede local está ativa." },
+      { id: 2, title: "Abrir o Menu Sincronização", description: "Abra o aplicativo e-SUS Território e toque no menu lateral na opção 'Sincronizar'.", image: "/images/guides/g20-step2.png", visualTip: "Acesse a tela de sincronização no menu principal do app." },
+      { id: 3, title: "Iniciar o Envio de Fichas", description: "Toque no botão 'Enviar Dados' e aguarde a barra de progresso ser concluída.", image: "/images/guides/g20-step3.png", visualTip: "Mantenha a tela aberta enquanto os arquivos são transmitidos." },
+      { id: 4, title: "Receber Atualizações da Base", description: "Após enviar, toque em 'Receber Dados' para baixar novidades do PEC no seu tablet.", image: "/images/guides/g20-step4.png", visualTip: "Atualize a base do tablet com os novos cadastros da equipe." },
+      { id: 5, title: "Confirmar Mensagem de Sucesso", description: "Certifique-se de que a mensagem 'Sincronização realizada com sucesso' foi exibida.", image: "/images/guides/g20-step5.png", visualTip: "Verifique se o contador de fichas pendentes zerou." }
+    ]
+  },
+
+  // ==========================================
+  // GUIAS 21 EM DIANTE: PROGRAMAS DE SAÚDE E ATENDIMENTO CLÍNICO NO TERRITÓRIO
+  // ==========================================
+  {
+    id: "g21",
     slug: "pre-natal",
     title: "Acompanhamento de Pré-natal",
-    category: "Materno-Infantil",
+    category: "Programas de Saúde",
     summary: "Rotina de captação e acompanhamento de gestantes na comunidade.",
     steps: [
       { id: 1, title: "Identificar Gestante", description: "Confirme a suspeita de gravidez e a data da última menstruação (DUM).", image: "/images/guides/g4-step1.png", visualTip: "Anote a DUM e verifique a semana gestacional estimada com a gestante." },
@@ -54,10 +300,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g5",
+    id: "g22",
     slug: "hiperdia",
     title: "Acompanhamento Hiperdia",
-    category: "Doenças Crônicas",
+    category: "Programas de Saúde",
     summary: "Monitoramento de hipertensos e diabéticos durante as visitas.",
     steps: [
       { id: 1, title: "Aferição", description: "Se habilitado, auxilie na aferição de PA ou acompanhe o relato dos valores.", image: "/images/guides/g5-step1.png", visualTip: "Registre o valor da Pressão Arterial (mmHg) e Glicemia de Jejum relatados pelo paciente." },
@@ -67,10 +313,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g6",
+    id: "g23",
     slug: "bolsa-familia",
     title: "Acompanhamento Bolsa Família",
-    category: "Programas Sociais",
+    category: "Programas de Saúde",
     summary: "Cumprimento das condicionalidades de saúde do programa.",
     steps: [
       { id: 1, title: "Identificar Beneficiário", description: "Localize as famílias que recebem o benefício na sua lista.", image: "/images/guides/g6-step1.png", visualTip: "Filtre a lista de cidadãos selecionando o marcador 'Bolsa Família'." },
@@ -80,10 +326,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g7",
-    slug: "visita-recem-nascido",
-    title: "Visita ao Recém-nascido",
-    category: "Materno-Infantil",
+    id: "g24",
+    slug: "visita-recem-nascido-cuidados",
+    title: "Visita ao Recém-nascido (Cuidados)",
+    category: "Programas de Saúde",
     summary: "Primeira visita após o nascimento (até o 5º dia de vida).",
     steps: [
       { id: 1, title: "Teste do Pezinho", description: "Verifique se o teste foi realizado entre o 3º e o 5º dia.", image: "/images/guides/g7-step1.png", visualTip: "Confirme se a coleta da triagem neonatal (teste do pezinho) foi registrada." },
@@ -93,10 +339,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g8",
+    id: "g25",
     slug: "combate-dengue",
     title: "Prevenção de Arboviroses",
-    category: "Endemias",
+    category: "Programas de Saúde",
     summary: "Ações de campo para controle de Dengue, Zika e Chikungunya.",
     steps: [
       { id: 1, title: "Inspeção de Quintal", description: "Procure por recipientes que acumulem água parada.", image: "/images/guides/g8-step1.png", visualTip: "Inspecione calhas, pratos de plantas, pneu velhos e vasilhames ao ar livre." },
@@ -106,10 +352,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g9",
+    id: "g26",
     slug: "saude-mental",
     title: "Saúde Mental na Comunidade",
-    category: "Saúde Mental",
+    category: "Programas de Saúde",
     summary: "Apoio e identificação de sofrimento psíquico.",
     steps: [
       { id: 1, title: "Escuta Qualificada", description: "Dê espaço para o cidadão falar sobre seus sentimentos sem julgamentos.", image: "/images/guides/g9-step1.png", visualTip: "Mantenha contato visual e demonstre empatia durante o relato do morador." },
@@ -119,23 +365,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g10",
-    slug: "atualizar-cadastro",
-    title: "Atualizar Dados Cadastrais",
-    category: "Cadastro",
-    summary: "Como proceder quando o cidadão muda de endereço ou telefone.",
-    steps: [
-      { id: 1, title: "Localizar Cadastro", description: "Busque pelo CPF ou CNS no e-SUS Território.", image: "/images/guides/g10-step1.png", visualTip: "Digite o CPF ou CNS na caixa de pesquisa da tela de busca de cidadãos." },
-      { id: 2, title: "Editar Ficha", description: "Toque no ícone de lápis para abrir a edição da ficha individual.", image: "/images/guides/g10-step2.png", visualTip: "Toque no ícone de lápis de edição no cabeçalho do perfil do cidadão." },
-      { id: 3, title: "Campos Críticos", description: "Atualize telefone, endereço e a composição familiar (quem saiu/entrou).", image: "/images/guides/g10-step3.png", visualTip: "Altere o número de telefone de contato e confirme o endereço atualizado." },
-      { id: 4, title: "Finalizar", description: "Salve e sincronize para que a UBS receba os dados atualizados.", image: "/images/guides/g10-step4.png", visualTip: "Toque no botão 'Salvar' no final do formulário e envie na próxima sincronização." }
-    ]
-  },
-  {
-    id: "g11",
+    id: "g27",
     slug: "saude-idoso",
     title: "Saúde do Idoso",
-    category: "Ciclos de Vida",
+    category: "Programas de Saúde",
     summary: "Avaliação de fragilidade e riscos no domicílio do idoso.",
     steps: [
       { id: 1, title: "Risco de Queda", description: "Observe tapetes soltos, falta de corrimão e iluminação precária.", image: "/images/guides/g11-step1.png", visualTip: "Examine a casa procurando por obstáculos no piso, iluminação fraca ou banheiros sem barra." },
@@ -145,10 +378,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g12",
+    id: "g28",
     slug: "vacinacao-atraso",
     title: "Vacinação em Atraso",
-    category: "Imunização",
+    category: "Programas de Saúde",
     summary: "Como proceder ao identificar crianças com vacinas pendentes.",
     steps: [
       { id: 1, title: "Conferir Caderneta", description: "Compare as vacinas tomadas com o calendário nacional vigente.", image: "/images/guides/g12-step1.png", visualTip: "Abra a Caderneta de Vacinação na seção dos esquemas por faixa etária." },
@@ -158,10 +391,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g13",
+    id: "g29",
     slug: "planejamento-familiar",
     title: "Planejamento Familiar",
-    category: "Saúde Sexual",
+    category: "Programas de Saúde",
     summary: "Orientações sobre métodos contraceptivos e saúde reprodutiva.",
     steps: [
       { id: 1, title: "Abordagem", description: "Inicie a conversa sobre o desejo de ter filhos ou evitar gravidez no momento.", image: "/images/guides/g13-step1.png", visualTip: "Converse de forma reservada para entender as metas reprodutivas do cidadão ou casal." },
@@ -171,10 +404,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g14",
+    id: "g30",
     slug: "puerperio",
     title: "Cuidados no Puerpério",
-    category: "Materno-Infantil",
+    category: "Programas de Saúde",
     summary: "Acompanhamento da saúde da mulher após o parto.",
     steps: [
       { id: 1, title: "Sinais de Infecção", description: "Observe febre, dor intensa ou sangramento com odor forte (loquiação).", image: "/images/guides/g14-step1.png", visualTip: "Questione sobre febre, calafrios ou odor desagradável nos lóquios pós-parto." },
@@ -184,10 +417,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g15",
+    id: "g31",
     slug: "busca-ativa-tb-hanseniase",
     title: "Sintomáticos Respiratórios e Pele",
-    category: "Doenças Crônicas",
+    category: "Programas de Saúde",
     summary: "Busca ativa de Tuberculose e Hanseníase no território.",
     steps: [
       { id: 1, title: "Identificar Tosse", description: "Questione sobre tosse por 3 semanas ou mais (Tuberculose).", image: "/images/guides/g15-step1.png", visualTip: "Pergunte a todos os moradores se há tosse persistente por 21 dias ou mais." },
@@ -197,10 +430,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g16",
+    id: "g32",
     slug: "saude-bucal",
     title: "Orientações de Saúde Bucal",
-    category: "Prevenção",
+    category: "Programas de Saúde",
     summary: "Promoção da higiene oral e identificação de lesões.",
     steps: [
       { id: 1, title: "Higiene Diária", description: "Oriente sobre escovação após as refeições e uso do fio dental.", image: "/images/guides/g16-step1.png", visualTip: "Demonstre a técnica de escovação suave com movimentos circulares na gengiva." },
@@ -210,10 +443,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g17",
+    id: "g33",
     slug: "identificar-violencia",
     title: "Identificação de Violência",
-    category: "Social",
+    category: "Programas de Saúde",
     summary: "Como agir em casos suspeitos de violência doméstica ou infantil.",
     steps: [
       { id: 1, title: "Sinais Físicos", description: "Observe hematomas em locais incomuns ou marcas de queimadura.", image: "/images/guides/g17-step1.png", visualTip: "Fique atento a escoriações em áreas cobertas por roupas ou contusões com padrões de objetos." },
@@ -223,10 +456,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g18",
+    id: "g34",
     slug: "riscos-ambientais",
     title: "Saneamento e Meio Ambiente",
-    category: "Endemias",
+    category: "Programas de Saúde",
     summary: "Vigilância de riscos no entorno do domicílio.",
     steps: [
       { id: 1, title: "Água e Esgoto", description: "Verifique a origem da água e o destino dos dejetos (fossa ou rede).", image: "/images/guides/g18-step1.png", visualTip: "Pergunte se a água consumida passa por filtro/fervura e se há vazamento de esgoto." },
@@ -236,10 +469,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g19",
+    id: "g35",
     slug: "cuidados-paliativos",
     title: "Apoio em Cuidados Paliativos",
-    category: "Saúde",
+    category: "Programas de Saúde",
     summary: "Acompanhamento de pacientes com doenças graves em terminalidade.",
     steps: [
       { id: 1, title: "Conforto e Dor", description: "Pergunte sobre a intensidade da dor e se a medicação está aliviando.", image: "/images/guides/g19-step1.png", visualTip: "Consulte a escala visual de dor (0 a 10) relatada pelo paciente ou cuidador." },
@@ -249,10 +482,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g20",
+    id: "g36",
     slug: "mordedura-animais",
     title: "Mordedura e Raiva Humana",
-    category: "Urgências",
+    category: "Programas de Saúde",
     summary: "Primeiros cuidados após ataques de animais.",
     steps: [
       { id: 1, title: "Lavagem Imediata", description: "Oriente lavar o ferimento abundantemente com água e sabão.", image: "/images/guides/g20-step1.png", visualTip: "Lave o local com água corrente abundante e sabão em barra por pelo menos 5 minutos." },
@@ -262,10 +495,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g21",
+    id: "g37",
     slug: "saude-homem",
     title: "Saúde do Homem",
-    category: "Ciclos de Vida",
+    category: "Programas de Saúde",
     summary: "Ações de prevenção e rastreamento para a população masculina.",
     steps: [
       { id: 1, title: "Rastreamento", description: "Oriente sobre a importância dos exames de rotina (PA, glicemia, colesterol).", image: "/images/guides/g21-step1.png", visualTip: "Reforce a realização anual de testes de rotina cardiometabólica na UBS." },
@@ -275,10 +508,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g22",
+    id: "g38",
     slug: "reducao-danos",
     title: "Álcool e Drogas (Redução de Danos)",
-    category: "Saúde Mental",
+    category: "Programas de Saúde",
     summary: "Apoio e orientações para usuários de substâncias.",
     steps: [
       { id: 1, title: "Vínculo e Escuta", description: "Aproxime-se sem julgamentos para entender o padrão de uso.", image: "/images/guides/g22-step1.png", visualTip: "Adote uma postura empática e aberta para dialogar com o usuário." },
@@ -288,10 +521,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g23",
+    id: "g39",
     slug: "prevencao-cancer",
     title: "Prevenção de Câncer Feminino",
-    category: "Prevenção",
+    category: "Programas de Saúde",
     summary: "Orientações sobre Papanicolau e Mamografia.",
     steps: [
       { id: 1, title: "Autoexame", description: "Ensine a mulher a observar as mamas e identificar alterações.", image: "/images/guides/g23-step1.png", visualTip: "Oriente a observação do formato das mamas e presença de retrações na pele." },
@@ -301,10 +534,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g24",
+    id: "g40",
     slug: "sintomas-gripais",
     title: "Sintomas Gripais e COVID",
-    category: "Urgências",
+    category: "Programas de Saúde",
     summary: "Como agir em casos de febre, tosse e falta de ar.",
     steps: [
       { id: 1, title: "Isolamento", description: "Oriente o afastamento de outras pessoas e o uso de máscara em casa.", image: "/images/guides/g24-step1.png", visualTip: "Oriente o uso de máscara cobrindo boca e nariz e ventilação frequente do quarto." },
@@ -314,10 +547,10 @@ export const GUIDES: Guide[] = [
     ]
   },
   {
-    id: "g25",
+    id: "g41",
     slug: "desenvolvimento-infantil",
     title: "Desenvolvimento Infantil",
-    category: "Ciclos de Vida",
+    category: "Programas de Saúde",
     summary: "Marcos de crescimento e aprendizagem da criança.",
     steps: [
       { id: 1, title: "Puericultura", description: "Verifique se as consultas de rotina no médico/enfermeiro estão em dia.", image: "/images/guides/g25-step1.png", visualTip: "Abra a Caderneta da Criança na curva de peso x idade e altura x idade." },
@@ -329,40 +562,61 @@ export const GUIDES: Guide[] = [
 ];
 
 export const INTENTS: Intent[] = [
-  { id: "i1", title: "Cadastrar família", keywords: ["família", "familia", "cadastrar", "novo cadastro", "casa nova"], guideId: "g1", confirmationPhrase: "Entendi. Você quer saber como cadastrar família. Posso continuar para o guia?" },
-  { id: "i2", title: "Registrar visita", keywords: ["visita", "visitar", "atendimento", "casa", "domiciliar"], guideId: "g2", confirmationPhrase: "Entendi. Você quer saber como registrar visita. Posso continuar para o guia?" },
-  { id: "i3", title: "Erro no e-SUS", keywords: ["erro", "problema", "nao funciona", "sincronizar", "trava", "sus", "esus"], guideId: "g3", confirmationPhrase: "Entendi. Você quer saber como resolver erro no e-SUS. Posso continuar para o guia?" },
-  { id: "i4", title: "Pré-natal", keywords: ["gestante", "grávida", "gravida", "gravidez", "prenatal", "pré-natal", "buchuda", "neném", "bebê"], guideId: "g4", confirmationPhrase: "Entendi. Você quer saber sobre o pré-natal. Posso continuar para o guia?" },
-  { id: "i5", title: "Hiperdia", keywords: ["pressão", "diabetes", "açúcar", "hipertenso", "diabético", "hiperdia", "insulina", "remédio"], guideId: "g5", confirmationPhrase: "Entendi. Você quer saber sobre o Hiperdia. Posso continuar para o guia?" },
-  { id: "i6", title: "Bolsa Família", keywords: ["bolsa família", "bolsa familia", "pesagem", "peso", "medir", "benefício", "auxílio", "pobreza"], guideId: "g6", confirmationPhrase: "Entendi. Você quer saber sobre o Bolsa Família. Posso continuar para o guia?" },
-  { id: "i7", title: "Recém-nascido", keywords: ["bebê", "rn", "recém-nascido", "umbigo", "pezinho", "puerpério", "nasceu", "maternidade"], guideId: "g7", confirmationPhrase: "Entendi. Você quer saber sobre a visita ao recém-nascido. Posso continuar para o guia?" },
-  { id: "i8", title: "Dengue e Focos", keywords: ["dengue", "mosquito", "larva", "água parada", "quintal", "zika", "chikungunya", "febre"], guideId: "g8", confirmationPhrase: "Entendi. Você quer saber sobre dengue e focos. Posso continuar para o guia?" },
-  { id: "i9", title: "Saúde Mental", keywords: ["depressão", "tristeza", "ansiedade", "surto", "caps", "remédio controlado", "saúde mental", "sofrimento"], guideId: "g9", confirmationPhrase: "Entendi. Você quer saber sobre saúde mental. Posso continuar para o guia?" },
-  { id: "i10", title: "Atualizar cadastro", keywords: ["mudou", "telefone", "endereço", "trocou", "atualizar", "mudar", "corrigir"], guideId: "g10", confirmationPhrase: "Entendi. Você quer saber como atualizar cadastro. Posso continuar para o guia?" },
-  { id: "i11", title: "Saúde do Idoso", keywords: ["velho", "vovó", "vovô", "idoso", "queda", "remédios", "esquecimento", "fragilidade"], guideId: "g11", confirmationPhrase: "Entendi. Você quer saber sobre a saúde do idoso. Posso continuar para o guia?" },
-  { id: "i12", title: "Vacina atrasada", keywords: ["vacina", "atrasada", "gotinha", "injeção", "calendário", "faltando", "imunização"], guideId: "g12", confirmationPhrase: "Entendi. Você quer saber sobre vacina atrasada. Posso continuar para o guia?" },
-  { id: "i13", title: "Planejamento Familiar", keywords: ["filho", "evitar", "camisinha", "anticoncepcional", "laqueadura", "vasectomia", "diu"], guideId: "g13", confirmationPhrase: "Entendi. Você quer saber sobre planejamento familiar. Posso continuar para o guia?" },
-  { id: "i14", title: "Pós-parto / Puerpério", keywords: ["pós-parto", "puerpério", "resguardo", "quarentena", "depressão pós-parto", "sangramento"], guideId: "g14", confirmationPhrase: "Entendi. Você quer saber sobre pós-parto e puerpério. Posso continuar para o guia?" },
-  { id: "i15", title: "TB e Hanseníase", keywords: ["tosse", "pulmão", "escarro", "mancha", "pele", "hanseníase", "tuberculose", "perda de força"], guideId: "g15", confirmationPhrase: "Entendi. Você quer saber sobre tuberculose e hanseníase. Posso continuar para o guia?" },
-  { id: "i16", title: "Saúde Bucal", keywords: ["dente", "boca", "limpeza", "escova", "ferida na boca", "dentadura", "prótese", "gengiva"], guideId: "g16", confirmationPhrase: "Entendi. Você quer saber sobre saúde bucal. Posso continuar para o guia?" },
-  { id: "i17", title: "Violência", keywords: ["apanhou", "violência", "bater", "abuso", "hematoma", "medo", "agressão", "doméstica"], guideId: "g17", confirmationPhrase: "Entendi. Você quer saber sobre identificação de violência. Posso continuar para o guia?" },
-  { id: "i18", title: "Riscos Ambientais", keywords: ["lixo", "esgoto", "água", "rato", "escorpião", "entulho", "fossa", "poluição"], guideId: "g18", confirmationPhrase: "Entendi. Você quer saber sobre riscos ambientais. Posso continuar para o guia?" },
-  { id: "i19", title: "Cuidados Paliativos", keywords: ["cama", "leito", "morrer", "terminal", "câncer", "ferida", "conforto", "paliativo"], guideId: "g19", confirmationPhrase: "Entendi. Você quer saber sobre cuidados paliativos. Posso continuar para o guia?" },
-  { id: "i20", title: "Mordida de Animal", keywords: ["mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva"], guideId: "g20", confirmationPhrase: "Entendi. Você quer saber sobre mordida de animal. Posso continuar para o guia?" },
-  { id: "i21", title: "Saúde do Homem", keywords: ["homem", "próstata", "novembro azul", "ereção", "exame homem", "masculino"], guideId: "g21", confirmationPhrase: "Entendi. Você quer saber sobre a saúde do homem. Posso continuar para o guia?" },
-  { id: "i22", title: "Drogas e Álcool", keywords: ["bebida", "droga", "cachaça", "vício", "alcoolismo", "redução de danos", "fumando"], guideId: "g22", confirmationPhrase: "Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?" },
-  { id: "i23", title: "Prevenção Câncer", keywords: ["preventivo", "papanicolau", "mama", "mamografia", "câncer de mama", "câncer de colo"], guideId: "g23", confirmationPhrase: "Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?" },
-  { id: "i24", title: "Gripe e COVID", keywords: ["gripe", "covid", "tosse", "falta de ar", "resfriado", "corona", "catarro"], guideId: "g24", confirmationPhrase: "Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?" },
-  { id: "i25", title: "Puericultura", keywords: ["desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar"], guideId: "g25", confirmationPhrase: "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?" }
+  // Intents 1 a 20 Mapeadas 1:1 com as 20 Perguntas do Documento Projeto Anjo ACS
+  { id: "i1", title: "1. Cadastro de Casa Nova", keywords: ["casa nova", "cadastrar casa", "cadastro domicílio", "primeira visita", "novo domicílio", "cadastrar uma casa"], guideId: "g1", confirmationPhrase: "Entendi. Você quer saber como cadastrar uma casa nova no sistema. Posso continuar para o guia?" },
+  { id: "i2", title: "2. Duplicação de Domicílio", keywords: ["casa cadastrada", "duplicação de domicílio", "já cadastrada", "cadastrar de novo", "verificar casa"], guideId: "g2", confirmationPhrase: "Entendi. Você quer saber se a casa já está cadastrada ou se precisa cadastrar de novo. Posso continuar para o guia?" },
+  { id: "i3", title: "3. Erro de Endereço ou CEP", keywords: ["endereço não aparece", "erro de rua", "bairro errado", "cep", "logradouro", "endereço errado"], guideId: "g3", confirmationPhrase: "Entendi. Você quer saber o que fazer quando o endereço ou CEP não aparece certo. Posso continuar para o guia?" },
+  { id: "i4", title: "4. Cadastrar Morador", keywords: ["cadastrar morador", "adicionar morador", "novo morador nessa casa", "cadastrar cidadão no domicílio"], guideId: "g4", confirmationPhrase: "Entendi. Você quer saber como cadastrar um morador em uma casa já registrada. Posso continuar para o guia?" },
+  { id: "i5", title: "5. Cadastro sem CPF ou Cartão SUS", keywords: ["sem cpf", "sem cartão do sus", "sem cns", "cadastrar sem documento", "não tem cpf"], guideId: "g5", confirmationPhrase: "Entendi. Você quer saber se pode cadastrar uma pessoa mesmo sem CPF nem cartão do SUS. Posso continuar para o guia?" },
+  { id: "i6", title: "6. Verificar Duplicação de Cidadão", keywords: ["pessoa já cadastrada", "verificar cadastro", "duplicação de pessoa", "já tá no sistema", "checar cidadão"], guideId: "g6", confirmationPhrase: "Entendi. Você quer saber como verificar se a pessoa já está cadastrada no sistema. Posso continuar para o guia?" },
+  { id: "i7", title: "7. Cadastrar Recém-nascido", keywords: ["recém-nascido", "cadastrar bebê", "rn", "nasceu bebê", "cadastrar recem nascido"], guideId: "g7", confirmationPhrase: "Entendi. Você quer saber como cadastrar um recém-nascido no sistema. Posso continuar para o guia?" },
+  { id: "i8", title: "8. Mudança de Morador (Saída)", keywords: ["mudou da casa", "pessoa se mudou", "saída de morador", "retirar da casa", "mudança territorial"], guideId: "g8", confirmationPhrase: "Entendi. Você quer saber como registrar a mudança de uma pessoa que saiu da casa. Posso continuar para o guia?" },
+  { id: "i9", title: "9. Chegada de Novo Morador", keywords: ["chegou novo morador", "novo morador na casa", "atualizar família", "adicionar parente", "morador novo"], guideId: "g9", confirmationPhrase: "Entendi. Você quer saber como atualizar a família quando chega um novo morador. Posso continuar para o guia?" },
+  { id: "i10", title: "10. Registrar Óbito", keywords: ["registrar óbito", "óbito", "morreu", "faleceu", "desligar por óbito"], guideId: "g10", confirmationPhrase: "Entendi. Você quer saber como registrar um óbito no e-SUS Território. Posso continuar para o guia?" },
+  { id: "i11", title: "11. Registrar Visita Realizada", keywords: ["registro de visita", "fiz visita hoje", "registrar visita", "visita domiciliar", "marcar visita"], guideId: "g11", confirmationPhrase: "Entendi. Você quer saber como registrar que fez uma visita hoje. Posso continuar para o guia?" },
+  { id: "i12", title: "12. Escolher Motivo de Visita", keywords: ["motivo de visita", "qual motivo marcar", "opção de visita", "motivos da visita", "marcar na visita"], guideId: "g12", confirmationPhrase: "Entendi. Você quer saber qual motivo de visita deve marcar no aplicativo. Posso continuar para o guia?" },
+  { id: "i13", title: "13. Visita Ausente ou Recusada", keywords: ["não encontrei ninguém", "ninguém em casa", "morador ausente", "visita recusada", "casa fechada"], guideId: "g13", confirmationPhrase: "Entendi. Você quer saber se precisa registrar a visita quando não encontra ninguém em casa. Posso continuar para o guia?" },
+  { id: "i14", title: "14. Alerta de Cadastro Duplicado", keywords: ["mensagem de cadastro duplicado", "cadastro duplicado", "o que significa duplicado", "aviso duplicado"], guideId: "g14", confirmationPhrase: "Entendi. Você quer saber o que significa a mensagem de cadastro duplicado. Posso continuar para o guia?" },
+  { id: "i15", title: "15. Pessoas com Mesmo Nome", keywords: ["mesmo nome", "duas pessoas mesmo nome", "homônimo", "como saber se é a mesma", "nome igual"], guideId: "g15", confirmationPhrase: "Entendi. Você quer saber como verificar se duas pessoas com o mesmo nome são a mesma pessoa. Posso continuar para o guia?" },
+  { id: "i16", title: "16. Ruas com Nome Parecido", keywords: ["duas ruas com nome parecido", "rua parecida", "qual rua escolher", "nome de rua parecido", "logradouro parecido"], guideId: "g16", confirmationPhrase: "Entendi. Você quer saber qual rua escolher quando há duas ruas com nomes parecidos. Posso continuar para o guia?" },
+  { id: "i17", title: "17. Entender Inconsistência", keywords: ["tem uma inconsistência", "o que é inconsistência", "sistema disse inconsistência", "inconsistência no cadastro"], guideId: "g17", confirmationPhrase: "Entendi. Você quer saber o que é uma inconsistência informada pelo sistema. Posso continuar para o guia?" },
+  { id: "i18", title: "18. Corrigir Erro Pós-Sincronização", keywords: ["erro depois da sincronização", "corrigir erro pós sincronização", "erro de sincronização", "relatório de inconsistência pós sync"], guideId: "g18", confirmationPhrase: "Entendi. Você quer saber como corrigir um erro que apareceu após a sincronização. Posso continuar para o guia?" },
+  { id: "i19", title: "19. Cadastros Não Aparecem na UBS", keywords: ["cadastros não aparecem", "não aparece no sistema da unidade", "não foi pro pec", "cadastros sumiram", "falha no envio"], guideId: "g19", confirmationPhrase: "Entendi. Você quer saber por que seus cadastros não estão aparecendo no sistema da unidade. Posso continuar para o guia?" },
+  { id: "i20", title: "20. Sincronizar Tablet com Unidade", keywords: ["como sincronizar", "sincronizar tablet", "enviar dados unidade", "sincronização com pec", "enviar fichas"], guideId: "g20", confirmationPhrase: "Entendi. Você quer saber como sincronizar os dados do tablet com a unidade. Posso continuar para o guia?" },
+
+  // Intents Adicionais de Programas de Saúde
+  { id: "i21", title: "Pré-natal", keywords: ["gestante", "grávida", "gravida", "gravidez", "prenatal", "pré-natal", "buchuda", "neném", "bebê"], guideId: "g21", confirmationPhrase: "Entendi. Você quer saber sobre o pré-natal. Posso continuar para o guia?" },
+  { id: "i22", title: "Hiperdia", keywords: ["pressão", "diabetes", "açúcar", "hipertenso", "diabético", "hiperdia", "insulina", "remédio"], guideId: "g22", confirmationPhrase: "Entendi. Você quer saber sobre o Hiperdia. Posso continuar para o guia?" },
+  { id: "i23", title: "Bolsa Família", keywords: ["bolsa família", "bolsa familia", "pesagem", "peso", "medir", "benefício", "auxílio", "pobreza"], guideId: "g23", confirmationPhrase: "Entendi. Você quer saber sobre o Bolsa Família. Posso continuar para o guia?" },
+  { id: "i24", title: "Visita RN (Cuidados)", keywords: ["cuidados rn", "umbigo", "pezinho", "visita recem nascido"], guideId: "g24", confirmationPhrase: "Entendi. Você quer saber sobre os cuidados na visita ao recém-nascido. Posso continuar para o guia?" },
+  { id: "i25", title: "Dengue e Focos", keywords: ["dengue", "mosquito", "larva", "água parada", "quintal", "zika", "chikungunya", "febre"], guideId: "g25", confirmationPhrase: "Entendi. Você quer saber sobre dengue e focos. Posso continuar para o guia?" },
+  { id: "i26", title: "Saúde Mental", keywords: ["depressão", "tristeza", "ansiedade", "surto", "caps", "remédio controlado", "saúde mental", "sofrimento"], guideId: "g26", confirmationPhrase: "Entendi. Você quer saber sobre saúde mental. Posso continuar para o guia?" },
+  { id: "i27", title: "Saúde do Idoso", keywords: ["velho", "vovó", "vovô", "idoso", "queda", "remédios", "esquecimento", "fragilidade"], guideId: "g27", confirmationPhrase: "Entendi. Você quer saber sobre a saúde do idoso. Posso continuar para o guia?" },
+  { id: "i28", title: "Vacina atrasada", keywords: ["vacina", "atrasada", "gotinha", "injeção", "calendário", "faltando", "imunização"], guideId: "g28", confirmationPhrase: "Entendi. Você quer saber sobre vacina atrasada. Posso continuar para o guia?" },
+  { id: "i29", title: "Planejamento Familiar", keywords: ["filho", "evitar", "camisinha", "anticoncepcional", "laqueadura", "vasectomia", "diu"], guideId: "g29", confirmationPhrase: "Entendi. Você quer saber sobre planejamento familiar. Posso continuar para o guia?" },
+  { id: "i30", title: "Pós-parto / Puerpério", keywords: ["pós-parto", "puerpério", "resguardo", "quarentena", "depressão pós-parto", "sangramento"], guideId: "g30", confirmationPhrase: "Entendi. Você quer saber sobre pós-parto e puerpério. Posso continuar para o guia?" },
+  { id: "i31", title: "TB e Hanseníase", keywords: ["tosse", "pulmão", "escarro", "mancha", "pele", "hanseníase", "tuberculose", "perda de força"], guideId: "g31", confirmationPhrase: "Entendi. Você quer saber sobre tuberculose e hanseníase. Posso continuar para o guia?" },
+  { id: "i32", title: "Saúde Bucal", keywords: ["dente", "boca", "limpeza", "escova", "ferida na boca", "dentadura", "prótese", "gengiva"], guideId: "g32", confirmationPhrase: "Entendi. Você quer saber sobre saúde bucal. Posso continuar para o guia?" },
+  { id: "i33", title: "Violência", keywords: ["apanhou", "violência", "bater", "abuso", "hematoma", "medo", "agressão", "doméstica"], guideId: "g33", confirmationPhrase: "Entendi. Você quer saber sobre identificação de violência. Posso continuar para o guia?" },
+  { id: "i34", title: "Riscos Ambientais", keywords: ["lixo", "esgoto", "água", "rato", "escorpião", "entulho", "fossa", "poluição"], guideId: "g34", confirmationPhrase: "Entendi. Você quer saber sobre riscos ambientais. Posso continuar para o guia?" },
+  { id: "i35", title: "Cuidados Paliativos", keywords: ["cama", "leito", "morrer", "terminal", "câncer", "ferida", "conforto", "paliativo"], guideId: "g35", confirmationPhrase: "Entendi. Você quer saber sobre cuidados paliativos. Posso continuar para o guia?" },
+  { id: "i36", title: "Mordida de Animal", keywords: ["mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva"], guideId: "g36", confirmationPhrase: "Entendi. Você quer saber sobre mordida de animal. Posso continuar para o guia?" },
+  { id: "i37", title: "Saúde do Homem", keywords: ["homem", "próstata", "novembro azul", "ereção", "exame homem", "masculino"], guideId: "g37", confirmationPhrase: "Entendi. Você quer saber sobre a saúde do homem. Posso continuar para o guia?" },
+  { id: "i38", title: "Drogas e Álcool", keywords: ["bebida", "droga", "cachaça", "vício", "alcoolismo", "redução de danos", "fumando"], guideId: "g38", confirmationPhrase: "Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?" },
+  { id: "i39", title: "Prevenção Câncer", keywords: ["preventivo", "papanicolau", "mama", "mamografia", "câncer de mama", "câncer de colo"], guideId: "g39", confirmationPhrase: "Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?" },
+  { id: "i40", title: "Gripe e COVID", keywords: ["gripe", "covid", "tosse", "falta de ar", "resfriado", "corona", "catarro"], guideId: "g40", confirmationPhrase: "Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?" },
+  { id: "i41", title: "Puericultura", keywords: ["desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar"], guideId: "g41", confirmationPhrase: "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?" }
 ];
 
 export const CATEGORIES: Category[] = [
-  { id: "c1", title: "Cadastro e Visitas", icon: "UserPlus", intents: ["i1", "i2", "i10"] },
-  { id: "c2", title: "Saúde Materno-Infantil", icon: "Home", intents: ["i4", "i7", "i14", "i25"] },
-  { id: "c3", title: "Doenças e Endemias", icon: "Tablet", intents: ["i5", "i8", "i15", "i18", "i20", "i24"] },
-  { id: "c4", title: "Social e Mental", icon: "FileText", intents: ["i6", "i9", "i17", "i22"] },
-  { id: "c5", title: "Ciclos e Prevenção", icon: "FileText", intents: ["i11", "i12", "i13", "i16", "i19", "i21", "i23"] },
-  { id: "c6", title: "Suporte e-SUS", icon: "Tablet", intents: ["i3"] }
+  { id: "c1", title: "1. Cadastro de Domicílio", icon: "Home", intents: ["i1", "i2", "i3"] },
+  { id: "c2", title: "2. Cadastro de Moradores", icon: "UserPlus", intents: ["i4", "i5", "i6", "i7"] },
+  { id: "c3", title: "3. Atualização de Dados da Família", icon: "FileText", intents: ["i8", "i9", "i10"] },
+  { id: "c4", title: "4. Registro da Visita Domiciliar", icon: "FileText", intents: ["i11", "i12", "i13"] },
+  { id: "c5", title: "5. Problemas de Duplicação", icon: "Tablet", intents: ["i14", "i15", "i16"] },
+  { id: "c6", title: "6. Problemas de Inconsistência", icon: "Tablet", intents: ["i17", "i18"] },
+  { id: "c7", title: "7. Problemas de Sincronização", icon: "Tablet", intents: ["i19", "i20"] },
+  { id: "c8", title: "8. Programas de Saúde e Prevenção", icon: "Home", intents: ["i21", "i22", "i23", "i24", "i25", "i26", "i27", "i28", "i29", "i30", "i31", "i32", "i33", "i34", "i35", "i36", "i37", "i38", "i39", "i40", "i41"] }
 ];
 
 export const MANUALS: Manual[] = [
