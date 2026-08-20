@@ -24,13 +24,23 @@ const FeedbackDoubt = () => {
       </div>
 
       <div className="flex flex-col gap-4 w-full">
-        <button 
-          onClick={() => navigate(`/guia-detalhado/${id}`)}
-          className="pill-button bg-white border-2 border-[#1B4332] text-[#1B4332] shadow-none flex items-center justify-center gap-3"
-        >
-          <MessageSquareText size={20} />
-          Sim, me mostre detalhes
-        </button>
+        {guide?.hasDetailedGuide !== false ? (
+          <button 
+            onClick={() => navigate(`/guia-detalhado/${id}`)}
+            className="pill-button bg-white border-2 border-[#1B4332] text-[#1B4332] shadow-none flex items-center justify-center gap-3"
+          >
+            <MessageSquareText size={20} />
+            Sim, me mostre detalhes
+          </button>
+        ) : (
+          <button 
+            onClick={() => navigate('/ajuda')}
+            className="pill-button bg-white border-2 border-[#1B4332] text-[#1B4332] shadow-none flex items-center justify-center gap-3"
+          >
+            <HelpCircle size={20} />
+            Sim, falar com suporte
+          </button>
+        )}
         
         <button 
           onClick={() => navigate('/sucesso-guia')}

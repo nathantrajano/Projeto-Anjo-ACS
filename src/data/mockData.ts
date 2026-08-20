@@ -30,7 +30,7 @@ export const GUIDES: Guide[] = [
       { id: 1, title: "Pesquisar Endereço", description: "Na aba Domicílios, use a barra de busca e digite o nome da rua e o número da casa.", image: "/images/guides/g2-step1.png", visualTip: "Digite o número exato do imóvel na barra de pesquisa no topo." },
       { id: 2, title: "Conferir Complemento", description: "Verifique se o imóvel possui complementos como casa A, casa B ou bloco.", image: "/images/guides/g2-step2.png", visualTip: "Confira se o número do imóvel tem diferenciação por letra ou bloco." },
       { id: 3, title: "Consultar Lista da Microárea", description: "Filtre a busca pela sua microárea para listar todas as casas da quadra.", image: "/images/guides/g2-step3.png", visualTip: "Selecione o filtro por microárea para visualizar os vizinhos." },
-      { id: 4, title: "Confirmar Antes de Criar", description: "Se a casa já aparecer na lista, abra a ficha existente em vez de cadastrar novamente.", image: "/images/guides/g2-step4.png", visualTip: "Evite cadastrar duas vezes a mesma casa no sistema." }
+      { id: 4, title: "Confirmar Antes de Criar", description: "Se a casa já aparecer na lista, abra a ficha existente em vez de cadastrar novamente.", visualTip: "Evite cadastrar duas vezes a mesma casa no sistema." }
     ]
   },
   {
@@ -68,6 +68,7 @@ export const GUIDES: Guide[] = [
     title: "Cadastrar Morador sem CPF ou CNS",
     category: "Cadastro de Moradores",
     summary: "Como cadastrar um cidadão que não possui CPF nem Cartão do SUS no momento da visita.",
+    hasDetailedGuide: false,
     steps: [
       { id: 1, title: "Prosseguir sem Documento", description: "Sim, é possível realizar o cadastro no e-SUS mesmo sem o CPF ou CNS do morador.", image: "/images/guides/g5-step1.png", visualTip: "Avance no formulário deixando o campo de documento em branco se necessário." },
       { id: 2, title: "Usar CNS se Houver", description: "Se a pessoa não tiver CPF, verifique se ela possui o Cartão Nacional do SUS.", image: "/images/guides/g5-step2.png", visualTip: "Digite a numeração de 15 dígitos do Cartão SUS se disponível." },

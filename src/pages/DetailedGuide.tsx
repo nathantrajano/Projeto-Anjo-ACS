@@ -15,7 +15,13 @@ const DetailedGuide = () => {
     return COMFORTING_MESSAGES[Math.floor(Math.random() * COMFORTING_MESSAGES.length)];
   }, []);
 
-  if (!guide) return null;
+  React.useEffect(() => {
+    if (!guide || guide.hasDetailedGuide === false) {
+      navigate(guide ? `/guia/${id}` : '/', { replace: true });
+    }
+  }, [guide, id, navigate]);
+
+  if (!guide || guide.hasDetailedGuide === false) return null;
 
   return (
     <div className="px-6 flex flex-col gap-6 animate-in slide-in-from-right-4 duration-300 pb-32">

@@ -15,6 +15,7 @@ export interface Guide {
   summary: string;
   steps: Step[];
   relatedManuals?: string[];
+  hasDetailedGuide?: boolean;
 }
 
 export interface Manual {

@@ -137,13 +137,15 @@ const GuideSteps = () => {
           <ChevronRight size={20} />
         </button>
         
-        <button 
-          onClick={() => navigate(`/guia-detalhado/${id}`)}
-          className="pill-button bg-white border-2 border-[#1B4332] text-[#1B4332] shadow-none active:scale-95 flex items-center justify-center gap-2"
-        >
-          Ir para guia detalhado
-          <ChevronRight size={20} />
-        </button>
+        {guide.hasDetailedGuide !== false && (
+          <button 
+            onClick={() => navigate(`/guia-detalhado/${id}`)}
+            className="pill-button bg-white border-2 border-[#1B4332] text-[#1B4332] shadow-none active:scale-95 flex items-center justify-center gap-2"
+          >
+            Ir para guia detalhado
+            <ChevronRight size={20} />
+          </button>
+        )}
 
         <button 
           onClick={() => navigate('/ajuda')}
