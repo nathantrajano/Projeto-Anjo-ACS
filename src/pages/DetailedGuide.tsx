@@ -64,34 +64,49 @@ const DetailedGuide = () => {
               <h4 className="font-bold text-[#1B4332]">{step.title}</h4>
             </div>
 
-            <div className="relative rounded-3xl overflow-hidden border-2 border-emerald-100 shadow-lg bg-emerald-950/5 aspect-video flex items-center justify-center">
-              {step.image ? (
-                <img 
-                  src={step.image} 
-                  alt={step.title} 
-                  className="w-full h-full object-cover"
-                />
-              ) : (
-                /* Mock visual de tela do e-SUS Território */
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald-900/10 to-emerald-800/20 flex flex-col items-center justify-center p-6 text-center">
-                  <div className="w-3/4 h-3 bg-emerald-600/20 rounded mb-2"></div>
-                  <div className="w-1/2 h-3 bg-emerald-600/15 rounded mb-3"></div>
-                  <div className="p-3 bg-[#1B4332] rounded-xl shadow-md flex items-center gap-2 text-white text-xs font-bold">
-                    <MousePointer2 size={18} className="text-emerald-400 animate-pulse" />
-                    <span>Tela: {step.title}</span>
-                  </div>
+            {/* Imagem opcional: container que se adapta proporcionalmente a fotos verticais de celular */}
+            {step.image && (
+              <div className="flex flex-col gap-3">
+                <div className="relative rounded-3xl overflow-hidden border-2 border-emerald-100/80 shadow-md bg-emerald-950/5 flex items-center justify-center p-1 sm:p-2">
+                  <img 
+                    src={step.image} 
+                    alt={step.title} 
+                    className="w-full h-auto max-h-[640px] object-contain rounded-2xl block"
+                    loading="lazy"
+                  />
                 </div>
-              )}
-              
-              {/* Overlay de instrução visual */}
-              {step.visualTip && (
-                <div className="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm p-2.5 rounded-xl border border-emerald-200 shadow-sm">
-                  <p className="text-[11px] font-bold text-[#1B4332] leading-tight">
-                    <span className="text-emerald-600">Dica Visual:</span> {step.visualTip}
+
+                {/* Dica visual em formato de destaque abaixo da imagem para não cobrir botões da tela */}
+                {step.visualTip && (
+                  <div className="bg-emerald-50/90 border border-emerald-200/80 rounded-2xl p-3.5 flex items-start gap-2.5 shadow-xs">
+                    <div className="p-1.5 bg-[#1B4332] text-white rounded-lg shrink-0 mt-0.5">
+                      <MousePointer2 size={14} className="text-emerald-300" />
+                    </div>
+                    <div className="flex-1">
+                      <span className="text-[11px] font-black text-emerald-800 uppercase tracking-wider block">Dica Visual</span>
+                      <p className="text-xs font-semibold text-[#1B4332] leading-snug mt-0.5">
+                        {step.visualTip}
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Dica visual em formato de destaque quando o passo não possui imagem */}
+            {!step.image && step.visualTip && (
+              <div className="bg-emerald-50/80 border border-emerald-200/80 rounded-2xl p-3.5 flex items-start gap-2.5 shadow-xs">
+                <div className="p-1.5 bg-[#1B4332] text-white rounded-lg shrink-0 mt-0.5">
+                  <MousePointer2 size={14} className="text-emerald-300" />
+                </div>
+                <div className="flex-1">
+                  <span className="text-[11px] font-black text-emerald-800 uppercase tracking-wider block">Dica Visual</span>
+                  <p className="text-xs font-semibold text-[#1B4332] leading-snug mt-0.5">
+                    {step.visualTip}
                   </p>
                 </div>
-              )}
-            </div>
+              </div>
+            )}
 
             <p className="text-sm text-gray-600 font-medium leading-relaxed bg-white p-4 rounded-2xl border border-gray-100 shadow-xs">
               {step.description}

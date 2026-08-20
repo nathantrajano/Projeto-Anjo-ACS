@@ -13,11 +13,11 @@ export const GUIDES: Guide[] = [
     category: "Cadastro de Domicílio",
     summary: "Passo a passo para realizar o cadastro inicial de um novo domicílio no e-SUS Território.",
     steps: [
-      { id: 1, title: "Acesse o Território", description: "Abra o aplicativo e-SUS Território no tablet e selecione a aba Domicílios.", image: "/images/guides/g1-step1.png", visualTip: "Toque no ícone oficial do e-SUS Território e vá no menu de Domicílios." },
-      { id: 2, title: "Novo Domicílio", description: "Toque no botão '+' e selecione a opção 'Adicionar Domicílio'.", image: "/images/guides/g1-step2.png", visualTip: "Clique no botão verde de adição '+' no canto inferior da tela." },
-      { id: 3, title: "Endereço e Número", description: "Informe o CEP, logradouro, número do imóvel e complemento se houver.", image: "/images/guides/g1-step3.png", visualTip: "Confira se o nome da rua coincide com o mapa oficial da microárea." },
-      { id: 4, title: "Características do Imóvel", description: "Preencha o tipo de imóvel, abastecimento de água e destino do lixo.", image: "/images/guides/g1-step4.png", visualTip: "Marque as condições habitacionais observadas no local." },
-      { id: 5, title: "Salvar Cadastro", description: "Confirme os dados e toque em Salvar para registrar o domicílio na base local.", image: "/images/guides/g1-step5.png", visualTip: "Certifique-se de que a mensagem de sucesso seja exibida." }
+      { id: 1, title: "Acesse o Território", description: "Abra o aplicativo e-SUS Território no tablet e selecione a aba Domicílios.", image: "/images/guides/g1/g1-passo1.jpg", visualTip: "Toque no ícone oficial do e-SUS Território e vá no menu de Domicílios." },
+      { id: 2, title: "Novo Domicílio", description: "Toque no botão '+' e selecione a opção 'Adicionar Domicílio'.", image: "/images/guides/g1/g1-passo2.jpg", visualTip: "Clique no botão verde de adição '+' no canto inferior da tela." },
+      { id: 3, title: "Endereço e Número", description: "Informe o CEP, logradouro, número do imóvel e complemento se houver.", image: "/images/guides/g1/g1-passo3.jpg", visualTip: "Confira se o nome da rua coincide com o mapa oficial da microárea." },
+      { id: 4, title: "Características do Imóvel", description: "Preencha o tipo de imóvel, abastecimento de água e destino do lixo.", image: "/images/guides/g1/g1-passo4.png", visualTip: "Marque as condições habitacionais observadas no local." },
+      { id: 5, title: "Salvar Cadastro", description: "Confirme os dados e toque em Salvar para registrar o domicílio na base local.", image: "/images/guides/g1/g1-passo5.jpg", visualTip: "Certifique-se de que a mensagem de sucesso seja exibida." }
     ]
   },
   {
@@ -27,9 +27,9 @@ export const GUIDES: Guide[] = [
     category: "Cadastro de Domicílio",
     summary: "Como checar se uma casa já foi cadastrada antes de criar um novo registro no e-SUS.",
     steps: [
-      { id: 1, title: "Pesquisar Endereço", description: "Na aba Domicílios, use a barra de busca e digite o nome da rua e o número da casa.", image: "/images/guides/g2-step1.png", visualTip: "Digite o número exato do imóvel na barra de pesquisa no topo." },
-      { id: 2, title: "Conferir Complemento", description: "Verifique se o imóvel possui complementos como casa A, casa B ou bloco.", image: "/images/guides/g2-step2.png", visualTip: "Confira se o número do imóvel tem diferenciação por letra ou bloco." },
-      { id: 3, title: "Consultar Lista da Microárea", description: "Filtre a busca pela sua microárea para listar todas as casas da quadra.", image: "/images/guides/g2-step3.png", visualTip: "Selecione o filtro por microárea para visualizar os vizinhos." },
+      { id: 1, title: "Pesquisar Endereço", description: "Na aba Domicílios, use a barra de busca e digite o nome da rua e o número da casa.", image: "/images/guides/g2/g2-passo1.jpg", visualTip: "Digite o número exato do imóvel na barra de pesquisa no topo." },
+      { id: 2, title: "Conferir Complemento", description: "Verifique se o imóvel possui complementos como casa A, casa B ou bloco.", image: "/images/guides/g2/g2-passo2.jpg", visualTip: "Confira se o número do imóvel tem diferenciação por letra ou bloco." },
+      { id: 3, title: "Consultar Lista da Microárea", description: "Filtre a busca pela sua microárea para listar todas as casas da quadra.", image: "/images/guides/g2/g2-passo3.jpg", visualTip: "Selecione o filtro por microárea para visualizar os vizinhos." },
       { id: 4, title: "Confirmar Antes de Criar", description: "Se a casa já aparecer na lista, abra a ficha existente em vez de cadastrar novamente.", visualTip: "Evite cadastrar duas vezes a mesma casa no sistema." }
     ]
   },
@@ -40,10 +40,10 @@ export const GUIDES: Guide[] = [
     category: "Cadastro de Domicílio",
     summary: "O que fazer quando a rua, o bairro ou o CEP não aparecem corretamente no aplicativo.",
     steps: [
-      { id: 1, title: "Buscar por Nome Similar", description: "Digite parte do nome da rua na busca de logradouro para localizar a grafia cadastrada.", image: "/images/guides/g3-step1.png", visualTip: "Digite apenas o nome principal da rua sem o termo 'Rua' ou 'Avenida'." },
-      { id: 2, title: "Usar CEP Geral do Município", description: "Se o CEP específico não funcionar, tente o CEP geral da cidade cadastrado na UBS.", image: "/images/guides/g3-step2.png", visualTip: "Consulte o código de CEP de referência da sua equipe de saúde." },
-      { id: 3, title: "Editar Ficha de Domicílio", description: "Se o erro for em casa existente, abra o domicílio e toque no lápis para atualizar o endereço.", image: "/images/guides/g3-step3.png", visualTip: "Clique no ícone de lápis de edição no cabeçalho da ficha do imóvel." },
-      { id: 4, title: "Anotar Logradouro Ausente", description: "Caso a rua não exista na lista oficial, anote e informe à coordenação para atualização da base.", image: "/images/guides/g3-step4.png", visualTip: "Repasse o nome correto da rua nova à supervisão da UBS." }
+      { id: 1, title: "Buscar por Nome Similar", description: "Digite parte do nome da rua na busca de logradouro para localizar a grafia cadastrada.", image: "/images/guides/g3/g3-passo1.jpg", visualTip: "Digite apenas o nome principal da rua sem o termo 'Rua' ou 'Avenida'." },
+      { id: 2, title: "Usar CEP Geral do Município", description: "Se o CEP específico não funcionar, tente o CEP geral da cidade cadastrado na UBS.", visualTip: "Consulte o código de CEP de referência da sua equipe de saúde." },
+      { id: 3, title: "Editar Ficha de Domicílio", description: "Se o erro for em casa existente, abra o domicílio e toque no lápis para atualizar o endereço.", image: "/images/guides/g3/g3-passo3.jpg", visualTip: "Clique no ícone de lápis de edição no cabeçalho da ficha do imóvel." },
+      { id: 4, title: "Anotar Logradouro Ausente", description: "Caso a rua não exista na lista oficial, anote e informe à coordenação para atualização da base.", visualTip: "Repasse o nome correto da rua nova à supervisão da UBS." }
     ]
   },
 
@@ -55,11 +55,11 @@ export const GUIDES: Guide[] = [
     category: "Cadastro de Moradores",
     summary: "Passo a passo para incluir e vincular um novo morador a um domicílio já existente.",
     steps: [
-      { id: 1, title: "Abrir o Domicílio", description: "Localize a casa no aplicativo e toque na ficha do domicílio correspondente.", image: "/images/guides/g4-step1.png", visualTip: "Selecione o cartão da casa na sua lista de imóveis." },
-      { id: 2, title: "Adicionar Morador", description: "Toque na opção 'Adicionar Família' ou 'Adicionar Morador' dentro da casa.", image: "/images/guides/g4-step2.png", visualTip: "Clique no botão de adição de moradores no rodapé da ficha." },
-      { id: 3, title: "Preencher Dados Pessoais", description: "Insira nome completo, data de nascimento, sexo e nome da mãe.", image: "/images/guides/g4-step3.png", visualTip: "Digite os dados exatamente como constam no documento oficial." },
-      { id: 4, title: "Vincular ao Responsável", description: "Defina o parentesco do morador em relação ao responsável familiar.", image: "/images/guides/g4-step4.png", visualTip: "Selecione a opção de parentesco correta no menu suspenso." },
-      { id: 5, title: "Salvar Morador", description: "Confirme as informações e salve para concluir a inclusão do morador.", image: "/images/guides/g4-step5.png", visualTip: "Clique em Salvar no final do formulário." }
+      { id: 1, title: "Abrir o Domicílio", description: "Localize a casa no aplicativo e toque na ficha do domicílio correspondente.", image: "/images/guides/g4/g4-passo1.jpg", visualTip: "Selecione o cartão da casa na sua lista de imóveis." },
+      { id: 2, title: "Adicionar Morador", description: "Toque na opção 'Adicionar Família' ou 'Adicionar Morador' dentro da casa.", image: "/images/guides/g4/g4-passo2.jpg", visualTip: "Clique no botão de adição de moradores no rodapé da ficha." },
+      { id: 3, title: "Preencher Dados Pessoais", description: "Insira nome completo, data de nascimento, sexo e nome da mãe.", image: "/images/guides/g4/g4-passo3.jpg", visualTip: "Digite os dados exatamente como constam no documento oficial." },
+      { id: 4, title: "Vincular ao Responsável", description: "Defina o parentesco do morador em relação ao responsável familiar.", image: "/images/guides/g4/g4-passo4.jpg", visualTip: "Selecione a opção de parentesco correta no menu suspenso." },
+      { id: 5, title: "Salvar Morador", description: "Confirme as informações e salve para concluir a inclusão do morador.", image: "/images/guides/g4/g4-passo5.jpg", visualTip: "Clique em Salvar no final do formulário." }
     ]
   },
   {
@@ -70,10 +70,10 @@ export const GUIDES: Guide[] = [
     summary: "Como cadastrar um cidadão que não possui CPF nem Cartão do SUS no momento da visita.",
     hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Prosseguir sem Documento", description: "Sim, é possível realizar o cadastro no e-SUS mesmo sem o CPF ou CNS do morador.", image: "/images/guides/g5-step1.png", visualTip: "Avance no formulário deixando o campo de documento em branco se necessário." },
-      { id: 2, title: "Usar CNS se Houver", description: "Se a pessoa não tiver CPF, verifique se ela possui o Cartão Nacional do SUS.", image: "/images/guides/g5-step2.png", visualTip: "Digite a numeração de 15 dígitos do Cartão SUS se disponível." },
-      { id: 3, title: "Preencher Nome e Nascimento", description: "Se não houver nenhum documento, registre com precisão o nome completo e a data de nascimento.", image: "/images/guides/g5-step3.png", visualTip: "Preencha a data de nascimento e o nome da mãe completo." },
-      { id: 4, title: "Solicitar Atualização Posterior", description: "Oriente a família a providenciar o documento e levar à unidade para atualizar depois.", image: "/images/guides/g5-step4.png", visualTip: "Anote o compromisso de atualização no seu diário de campo." }
+      { id: 1, title: "Prosseguir sem Documento", description: "Sim, é possível realizar o cadastro no e-SUS mesmo sem o CPF ou CNS do morador.", visualTip: "Avance no formulário deixando o campo de documento em branco se necessário." },
+      { id: 2, title: "Usar CNS se Houver", description: "Se a pessoa não tiver CPF, verifique se ela possui o Cartão Nacional do SUS.", visualTip: "Digite a numeração de 15 dígitos do Cartão SUS se disponível." },
+      { id: 3, title: "Preencher Nome e Nascimento", description: "Se não houver nenhum documento, registre com precisão o nome completo e a data de nascimento.", visualTip: "Preencha a data de nascimento e o nome da mãe completo." },
+      { id: 4, title: "Solicitar Atualização Posterior", description: "Oriente a família a providenciar o documento e levar à unidade para atualizar depois.", visualTip: "Anote o compromisso de atualização no seu diário de campo." }
     ]
   },
   {
@@ -83,10 +83,10 @@ export const GUIDES: Guide[] = [
     category: "Cadastro de Moradores",
     summary: "Como buscar e confirmar se a pessoa já possui cadastro no sistema antes de criar outro.",
     steps: [
-      { id: 1, title: "Buscar por CPF ou CNS", description: "Utilize o campo de busca digitando o CPF ou o número do Cartão SUS da pessoa.", image: "/images/guides/g6-step1.png", visualTip: "O CPF é a forma mais rápida e segura de localizar um cadastro existente." },
-      { id: 2, title: "Buscar por Nome e Nascimento", description: "Se não tiver o documento, busque pelo nome completo e data de nascimento.", image: "/images/guides/g6-step2.png", visualTip: "Digite o nome completo sem abreviações na caixa de busca." },
-      { id: 3, title: "Conferir Nome da Mãe", description: "Compare o nome da mãe no cadastro encontrado para confirmar se é a mesma pessoa.", image: "/images/guides/g6-step3.png", visualTip: "Verifique o nome da mãe para evitar confundir pessoas com nomes iguais." },
-      { id: 4, title: "Vincular Cadastro Existente", description: "Se o cadastro for encontrado, apenas vincule a pessoa ao domicílio atual.", image: "/images/guides/g6-step4.png", visualTip: "Evite duplicar registros atrelando a pessoa já existente ao endereço." }
+      { id: 1, title: "Buscar por CPF ou CNS", description: "Utilize o campo de busca digitando o CPF ou o número do Cartão SUS da pessoa.", image: "/images/guides/g6/g6-passo1.jpg", visualTip: "O CPF é a forma mais rápida e segura de localizar um cadastro existente." },
+      { id: 2, title: "Buscar por Nome e Nascimento", description: "Se não tiver o documento, busque pelo nome completo e data de nascimento.", visualTip: "Digite o nome completo sem abreviações na caixa de busca." },
+      { id: 3, title: "Conferir Nome da Mãe", description: "Compare o nome da mãe no cadastro encontrado para confirmar se é a mesma pessoa.", visualTip: "Verifique o nome da mãe para evitar confundir pessoas com nomes iguais." },
+      { id: 4, title: "Vincular Cadastro Existente", description: "Se o cadastro for encontrado, apenas vincule a pessoa ao domicílio atual.", visualTip: "Evite duplicar registros atrelando a pessoa já existente ao endereço." }
     ]
   },
   {
@@ -96,11 +96,11 @@ export const GUIDES: Guide[] = [
     category: "Cadastro de Moradores",
     summary: "Orientações para cadastrar um recém-nascido no e-SUS Território vinculando-o à família.",
     steps: [
-      { id: 1, title: "Abrir a Ficha Familiar", description: "Acesse o domicílio cadastrado onde a mãe ou responsável reside.", image: "/images/guides/g7-step1.png", visualTip: "Localize a casa da mãe da criança no aplicativo." },
-      { id: 2, title: "Adicionar Novo Membro", description: "Toque em Adicionar Morador e selecione a opção de dependente ou filho.", image: "/images/guides/g7-step2.png", visualTip: "Clique no botão de adicionar membro da família." },
-      { id: 3, title: "Preencher Registro de Nascimento", description: "Informe a data de nascimento, peso ao nascer e a Declaração de Nascido Vivo se houver.", image: "/images/guides/g7-step3.png", visualTip: "Insira os dados da certidão de nascimento ou da folha de alta da maternidade." },
-      { id: 4, title: "Vincular à Mãe", description: "Selecione o cadastro da mãe no campo correspondente para garantir o vínculo.", image: "/images/guides/g7-step4.png", visualTip: "Marque a mãe cadastrada como responsável direta pelo bebê." },
-      { id: 5, title: "Salvar e Agendar Visita", description: "Salve a ficha do recém-nascido e já programe a primeira visita de puericultura.", image: "/images/guides/g7-step5.png", visualTip: "Confirme o registro e agende o acompanhamento neonatal." }
+      { id: 1, title: "Abrir a Ficha Familiar", description: "Acesse o domicílio cadastrado onde a mãe ou responsável reside.", image: "/images/guides/g7/g7-passo1.jpeg", visualTip: "Localize a casa da mãe da criança no aplicativo." },
+      { id: 2, title: "Adicionar Novo Membro", description: "Toque em Adicionar Morador e selecione a opção de dependente ou filho.", image: "/images/guides/g7/g7-passo2.jpg", visualTip: "Clique no botão de adicionar membro da família." },
+      { id: 3, title: "Preencher Registro de Nascimento", description: "Informe a data de nascimento, peso ao nascer e a Declaração de Nascido Vivo se houver.", image: "/images/guides/g7/g7-passo3.jpg", visualTip: "Insira os dados da certidão de nascimento ou da folha de alta da maternidade." },
+      { id: 4, title: "Vincular à Mãe", description: "Selecione o cadastro da mãe no campo correspondente para garantir o vínculo.", image: "/images/guides/g7/g7-passo4.jpg", visualTip: "Marque a mãe cadastrada como responsável direta pelo bebê." },
+      { id: 5, title: "Salvar e Agendar Visita", description: "Salve a ficha do recém-nascido e já programe a primeira visita de puericultura.", visualTip: "Confirme o registro e agende o acompanhamento neonatal." }
     ]
   },
 
@@ -112,10 +112,10 @@ export const GUIDES: Guide[] = [
     category: "Atualização de Dados",
     summary: "Como atualizar o sistema quando um morador se muda do domicílio ou da microárea.",
     steps: [
-      { id: 1, title: "Acesse o Cadastro do Cidadão", description: "Localize o morador dentro da ficha do domicílio atual.", image: "/images/guides/g8-step1.png", visualTip: "Abra a lista de moradores da casa correspondente." },
-      { id: 2, title: "Opções do Morador", description: "Toque nos três pontinhos ou no ícone de edição ao lado do nome da pessoa.", image: "/images/guides/g8-step2.png", visualTip: "Clique no botão de opções ao lado do nome do cidadão." },
-      { id: 3, title: "Selecionar Mudança de Território", description: "Escolha a opção 'Mudou-se' ou 'Saída do Domicílio'.", image: "/images/guides/g8-step3.png", visualTip: "Selecione o motivo de saída 'Mudança de Território'." },
-      { id: 4, title: "Confirmar Desvinculação", description: "Confirme a alteração para desvincular o morador daquela residência.", image: "/images/guides/g8-step4.png", visualTip: "Toque em Confirmar para atualizar a composição familiar." }
+      { id: 1, title: "Acesse o Cadastro do Cidadão", description: "Localize o morador dentro da ficha do domicílio atual.", image: "/images/guides/g8/g8-passo1.jpg", visualTip: "Abra a lista de moradores da casa correspondente." },
+      { id: 2, title: "Opções do Morador", description: "Toque nos três pontinhos ou no ícone de edição ao lado do nome da pessoa.", image: "/images/guides/g8/g8-passo2.jpg", visualTip: "Clique no botão de opções ao lado do nome do cidadão." },
+      { id: 3, title: "Selecionar Mudança de Território", description: "Escolha a opção 'Mudou-se' ou 'Saída do Domicílio'.", visualTip: "Selecione o motivo de saída 'Mudança de Território'." },
+      { id: 4, title: "Confirmar Desvinculação", description: "Confirme a alteração para desvincular o morador daquela residência.", visualTip: "Toque em Confirmar para atualizar a composição familiar." }
     ]
   },
   {
@@ -125,10 +125,10 @@ export const GUIDES: Guide[] = [
     category: "Atualização de Dados",
     summary: "Passo a passo para incluir um morador recém-chegado à composição familiar.",
     steps: [
-      { id: 1, title: "Localizar a Residência", description: "Abra a ficha da casa onde o novo morador passou a residir.", image: "/images/guides/g9-step1.png", visualTip: "Selecione o domicílio na lista da sua microárea." },
-      { id: 2, title: "Verificar se já tem Cadastro", description: "Pesquise se a pessoa veio de outro bairro e já possui registro no sistema.", image: "/images/guides/g9-step2.png", visualTip: "Busque pelo CPF para puxar o cadastro pré-existente se houver." },
-      { id: 3, title: "Adicionar ou Transferir", description: "Se já tiver cadastro, faça a transferência de endereço; se não tiver, crie um novo.", image: "/images/guides/g9-step3.png", visualTip: "Escolha entre vincular morador existente ou criar nova ficha." },
-      { id: 4, title: "Atualizar Relação Familiar", description: "Ajuste o grau de parentesco e salve a nova formação da família.", image: "/images/guides/g9-step4.png", visualTip: "Defina o parentesco do novo integrante e clique em Salvar." }
+      { id: 1, title: "Localizar a Residência", description: "Abra a ficha da casa onde o novo morador passou a residir.", image: "/images/guides/g9/g9-passo1.jpg", visualTip: "Selecione o domicílio na lista da sua microárea." },
+      { id: 2, title: "Verificar se já tem Cadastro", description: "Pesquise se a pessoa veio de outro bairro e já possui registro no sistema.", image: "/images/guides/g9/g9-passo2.jpg", visualTip: "Busque pelo CPF para puxar o cadastro pré-existente se houver." },
+      { id: 3, title: "Adicionar ou Transferir", description: "Se já tiver cadastro, faça a transferência de endereço; se não tiver, crie um novo.", visualTip: "Escolha entre vincular morador existente ou criar nova ficha." },
+      { id: 4, title: "Atualizar Relação Familiar", description: "Ajuste o grau de parentesco e salve a nova formação da família.", visualTip: "Defina o parentesco do novo integrante e clique em Salvar." }
     ]
   },
   {
@@ -138,10 +138,10 @@ export const GUIDES: Guide[] = [
     category: "Atualização de Dados",
     summary: "Como proceder para dar baixa por óbito na ficha do cidadão com respeito e precisão.",
     steps: [
-      { id: 1, title: "Localizar Ficha do Cidadão", description: "Busque pelo nome ou CPF da pessoa falecida no aplicativo.", image: "/images/guides/g10-step1.png", visualTip: "Abra a ficha do cidadão no e-SUS Território." },
-      { id: 2, title: "Editar Cadastro Individual", description: "Toque no ícone de lápis para alterar os dados da ficha.", image: "/images/guides/g10-step2.png", visualTip: "Clique no botão de edição de cadastro do indivíduo." },
-      { id: 3, title: "Marcar Opção Óbito", description: "Selecione o campo de saída por 'Óbito' e informe a data do falecimento se solicitada.", image: "/images/guides/g10-step3.png", visualTip: "Marque a caixa de seleção de Óbito nas opções de saída." },
-      { id: 4, title: "Salvar e Notificar Equipe", description: "Salve a ficha e comunique a equipe de saúde para encerramento de acompanhamentos.", image: "/images/guides/g10-step4.png", visualTip: "Confirme a alteração para atualizar o histórico da UBS." }
+      { id: 1, title: "Localizar Ficha do Cidadão", description: "Busque pelo nome ou CPF da pessoa falecida no aplicativo.", image: "/images/guides/g10/g10-passo1.jpg", visualTip: "Abra a ficha do cidadão no e-SUS Território." },
+      { id: 2, title: "Editar Cadastro Individual", description: "Toque no ícone de lápis para alterar os dados da ficha.", image: "/images/guides/g10/g10-passo2.jpg", visualTip: "Clique no botão de edição de cadastro do indivíduo." },
+      { id: 3, title: "Marcar Opção Óbito", description: "Selecione o campo de saída por 'Óbito' e informe a data do falecimento se solicitada.", image: "/images/guides/g10/g10-passo3.jpg", visualTip: "Marque a caixa de seleção de Óbito nas opções de saída." },
+      { id: 4, title: "Salvar e Notificar Equipe", description: "Salve a ficha e comunique a equipe de saúde para encerramento de acompanhamentos.", visualTip: "Confirme a alteração para atualizar o histórico da UBS." }
     ]
   },
 
@@ -153,10 +153,10 @@ export const GUIDES: Guide[] = [
     category: "Registro de Visitas",
     summary: "Como registrar corretamente uma visita domiciliar realizada no dia a dia.",
     steps: [
-      { id: 1, title: "Localizar Cidadão ou Família", description: "Busque a pessoa ou a casa na sua lista de microárea.", image: "/images/guides/g11-step1.png", visualTip: "Selecione o morador visitado no aplicativo." },
-      { id: 2, title: "Iniciar Ficha de Visita", description: "Toque no botão 'Registrar Visita' no perfil do cidadão.", image: "/images/guides/g11-step2.png", visualTip: "Clique no botão azul de registro de visita." },
-      { id: 3, title: "Marcar Motivos e Ações", description: "Selecione os motivos da visita e ações realizadas no momento.", image: "/images/guides/g11-step3.png", visualTip: "Marque as caixas de acompanhamento correspondentes." },
-      { id: 4, title: "Salvar Visita", description: "Confirme o desfecho como 'Visita Realizada' e toque em Salvar.", image: "/images/guides/g11-step4.png", visualTip: "Confirme o salvamento no final da tela." }
+      { id: 1, title: "Localizar Cidadão ou Família", description: "Busque a pessoa ou a casa na sua lista de microárea.", visualTip: "Selecione o morador visitado no aplicativo." },
+      { id: 2, title: "Iniciar Ficha de Visita", description: "Toque no botão 'Registrar Visita' no perfil do cidadão.", image: "/images/guides/g11/g11-passo2.jpg", visualTip: "Clique no botão azul de registro de visita." },
+      { id: 3, title: "Marcar Motivos e Ações", description: "Selecione os motivos da visita e ações realizadas no momento.", visualTip: "Marque as caixas de acompanhamento correspondentes." },
+      { id: 4, title: "Salvar Visita", description: "Confirme o desfecho como 'Visita Realizada' e toque em Salvar.", visualTip: "Confirme o salvamento no final da tela." }
     ]
   },
   {
@@ -165,11 +165,12 @@ export const GUIDES: Guide[] = [
     title: "Selecionar Motivo da Visita Domiciliar",
     category: "Registro de Visitas",
     summary: "Orientações sobre qual motivo de visita marcar de acordo com o foco do atendimento.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Cadastramento e Atualização", description: "Marque 'Cadastramento/Atualização' quando o foco for coletar dados cadastrais.", image: "/images/guides/g12-step1.png", visualTip: "Selecione esta opção ao preencher fichas novas ou atualizar dados." },
-      { id: 2, title: "Acompanhamento Continuado", description: "Marque 'Gestante', 'Hipertensão', 'Diabetes' ou 'Criança' conforme o público atendido.", image: "/images/guides/g12-step2.png", visualTip: "Escolha os grupos prioritários acompanhados na visita." },
-      { id: 3, title: "Busca Ativa e Convites", description: "Marque 'Busca Ativa' para vacinas atrasadas, consultas faltosas ou exames pendentes.", image: "/images/guides/g12-step3.png", visualTip: "Marque busca ativa quando for reconvocar o paciente para a UBS." },
-      { id: 4, title: "Controle Ambiental", description: "Marque 'Controle de Vetores' ao realizar inspeções de dengue e saneamento.", image: "/images/guides/g12-step4.png", visualTip: "Selecione a opção ambiental caso inspecione o quintal." }
+      { id: 1, title: "Cadastramento e Atualização", description: "Marque 'Cadastramento/Atualização' quando o foco for coletar dados cadastrais.", visualTip: "Selecione esta opção ao preencher fichas novas ou atualizar dados." },
+      { id: 2, title: "Acompanhamento Continuado", description: "Marque 'Gestante', 'Hipertensão', 'Diabetes' ou 'Criança' conforme o público atendido.", visualTip: "Escolha os grupos prioritários acompanhados na visita." },
+      { id: 3, title: "Busca Ativa e Convites", description: "Marque 'Busca Ativa' para vacinas atrasadas, consultas faltosas ou exames pendentes.", visualTip: "Marque busca ativa quando for reconvocar o paciente para a UBS." },
+      { id: 4, title: "Controle Ambiental", description: "Marque 'Controle de Vetores' ao realizar inspeções de dengue e saneamento.", visualTip: "Selecione a opção ambiental caso inspecione o quintal." }
     ]
   },
   {
@@ -178,11 +179,12 @@ export const GUIDES: Guide[] = [
     title: "Registrar Visita com Morador Ausente ou Recusada",
     category: "Registro de Visitas",
     summary: "Como registrar a tentativa de visita quando a casa está fechada ou o morador recusa.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Sim, Deve Registrar", description: "É essencial registrar no sistema mesmo quando não encontrar ninguém em casa.", image: "/images/guides/g13-step1.png", visualTip: "Registrar ausências comprova o deslocamento e a cobertura da microárea." },
-      { id: 2, title: "Abrir Ficha de Visita", description: "Selecione o domicílio ou o cidadão que tentou visitar.", image: "/images/guides/g13-step2.png", visualTip: "Clique em Registrar Visita normalmente." },
-      { id: 3, title: "Selecionar Desfecho Ausente", description: "No campo Desfecho, escolha a opção 'Ausente' se o imóvel estiver fechado.", image: "/images/guides/g13-step3.png", visualTip: "Selecione 'Ausente' no menu de desfecho da visita." },
-      { id: 4, title: "Selecionar Desfecho Recusada", description: "Se o morador não quiser atender, escolha a opção 'Recusada' e salve.", image: "/images/guides/g13-step4.png", visualTip: "Marque 'Recusada' com respeito à opção do cidadão e salve." }
+      { id: 1, title: "Sim, Deve Registrar", description: "É essencial registrar no sistema mesmo quando não encontrar ninguém em casa.", visualTip: "Registrar ausências comprova o deslocamento e a cobertura da microárea." },
+      { id: 2, title: "Abrir Ficha de Visita", description: "Selecione o domicílio ou o cidadão que tentou visitar.", visualTip: "Clique em Registrar Visita normalmente." },
+      { id: 3, title: "Selecionar Desfecho Ausente", description: "No campo Desfecho, escolha a opção 'Ausente' se o imóvel estiver fechado.", visualTip: "Selecione 'Ausente' no menu de desfecho da visita." },
+      { id: 4, title: "Selecionar Desfecho Recusada", description: "Se o morador não quiser atender, escolha a opção 'Recusada' e salve.", visualTip: "Marque 'Recusada' com respeito à opção do cidadão e salve." }
     ]
   },
 
@@ -193,11 +195,12 @@ export const GUIDES: Guide[] = [
     title: "Mensagem de Cadastro Duplicado",
     category: "Problemas de Duplicação",
     summary: "Entenda o alerta de cadastro duplicado e saiba como resolver sem perdas de dados.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Compreender o Alerta", description: "Esta mensagem indica que o CPF ou CNS digitado já existe na base de dados da UBS.", image: "/images/guides/g14-step1.png", visualTip: "O sistema impede a criação de duas fichas para a mesma pessoa." },
-      { id: 2, title: "Não Criar Novo Cadastro", description: "Não tente forçar um novo cadastro alterando letras do nome ou números.", image: "/images/guides/g14-step2.png", visualTip: "Evite alterar dados reais para burlar o aviso do sistema." },
-      { id: 3, title: "Buscar Cadastro Existente", description: "Volte à tela de busca e pesquise pelo CPF para carregar a ficha oficial.", image: "/images/guides/g14-step3.png", visualTip: "Busque pelo CPF para abrir a ficha que já existia." },
-      { id: 4, title: "Vincular à Família", description: "Abra a ficha encontrada e apenas atualize o endereço para o domicílio atual.", image: "/images/guides/g14-step4.png", visualTip: "Reative ou mude o endereço da pessoa para a casa correta." }
+      { id: 1, title: "Compreender o Alerta", description: "Esta mensagem indica que o CPF ou CNS digitado já existe na base de dados da UBS.", visualTip: "O sistema impede a criação de duas fichas para a mesma pessoa." },
+      { id: 2, title: "Não Criar Novo Cadastro", description: "Não tente forçar um novo cadastro alterando letras do nome ou números.", visualTip: "Evite alterar dados reais para burlar o aviso do sistema." },
+      { id: 3, title: "Buscar Cadastro Existente", description: "Volte à tela de busca e pesquise pelo CPF para carregar a ficha oficial.", visualTip: "Busque pelo CPF para abrir a ficha que já existia." },
+      { id: 4, title: "Vincular à Família", description: "Abra a ficha encontrada e apenas atualize o endereço para o domicílio atual.", visualTip: "Reative ou mude o endereço da pessoa para a casa correta." }
     ]
   },
   {
@@ -207,10 +210,10 @@ export const GUIDES: Guide[] = [
     category: "Problemas de Duplicação",
     summary: "Como conferir data de nascimento, mãe e documentos para diferenciar cadastros homônimos.",
     steps: [
-      { id: 1, title: "Verificar Data de Nascimento", description: "Compare a data de nascimento exata dos dois cadastros para conferir se são pessoas diferentes.", image: "/images/guides/g15-step1.png", visualTip: "Confira dia, mês e ano de nascimento na certidão ou RG." },
-      { id: 2, title: "Conferir Nome da Mãe", description: "Examine o nome completo da mãe registrado em cada uma das fichas.", image: "/images/guides/g15-step2.png", visualTip: "O nome da mãe é o principal elemento diferenciador de homônimos." },
-      { id: 3, title: "Checar Número de CPF e CNS", description: "Verifique o número do CPF ou do Cartão do SUS de cada cidadão.", image: "/images/guides/g15-step3.png", visualTip: "O CPF é único para cada brasileiro e tira a dúvida." },
-      { id: 4, title: "Confirmar Endereço do Imóvel", description: "Certifique-se em qual casa e microárea cada um dos homônimos reside.", image: "/images/guides/g15-step4.png", visualTip: "Valide o endereço de residência atual." }
+      { id: 1, title: "Verificar Data de Nascimento", description: "Compare a data de nascimento exata dos dois cadastros para conferir se são pessoas diferentes.", visualTip: "Confira dia, mês e ano de nascimento na certidão ou RG." },
+      { id: 2, title: "Conferir Nome da Mãe", description: "Examine o nome completo da mãe registrado em cada uma das fichas.", image: "/images/guides/g15/g15-passo2.jpg", visualTip: "O nome da mãe é o principal elemento diferenciador de homônimos." },
+      { id: 3, title: "Checar Número de CPF e CNS", description: "Verifique o número do CPF ou do Cartão do SUS de cada cidadão.", visualTip: "O CPF é único para cada brasileiro e tira a dúvida." },
+      { id: 4, title: "Confirmar Endereço do Imóvel", description: "Certifique-se em qual casa e microárea cada um dos homônimos reside.", visualTip: "Valide o endereço de residência atual." }
     ]
   },
   {
@@ -220,10 +223,10 @@ export const GUIDES: Guide[] = [
     category: "Problemas de Duplicação",
     summary: "Orientações para selecionar a rua correta quando houver nomes parecidos na lista oficial.",
     steps: [
-      { id: 1, title: "Evitar Abreviações", description: "Procure o nome por extenso na lista de logradouros em vez de usar siglas incomuns.", image: "/images/guides/g16-step1.png", visualTip: "Busque por 'São José' em vez de 'S. Jose'." },
-      { id: 2, title: "Conferir o Bairro", description: "Verifique a qual bairro a rua pertence na lista de opções exibida.", image: "/images/guides/g16-step2.png", visualTip: "Confirme se o bairro associado à rua bate com o território." },
-      { id: 3, title: "Padronizar com a Equipe", description: "Consulte os colegas ACS da mesma microárea para usar o mesmo padrão de rua.", image: "/images/guides/g16-step3.png", visualTip: "Alinhe com a equipe qual opção de rua todos estão selecionando." },
-      { id: 4, title: "Selecionar Código de Logradouro", description: "Escolha a rua que possui o código CEP oficial cadastrado na UBS.", image: "/images/guides/g16-step4.png", visualTip: "Selecione o logradouro padrão indicado pela supervisão." }
+      { id: 1, title: "Evitar Abreviações", description: "Procure o nome por extenso na lista de logradouros em vez de usar siglas incomuns.", image: "/images/guides/g16/g16-passo1.jpg", visualTip: "Busque por 'São José' em vez de 'S. Jose'." },
+      { id: 2, title: "Conferir o Bairro", description: "Verifique a qual bairro a rua pertence na lista de opções exibida.", visualTip: "Confirme se o bairro associado à rua bate com o território." },
+      { id: 3, title: "Padronizar com a Equipe", description: "Consulte os colegas ACS da mesma microárea para usar o mesmo padrão de rua.", visualTip: "Alinhe com a equipe qual opção de rua todos estão selecionando." },
+      { id: 4, title: "Selecionar Código de Logradouro", description: "Escolha a rua que possui o código CEP oficial cadastrado na UBS.", visualTip: "Selecione o logradouro padrão indicado pela supervisão." }
     ]
   },
 
@@ -234,11 +237,12 @@ export const GUIDES: Guide[] = [
     title: "Entender Inconsistência no Sistema",
     category: "Problemas de Inconsistência",
     summary: "O que é uma inconsistência de dados no e-SUS Território e como identificá-la.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "O que é Inconsistência?", description: "Inconsistência ocorre quando faltam dados obrigatórios ou há dados conflitantes na ficha.", image: "/images/guides/g17-step1.png", visualTip: "Exemplo: morador sem sexo informado ou data de nascimento futura." },
-      { id: 2, title: "Exemplos Comuns", description: "CPF inválido, responsável familiar não indicado ou ausência de vínculo de parentesco.", image: "/images/guides/g17-step2.png", visualTip: "Campos obrigatórios em branco geram inconsistência no PEC." },
-      { id: 3, title: "Impacto no Trabalho", description: "Fichas com inconsistência não são validadas pelo Ministério da Saúde até serem corrigidas.", image: "/images/guides/g17-step3.png", visualTip: "Inconsistências impedem a contabilização dos seus relatórios." },
-      { id: 4, title: "Como Identificar", description: "O aplicativo exibe um alerta amarelo ou vermelho indicando a ficha com pendência.", image: "/images/guides/g17-step4.png", visualTip: "Fique atento aos símbolos de aviso ao lado dos nomes." }
+      { id: 1, title: "O que é Inconsistência?", description: "Inconsistência ocorre quando faltam dados obrigatórios ou há dados conflitantes na ficha.", visualTip: "Exemplo: morador sem sexo informado ou data de nascimento futura." },
+      { id: 2, title: "Exemplos Comuns", description: "CPF inválido, responsável familiar não indicado ou ausência de vínculo de parentesco.", visualTip: "Campos obrigatórios em branco geram inconsistência no PEC." },
+      { id: 3, title: "Impacto no Trabalho", description: "Fichas com inconsistência não são validadas pelo Ministério da Saúde até serem corrigidas.", visualTip: "Inconsistências impedem a contabilização dos seus relatórios." },
+      { id: 4, title: "Como Identificar", description: "O aplicativo exibe um alerta amarelo ou vermelho indicando a ficha com pendência.", visualTip: "Fique atento aos símbolos de aviso ao lado dos nomes." }
     ]
   },
   {
@@ -247,11 +251,12 @@ export const GUIDES: Guide[] = [
     title: "Corrigir Erro Pós-Sincronização",
     category: "Problemas de Inconsistência",
     summary: "Passo a passo para localizar e corrigir fichas com erro devolvidas após sincronizar.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Verificar Relatório de Sincronização", description: "Após sincronizar, abra a aba Sincronização e veja a lista de fichas rejeitadas.", image: "/images/guides/g18-step1.png", visualTip: "Confira as mensagens marcadas como Erro ou Rejeitada." },
-      { id: 2, title: "Ler a Mensagem do Erro", description: "Toque na ficha rejeitada para ler exatamente qual campo precisa de correção.", image: "/images/guides/g18-step2.png", visualTip: "Leia a instrução emitida pelo sistema sobre a pendência." },
-      { id: 3, title: "Editar os Campos Indicados", description: "Abra a ficha do cidadão ou domicílio e corrija a informação incorreta.", image: "/images/guides/g18-step3.png", visualTip: "Preencha o campo ausente ou corrija o número inválido." },
-      { id: 4, title: "Sincronizar Novamente", description: "Após salvar as correções, faça uma nova sincronização para reenviar as fichas.", image: "/images/guides/g18-step4.png", visualTip: "Envie novamente os dados para validação no PEC da unidade." }
+      { id: 1, title: "Verificar Relatório de Sincronização", description: "Após sincronizar, abra a aba Sincronização e veja a lista de fichas rejeitadas.", visualTip: "Confira as mensagens marcadas como Erro ou Rejeitada." },
+      { id: 2, title: "Ler a Mensagem do Erro", description: "Toque na ficha rejeitada para ler exatamente qual campo precisa de correção.", visualTip: "Leia a instrução emitida pelo sistema sobre a pendência." },
+      { id: 3, title: "Editar os Campos Indicados", description: "Abra a ficha do cidadão ou domicílio e corrija a informação incorreta.", visualTip: "Preencha o campo ausente ou corrija o número inválido." },
+      { id: 4, title: "Sincronizar Novamente", description: "Após salvar as correções, faça uma nova sincronização para reenviar as fichas.", visualTip: "Envie novamente os dados para validação no PEC da unidade." }
     ]
   },
 
@@ -262,11 +267,12 @@ export const GUIDES: Guide[] = [
     title: "Cadastros Ausentes no Sistema da Unidade",
     category: "Problemas de Sincronização",
     summary: "Por que cadastros feitos no tablet ainda não aparecem no PEC da unidade e como resolver.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Verificar Fichas Pendentes", description: "Abra o menu Sincronização no tablet e confira se há fichas acumuladas sem enviar.", image: "/images/guides/g19-step1.png", visualTip: "Veja se o contador de fichas pendentes está maior que zero." },
-      { id: 2, title: "Checar Conexão Wi-Fi da UBS", description: "Certifique-se de que o tablet está conectado à rede de internet oficial da UBS.", image: "/images/guides/g19-step2.png", visualTip: "Verifique se o Wi-Fi da unidade está ativo e funcionando." },
-      { id: 3, title: "Aguardar Processamento do PEC", description: "O sistema da unidade pode levar alguns minutos para importar o lote recebido.", image: "/images/guides/g19-step3.png", visualTip: "Dê um tempo para o computador da unidade processar a carga." },
-      { id: 4, title: "Solicitar Reimportação", description: "Se as fichas foram enviadas mas não aparecem, peça ao digitador ou enfermeiro para checar o lote no PEC.", image: "/images/guides/g19-step4.png", visualTip: "Peça à supervisão para verificar a aba de recepção de fichas no PEC." }
+      { id: 1, title: "Verificar Fichas Pendentes", description: "Abra o menu Sincronização no tablet e confira se há fichas acumuladas sem enviar.", visualTip: "Veja se o contador de fichas pendentes está maior que zero." },
+      { id: 2, title: "Checar Conexão Wi-Fi da UBS", description: "Certifique-se de que o tablet está conectado à rede de internet oficial da UBS.", visualTip: "Verifique se o Wi-Fi da unidade está ativo e funcionando." },
+      { id: 3, title: "Aguardar Processamento do PEC", description: "O sistema da unidade pode levar alguns minutos para importar o lote recebido.", visualTip: "Dê um tempo para o computador da unidade processar a carga." },
+      { id: 4, title: "Solicitar Reimportação", description: "Se as fichas foram enviadas mas não aparecem, peça ao digitador ou enfermeiro para checar o lote no PEC.", visualTip: "Peça à supervisão para verificar a aba de recepção de fichas no PEC." }
     ]
   },
   {
@@ -275,12 +281,13 @@ export const GUIDES: Guide[] = [
     title: "Sincronizar Dados do Tablet com a Unidade",
     category: "Problemas de Sincronização",
     summary: "Passo a passo completo para sincronizar os dados do tablet com o PEC da unidade.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Conectar ao Wi-Fi da UBS", description: "Ao chegar na Unidade de Saúde, ligue o Wi-Fi do tablet e conecte à rede autorizada.", image: "/images/guides/g20-step1.png", visualTip: "Confira se a conexão com a internet ou rede local está ativa." },
-      { id: 2, title: "Abrir o Menu Sincronização", description: "Abra o aplicativo e-SUS Território e toque no menu lateral na opção 'Sincronizar'.", image: "/images/guides/g20-step2.png", visualTip: "Acesse a tela de sincronização no menu principal do app." },
-      { id: 3, title: "Iniciar o Envio de Fichas", description: "Toque no botão 'Enviar Dados' e aguarde a barra de progresso ser concluída.", image: "/images/guides/g20-step3.png", visualTip: "Mantenha a tela aberta enquanto os arquivos são transmitidos." },
-      { id: 4, title: "Receber Atualizações da Base", description: "Após enviar, toque em 'Receber Dados' para baixar novidades do PEC no seu tablet.", image: "/images/guides/g20-step4.png", visualTip: "Atualize a base do tablet com os novos cadastros da equipe." },
-      { id: 5, title: "Confirmar Mensagem de Sucesso", description: "Certifique-se de que a mensagem 'Sincronização realizada com sucesso' foi exibida.", image: "/images/guides/g20-step5.png", visualTip: "Verifique se o contador de fichas pendentes zerou." }
+      { id: 1, title: "Conectar ao Wi-Fi da UBS", description: "Ao chegar na Unidade de Saúde, ligue o Wi-Fi do tablet e conecte à rede autorizada.", visualTip: "Confira se a conexão com a internet ou rede local está ativa." },
+      { id: 2, title: "Abrir o Menu Sincronização", description: "Abra o aplicativo e-SUS Território e toque no menu lateral na opção 'Sincronizar'.", visualTip: "Acesse a tela de sincronização no menu principal do app." },
+      { id: 3, title: "Iniciar o Envio de Fichas", description: "Toque no botão 'Enviar Dados' e aguarde a barra de progresso ser concluída.", visualTip: "Mantenha a tela aberta enquanto os arquivos são transmitidos." },
+      { id: 4, title: "Receber Atualizações da Base", description: "Após enviar, toque em 'Receber Dados' para baixar novidades do PEC no seu tablet.", visualTip: "Atualize a base do tablet com os novos cadastros da equipe." },
+      { id: 5, title: "Confirmar Mensagem de Sucesso", description: "Certifique-se de que a mensagem 'Sincronização realizada com sucesso' foi exibida.", visualTip: "Verifique se o contador de fichas pendentes zerou." }
     ]
   },
 
@@ -293,11 +300,12 @@ export const GUIDES: Guide[] = [
     title: "Acompanhamento de Pré-natal",
     category: "Programas de Saúde",
     summary: "Rotina de captação e acompanhamento de gestantes na comunidade.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Identificar Gestante", description: "Confirme a suspeita de gravidez e a data da última menstruação (DUM).", image: "/images/guides/g4-step1.png", visualTip: "Anote a DUM e verifique a semana gestacional estimada com a gestante." },
-      { id: 2, title: "Ficha de Cadastro", description: "Atualize a ficha individual marcando a opção 'Gestante'.", image: "/images/guides/g4-step2.png", visualTip: "Na aba 'Condições de Saúde', selecione o campo de verificação 'Gestante'." },
-      { id: 3, title: "Agendar Consulta", description: "Encaminhe para a primeira consulta de pré-natal na UBS.", image: "/images/guides/g4-step3.png", visualTip: "Confira na agenda da UBS a data de atendimento da equipe de saúde da família." },
-      { id: 4, title: "Caderneta", description: "Verifique se a gestante já possui e está utilizando a Caderneta da Gestante.", image: "/images/guides/g4-step4.png", visualTip: "Solicite a Caderneta da Gestante para conferir os registros das consultas anteriores." }
+      { id: 1, title: "Identificar Gestante", description: "Confirme a suspeita de gravidez e a data da última menstruação (DUM).", visualTip: "Anote a DUM e verifique a semana gestacional estimada com a gestante." },
+      { id: 2, title: "Ficha de Cadastro", description: "Atualize a ficha individual marcando a opção 'Gestante'.", visualTip: "Na aba 'Condições de Saúde', selecione o campo de verificação 'Gestante'." },
+      { id: 3, title: "Agendar Consulta", description: "Encaminhe para a primeira consulta de pré-natal na UBS.", visualTip: "Confira na agenda da UBS a data de atendimento da equipe de saúde da família." },
+      { id: 4, title: "Caderneta", description: "Verifique se a gestante já possui e está utilizando a Caderneta da Gestante.", visualTip: "Solicite a Caderneta da Gestante para conferir os registros das consultas anteriores." }
     ]
   },
   {
@@ -306,11 +314,12 @@ export const GUIDES: Guide[] = [
     title: "Acompanhamento Hiperdia",
     category: "Programas de Saúde",
     summary: "Monitoramento de hipertensos e diabéticos durante as visitas.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Aferição", description: "Se habilitado, auxilie na aferição de PA ou acompanhe o relato dos valores.", image: "/images/guides/g5-step1.png", visualTip: "Registre o valor da Pressão Arterial (mmHg) e Glicemia de Jejum relatados pelo paciente." },
-      { id: 2, title: "Medicação", description: "Questione sobre o uso regular dos medicamentos prescritos.", image: "/images/guides/g5-step2.png", visualTip: "Confira se a caixa de medicamentos está sendo tomada nos horários recomendados." },
-      { id: 3, title: "Sinais de Alerta", description: "Observe edemas, tonturas ou feridas que não cicatrizam (em diabéticos).", image: "/images/guides/g5-step3.png", visualTip: "Avalie presença de inchaço em tornozelos ou feridas em membros inferiores." },
-      { id: 4, title: "Registro e-SUS", description: "Marque o acompanhamento de 'Hipertensão' ou 'Diabetes' na ficha de visita.", image: "/images/guides/g5-step4.png", visualTip: "Selecione 'Hipertensão Arterial' ou 'Diabetes Mellitus' nos campos da visita." }
+      { id: 1, title: "Aferição", description: "Se habilitado, auxilie na aferição de PA ou acompanhe o relato dos valores.", visualTip: "Registre o valor da Pressão Arterial (mmHg) e Glicemia de Jejum relatados pelo paciente." },
+      { id: 2, title: "Medicação", description: "Questione sobre o uso regular dos medicamentos prescritos.", visualTip: "Confira se a caixa de medicamentos está sendo tomada nos horários recomendados." },
+      { id: 3, title: "Sinais de Alerta", description: "Observe edemas, tonturas ou feridas que não cicatrizam (em diabéticos).", visualTip: "Avalie presença de inchaço em tornozelos ou feridas em membros inferiores." },
+      { id: 4, title: "Registro e-SUS", description: "Marque o acompanhamento de 'Hipertensão' ou 'Diabetes' na ficha de visita.", visualTip: "Selecione 'Hipertensão Arterial' ou 'Diabetes Mellitus' nos campos da visita." }
     ]
   },
   {
@@ -319,11 +328,12 @@ export const GUIDES: Guide[] = [
     title: "Acompanhamento Bolsa Família",
     category: "Programas de Saúde",
     summary: "Cumprimento das condicionalidades de saúde do programa.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Identificar Beneficiário", description: "Localize as famílias que recebem o benefício na sua lista.", image: "/images/guides/g6-step1.png", visualTip: "Filtre a lista de cidadãos selecionando o marcador 'Bolsa Família'." },
-      { id: 2, title: "Pesagem e Estatura", description: "Realize ou encaminhe para a coleta de medidas antropométricas.", image: "/images/guides/g6-step2.png", visualTip: "Anote os valores de peso (kg) e altura/estatura (cm) obtidos na pesagem." },
-      { id: 3, title: "Vacinação", description: "Verifique se o calendário vacinal das crianças está em dia.", image: "/images/guides/g6-step3.png", visualTip: "Examine a Caderneta de Vacinação das crianças menores de 7 anos." },
-      { id: 4, title: "Mapa de Acompanhamento", description: "Lance os dados no sistema ou preencha o mapa físico do Bolsa Família.", image: "/images/guides/g6-step4.png", visualTip: "Confirme a digitação das medidas no mapa de acompanhamento do vigência atual." }
+      { id: 1, title: "Identificar Beneficiário", description: "Localize as famílias que recebem o benefício na sua lista.", visualTip: "Filtre a lista de cidadãos selecionando o marcador 'Bolsa Família'." },
+      { id: 2, title: "Pesagem e Estatura", description: "Realize ou encaminhe para a coleta de medidas antropométricas.", visualTip: "Anote os valores de peso (kg) e altura/estatura (cm) obtidos na pesagem." },
+      { id: 3, title: "Vacinação", description: "Verifique se o calendário vacinal das crianças está em dia.", visualTip: "Examine a Caderneta de Vacinação das crianças menores de 7 anos." },
+      { id: 4, title: "Mapa de Acompanhamento", description: "Lance os dados no sistema ou preencha o mapa físico do Bolsa Família.", visualTip: "Confirme a digitação das medidas no mapa de acompanhamento do vigência atual." }
     ]
   },
   {
@@ -332,11 +342,12 @@ export const GUIDES: Guide[] = [
     title: "Visita ao Recém-nascido (Cuidados)",
     category: "Programas de Saúde",
     summary: "Primeira visita após o nascimento (até o 5º dia de vida).",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Teste do Pezinho", description: "Verifique se o teste foi realizado entre o 3º e o 5º dia.", image: "/images/guides/g7-step1.png", visualTip: "Confirme se a coleta da triagem neonatal (teste do pezinho) foi registrada." },
-      { id: 2, title: "Coto Umbilical", description: "Oriente sobre a limpeza com álcool 70% e observe sinais de infecção.", image: "/images/guides/g7-step2.png", visualTip: "Oriente a aplicação de álcool a 70% na base do coto umbilical a cada troca." },
-      { id: 3, title: "Amamentação", description: "Observe a pega e oriente sobre o aleitamento materno exclusivo.", image: "/images/guides/g7-step3.png", visualTip: "Verifique se os lábios do bebê estão virados para fora e abocanhando a aréola." },
-      { id: 4, title: "Agendamento", description: "Garanta que a primeira consulta de puericultura esteja marcada na UBS.", image: "/images/guides/g7-step4.png", visualTip: "Confirme o agendamento da consulta de retorno da puérpera e do bebê na UBS." }
+      { id: 1, title: "Teste do Pezinho", description: "Verifique se o teste foi realizado entre o 3º e o 5º dia.", visualTip: "Confirme se a coleta da triagem neonatal (teste do pezinho) foi registrada." },
+      { id: 2, title: "Coto Umbilical", description: "Oriente sobre a limpeza com álcool 70% e observe sinais de infecção.", visualTip: "Oriente a aplicação de álcool a 70% na base do coto umbilical a cada troca." },
+      { id: 3, title: "Amamentação", description: "Observe a pega e oriente sobre o aleitamento materno exclusivo.", visualTip: "Verifique se os lábios do bebê estão virados para fora e abocanhando a aréola." },
+      { id: 4, title: "Agendamento", description: "Garanta que a primeira consulta de puericultura esteja marcada na UBS.", visualTip: "Confirme o agendamento da consulta de retorno da puérpera e do bebê na UBS." }
     ]
   },
   {
@@ -345,11 +356,12 @@ export const GUIDES: Guide[] = [
     title: "Prevenção de Arboviroses",
     category: "Programas de Saúde",
     summary: "Ações de campo para controle de Dengue, Zika e Chikungunya.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Inspeção de Quintal", description: "Procure por recipientes que acumulem água parada.", image: "/images/guides/g8-step1.png", visualTip: "Inspecione calhas, pratos de plantas, pneu velhos e vasilhames ao ar livre." },
-      { id: 2, title: "Vedação de Caixas", description: "Verifique se as caixas d'água estão devidamente tampadas.", image: "/images/guides/g8-step2.png", visualTip: "Certifique-se de que reservatórios superiores e cisternas estejam hermeticamente vedados." },
-      { id: 3, title: "Sinais e Sintomas", description: "Oriente a família sobre febre alta, dores no corpo e manchas vermelhas.", image: "/images/guides/g8-step3.png", visualTip: "Reforce a atenção aos sinais de febre súbita, dor atrás dos olhos e manchar cutâneas." },
-      { id: 4, title: "Registro de Foco", description: "Caso encontre larvas, notifique imediatamente a equipe de endemias.", image: "/images/guides/g8-step4.png", visualTip: "Registre o achado de foco na ficha de controle ambiental do aplicativo." }
+      { id: 1, title: "Inspeção de Quintal", description: "Procure por recipientes que acumulem água parada.", visualTip: "Inspecione calhas, pratos de plantas, pneu velhos e vasilhames ao ar livre." },
+      { id: 2, title: "Vedação de Caixas", description: "Verifique se as caixas d'água estão devidamente tampadas.", visualTip: "Certifique-se de que reservatórios superiores e cisternas estejam hermeticamente vedados." },
+      { id: 3, title: "Sinais e Sintomas", description: "Oriente a família sobre febre alta, dores no corpo e manchas vermelhas.", visualTip: "Reforce a atenção aos sinais de febre súbita, dor atrás dos olhos e manchar cutâneas." },
+      { id: 4, title: "Registro de Foco", description: "Caso encontre larvas, notifique imediatamente a equipe de endemias.", visualTip: "Registre o achado de foco na ficha de controle ambiental do aplicativo." }
     ]
   },
   {
@@ -358,11 +370,12 @@ export const GUIDES: Guide[] = [
     title: "Saúde Mental na Comunidade",
     category: "Programas de Saúde",
     summary: "Apoio e identificação de sofrimento psíquico.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Escuta Qualificada", description: "Dê espaço para o cidadão falar sobre seus sentimentos sem julgamentos.", image: "/images/guides/g9-step1.png", visualTip: "Mantenha contato visual e demonstre empatia durante o relato do morador." },
-      { id: 2, title: "Identificar Crise", description: "Observe sinais de isolamento, choro frequente ou ideação suicida.", image: "/images/guides/g9-step2.png", visualTip: "Preste atenção a mudanças abruptas na rotina, aparência ou discurso do indivíduo." },
-      { id: 3, title: "Rede de Apoio", description: "Verifique se o paciente frequenta o CAPS ou se tem acompanhamento médico.", image: "/images/guides/g9-step3.png", visualTip: "Identifique se há uso de medicações psiquiátricas e se há vínculo com o CAPS da região." },
-      { id: 4, title: "Vínculo Familiar", description: "Oriente a família sobre a importância do acolhimento no ambiente doméstico.", image: "/images/guides/g9-step4.png", visualTip: "Oriente os familiares sobre condutas de suporte emocional e acompanhamento contínuo." }
+      { id: 1, title: "Escuta Qualificada", description: "Dê espaço para o cidadão falar sobre seus sentimentos sem julgamentos.", visualTip: "Mantenha contato visual e demonstre empatia durante o relato do morador." },
+      { id: 2, title: "Identificar Crise", description: "Observe sinais de isolamento, choro frequente ou ideação suicida.", visualTip: "Preste atenção a mudanças abruptas na rotina, aparência ou discurso do indivíduo." },
+      { id: 3, title: "Rede de Apoio", description: "Verifique se o paciente frequenta o CAPS ou se tem acompanhamento médico.", visualTip: "Identifique se há uso de medicações psiquiátricas e se há vínculo com o CAPS da região." },
+      { id: 4, title: "Vínculo Familiar", description: "Oriente a família sobre a importância do acolhimento no ambiente doméstico.", visualTip: "Oriente os familiares sobre condutas de suporte emocional e acompanhamento contínuo." }
     ]
   },
   {
@@ -371,11 +384,12 @@ export const GUIDES: Guide[] = [
     title: "Saúde do Idoso",
     category: "Programas de Saúde",
     summary: "Avaliação de fragilidade e riscos no domicílio do idoso.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Risco de Queda", description: "Observe tapetes soltos, falta de corrimão e iluminação precária.", image: "/images/guides/g11-step1.png", visualTip: "Examine a casa procurando por obstáculos no piso, iluminação fraca ou banheiros sem barra." },
-      { id: 2, title: "Polifarmácia", description: "Verifique se o idoso toma mais de 5 medicamentos e se há confusão nas doses.", image: "/images/guides/g11-step2.png", visualTip: "Revise a lista de remédios prescritos e organize os horários em caixa organizadora." },
-      { id: 3, title: "Caderneta do Idoso", description: "Atualize os dados de saúde na Caderneta da Pessoa Idosa.", image: "/images/guides/g11-step3.png", visualTip: "Preencha as medições recentes e o gráfico de pressão arterial na Caderneta do Idoso." },
-      { id: 4, title: "Atividades Diárias", description: "Avalie se o idoso consegue comer, tomar banho e se vestir sozinho.", image: "/images/guides/g11-step4.png", visualTip: "Avalie o grau de dependência para atividades básicas da vida diária (ABVD)." }
+      { id: 1, title: "Risco de Queda", description: "Observe tapetes soltos, falta de corrimão e iluminação precária.", visualTip: "Examine a casa procurando por obstáculos no piso, iluminação fraca ou banheiros sem barra." },
+      { id: 2, title: "Polifarmácia", description: "Verifique se o idoso toma mais de 5 medicamentos e se há confusão nas doses.", visualTip: "Revise a lista de remédios prescritos e organize os horários em caixa organizadora." },
+      { id: 3, title: "Caderneta do Idoso", description: "Atualize os dados de saúde na Caderneta da Pessoa Idosa.", visualTip: "Preencha as medições recentes e o gráfico de pressão arterial na Caderneta do Idoso." },
+      { id: 4, title: "Atividades Diárias", description: "Avalie se o idoso consegue comer, tomar banho e se vestir sozinho.", visualTip: "Avalie o grau de dependência para atividades básicas da vida diária (ABVD)." }
     ]
   },
   {
@@ -384,11 +398,12 @@ export const GUIDES: Guide[] = [
     title: "Vacinação em Atraso",
     category: "Programas de Saúde",
     summary: "Como proceder ao identificar crianças com vacinas pendentes.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Conferir Caderneta", description: "Compare as vacinas tomadas com o calendário nacional vigente.", image: "/images/guides/g12-step1.png", visualTip: "Abra a Caderneta de Vacinação na seção dos esquemas por faixa etária." },
-      { id: 2, title: "Identificar Faltosas", description: "Anote quais doses estão atrasadas (Ex: Penta, VIP/VOP, SCR).", image: "/images/guides/g12-step2.png", visualTip: "Verifique a ausência de carimbo nas vacinas recomendadas para a idade atual." },
-      { id: 3, title: "Orientar Família", description: "Explique a importância da proteção e os riscos das doenças.", image: "/images/guides/g12-step3.png", visualTip: "Esclareça mitos sobre vacinas e reforce a segurança da imunização." },
-      { id: 4, title: "Encaminhamento", description: "Direcione a família imediatamente à sala de vacina da UBS de referência.", image: "/images/guides/g12-step4.png", visualTip: "Entregue a senha ou encaminhamento por escrito indicando a sala de vacinas da UBS." }
+      { id: 1, title: "Conferir Caderneta", description: "Compare as vacinas tomadas com o calendário nacional vigente.", visualTip: "Abra a Caderneta de Vacinação na seção dos esquemas por faixa etária." },
+      { id: 2, title: "Identificar Faltosas", description: "Anote quais doses estão atrasadas (Ex: Penta, VIP/VOP, SCR).", visualTip: "Verifique a ausência de carimbo nas vacinas recomendadas para a idade atual." },
+      { id: 3, title: "Orientar Família", description: "Explique a importância da proteção e os riscos das doenças.", visualTip: "Esclareça mitos sobre vacinas e reforce a segurança da imunização." },
+      { id: 4, title: "Encaminhamento", description: "Direcione a família imediatamente à sala de vacina da UBS de referência.", visualTip: "Entregue a senha ou encaminhamento por escrito indicando a sala de vacinas da UBS." }
     ]
   },
   {
@@ -397,11 +412,12 @@ export const GUIDES: Guide[] = [
     title: "Planejamento Familiar",
     category: "Programas de Saúde",
     summary: "Orientações sobre métodos contraceptivos e saúde reprodutiva.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Abordagem", description: "Inicie a conversa sobre o desejo de ter filhos ou evitar gravidez no momento.", image: "/images/guides/g13-step1.png", visualTip: "Converse de forma reservada para entender as metas reprodutivas do cidadão ou casal." },
-      { id: 2, title: "Métodos Disponíveis", description: "Informe sobre camisinha, pílula, injetável, DIU e métodos definitivos no SUS.", image: "/images/guides/g13-step2.png", visualTip: "Apresente o leque de métodos contraceptivos reversíveis fornecidos na UBS." },
-      { id: 3, title: "Grupo de Apoio", description: "Convide o casal para as reuniões de planejamento familiar na unidade.", image: "/images/guides/g13-step3.png", visualTip: "Informe os dias e horários dos encontros educativos de planejamento na UBS." },
-      { id: 4, title: "Distribuição", description: "Lembre que preservativos podem ser retirados livremente na UBS.", image: "/images/guides/g13-step4.png", visualTip: "Lembre que não é necessária receita médica para retirar preservativos na unidade." }
+      { id: 1, title: "Abordagem", description: "Inicie a conversa sobre o desejo de ter filhos ou evitar gravidez no momento.", visualTip: "Converse de forma reservada para entender as metas reprodutivas do cidadão ou casal." },
+      { id: 2, title: "Métodos Disponíveis", description: "Informe sobre camisinha, pílula, injetável, DIU e métodos definitivos no SUS.", visualTip: "Apresente o leque de métodos contraceptivos reversíveis fornecidos na UBS." },
+      { id: 3, title: "Grupo de Apoio", description: "Convide o casal para as reuniões de planejamento familiar na unidade.", visualTip: "Informe os dias e horários dos encontros educativos de planejamento na UBS." },
+      { id: 4, title: "Distribuição", description: "Lembre que preservativos podem ser retirados livremente na UBS.", visualTip: "Lembre que não é necessária receita médica para retirar preservativos na unidade." }
     ]
   },
   {
@@ -410,11 +426,12 @@ export const GUIDES: Guide[] = [
     title: "Cuidados no Puerpério",
     category: "Programas de Saúde",
     summary: "Acompanhamento da saúde da mulher após o parto.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Sinais de Infecção", description: "Observe febre, dor intensa ou sangramento com odor forte (loquiação).", image: "/images/guides/g14-step1.png", visualTip: "Questione sobre febre, calafrios ou odor desagradável nos lóquios pós-parto." },
-      { id: 2, title: "Saúde Mental", description: "Identifique sinais de tristeza profunda ou desinteresse pelo bebê (Depressão Pós-parto).", image: "/images/guides/g14-step2.png", visualTip: "Observe manifestações de apatia, choro contínuo ou dificuldade de criar vínculo com o bebê." },
-      { id: 3, title: "Exame Ginecológico", description: "Garanta que a consulta de revisão (42 dias) esteja agendada.", image: "/images/guides/g14-step3.png", visualTip: "Verifique se a marcação da consulta puerperal de 42 dias foi efetuada." },
-      { id: 4, title: "Amamentação", description: "Avalie a saúde das mamas (fissuras ou mastite) e apoie a puérpera.", image: "/images/guides/g14-step4.png", visualTip: "Examine visualmente se há ingurgitamento mamário, fissuras ou vermelhidão excessiva." }
+      { id: 1, title: "Sinais de Infecção", description: "Observe febre, dor intensa ou sangramento com odor forte (loquiação).", visualTip: "Questione sobre febre, calafrios ou odor desagradável nos lóquios pós-parto." },
+      { id: 2, title: "Saúde Mental", description: "Identifique sinais de tristeza profunda ou desinteresse pelo bebê (Depressão Pós-parto).", visualTip: "Observe manifestações de apatia, choro contínuo ou dificuldade de criar vínculo com o bebê." },
+      { id: 3, title: "Exame Ginecológico", description: "Garanta que a consulta de revisão (42 dias) esteja agendada.", visualTip: "Verifique se a marcação da consulta puerperal de 42 dias foi efetuada." },
+      { id: 4, title: "Amamentação", description: "Avalie a saúde das mamas (fissuras ou mastite) e apoie a puérpera.", visualTip: "Examine visualmente se há ingurgitamento mamário, fissuras ou vermelhidão excessiva." }
     ]
   },
   {
@@ -423,11 +440,12 @@ export const GUIDES: Guide[] = [
     title: "Sintomáticos Respiratórios e Pele",
     category: "Programas de Saúde",
     summary: "Busca ativa de Tuberculose e Hanseníase no território.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Identificar Tosse", description: "Questione sobre tosse por 3 semanas ou mais (Tuberculose).", image: "/images/guides/g15-step1.png", visualTip: "Pergunte a todos os moradores se há tosse persistente por 21 dias ou mais." },
-      { id: 2, title: "Manchas na Pele", description: "Observe manchas claras ou avermelhadas com perda de sensibilidade (Hanseníase).", image: "/images/guides/g15-step2.png", visualTip: "Procure por lesões de pele esbranquiçadas ou avermelhadas que não doem nem coçam." },
-      { id: 3, title: "Contatos Próximos", description: "Identifique se familiares de casos confirmados estão sendo avaliados.", image: "/images/guides/g15-step3.png", visualTip: "Mapeie os comunicantes domiciliares de casos confirmados para agendar avaliação." },
-      { id: 4, title: "Encaminhamento", description: "Direcione para coleta de escarro ou avaliação médica na UBS.", image: "/images/guides/g15-step4.png", visualTip: "Forneça os frascos de baciloscopia ou agende a consulta médica para diagnóstico." }
+      { id: 1, title: "Identificar Tosse", description: "Questione sobre tosse por 3 semanas ou mais (Tuberculose).", visualTip: "Pergunte a todos os moradores se há tosse persistente por 21 dias ou mais." },
+      { id: 2, title: "Manchas na Pele", description: "Observe manchas claras ou avermelhadas com perda de sensibilidade (Hanseníase).", visualTip: "Procure por lesões de pele esbranquiçadas ou avermelhadas que não doem nem coçam." },
+      { id: 3, title: "Contatos Próximos", description: "Identifique se familiares de casos confirmados estão sendo avaliados.", visualTip: "Mapeie os comunicantes domiciliares de casos confirmados para agendar avaliação." },
+      { id: 4, title: "Encaminhamento", description: "Direcione para coleta de escarro ou avaliação médica na UBS.", visualTip: "Forneça os frascos de baciloscopia ou agende a consulta médica para diagnóstico." }
     ]
   },
   {
@@ -436,11 +454,12 @@ export const GUIDES: Guide[] = [
     title: "Orientações de Saúde Bucal",
     category: "Programas de Saúde",
     summary: "Promoção da higiene oral e identificação de lesões.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Higiene Diária", description: "Oriente sobre escovação após as refeições e uso do fio dental.", image: "/images/guides/g16-step1.png", visualTip: "Demonstre a técnica de escovação suave com movimentos circulares na gengiva." },
-      { id: 2, title: "Bebês e Crianças", description: "Explique que a limpeza deve começar antes mesmo dos primeiros dentes.", image: "/images/guides/g16-step2.png", visualTip: "Oriente a limpeza da cavidade oral de bebês com gaze limpa embebida em água filtrada." },
-      { id: 3, title: "Lesões Suspeitas", description: "Observe feridas na boca que não cicatrizam em 15 dias (risco de câncer).", image: "/images/guides/g16-step3.png", visualTip: "Inspecione se há aftas grandes ou úlceras orais que persistem por mais de 2 semanas." },
-      { id: 4, title: "Próteses", description: "Oriente idosos sobre a limpeza correta e retirada da dentadura para dormir.", image: "/images/guides/g16-step4.png", visualTip: "Recomende a remoção da prótese à noite e higienização com escova de cerdas duras." }
+      { id: 1, title: "Higiene Diária", description: "Oriente sobre escovação após as refeições e uso do fio dental.", visualTip: "Demonstre a técnica de escovação suave com movimentos circulares na gengiva." },
+      { id: 2, title: "Bebês e Crianças", description: "Explique que a limpeza deve começar antes mesmo dos primeiros dentes.", visualTip: "Oriente a limpeza da cavidade oral de bebês com gaze limpa embebida em água filtrada." },
+      { id: 3, title: "Lesões Suspeitas", description: "Observe feridas na boca que não cicatrizam em 15 dias (risco de câncer).", visualTip: "Inspecione se há aftas grandes ou úlceras orais que persistem por mais de 2 semanas." },
+      { id: 4, title: "Próteses", description: "Oriente idosos sobre a limpeza correta e retirada da dentadura para dormir.", visualTip: "Recomende a remoção da prótese à noite e higienização com escova de cerdas duras." }
     ]
   },
   {
@@ -449,11 +468,12 @@ export const GUIDES: Guide[] = [
     title: "Identificação de Violência",
     category: "Programas de Saúde",
     summary: "Como agir em casos suspeitos de violência doméstica ou infantil.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Sinais Físicos", description: "Observe hematomas em locais incomuns ou marcas de queimadura.", image: "/images/guides/g17-step1.png", visualTip: "Fique atento a escoriações em áreas cobertas por roupas ou contusões com padrões de objetos." },
-      { id: 2, title: "Comportamento", description: "Note isolamento repentino, medo excessivo ou regressão no desenvolvimento.", image: "/images/guides/g17-step2.png", visualTip: "Observe se a criança se sobressalta com facilidade ou se o cidadão se mostra extremamente acuado." },
-      { id: 3, title: "Escuta Protegida", description: "Não force o relato; acolha o que for dito voluntariamente.", image: "/images/guides/g17-step3.png", visualTip: "Escute com calma sem fazer perguntas indutivas ou demonstrar espanto." },
-      { id: 4, title: "Notificação", description: "Informe imediatamente à sua enfermeira supervisora para conduta sigilosa.", image: "/images/guides/g17-step4.png", visualTip: "Encaminhe o relato sigilosamente à supervisão de enfermagem da UBS." }
+      { id: 1, title: "Sinais Físicos", description: "Observe hematomas em locais incomuns ou marcas de queimadura.", visualTip: "Fique atento a escoriações em áreas cobertas por roupas ou contusões com padrões de objetos." },
+      { id: 2, title: "Comportamento", description: "Note isolamento repentino, medo excessivo ou regressão no desenvolvimento.", visualTip: "Observe se a criança se sobressalta com facilidade ou se o cidadão se mostra extremamente acuado." },
+      { id: 3, title: "Escuta Protegida", description: "Não force o relato; acolha o que for dito voluntariamente.", visualTip: "Escute com calma sem fazer perguntas indutivas ou demonstrar espanto." },
+      { id: 4, title: "Notificação", description: "Informe imediatamente à sua enfermeira supervisora para conduta sigilosa.", visualTip: "Encaminhe o relato sigilosamente à supervisão de enfermagem da UBS." }
     ]
   },
   {
@@ -462,11 +482,12 @@ export const GUIDES: Guide[] = [
     title: "Saneamento e Meio Ambiente",
     category: "Programas de Saúde",
     summary: "Vigilância de riscos no entorno do domicílio.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Água e Esgoto", description: "Verifique a origem da água e o destino dos dejetos (fossa ou rede).", image: "/images/guides/g18-step1.png", visualTip: "Pergunte se a água consumida passa por filtro/fervura e se há vazamento de esgoto." },
-      { id: 2, title: "Lixo e Entulho", description: "Oriente sobre o descarte correto para evitar ratos e escorpiões.", image: "/images/guides/g18-step2.png", visualTip: "Oriente a manter restos de construção longe das paredes da residência." },
-      { id: 3, title: "Animais Sinantrópicos", description: "Observe presença de morcegos, barbeiros ou caramujos africanos.", image: "/images/guides/g18-step3.png", visualTip: "Verifique se há frestas em paredes de taipa/tijolo que sirvam de abrigo a barbeiros." },
-      { id: 4, title: "Manejo Ambiental", description: "Sugira soluções simples como telar ralos e manter quintais limpos.", image: "/images/guides/g18-step4.png", visualTip: "Recomende a instalação de ralo abre-fecha e proteção nas portas contra pragas." }
+      { id: 1, title: "Água e Esgoto", description: "Verifique a origem da água e o destino dos dejetos (fossa ou rede).", visualTip: "Pergunte se a água consumida passa por filtro/fervura e se há vazamento de esgoto." },
+      { id: 2, title: "Lixo e Entulho", description: "Oriente sobre o descarte correto para evitar ratos e escorpiões.", visualTip: "Oriente a manter restos de construção longe das paredes da residência." },
+      { id: 3, title: "Animais Sinantrópicos", description: "Observe presença de morcegos, barbeiros ou caramujos africanos.", visualTip: "Verifique se há frestas em paredes de taipa/tijolo que sirvam de abrigo a barbeiros." },
+      { id: 4, title: "Manejo Ambiental", description: "Sugira soluções simples como telar ralos e manter quintais limpos.", visualTip: "Recomende a instalação de ralo abre-fecha e proteção nas portas contra pragas." }
     ]
   },
   {
@@ -475,11 +496,12 @@ export const GUIDES: Guide[] = [
     title: "Apoio em Cuidados Paliativos",
     category: "Programas de Saúde",
     summary: "Acompanhamento de pacientes com doenças graves em terminalidade.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Conforto e Dor", description: "Pergunte sobre a intensidade da dor e se a medicação está aliviando.", image: "/images/guides/g19-step1.png", visualTip: "Consulte a escala visual de dor (0 a 10) relatada pelo paciente ou cuidador." },
-      { id: 2, title: "Prevenção de Lesões", description: "Oriente a família sobre a mudança de decúbito (virar o paciente) a cada 2h.", image: "/images/guides/g19-step2.png", visualTip: "Ensine a alternar a posição do paciente no leito (de lado, de costas) periodicamente." },
-      { id: 3, title: "Higiene e Nutrição", description: "Auxilie com dicas para banho no leito e alimentação pastosa/líquida.", image: "/images/guides/g19-step3.png", visualTip: "Oriente o uso de travesseiros para apoio e alimentos facilitados para deglutição." },
-      { id: 4, title: "Apoio ao Cuidador", description: "Observe se o cuidador está exausto e ofereça escuta emocional.", image: "/images/guides/g19-step4.png", visualTip: "Acolha o cuidador principal e sugira revezamento de tarefas com outros familiares." }
+      { id: 1, title: "Conforto e Dor", description: "Pergunte sobre a intensidade da dor e se a medicação está aliviando.", visualTip: "Consulte a escala visual de dor (0 a 10) relatada pelo paciente ou cuidador." },
+      { id: 2, title: "Prevenção de Lesões", description: "Oriente a família sobre a mudança de decúbito (virar o paciente) a cada 2h.", visualTip: "Ensine a alternar a posição do paciente no leito (de lado, de costas) periodicamente." },
+      { id: 3, title: "Higiene e Nutrição", description: "Auxilie com dicas para banho no leito e alimentação pastosa/líquida.", visualTip: "Oriente o uso de travesseiros para apoio e alimentos facilitados para deglutição." },
+      { id: 4, title: "Apoio ao Cuidador", description: "Observe se o cuidador está exausto e ofereça escuta emocional.", visualTip: "Acolha o cuidador principal e sugira revezamento de tarefas com outros familiares." }
     ]
   },
   {
@@ -488,11 +510,12 @@ export const GUIDES: Guide[] = [
     title: "Mordedura e Raiva Humana",
     category: "Programas de Saúde",
     summary: "Primeiros cuidados após ataques de animais.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Lavagem Imediata", description: "Oriente lavar o ferimento abundantemente com água e sabão.", image: "/images/guides/g20-step1.png", visualTip: "Lave o local com água corrente abundante e sabão em barra por pelo menos 5 minutos." },
-      { id: 2, title: "Dados do Animal", description: "Identifique se o animal é conhecido e pode ser observado por 10 dias.", image: "/images/guides/g20-step2.png", visualTip: "Anote o endereço do proprietário do cão/gato para monitorar o animal por 10 dias." },
-      { id: 3, title: "Encaminhamento Rápido", description: "Envie o paciente à UBS para avaliar a necessidade de vacina ou soro.", image: "/images/guides/g20-step3.png", visualTip: "Encaminhe o acidentado com urgência à sala de atendimento da UBS de referência." },
-      { id: 4, title: "Notificação", description: "Registre o caso de agressão por animal no sistema de vigilância.", image: "/images/guides/g20-step4.png", visualTip: "Preencha o registro de acidente por animal potencialmente transmissor da raiva." }
+      { id: 1, title: "Lavagem Imediata", description: "Oriente lavar o ferimento abundantemente com água e sabão.", visualTip: "Lave o local com água corrente abundante e sabão em barra por pelo menos 5 minutos." },
+      { id: 2, title: "Dados do Animal", description: "Identifique se o animal é conhecido e pode ser observado por 10 dias.", visualTip: "Anote o endereço do proprietário do cão/gato para monitorar o animal por 10 dias." },
+      { id: 3, title: "Encaminhamento Rápido", description: "Envie o paciente à UBS para avaliar a necessidade de vacina ou soro.", visualTip: "Encaminhe o acidentado com urgência à sala de atendimento da UBS de referência." },
+      { id: 4, title: "Notificação", description: "Registre o caso de agressão por animal no sistema de vigilância.", visualTip: "Preencha o registro de acidente por animal potencialmente transmissor da raiva." }
     ]
   },
   {
@@ -501,11 +524,12 @@ export const GUIDES: Guide[] = [
     title: "Saúde do Homem",
     category: "Programas de Saúde",
     summary: "Ações de prevenção e rastreamento para a população masculina.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Rastreamento", description: "Oriente sobre a importância dos exames de rotina (PA, glicemia, colesterol).", image: "/images/guides/g21-step1.png", visualTip: "Reforce a realização anual de testes de rotina cardiometabólica na UBS." },
-      { id: 2, title: "Prevenção de Câncer", description: "Fale sobre o câncer de próstata e pênis (higiene e sinais de alerta).", image: "/images/guides/g21-step2.png", visualTip: "Oriente sobre os sinais de nódulos ou feridas na região genital masculina." },
-      { id: 3, title: "Saúde Sexual", description: "Aborde o uso de preservativos e o teste rápido para ISTs.", image: "/images/guides/g21-step3.png", visualTip: "Ofereça os testes rápidos de triagem para ISTs disponíveis na unidade." },
-      { id: 4, title: "Acesso à UBS", description: "Estimule o comparecimento à unidade, mesmo sem sintomas agudos.", image: "/images/guides/g21-step4.png", visualTip: "Informe sobre o pré-natal do parceiro e horários de atendimento masculino na UBS." }
+      { id: 1, title: "Rastreamento", description: "Oriente sobre a importância dos exames de rotina (PA, glicemia, colesterol).", visualTip: "Reforce a realização anual de testes de rotina cardiometabólica na UBS." },
+      { id: 2, title: "Prevenção de Câncer", description: "Fale sobre o câncer de próstata e pênis (higiene e sinais de alerta).", visualTip: "Oriente sobre os sinais de nódulos ou feridas na região genital masculina." },
+      { id: 3, title: "Saúde Sexual", description: "Aborde o uso de preservativos e o teste rápido para ISTs.", visualTip: "Ofereça os testes rápidos de triagem para ISTs disponíveis na unidade." },
+      { id: 4, title: "Acesso à UBS", description: "Estimule o comparecimento à unidade, mesmo sem sintomas agudos.", visualTip: "Informe sobre o pré-natal do parceiro e horários de atendimento masculino na UBS." }
     ]
   },
   {
@@ -514,11 +538,12 @@ export const GUIDES: Guide[] = [
     title: "Álcool e Drogas (Redução de Danos)",
     category: "Programas de Saúde",
     summary: "Apoio e orientações para usuários de substâncias.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Vínculo e Escuta", description: "Aproxime-se sem julgamentos para entender o padrão de uso.", image: "/images/guides/g22-step1.png", visualTip: "Adote uma postura empática e aberta para dialogar com o usuário." },
-      { id: 2, title: "Hidratação e Alimentação", description: "Oriente sobre cuidados básicos para diminuir o impacto físico.", image: "/images/guides/g22-step2.png", visualTip: "Enfatize a necessidade de beber água regularmente e se alimentar antes do uso." },
-      { id: 3, title: "Rede de Cuidado", description: "Informe sobre o CAPS AD e grupos de apoio na comunidade.", image: "/images/guides/g22-step3.png", visualTip: "Apresente os serviços de atenção psicossocial especializados em álcool e drogas." },
-      { id: 4, title: "Segurança", description: "Em caso de overdose ou abstinência grave, saiba como acionar o SAMU.", image: "/images/guides/g22-step4.png", visualTip: "Mantenha o número do SAMU 192 visível e oriente a família sobre sinais de emergência." }
+      { id: 1, title: "Vínculo e Escuta", description: "Aproxime-se sem julgamentos para entender o padrão de uso.", visualTip: "Adote uma postura empática e aberta para dialogar com o usuário." },
+      { id: 2, title: "Hidratação e Alimentação", description: "Oriente sobre cuidados básicos para diminuir o impacto físico.", visualTip: "Enfatize a necessidade de beber água regularmente e se alimentar antes do uso." },
+      { id: 3, title: "Rede de Cuidado", description: "Informe sobre o CAPS AD e grupos de apoio na comunidade.", visualTip: "Apresente os serviços de atenção psicossocial especializados em álcool e drogas." },
+      { id: 4, title: "Segurança", description: "Em caso de overdose ou abstinência grave, saiba como acionar o SAMU.", visualTip: "Mantenha o número do SAMU 192 visível e oriente a família sobre sinais de emergência." }
     ]
   },
   {
@@ -527,11 +552,12 @@ export const GUIDES: Guide[] = [
     title: "Prevenção de Câncer Feminino",
     category: "Programas de Saúde",
     summary: "Orientações sobre Papanicolau e Mamografia.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Autoexame", description: "Ensine a mulher a observar as mamas e identificar alterações.", image: "/images/guides/g23-step1.png", visualTip: "Oriente a observação do formato das mamas e presença de retrações na pele." },
-      { id: 2, title: "Preventivo", description: "Verifique se o Papanicolau está em dia (recomendado a cada 1 a 3 anos).", image: "/images/guides/g23-step2.png", visualTip: "Confira na ficha individual se a mulher colheu o exame citopatológico nos últimos 3 anos." },
-      { id: 3, title: "Critérios de Idade", description: "Oriente sobre a mamografia para mulheres entre 50 e 69 anos.", image: "/images/guides/g23-step3.png", visualTip: "Verifique se a paciente está na faixa etária alvo para rastreamento mamográfico." },
-      { id: 4, title: "Encaminhamento", description: "Agende ou direcione para a coleta na Unidade de Saúde.", image: "/images/guides/g23-step4.png", visualTip: "Agende o horário de coleta do preventivo na agenda de enfermagem da UBS." }
+      { id: 1, title: "Autoexame", description: "Ensine a mulher a observar as mamas e identificar alterações.", visualTip: "Oriente a observação do formato das mamas e presença de retrações na pele." },
+      { id: 2, title: "Preventivo", description: "Verifique se o Papanicolau está em dia (recomendado a cada 1 a 3 anos).", visualTip: "Confira na ficha individual se a mulher colheu o exame citopatológico nos últimos 3 anos." },
+      { id: 3, title: "Critérios de Idade", description: "Oriente sobre a mamografia para mulheres entre 50 e 69 anos.", visualTip: "Verifique se a paciente está na faixa etária alvo para rastreamento mamográfico." },
+      { id: 4, title: "Encaminhamento", description: "Agende ou direcione para a coleta na Unidade de Saúde.", visualTip: "Agende o horário de coleta do preventivo na agenda de enfermagem da UBS." }
     ]
   },
   {
@@ -540,11 +566,12 @@ export const GUIDES: Guide[] = [
     title: "Sintomas Gripais e COVID",
     category: "Programas de Saúde",
     summary: "Como agir em casos de febre, tosse e falta de ar.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Isolamento", description: "Oriente o afastamento de outras pessoas e o uso de máscara em casa.", image: "/images/guides/g24-step1.png", visualTip: "Oriente o uso de máscara cobrindo boca e nariz e ventilação frequente do quarto." },
-      { id: 2, title: "Sinais de Gravidade", description: "Monitore se há falta de ar, cansaço extremo ou febre persistente.", image: "/images/guides/g24-step2.png", visualTip: "Monitore a frequência respiratória e sensação de sufocamento ao realizar esforços." },
-      { id: 3, title: "Testagem", description: "Informe sobre onde e quando realizar o teste (COVID ou Influenza).", image: "/images/guides/g24-step3.png", visualTip: "Indique a data correta para a realização do teste rápido na unidade básica." },
-      { id: 4, title: "Notificação", description: "Registre o caso como suspeito na planilha de monitoramento da equipe.", image: "/images/guides/g24-step4.png", visualTip: "Insira os dados do sintomático na ficha de acompanhamento respiratório da equipe." }
+      { id: 1, title: "Isolamento", description: "Oriente o afastamento de outras pessoas e o uso de máscara em casa.", visualTip: "Oriente o uso de máscara cobrindo boca e nariz e ventilação frequente do quarto." },
+      { id: 2, title: "Sinais de Gravidade", description: "Monitore se há falta de ar, cansaço extremo ou febre persistente.", visualTip: "Monitore a frequência respiratória e sensação de sufocamento ao realizar esforços." },
+      { id: 3, title: "Testagem", description: "Informe sobre onde e quando realizar o teste (COVID ou Influenza).", visualTip: "Indique a data correta para a realização do teste rápido na unidade básica." },
+      { id: 4, title: "Notificação", description: "Registre o caso como suspeito na planilha de monitoramento da equipe.", visualTip: "Insira os dados do sintomático na ficha de acompanhamento respiratório da equipe." }
     ]
   },
   {
@@ -553,11 +580,28 @@ export const GUIDES: Guide[] = [
     title: "Desenvolvimento Infantil",
     category: "Programas de Saúde",
     summary: "Marcos de crescimento e aprendizagem da criança.",
+    hasDetailedGuide: false,
     steps: [
-      { id: 1, title: "Puericultura", description: "Verifique se as consultas de rotina no médico/enfermeiro estão em dia.", image: "/images/guides/g25-step1.png", visualTip: "Abra a Caderneta da Criança na curva de peso x idade e altura x idade." },
-      { id: 2, title: "Marcos Motores", description: "Observe se a criança já senta, engatinha ou anda conforme a idade.", image: "/images/guides/g25-step2.png", visualTip: "Confira a tabela de desenvolvimento neuropsicomotor da Caderneta da Criança." },
-      { id: 3, title: "Linguagem", description: "Note se a criança interage, balbucia ou já fala palavras simples.", image: "/images/guides/g25-step3.png", visualTip: "Verifique se a criança reage ao ser chamada pelo nome e imita sons." },
-      { id: 4, title: "Estímulos", description: "Oriente os pais sobre a importância de brincar e conversar com o bebê.", image: "/images/guides/g25-step4.png", visualTip: "Incentive os responsáveis a lerem estórias e interagirem sem o uso de telas." }
+      { id: 1, title: "Puericultura", description: "Verifique se as consultas de rotina no médico/enfermeiro estão em dia.", visualTip: "Abra a Caderneta da Criança na curva de peso x idade e altura x idade." },
+      { id: 2, title: "Marcos Motores", description: "Observe se a criança já senta, engatinha ou anda conforme a idade.", visualTip: "Confira a tabela de desenvolvimento neuropsicomotor da Caderneta da Criança." },
+      { id: 3, title: "Linguagem", description: "Note se a criança interage, balbucia ou já fala palavras simples.", visualTip: "Verifique se a criança reage ao ser chamada pelo nome e imita sons." },
+      { id: 4, title: "Estímulos", description: "Oriente os pais sobre a importância de brincar e conversar com o bebê.", visualTip: "Incentive os responsáveis a lerem estórias e interagirem sem o uso de telas." }
+    ]
+  },
+  {
+    id: "g42",
+    slug: "ivcf-20-idoso",
+    title: "Aplicação do IVCF-20 (Saúde da Pessoa Idosa)",
+    category: "Programas de Saúde",
+    summary: "Orientações do Ministério da Saúde para preenchimento e aplicação do Índice de Vulnerabilidade Clínico-Funcional (IVCF-20) no e-SUS Território.",
+    hasDetailedGuide: false,
+    steps: [
+      { id: 1, title: "Acessar o Questionário no e-SUS", description: "Na ficha individual do morador idoso (60 anos ou mais), abra a aba de questionários e selecione 'Avaliação da Pessoa Idosa - IVCF-20'.", visualTip: "Abra a seção de questionários específicos no perfil individual do cidadão idoso." },
+      { id: 2, title: "Envolver Familiar ou Cuidador", description: "Convide um familiar ou o cuidador principal para acompanhar a conversa, ajudando a validar as informações sobre uso de remédios, histórico de quedas e dificuldades na rotina.", visualTip: "Peça licença para que um familiar de referência participe e confirme os detalhes relatados." },
+      { id: 3, title: "Compreender o Impacto do seu Papel", description: "ACS, ao preencher o IVCF-20 você é os olhos do SUS dentro da casa: muitas famílias não percebem a tempo o risco de quedas, esquecimentos ou sobrecarga de quem cuida. Seu preenchimento garante que a equipe de saúde chegue antes de uma internação grave e dá à família a certeza de que não está desamparada.", visualTip: "Seu olhar atento no território transforma dados em cuidado real e dignidade para a família do idoso." },
+      { id: 4, title: "Avaliar as 8 Dimensões Clínicas", description: "Faça as perguntas diretamente ao idoso com calma sobre: autopercepção da saúde, atividades diárias (AVDs), cognição/memória, humor, mobilidade, visão/audição e comorbidades.", visualTip: "Mantenha o foco no idoso, usando o familiar como apoio quando houver dúvida ou esquecimento." },
+      { id: 5, title: "Interpretar o Escore (0 a 40 pontos)", description: "O e-SUS calcula a pontuação: 0 a 6 pontos (Idoso Robusto), 7 a 14 pontos (Risco de Fragilização) e 15 ou mais pontos (Idoso Frágil).", visualTip: "Confira o resultado da pontuação total e a classificação de fragilidade calculada na tela." },
+      { id: 6, title: "Notificar a Equipe de Saúde da Família", description: "Salve a avaliação e comunique imediatamente à enfermeira ou médico da UBS os idosos com escore ≥ 7 para elaboração do plano de cuidados prioritário.", visualTip: "Repasse os idosos frágeis na reunião de equipe da UBS para visitas e acompanhamento prioritário." }
     ]
   }
 ];
@@ -606,7 +650,8 @@ export const INTENTS: Intent[] = [
   { id: "i38", title: "Drogas e Álcool", keywords: ["bebida", "droga", "cachaça", "vício", "alcoolismo", "redução de danos", "fumando"], guideId: "g38", confirmationPhrase: "Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?" },
   { id: "i39", title: "Prevenção Câncer", keywords: ["preventivo", "papanicolau", "mama", "mamografia", "câncer de mama", "câncer de colo"], guideId: "g39", confirmationPhrase: "Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?" },
   { id: "i40", title: "Gripe e COVID", keywords: ["gripe", "covid", "tosse", "falta de ar", "resfriado", "corona", "catarro"], guideId: "g40", confirmationPhrase: "Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?" },
-  { id: "i41", title: "Puericultura", keywords: ["desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar"], guideId: "g41", confirmationPhrase: "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?" }
+  { id: "i41", title: "Puericultura", keywords: ["desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar"], guideId: "g41", confirmationPhrase: "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?" },
+  { id: "i42", title: "Avaliação IVCF-20 (Pessoa Idosa)", keywords: ["ivcf", "ivcf 20", "ivcf-20", "idoso fragil", "fragilidade idoso", "vulnerabilidade idoso", "questionario idoso", "avaliação idoso", "escore idoso", "preenchimento ivcf"], guideId: "g42", confirmationPhrase: "Entendi. Você quer saber como preencher e aplicar o IVCF-20 da pessoa idosa no e-SUS Território. Posso continuar para o guia?" }
 ];
 
 export const CATEGORIES: Category[] = [
@@ -617,7 +662,7 @@ export const CATEGORIES: Category[] = [
   { id: "c5", title: "5. Problemas de Duplicação", icon: "Tablet", intents: ["i14", "i15", "i16"] },
   { id: "c6", title: "6. Problemas de Inconsistência", icon: "Tablet", intents: ["i17", "i18"] },
   { id: "c7", title: "7. Problemas de Sincronização", icon: "Tablet", intents: ["i19", "i20"] },
-  { id: "c8", title: "8. Programas de Saúde e Prevenção", icon: "Home", intents: ["i21", "i22", "i23", "i24", "i25", "i26", "i27", "i28", "i29", "i30", "i31", "i32", "i33", "i34", "i35", "i36", "i37", "i38", "i39", "i40", "i41"] }
+  { id: "c8", title: "8. Programas de Saúde e Prevenção", icon: "Home", intents: ["i21", "i22", "i23", "i24", "i25", "i26", "i27", "i28", "i29", "i30", "i31", "i32", "i33", "i34", "i35", "i36", "i37", "i38", "i39", "i40", "i41", "i42"] }
 ];
 
 export const MANUALS: Manual[] = [

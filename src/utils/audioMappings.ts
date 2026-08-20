@@ -88,6 +88,7 @@ export const audioMappings: AudioMapping = {
   "\"Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?\"": "confirmacao/prevencao-cancer.mp3",
   "\"Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?\"": "confirmacao/sintomas-gripais.mp3",
   "\"Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?\"": "confirmacao/desenvolvimento-infantil.mp3",
+  "\"Entendi. Você quer saber como preencher e aplicar o IVCF-20 da pessoa idosa no e-SUS Território. Posso continuar para o guia?\"": "confirmacao/ivcf-20.mp3",
 
   // === GUIAS - TÍTULOS E RESUMOS (G1 A G20) ===
   "Cadastrar Casa Nova no Sistema": "guias/g1_title.mp3",
