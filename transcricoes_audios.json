@@ -1,0 +1,962 @@
+[
+  {
+    "index": 1,
+    "full_path": "public/audios/confirmacao/atualizar-cadastro.mp3",
+    "relative_path": "confirmacao/atualizar-cadastro.mp3",
+    "folder": "confirmacao",
+    "filename": "atualizar-cadastro.mp3",
+    "transcription": "entendi você quer saber como atualizar cadastro posso continuar para o guia"
+  },
+  {
+    "index": 2,
+    "full_path": "public/audios/confirmacao/bolsa-familia.mp3",
+    "relative_path": "confirmacao/bolsa-familia.mp3",
+    "folder": "confirmacao",
+    "filename": "bolsa-familia.mp3",
+    "transcription": "entendi você quer saber sobre o bolsa família posso continuar para o guia"
+  },
+  {
+    "index": 3,
+    "full_path": "public/audios/confirmacao/busca-ativa-tb-hanseniase.mp3",
+    "relative_path": "confirmacao/busca-ativa-tb-hanseniase.mp3",
+    "folder": "confirmacao",
+    "filename": "busca-ativa-tb-hanseniase.mp3",
+    "transcription": "entendi você quer saber sobre tuberculose e hanseníase posso continuar para o guia"
+  },
+  {
+    "index": 4,
+    "full_path": "public/audios/confirmacao/cadastro-familia.mp3",
+    "relative_path": "confirmacao/cadastro-familia.mp3",
+    "folder": "confirmacao",
+    "filename": "cadastro-familia.mp3",
+    "transcription": "entendi você quer saber como cadastrar família posso continuar para o guia"
+  },
+  {
+    "index": 5,
+    "full_path": "public/audios/confirmacao/combate-dengue.mp3",
+    "relative_path": "confirmacao/combate-dengue.mp3",
+    "folder": "confirmacao",
+    "filename": "combate-dengue.mp3",
+    "transcription": "entendi você quer saber sobre dengue e Focus posso continuar para o guia"
+  },
+  {
+    "index": 6,
+    "full_path": "public/audios/confirmacao/cuidados-paliativos.mp3",
+    "relative_path": "confirmacao/cuidados-paliativos.mp3",
+    "folder": "confirmacao",
+    "filename": "cuidados-paliativos.mp3",
+    "transcription": "entendi você quer saber sobre cuidados paliativos posso continuar para o guia"
+  },
+  {
+    "index": 7,
+    "full_path": "public/audios/confirmacao/desenvolvimento-infantil.mp3",
+    "relative_path": "confirmacao/desenvolvimento-infantil.mp3",
+    "folder": "confirmacao",
+    "filename": "desenvolvimento-infantil.mp3",
+    "transcription": "entendi você quer saber sobre Puericultura posso continuar para o guia"
+  },
+  {
+    "index": 8,
+    "full_path": "public/audios/confirmacao/e-sus-problemas.mp3",
+    "relative_path": "confirmacao/e-sus-problemas.mp3",
+    "folder": "confirmacao",
+    "filename": "e-sus-problemas.mp3",
+    "transcription": "entendi você quer saber como resolver erro não é SUS posso continuar para o guia"
+  },
+  {
+    "index": 9,
+    "full_path": "public/audios/confirmacao/hiperdia.mp3",
+    "relative_path": "confirmacao/hiperdia.mp3",
+    "folder": "confirmacao",
+    "filename": "hiperdia.mp3",
+    "transcription": "entendi você quer saber sobre o hiperdia posso continuar para o Gu"
+  },
+  {
+    "index": 10,
+    "full_path": "public/audios/confirmacao/identificar-violencia.mp3",
+    "relative_path": "confirmacao/identificar-violencia.mp3",
+    "folder": "confirmacao",
+    "filename": "identificar-violencia.mp3",
+    "transcription": "entendi você quer saber sobre identificação de violência posso continuar para o guia"
+  },
+  {
+    "index": 11,
+    "full_path": "public/audios/confirmacao/mordedura-animais.mp3",
+    "relative_path": "confirmacao/mordedura-animais.mp3",
+    "folder": "confirmacao",
+    "filename": "mordedura-animais.mp3",
+    "transcription": "entendi você quer saber sobre mordida de animal posso continuar para o guia"
+  },
+  {
+    "index": 12,
+    "full_path": "public/audios/confirmacao/planejamento-familiar.mp3",
+    "relative_path": "confirmacao/planejamento-familiar.mp3",
+    "folder": "confirmacao",
+    "filename": "planejamento-familiar.mp3",
+    "transcription": "entendi você quer saber sobre planejamento familiar posso continuar para o guia"
+  },
+  {
+    "index": 13,
+    "full_path": "public/audios/confirmacao/pre-natal.mp3",
+    "relative_path": "confirmacao/pre-natal.mp3",
+    "folder": "confirmacao",
+    "filename": "pre-natal.mp3",
+    "transcription": "entendi você quer saber sobre o pré-natal posso continuar para o guia"
+  },
+  {
+    "index": 14,
+    "full_path": "public/audios/confirmacao/prevencao-cancer.mp3",
+    "relative_path": "confirmacao/prevencao-cancer.mp3",
+    "folder": "confirmacao",
+    "filename": "prevencao-cancer.mp3",
+    "transcription": "entendi você quer saber sobre prevenção de câncer posso continuar para o guia"
+  },
+  {
+    "index": 15,
+    "full_path": "public/audios/confirmacao/puerperio.mp3",
+    "relative_path": "confirmacao/puerperio.mp3",
+    "folder": "confirmacao",
+    "filename": "puerperio.mp3",
+    "transcription": "entendi você quer saber sobre pós-parto e puerpério posso continuar para o guia"
+  },
+  {
+    "index": 16,
+    "full_path": "public/audios/confirmacao/reducao-danos.mp3",
+    "relative_path": "confirmacao/reducao-danos.mp3",
+    "folder": "confirmacao",
+    "filename": "reducao-danos.mp3",
+    "transcription": "entendi você quer saber sobre drogas e Álcool posso continuar para o guia"
+  },
+  {
+    "index": 17,
+    "full_path": "public/audios/confirmacao/riscos-ambientais.mp3",
+    "relative_path": "confirmacao/riscos-ambientais.mp3",
+    "folder": "confirmacao",
+    "filename": "riscos-ambientais.mp3",
+    "transcription": "entendi você quer saber sobre riscos ambientais posso continuar para o guia"
+  },
+  {
+    "index": 18,
+    "full_path": "public/audios/confirmacao/saude-bucal.mp3",
+    "relative_path": "confirmacao/saude-bucal.mp3",
+    "folder": "confirmacao",
+    "filename": "saude-bucal.mp3",
+    "transcription": "entendi você quer saber sobre saúde bucal posso continuar para o guia"
+  },
+  {
+    "index": 19,
+    "full_path": "public/audios/confirmacao/saude-homem.mp3",
+    "relative_path": "confirmacao/saude-homem.mp3",
+    "folder": "confirmacao",
+    "filename": "saude-homem.mp3",
+    "transcription": "entendi você quer saber sobre a saúde do homem posso continuar para o guia"
+  },
+  {
+    "index": 20,
+    "full_path": "public/audios/confirmacao/saude-idoso.mp3",
+    "relative_path": "confirmacao/saude-idoso.mp3",
+    "folder": "confirmacao",
+    "filename": "saude-idoso.mp3",
+    "transcription": "entendi você quer saber sobre a saúde do idoso posso continuar para o guia"
+  },
+  {
+    "index": 21,
+    "full_path": "public/audios/confirmacao/saude-mental.mp3",
+    "relative_path": "confirmacao/saude-mental.mp3",
+    "folder": "confirmacao",
+    "filename": "saude-mental.mp3",
+    "transcription": "entendi você quer saber sobre saúde mental posso continuar para o guia"
+  },
+  {
+    "index": 22,
+    "full_path": "public/audios/confirmacao/sintomas-gripais.mp3",
+    "relative_path": "confirmacao/sintomas-gripais.mp3",
+    "folder": "confirmacao",
+    "filename": "sintomas-gripais.mp3",
+    "transcription": "entendi você quer saber sobre gripe e covid posso continuar para o guia"
+  },
+  {
+    "index": 23,
+    "full_path": "public/audios/confirmacao/vacinacao-atraso.mp3",
+    "relative_path": "confirmacao/vacinacao-atraso.mp3",
+    "folder": "confirmacao",
+    "filename": "vacinacao-atraso.mp3",
+    "transcription": "entendi você quer saber sobre vacina atrasada posso continuar para o guia"
+  },
+  {
+    "index": 24,
+    "full_path": "public/audios/confirmacao/visita-domiciliar.mp3",
+    "relative_path": "confirmacao/visita-domiciliar.mp3",
+    "folder": "confirmacao",
+    "filename": "visita-domiciliar.mp3",
+    "transcription": "entendi você quer saber como registrar visita posso continuar para o guia"
+  },
+  {
+    "index": 25,
+    "full_path": "public/audios/confirmacao/visita-recem-nascido.mp3",
+    "relative_path": "confirmacao/visita-recem-nascido.mp3",
+    "folder": "confirmacao",
+    "filename": "visita-recem-nascido.mp3",
+    "transcription": "entendi você quer saber sobre a visita ao recém-nascido posso continuar para o guia"
+  },
+  {
+    "index": 26,
+    "full_path": "public/audios/guias/g11_summary.mp3",
+    "relative_path": "guias/g11_summary.mp3",
+    "folder": "guias",
+    "filename": "g11_summary.mp3",
+    "transcription": "Como registrar corretamente uma visita de rotina ou busca ativa"
+  },
+  {
+    "index": 27,
+    "full_path": "public/audios/guias/g11_title.mp3",
+    "relative_path": "guias/g11_title.mp3",
+    "folder": "guias",
+    "filename": "g11_title.mp3",
+    "transcription": "registrar visita domicilia"
+  },
+  {
+    "index": 28,
+    "full_path": "public/audios/guias/g1_summary.mp3",
+    "relative_path": "guias/g1_summary.mp3",
+    "folder": "guias",
+    "filename": "g1_summary.mp3",
+    "transcription": "guia passo a passo para realizar o cadastro completo de uma nova família no é SUS território"
+  },
+  {
+    "index": 29,
+    "full_path": "public/audios/guias/g1_title.mp3",
+    "relative_path": "guias/g1_title.mp3",
+    "folder": "guias",
+    "filename": "g1_title.mp3",
+    "transcription": "cadastrar nova família"
+  },
+  {
+    "index": 30,
+    "full_path": "public/audios/guias/g21_summary.mp3",
+    "relative_path": "guias/g21_summary.mp3",
+    "folder": "guias",
+    "filename": "g21_summary.mp3",
+    "transcription": "rotina de captação e acompanhamento de gestantes na comunidade"
+  },
+  {
+    "index": 31,
+    "full_path": "public/audios/guias/g21_title.mp3",
+    "relative_path": "guias/g21_title.mp3",
+    "folder": "guias",
+    "filename": "g21_title.mp3",
+    "transcription": "acompanhamento de pré-natal"
+  },
+  {
+    "index": 32,
+    "full_path": "public/audios/guias/g22_summary.mp3",
+    "relative_path": "guias/g22_summary.mp3",
+    "folder": "guias",
+    "filename": "g22_summary.mp3",
+    "transcription": "monitoramento de hipertensos e diabéticos durante as visitas"
+  },
+  {
+    "index": 33,
+    "full_path": "public/audios/guias/g22_title.mp3",
+    "relative_path": "guias/g22_title.mp3",
+    "folder": "guias",
+    "filename": "g22_title.mp3",
+    "transcription": "acompanhamento hiper"
+  },
+  {
+    "index": 34,
+    "full_path": "public/audios/guias/g23_summary.mp3",
+    "relative_path": "guias/g23_summary.mp3",
+    "folder": "guias",
+    "filename": "g23_summary.mp3",
+    "transcription": "cumprimento das condicionalidades de saúde do programa"
+  },
+  {
+    "index": 35,
+    "full_path": "public/audios/guias/g23_title.mp3",
+    "relative_path": "guias/g23_title.mp3",
+    "folder": "guias",
+    "filename": "g23_title.mp3",
+    "transcription": "acompanhamento Bolsa Família"
+  },
+  {
+    "index": 36,
+    "full_path": "public/audios/guias/g24_summary.mp3",
+    "relative_path": "guias/g24_summary.mp3",
+    "folder": "guias",
+    "filename": "g24_summary.mp3",
+    "transcription": "primeira visita após o nascimento até o quinto dia de vida"
+  },
+  {
+    "index": 37,
+    "full_path": "public/audios/guias/g24_title.mp3",
+    "relative_path": "guias/g24_title.mp3",
+    "folder": "guias",
+    "filename": "g24_title.mp3",
+    "transcription": "visitar o recém-nascido"
+  },
+  {
+    "index": 38,
+    "full_path": "public/audios/guias/g25_summary.mp3",
+    "relative_path": "guias/g25_summary.mp3",
+    "folder": "guias",
+    "filename": "g25_summary.mp3",
+    "transcription": "ações de campo para controle de dengue Zika e chikungunya"
+  },
+  {
+    "index": 39,
+    "full_path": "public/audios/guias/g25_title.mp3",
+    "relative_path": "guias/g25_title.mp3",
+    "folder": "guias",
+    "filename": "g25_title.mp3",
+    "transcription": "prevenção de arboviroses"
+  },
+  {
+    "index": 40,
+    "full_path": "public/audios/guias/g26_summary.mp3",
+    "relative_path": "guias/g26_summary.mp3",
+    "folder": "guias",
+    "filename": "g26_summary.mp3",
+    "transcription": "apoio e identificação de Sofrimento psíquico"
+  },
+  {
+    "index": 41,
+    "full_path": "public/audios/guias/g26_title.mp3",
+    "relative_path": "guias/g26_title.mp3",
+    "folder": "guias",
+    "filename": "g26_title.mp3",
+    "transcription": "saúde mental na comunidade"
+  },
+  {
+    "index": 42,
+    "full_path": "public/audios/guias/g27_summary.mp3",
+    "relative_path": "guias/g27_summary.mp3",
+    "folder": "guias",
+    "filename": "g27_summary.mp3",
+    "transcription": "avaliação de fragilidade e riscos no domicílio do idoso"
+  },
+  {
+    "index": 43,
+    "full_path": "public/audios/guias/g27_title.mp3",
+    "relative_path": "guias/g27_title.mp3",
+    "folder": "guias",
+    "filename": "g27_title.mp3",
+    "transcription": "saúde do idoso"
+  },
+  {
+    "index": 44,
+    "full_path": "public/audios/guias/g28_summary.mp3",
+    "relative_path": "guias/g28_summary.mp3",
+    "folder": "guias",
+    "filename": "g28_summary.mp3",
+    "transcription": "como proceder ao identificar crianças com vacinas pendentes"
+  },
+  {
+    "index": 45,
+    "full_path": "public/audios/guias/g28_title.mp3",
+    "relative_path": "guias/g28_title.mp3",
+    "folder": "guias",
+    "filename": "g28_title.mp3",
+    "transcription": "vacinação em atraso"
+  },
+  {
+    "index": 46,
+    "full_path": "public/audios/guias/g29_summary.mp3",
+    "relative_path": "guias/g29_summary.mp3",
+    "folder": "guias",
+    "filename": "g29_summary.mp3",
+    "transcription": "orientações sobre métodos contraceptivos e saúde reprodutiva"
+  },
+  {
+    "index": 47,
+    "full_path": "public/audios/guias/g29_title.mp3",
+    "relative_path": "guias/g29_title.mp3",
+    "folder": "guias",
+    "filename": "g29_title.mp3",
+    "transcription": "planejamento fa"
+  },
+  {
+    "index": 48,
+    "full_path": "public/audios/guias/g30_summary.mp3",
+    "relative_path": "guias/g30_summary.mp3",
+    "folder": "guias",
+    "filename": "g30_summary.mp3",
+    "transcription": "acompanhamento da saúde da mulher após o pa"
+  },
+  {
+    "index": 49,
+    "full_path": "public/audios/guias/g30_title.mp3",
+    "relative_path": "guias/g30_title.mp3",
+    "folder": "guias",
+    "filename": "g30_title.mp3",
+    "transcription": "cuidados no puerpério"
+  },
+  {
+    "index": 50,
+    "full_path": "public/audios/guias/g31_summary.mp3",
+    "relative_path": "guias/g31_summary.mp3",
+    "folder": "guias",
+    "filename": "g31_summary.mp3",
+    "transcription": "busca ativa de tuberculose e hanseníase no território"
+  },
+  {
+    "index": 51,
+    "full_path": "public/audios/guias/g31_title.mp3",
+    "relative_path": "guias/g31_title.mp3",
+    "folder": "guias",
+    "filename": "g31_title.mp3",
+    "transcription": "sintomáticos respiratórios e pele"
+  },
+  {
+    "index": 52,
+    "full_path": "public/audios/guias/g32_summary.mp3",
+    "relative_path": "guias/g32_summary.mp3",
+    "folder": "guias",
+    "filename": "g32_summary.mp3",
+    "transcription": "promoção da higiene oral e identificação de lesões"
+  },
+  {
+    "index": 53,
+    "full_path": "public/audios/guias/g32_title.mp3",
+    "relative_path": "guias/g32_title.mp3",
+    "folder": "guias",
+    "filename": "g32_title.mp3",
+    "transcription": "orientações de saúde bu"
+  },
+  {
+    "index": 54,
+    "full_path": "public/audios/guias/g33_summary.mp3",
+    "relative_path": "guias/g33_summary.mp3",
+    "folder": "guias",
+    "filename": "g33_summary.mp3",
+    "transcription": "como agir em caso suspeitos de violência doméstica ou infantil"
+  },
+  {
+    "index": 55,
+    "full_path": "public/audios/guias/g33_title.mp3",
+    "relative_path": "guias/g33_title.mp3",
+    "folder": "guias",
+    "filename": "g33_title.mp3",
+    "transcription": "identificação de violência"
+  },
+  {
+    "index": 56,
+    "full_path": "public/audios/guias/g34_summary.mp3",
+    "relative_path": "guias/g34_summary.mp3",
+    "folder": "guias",
+    "filename": "g34_summary.mp3",
+    "transcription": "vigilância de riscos no entorno do domicílio"
+  },
+  {
+    "index": 57,
+    "full_path": "public/audios/guias/g34_title.mp3",
+    "relative_path": "guias/g34_title.mp3",
+    "folder": "guias",
+    "filename": "g34_title.mp3",
+    "transcription": "saneamento e meio ambiente"
+  },
+  {
+    "index": 58,
+    "full_path": "public/audios/guias/g35_summary.mp3",
+    "relative_path": "guias/g35_summary.mp3",
+    "folder": "guias",
+    "filename": "g35_summary.mp3",
+    "transcription": "acompanhamento de pacientes com doenças graves em terminalidade"
+  },
+  {
+    "index": 59,
+    "full_path": "public/audios/guias/g35_title.mp3",
+    "relative_path": "guias/g35_title.mp3",
+    "folder": "guias",
+    "filename": "g35_title.mp3",
+    "transcription": "apoio em cuidados paliativos"
+  },
+  {
+    "index": 60,
+    "full_path": "public/audios/guias/g36_summary.mp3",
+    "relative_path": "guias/g36_summary.mp3",
+    "folder": "guias",
+    "filename": "g36_summary.mp3",
+    "transcription": "primeiros cuidados após ataques de animais"
+  },
+  {
+    "index": 61,
+    "full_path": "public/audios/guias/g36_title.mp3",
+    "relative_path": "guias/g36_title.mp3",
+    "folder": "guias",
+    "filename": "g36_title.mp3",
+    "transcription": "mordedura e raiva huma"
+  },
+  {
+    "index": 62,
+    "full_path": "public/audios/guias/g37_summary.mp3",
+    "relative_path": "guias/g37_summary.mp3",
+    "folder": "guias",
+    "filename": "g37_summary.mp3",
+    "transcription": "ações de prevenção e rastreamento para a população masculina"
+  },
+  {
+    "index": 63,
+    "full_path": "public/audios/guias/g37_title.mp3",
+    "relative_path": "guias/g37_title.mp3",
+    "folder": "guias",
+    "filename": "g37_title.mp3",
+    "transcription": "saúde do homem"
+  },
+  {
+    "index": 64,
+    "full_path": "public/audios/guias/g38_summary.mp3",
+    "relative_path": "guias/g38_summary.mp3",
+    "folder": "guias",
+    "filename": "g38_summary.mp3",
+    "transcription": "apoio e orientações para usuários de substâncias"
+  },
+  {
+    "index": 65,
+    "full_path": "public/audios/guias/g38_title.mp3",
+    "relative_path": "guias/g38_title.mp3",
+    "folder": "guias",
+    "filename": "g38_title.mp3",
+    "transcription": "álcool e drogas redução de danos"
+  },
+  {
+    "index": 66,
+    "full_path": "public/audios/guias/g39_summary.mp3",
+    "relative_path": "guias/g39_summary.mp3",
+    "folder": "guias",
+    "filename": "g39_summary.mp3",
+    "transcription": "orientações sobre papanicolau e mamografia"
+  },
+  {
+    "index": 67,
+    "full_path": "public/audios/guias/g39_title.mp3",
+    "relative_path": "guias/g39_title.mp3",
+    "folder": "guias",
+    "filename": "g39_title.mp3",
+    "transcription": "prevenção de câncer feminino"
+  },
+  {
+    "index": 68,
+    "full_path": "public/audios/guias/g3_summary.mp3",
+    "relative_path": "guias/g3_summary.mp3",
+    "folder": "guias",
+    "filename": "g3_summary.mp3",
+    "transcription": "resolução de erros comuns de sincronização e login"
+  },
+  {
+    "index": 69,
+    "full_path": "public/audios/guias/g3_title.mp3",
+    "relative_path": "guias/g3_title.mp3",
+    "folder": "guias",
+    "filename": "g3_title.mp3",
+    "transcription": "problemas nos"
+  },
+  {
+    "index": 70,
+    "full_path": "public/audios/guias/g40_summary.mp3",
+    "relative_path": "guias/g40_summary.mp3",
+    "folder": "guias",
+    "filename": "g40_summary.mp3",
+    "transcription": "como agir em casos de febre tosse e falta de ar"
+  },
+  {
+    "index": 71,
+    "full_path": "public/audios/guias/g40_title.mp3",
+    "relative_path": "guias/g40_title.mp3",
+    "folder": "guias",
+    "filename": "g40_title.mp3",
+    "transcription": "sintomas gripais e co"
+  },
+  {
+    "index": 72,
+    "full_path": "public/audios/guias/g41_summary.mp3",
+    "relative_path": "guias/g41_summary.mp3",
+    "folder": "guias",
+    "filename": "g41_summary.mp3",
+    "transcription": "Marcos de crescimento e aprendizagem da criança"
+  },
+  {
+    "index": 73,
+    "full_path": "public/audios/guias/g41_title.mp3",
+    "relative_path": "guias/g41_title.mp3",
+    "folder": "guias",
+    "filename": "g41_title.mp3",
+    "transcription": "Desenvolvimento Infantil"
+  },
+  {
+    "index": 74,
+    "full_path": "public/audios/guias/g8_summary.mp3",
+    "relative_path": "guias/g8_summary.mp3",
+    "folder": "guias",
+    "filename": "g8_summary.mp3",
+    "transcription": "como proceder quando o cidadão muda de endereço ou o telefone"
+  },
+  {
+    "index": 75,
+    "full_path": "public/audios/guias/g8_title.mp3",
+    "relative_path": "guias/g8_title.mp3",
+    "folder": "guias",
+    "filename": "g8_title.mp3",
+    "transcription": "atualizar dados cadastrais"
+  },
+  {
+    "index": 76,
+    "full_path": "public/audios/header/welcome.mp3",
+    "relative_path": "header/welcome.mp3",
+    "folder": "header",
+    "filename": "welcome.mp3",
+    "transcription": "você está no anjo ACS seu assistente digital como posso ajudar você hoje"
+  },
+  {
+    "index": 77,
+    "full_path": "public/audios/passos/g11_step1.mp3",
+    "relative_path": "passos/g11_step1.mp3",
+    "folder": "passos",
+    "filename": "g11_step1.mp3",
+    "transcription": "Localizar família busque a família o indivíduo na sua lista de micro área"
+  },
+  {
+    "index": 78,
+    "full_path": "public/audios/passos/g11_step2.mp3",
+    "relative_path": "passos/g11_step2.mp3",
+    "folder": "passos",
+    "filename": "g11_step2.mp3",
+    "transcription": "iniciar visita toque no botão registrar visita dentro da ficha do Cidadão"
+  },
+  {
+    "index": 79,
+    "full_path": "public/audios/passos/g11_step3.mp3",
+    "relative_path": "passos/g11_step3.mp3",
+    "folder": "passos",
+    "filename": "g11_step3.mp3",
+    "transcription": "motivo da visita selecione o motivo exemplo acompanhamento egresso de hospital etc"
+  },
+  {
+    "index": 80,
+    "full_path": "public/audios/passos/g11_step4.mp3",
+    "relative_path": "passos/g11_step4.mp3",
+    "folder": "passos",
+    "filename": "g11_step4.mp3",
+    "transcription": "desfecho Marquese a visita foi realizada recusada o seu morador estava ausente"
+  },
+  {
+    "index": 81,
+    "full_path": "public/audios/passos/g1_step1.mp3",
+    "relative_path": "passos/g1_step1.mp3",
+    "folder": "passos",
+    "filename": "g1_step1.mp3",
+    "transcription": "acesse o território Abra o aplicativo é susto território no seu tablet ou celular"
+  },
+  {
+    "index": 82,
+    "full_path": "public/audios/passos/g1_step2.mp3",
+    "relative_path": "passos/g1_step2.mp3",
+    "folder": "passos",
+    "filename": "g1_step2.mp3",
+    "transcription": "novo domicílio toque no ícone mais e selecione adicionar domicílio"
+  },
+  {
+    "index": 83,
+    "full_path": "public/audios/passos/g1_step3.mp3",
+    "relative_path": "passos/g1_step3.mp3",
+    "folder": "passos",
+    "filename": "g1_step3.mp3",
+    "transcription": "dados da família preencha as informações do responsável familiar primeiro"
+  },
+  {
+    "index": 84,
+    "full_path": "public/audios/passos/g1_step4.mp3",
+    "relative_path": "passos/g1_step4.mp3",
+    "folder": "passos",
+    "filename": "g1_step4.mp3",
+    "transcription": "membros adicione os demais membros vinculando-os ao responsável"
+  },
+  {
+    "index": 85,
+    "full_path": "public/audios/passos/g1_step5.mp3",
+    "relative_path": "passos/g1_step5.mp3",
+    "folder": "passos",
+    "filename": "g1_step5.mp3",
+    "transcription": "sincronizar ao finalizar Não esqueça de sincronizar os dados com a base"
+  },
+  {
+    "index": 86,
+    "full_path": "public/audios/passos/g21_step1.mp3",
+    "relative_path": "passos/g21_step1.mp3",
+    "folder": "passos",
+    "filename": "g21_step1.mp3",
+    "transcription": "identificar gestante confirme a suspeita de gravidez e a data da última menstruação dum"
+  },
+  {
+    "index": 87,
+    "full_path": "public/audios/passos/g21_step2.mp3",
+    "relative_path": "passos/g21_step2.mp3",
+    "folder": "passos",
+    "filename": "g21_step2.mp3",
+    "transcription": "ficha de cadastro atualize a ficha individual marcando a opção gestante"
+  },
+  {
+    "index": 88,
+    "full_path": "public/audios/passos/g21_step3.mp3",
+    "relative_path": "passos/g21_step3.mp3",
+    "folder": "passos",
+    "filename": "g21_step3.mp3",
+    "transcription": "agendar consulta encaminhe a primeira consulta de pré-natal na UBS"
+  },
+  {
+    "index": 89,
+    "full_path": "public/audios/passos/g21_step4.mp3",
+    "relative_path": "passos/g21_step4.mp3",
+    "folder": "passos",
+    "filename": "g21_step4.mp3",
+    "transcription": "caderneta verifique se a gestante Já possui e está utilizando a caderneta da gestante"
+  },
+  {
+    "index": 90,
+    "full_path": "public/audios/passos/g22_step1.mp3",
+    "relative_path": "passos/g22_step1.mp3",
+    "folder": "passos",
+    "filename": "g22_step1.mp3",
+    "transcription": "aferição se habilitado auxilia na aferição de pa ou acompanha o relato dos valores"
+  },
+  {
+    "index": 91,
+    "full_path": "public/audios/passos/g22_step2.mp3",
+    "relative_path": "passos/g22_step2.mp3",
+    "folder": "passos",
+    "filename": "g22_step2.mp3",
+    "transcription": "medicação questione sobre o uso regular dos medicamentos prescritos"
+  },
+  {
+    "index": 92,
+    "full_path": "public/audios/passos/g22_step3.mp3",
+    "relative_path": "passos/g22_step3.mp3",
+    "folder": "passos",
+    "filename": "g22_step3.mp3",
+    "transcription": "sinais de alerta Observe edemas tonturas ou feridas que não cicatrizam em diabéticos"
+  },
+  {
+    "index": 93,
+    "full_path": "public/audios/passos/g22_step4.mp3",
+    "relative_path": "passos/g22_step4.mp3",
+    "folder": "passos",
+    "filename": "g22_step4.mp3",
+    "transcription": "registro e sus marque o acompanhamento de hipertensão ou diabetes na ficha de visita"
+  },
+  {
+    "index": 94,
+    "full_path": "public/audios/passos/g23_step1.mp3",
+    "relative_path": "passos/g23_step1.mp3",
+    "folder": "passos",
+    "filename": "g23_step1.mp3",
+    "transcription": "identificar beneficiário localize as famílias que recebem o benefício na sua lista"
+  },
+  {
+    "index": 95,
+    "full_path": "public/audios/passos/g23_step2.mp3",
+    "relative_path": "passos/g23_step2.mp3",
+    "folder": "passos",
+    "filename": "g23_step2.mp3",
+    "transcription": "pesagem e estatura realize ou encaminho para a coleta de medidas antropométricas"
+  },
+  {
+    "index": 96,
+    "full_path": "public/audios/passos/g23_step3.mp3",
+    "relative_path": "passos/g23_step3.mp3",
+    "folder": "passos",
+    "filename": "g23_step3.mp3",
+    "transcription": "vacinação verifique se o calendário vacinal das crianças está em dia"
+  },
+  {
+    "index": 97,
+    "full_path": "public/audios/passos/g23_step4.mp3",
+    "relative_path": "passos/g23_step4.mp3",
+    "folder": "passos",
+    "filename": "g23_step4.mp3",
+    "transcription": "mapa de acompanhamento lance os dados no sistema ou preencha o mapa físico do Bolsa Família"
+  },
+  {
+    "index": 98,
+    "full_path": "public/audios/passos/g24_step1.mp3",
+    "relative_path": "passos/g24_step1.mp3",
+    "folder": "passos",
+    "filename": "g24_step1.mp3",
+    "transcription": "teste do pezinho verifique se o teste foi realizado entre o terceiro e o quinto dia"
+  },
+  {
+    "index": 99,
+    "full_path": "public/audios/passos/g24_step2.mp3",
+    "relative_path": "passos/g24_step2.mp3",
+    "folder": "passos",
+    "filename": "g24_step2.mp3",
+    "transcription": "conta umbilical Oriente Sobre a limpeza com álcool 70% e observe sinais de infecção"
+  },
+  {
+    "index": 100,
+    "full_path": "public/audios/passos/g24_step3.mp3",
+    "relative_path": "passos/g24_step3.mp3",
+    "folder": "passos",
+    "filename": "g24_step3.mp3",
+    "transcription": "amamentação observe a pega e oriente sobre o aleitamento materno exclusivo"
+  },
+  {
+    "index": 101,
+    "full_path": "public/audios/passos/g24_step4.mp3",
+    "relative_path": "passos/g24_step4.mp3",
+    "folder": "passos",
+    "filename": "g24_step4.mp3",
+    "transcription": "agendamento Garanta que a primeira consulta de Puericultura esteja marcada na UBS"
+  },
+  {
+    "index": 102,
+    "full_path": "public/audios/passos/g25_step1.mp3",
+    "relative_path": "passos/g25_step1.mp3",
+    "folder": "passos",
+    "filename": "g25_step1.mp3",
+    "transcription": "inspeção de Quintal procure por recipientes que acumulam água parada"
+  },
+  {
+    "index": 103,
+    "full_path": "public/audios/passos/g25_step2.mp3",
+    "relative_path": "passos/g25_step2.mp3",
+    "folder": "passos",
+    "filename": "g25_step2.mp3",
+    "transcription": "vedação de caixas verifique se as caixas d'água estão devidamente tampadas"
+  },
+  {
+    "index": 104,
+    "full_path": "public/audios/passos/g25_step3.mp3",
+    "relative_path": "passos/g25_step3.mp3",
+    "folder": "passos",
+    "filename": "g25_step3.mp3",
+    "transcription": "sinais e sintomas Oriente a família sobre febre alta dores no corpo e manchas vermelhas"
+  },
+  {
+    "index": 105,
+    "full_path": "public/audios/passos/g25_step4.mp3",
+    "relative_path": "passos/g25_step4.mp3",
+    "folder": "passos",
+    "filename": "g25_step4.mp3",
+    "transcription": "registro de foco caso encontre larvas notifique imediatamente a equipe de endemias"
+  },
+  {
+    "index": 106,
+    "full_path": "public/audios/passos/g26_step1.mp3",
+    "relative_path": "passos/g26_step1.mp3",
+    "folder": "passos",
+    "filename": "g26_step1.mp3",
+    "transcription": "escuta qualificada dê espaço para o cidadão falar sobre seus sentimentos sem julgamentos"
+  },
+  {
+    "index": 107,
+    "full_path": "public/audios/passos/g26_step2.mp3",
+    "relative_path": "passos/g26_step2.mp3",
+    "folder": "passos",
+    "filename": "g26_step2.mp3",
+    "transcription": "identificar crise Observe sinais de isolamento choro frequente ou ideação suicida"
+  },
+  {
+    "index": 108,
+    "full_path": "public/audios/passos/g26_step3.mp3",
+    "relative_path": "passos/g26_step3.mp3",
+    "folder": "passos",
+    "filename": "g26_step3.mp3",
+    "transcription": "rede de apoio verifique se o paciente frequenta o caps ou se tem acompanhamento médico"
+  },
+  {
+    "index": 109,
+    "full_path": "public/audios/passos/g26_step4.mp3",
+    "relative_path": "passos/g26_step4.mp3",
+    "folder": "passos",
+    "filename": "g26_step4.mp3",
+    "transcription": "vínculo familiar Oriente a família sobre a importância do acolhimento no ambiente doméstico"
+  },
+  {
+    "index": 110,
+    "full_path": "public/audios/passos/g27_step1.mp3",
+    "relative_path": "passos/g27_step1.mp3",
+    "folder": "passos",
+    "filename": "g27_step1.mp3",
+    "transcription": "risco de queda Observe tapetes soltos falta de corrimão e iluminação precária"
+  },
+  {
+    "index": 111,
+    "full_path": "public/audios/passos/g27_step2.mp3",
+    "relative_path": "passos/g27_step2.mp3",
+    "folder": "passos",
+    "filename": "g27_step2.mp3",
+    "transcription": "Poli farmácia verifique se o idoso toma mais de cinco medicamentos e se a confusão nas doses"
+  },
+  {
+    "index": 112,
+    "full_path": "public/audios/passos/g27_step3.mp3",
+    "relative_path": "passos/g27_step3.mp3",
+    "folder": "passos",
+    "filename": "g27_step3.mp3",
+    "transcription": "caderneta do Idoso atualize os dados de saúde na caderneta da pessoa idosa"
+  },
+  {
+    "index": 113,
+    "full_path": "public/audios/passos/g27_step4.mp3",
+    "relative_path": "passos/g27_step4.mp3",
+    "folder": "passos",
+    "filename": "g27_step4.mp3",
+    "transcription": "atividades diárias avalie se o idoso consegue comer tomar banho e se vestir sozinho"
+  },
+  {
+    "index": 114,
+    "full_path": "public/audios/passos/g3_step1.mp3",
+    "relative_path": "passos/g3_step1.mp3",
+    "folder": "passos",
+    "filename": "g3_step1.mp3",
+    "transcription": "verificar conexão certifique-se de que o wi-fi ou dados móveis estão ativos"
+  },
+  {
+    "index": 115,
+    "full_path": "public/audios/passos/g3_step2.mp3",
+    "relative_path": "passos/g3_step2.mp3",
+    "folder": "passos",
+    "filename": "g3_step2.mp3",
+    "transcription": "Limpar cache Vá nas configurações do Android Apps e sus Limpar cache"
+  },
+  {
+    "index": 116,
+    "full_path": "public/audios/passos/g3_step3.mp3",
+    "relative_path": "passos/g3_step3.mp3",
+    "folder": "passos",
+    "filename": "g3_step3.mp3",
+    "transcription": "versão do app verifique na Play Store se há atualizações pendentes"
+  },
+  {
+    "index": 117,
+    "full_path": "public/audios/passos/g8_step1.mp3",
+    "relative_path": "passos/g8_step1.mp3",
+    "folder": "passos",
+    "filename": "g8_step1.mp3",
+    "transcription": "localizar cadastro busque pelo CPF ou CNS no e-sus território"
+  },
+  {
+    "index": 118,
+    "full_path": "public/audios/passos/g8_step2.mp3",
+    "relative_path": "passos/g8_step2.mp3",
+    "folder": "passos",
+    "filename": "g8_step2.mp3",
+    "transcription": "editar ficha toque no ícone de lápis para abrir a edição da ficha individual"
+  },
+  {
+    "index": 119,
+    "full_path": "public/audios/passos/g8_step3.mp3",
+    "relative_path": "passos/g8_step3.mp3",
+    "folder": "passos",
+    "filename": "g8_step3.mp3",
+    "transcription": "Campos críticos atualize telefone endereço e a composição familiar quem saiu barra entrou"
+  },
+  {
+    "index": 120,
+    "full_path": "public/audios/passos/g8_step4.mp3",
+    "relative_path": "passos/g8_step4.mp3",
+    "folder": "passos",
+    "filename": "g8_step4.mp3",
+    "transcription": "finalizar salve sincronize para que a UBS receba os dados atualizados"
+  }
+]

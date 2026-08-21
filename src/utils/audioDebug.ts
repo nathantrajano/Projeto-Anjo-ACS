@@ -14,7 +14,31 @@ export const auditAudioMappings = (): {
   notMapped: string[];
 } => {
   const commonTexts = [
-    // Adicione aqui textos comuns do seu app para auditar
+    "Cadastrar Casa Nova no Sistema",
+    "Corrigir Erro de Endereço ou CEP",
+    "Registrar Mudança de Morador (Saída)",
+    "Registrar Visita Domiciliar",
+    "Acompanhamento de Pré-natal",
+    "Acompanhamento Hiperdia",
+    "Acompanhamento Bolsa Família",
+    "Visita ao Recém-nascido (Cuidados)",
+    "Prevenção de Arboviroses",
+    "Saúde Mental na Comunidade",
+    "Saúde do Idoso",
+    "Vacinação em Atraso",
+    "Planejamento Familiar",
+    "Cuidados no Puerpério",
+    "Sintomáticos Respiratórios e Pele",
+    "Orientações de Saúde Bucal",
+    "Identificação de Violência",
+    "Saneamento e Meio Ambiente",
+    "Apoio em Cuidados Paliativos",
+    "Mordedura e Raiva Humana",
+    "Saúde do Homem",
+    "Álcool e Drogas (Redução de Danos)",
+    "Prevenção de Câncer Feminino",
+    "Sintomas Gripais e COVID",
+    "Desenvolvimento Infantil"
   ];
 
   const mapped = Object.keys(audioMappings).length;
@@ -42,7 +66,7 @@ export const getMissingAudioFiles = (): string[] => {
     // Header
     'audios/header/welcome.mp3',
     
-    // Confirmações (25 intents)
+    // Confirmações
     'audios/confirmacao/cadastro-familia.mp3',
     'audios/confirmacao/visita-domiciliar.mp3',
     'audios/confirmacao/e-sus-problemas.mp3',
@@ -69,12 +93,21 @@ export const getMissingAudioFiles = (): string[] => {
     'audios/confirmacao/sintomas-gripais.mp3',
     'audios/confirmacao/desenvolvimento-infantil.mp3',
     
-    // Guias (25 guias × 2 = 50 arquivos)
+    // Guias principais com MP3 gravados
     'audios/guias/g1_title.mp3',
     'audios/guias/g1_summary.mp3',
-    'audios/guias/g2_title.mp3',
-    'audios/guias/g2_summary.mp3',
-    // ... adicione os 46 restantes
+    'audios/guias/g3_title.mp3',
+    'audios/guias/g3_summary.mp3',
+    'audios/guias/g8_title.mp3',
+    'audios/guias/g8_summary.mp3',
+    'audios/guias/g11_title.mp3',
+    'audios/guias/g11_summary.mp3',
+    'audios/guias/g21_title.mp3',
+    'audios/guias/g21_summary.mp3',
+    'audios/guias/g22_title.mp3',
+    'audios/guias/g22_summary.mp3',
+    'audios/guias/g27_title.mp3',
+    'audios/guias/g27_summary.mp3',
     
     // Motivacionais
     'audios/motivacional/missao-cumprida.mp3',
@@ -87,7 +120,6 @@ export const getMissingAudioFiles = (): string[] => {
   ];
 
   expectedAudios.forEach(audioPath => {
-    // Verificar se o arquivo existe (será 404 se não existir)
     fetch(audioPath, { method: 'HEAD' })
       .catch(() => {
         missing.push(audioPath);
@@ -116,7 +148,6 @@ export const printAudioAuditReport = () => {
 export const checkAudioSystem = () => {
   console.group('🔍 Verificação do Sistema de Áudio');
   
-  // Verificar audioManager
   try {
     import('./audioManager').then(() => {
       console.log('✅ audioManager.ts: OK');
@@ -125,11 +156,9 @@ export const checkAudioSystem = () => {
     console.error('❌ audioManager.ts: ERRO', e);
   }
 
-  // Verificar audioMappings
   const mappingCount = Object.keys(audioMappings).length;
   console.log(`✅ audioMappings.ts: ${mappingCount} mapeamentos encontrados`);
 
-  // Verificar speech.ts
   try {
     import('./speech').then(() => {
       console.log('✅ speech.ts: OK');
@@ -141,7 +170,6 @@ export const checkAudioSystem = () => {
   console.groupEnd();
 };
 
-// Exportar para uso no console durante desenvolvimento
 if (typeof window !== 'undefined') {
   (window as any).__AUDIO_DEBUG__ = {
     printAuditReport: printAudioAuditReport,
