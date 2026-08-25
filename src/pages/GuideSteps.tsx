@@ -5,8 +5,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { GUIDES } from "@/data/mockData";
 import { ArrowLeft, ChevronRight, HelpCircle } from "lucide-react";
 import { AudioButton } from "@/components/AudioButton";
-import { getAudioPath } from "@/utils/audioMappings";
-import { playAudio, stopAudio } from "@/utils/audioManager";
+import { speakAsync, stopSpeaking } from "@/utils/speech";
 
 const GuideSteps = () => {
   const { id } = useParams();
@@ -52,22 +51,9 @@ const GuideSteps = () => {
         }
         
         const text = textsToPlay[i];
-        let audioPath = getAudioPath(text);
+        console.log(`[Audio] Passo ${i + 1}/${textsToPlay.length}: "${text.substring(0, 50)}..."`);
         
-        // Se não encontrar, tenta um padrão derivado para passos
-        if (!audioPath && i >= 2) {
-          const stepIndex = i - 2 + 1; // Primeiro passo é índice 2
-          audioPath = `passos/${guide.id}_step${stepIndex}.mp3`;
-        }
-        
-        console.log(`[Audio] Passo ${i + 1}/${textsToPlay.length}: "${text.substring(0, 50)}..." → ${audioPath || "MAPEAMENTO NÃO ENCONTRADO"}`);
-        
-        if (audioPath) {
-          // playAudio() retorna uma Promise que resolve quando o áudio termina
-          await playAudio(audioPath);
-        } else {
-          console.warn(`[Audio] Nenhum áudio mapeado para: "${text}"`);
-        }
+        await speakAsync(text);
       }
       
       console.log(`[Audio] Sequência concluída!`);
@@ -81,7 +67,7 @@ const GuideSteps = () => {
 
   const stopFullGuideSequence = () => {
     shouldContinueRef.current = false;
-    stopAudio();
+    stopSpeaking();
     setIsPlayingFullGuide(false);
   };
 
@@ -101,7 +87,7 @@ const GuideSteps = () => {
         
         <button 
           onClick={() => isPlayingFullGuide ? stopFullGuideSequence() : playFullGuideSequence()}
-          className="mt-6 w-full justify-center !bg-white/20 !text-white border border-white/20 hover:!bg-white/30 px-4 py-2 rounded-lg font-medium transition-all active:scale-95"
+          className="mt-6 w-full justify-center !bg-white/20 !text-white border border-white/20 hover:!bg-white/30 px-4 py-2 rounded-lg font-medium transition-all active:scale-95 flex items-center justify-center gap-2"
         >
           {isPlayingFullGuide ? "⏸ Parando..." : "🔊 Ouvir guia completo"}
         </button>
@@ -131,7 +117,7 @@ const GuideSteps = () => {
       <div className="flex flex-col gap-3 mt-4">
         <button 
           onClick={() => navigate('/sucesso-guia')}
-          className="pill-button bg-[#1B4332] text-white shadow-lg active:scale-95"
+          className="pill-button bg-[#1B4332] text-white shadow-lg active:scale-95 flex items-center justify-center gap-2"
         >
           Pronto
           <ChevronRight size={20} />
