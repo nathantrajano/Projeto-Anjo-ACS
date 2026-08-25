@@ -93,7 +93,7 @@ export const audioMappings: AudioMapping = {
   // === GUIAS - TÍTULOS E RESUMOS (G1 A G20) ===
   "Cadastrar Casa Nova no Sistema": "guias/g1_title.mp3",
   "Passo a passo para realizar o cadastro inicial de um novo domicílio no e-SUS Território.": "guias/g1_summary.mp3",
-  
+
   "Verificar Duplicação de Domicílio": "guias/g2_title.mp3",
   "Como checar se uma casa já foi cadastrada antes de criar um novo registro no e-SUS.": "guias/g2_summary.mp3",
 
