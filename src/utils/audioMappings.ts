@@ -142,9 +142,53 @@ export const audioMappings: AudioMapping = {
   "Registrar Mudança de Morador (Saída)": "guias/g8_title.mp3",
   "Como atualizar o sistema quando um morador se muda do domicílio ou da microárea.": "guias/g8_summary.mp3",
 
+  // * G9 - Atualizar Novo Morador na Família
+  "Atualizar Novo Morador na Família": "guias/g9_title.mp3",
+  "Passo a passo para incluir um morador recém-chegado à composição familiar.": "guias/g9_summary.mp3",
+
+  // * G10 - Registrar Óbito no Sistema
+  "Registrar Óbito no Sistema": "guias/g10_title.mp3",
+  "Como proceder para dar baixa por óbito na ficha do cidadão com respeito e precisão.": "guias/g10_summary.mp3",
+
   // G11 - Registrar Visita Domiciliar
   "Registrar Visita Domiciliar": "guias/g11_title.mp3",
   "Como registrar corretamente uma visita domiciliar realizada no dia a dia.": "guias/g11_summary.mp3",
+
+  // * G12 - Selecionar Motivo da Visita Domiciliar
+  "Selecionar Motivo da Visita Domiciliar": "guias/g12_title.mp3",
+  "Orientações sobre qual motivo de visita marcar de acordo com o foco do atendimento.": "guias/g12_summary.mp3",
+
+  // * G13 - Registrar Visita com Morador Ausente ou Recusada
+  "Registrar Visita com Morador Ausente ou Recusada": "guias/g13_title.mp3",
+  "Como registrar a tentativa de visita quando a casa está fechada ou o morador recusa.": "guias/g13_summary.mp3",
+
+  // * G14 - Mensagem de Cadastro Duplicado
+  "Mensagem de Cadastro Duplicado": "guias/g14_title.mp3",
+  "Entenda o alerta de cadastro duplicado e saiba como resolver sem perdas de dados.": "guias/g14_summary.mp3",
+
+  // * G15 - Diferenciar Pessoas com Mesmo Nome (Homônimos)
+  "Diferenciar Pessoas com Mesmo Nome (Homônimos)": "guias/g15_title.mp3",
+  "Como conferir data de nascimento, mãe e documentos para diferenciar cadastros homônimos.": "guias/g15_summary.mp3",
+
+  // * G16 - Escolher Logradouro em Ruas Semelhantes
+  "Escolher Logradouro em Ruas Semelhantes": "guias/g16_title.mp3",
+  "Orientações para selecionar a rua correta quando houver nomes parecidos na lista oficial.": "guias/g16_summary.mp3",
+
+  // * G17 - Entender Inconsistência no Sistema
+  "Entender Inconsistência no Sistema": "guias/g17_title.mp3",
+  "O que é uma inconsistência de dados no e-SUS Território e como identificá-la.": "guias/g17_summary.mp3",
+
+  // * G18 - Corrigir Erro Pós-Sincronização
+  "Corrigir Erro Pós-Sincronização": "guias/g18_title.mp3",
+  "Passo a passo para localizar e corrigir fichas com erro devolvidas após sincronizar.": "guias/g18_summary.mp3",
+
+  // * G19 - Cadastros Ausentes no Sistema da Unidade
+  "Cadastros Ausentes no Sistema da Unidade": "guias/g19_title.mp3",
+  "Por que cadastros feitos no tablet ainda não aparecem no PEC da unidade e como resolver.": "guias/g19_summary.mp3",
+
+  // * G20 - Sincronizar Dados do Tablet com a Unidade
+  "Sincronizar Dados do Tablet com a Unidade": "guias/g20_title.mp3",
+  "Passo a passo completo para sincronizar os dados do tablet com o PEC da unidade.": "guias/g20_summary.mp3",
 
   // G21 - Acompanhamento de Pré-natal
   "Acompanhamento de Pré-natal": "guias/g21_title.mp3",
@@ -239,6 +283,12 @@ export const audioMappings: AudioMapping = {
   "Características do Imóvel. Preencha o tipo de imóvel, abastecimento de água e destino do lixo.": "passos/g1_step4.mp3",
   "Salvar Cadastro. Confirme os dados e toque em Salvar para registrar o domicílio na base local.": "passos/g1_step5.mp3",
 
+  // * G2 - Verificar Duplicação de Domicílio
+  "Pesquisar Endereço. Na aba Domicílios, use a barra de busca e digite o nome da rua e o número da casa.": "passos/g2_step1.mp3",
+  "Conferir Complemento. Verifique se o imóvel possui complementos como casa A, casa B ou bloco.": "passos/g2_step2.mp3",
+  "Consultar Lista da Microárea. Filtre a busca pela sua microárea para listar todas as casas da quadra.": "passos/g2_step3.mp3",
+  "Confirmar Antes de Criar. Se a casa já aparecer na lista, abra a ficha existente em vez de cadastrar novamente.": "passos/g2_step4.mp3",
+
   // G3 - Corrigir Erro de Endereço ou CEP
   "Buscar por Nome Similar. Digite parte do nome da rua na busca de logradouro para localizar a grafia cadastrada.": "passos/g3_step1.mp3",
   "Usar CEP Geral do Município. Se o CEP específico não funcionar, tente o CEP geral da cidade cadastrado na UBS.": "passos/g3_step2.mp3",
@@ -276,11 +326,78 @@ export const audioMappings: AudioMapping = {
   "Selecionar Mudança de Território. Escolha a opção 'Mudou-se' ou 'Saída do Domicílio'.": "passos/g8_step3.mp3",
   "Confirmar Desvinculação. Confirme a alteração para desvincular o morador daquela residência.": "passos/g8_step4.mp3",
 
+  // * G9 - Atualizar Novo Morador na Família
+  "Localizar a Residência. Abra a ficha da casa onde o novo morador passou a residir.": "passos/g9_step1.mp3",
+  "Verificar se já tem Cadastro. Pesquise se a pessoa veio de outro bairro e já possui registro no sistema.": "passos/g9_step2.mp3",
+  "Adicionar ou Transferir. Se já tiver cadastro, faça a transferência de endereço; se não tiver, crie um novo.": "passos/g9_step3.mp3",
+  "Atualizar Relação Familiar. Ajuste o grau de parentesco e salve a nova formação da família.": "passos/g9_step4.mp3",
+
+  // * G10 - Registrar Óbito no Sistema
+  "Localizar Ficha do Cidadão. Busque pelo nome ou CPF da pessoa falecida no aplicativo.": "passos/g10_step1.mp3",
+  "Editar Cadastro Individual. Toque no ícone de lápis para alterar os dados da ficha.": "passos/g10_step2.mp3",
+  "Marcar Opção Óbito. Selecione o campo de saída por 'Óbito' e informe a data do falecimento se solicitada.": "passos/g10_step3.mp3",
+  "Salvar e Notificar Equipe. Salve a ficha e comunique a equipe de saúde para encerramento de acompanhamentos.": "passos/g10_step4.mp3",
+
   // G11 - Registrar Visita Domiciliar
   "Localizar Cidadão ou Família. Busque a pessoa ou a casa na sua lista de microárea.": "passos/g11_step1.mp3",
   "Iniciar Ficha de Visita. Toque no botão 'Registrar Visita' no perfil do cidadão.": "passos/g11_step2.mp3",
   "Marcar Motivos e Ações. Selecione os motivos da visita e ações realizadas no momento.": "passos/g11_step3.mp3",
   "Salvar Visita. Confirme o desfecho como 'Visita Realizada' e toque em Salvar.": "passos/g11_step4.mp3",
+
+  // * G12 - Selecionar Motivo da Visita Domiciliar
+  "Cadastramento e Atualização. Marque 'Cadastramento/Atualização' quando o foco for coletar dados cadastrais.": "passos/g12_step1.mp3",
+  "Acompanhamento Continuado. Marque 'Gestante', 'Hipertensão', 'Diabetes' ou 'Criança' conforme o público atendido.": "passos/g12_step2.mp3",
+  "Busca Ativa e Convites. Marque 'Busca Ativa' para vacinas atrasadas, consultas faltosas ou exames pendentes.": "passos/g12_step3.mp3",
+  "Controle Ambiental. Marque 'Controle de Vetores' ao realizar inspeções de dengue e saneamento.": "passos/g12_step4.mp3",
+
+  // * G13 - Registrar Visita com Morador Ausente ou Recusada
+  "Sim, Deve Registrar. É essencial registrar no sistema mesmo quando não encontrar ninguém em casa.": "passos/g13_step1.mp3",
+  "Abrir Ficha de Visita. Selecione o domicílio ou o cidadão que tentou visitar.": "passos/g13_step2.mp3",
+  "Selecionar Desfecho Ausente. No campo Desfecho, escolha a opção 'Ausente' se o imóvel estiver fechado.": "passos/g13_step3.mp3",
+  "Selecionar Desfecho Recusada. Se o morador não quiser atender, escolha a opção 'Recusada' e salve.": "passos/g13_step4.mp3",
+
+  // * G14 - Mensagem de Cadastro Duplicado
+  "Compreender o Alerta. Esta mensagem indica que o CPF ou CNS digitado já existe na base de dados da UBS.": "passos/g14_step1.mp3",
+  "Não Criar Novo Cadastro. Não tente forçar um novo cadastro alterando letras do nome ou números.": "passos/g14_step2.mp3",
+  "Buscar Cadastro Existente. Volte à tela de busca e pesquise pelo CPF para carregar a ficha oficial.": "passos/g14_step3.mp3",
+  "Vincular à Família. Abra a ficha encontrada e apenas atualize o endereço para o domicílio atual.": "passos/g14_step4.mp3",
+
+  // * G15 - Diferenciar Pessoas com Mesmo Nome (Homônimos)
+  "Verificar Data de Nascimento. Compare a data de nascimento exata dos dois cadastros para conferir se são pessoas diferentes.": "passos/g15_step1.mp3",
+  "Conferir Nome da Mãe. Examine o nome completo da mãe registrado em cada uma das fichas.": "passos/g15_step2.mp3",
+  "Checar Número de CPF e CNS. Verifique o número do CPF ou do Cartão do SUS de cada cidadão.": "passos/g15_step3.mp3",
+  "Confirmar Endereço do Imóvel. Certifique-se em qual casa e microárea cada um dos homônimos reside.": "passos/g15_step4.mp3",
+
+  // * G16 - Escolher Logradouro em Ruas Semelhantes
+  "Evitar Abreviações. Procure o nome por extenso na lista de logradouros em vez de usar siglas incomuns.": "passos/g16_step1.mp3",
+  "Conferir o Bairro. Verifique a qual bairro a rua pertence na lista de opções exibida.": "passos/g16_step2.mp3",
+  "Padronizar com a Equipe. Consulte os colegas ACS da mesma microárea para usar o mesmo padrão de rua.": "passos/g16_step3.mp3",
+  "Selecionar Código de Logradouro. Escolha a rua que possui o código CEP oficial cadastrado na UBS.": "passos/g16_step4.mp3",
+
+  // * G17 - Entender Inconsistência no Sistema
+  "O que é Inconsistência?. Inconsistência ocorre quando faltam dados obrigatórios ou há dados conflitantes na ficha.": "passos/g17_step1.mp3",
+  "Exemplos Comuns. CPF inválido, responsável familiar não indicado ou ausência de vínculo de parentesco.": "passos/g17_step2.mp3",
+  "Impacto no Trabalho. Fichas com inconsistência não são validadas pelo Ministério da Saúde até serem corrigidas.": "passos/g17_step3.mp3",
+  "Como Identificar. O aplicativo exibe um alerta amarelo ou vermelho indicando a ficha com pendência.": "passos/g17_step4.mp3",
+
+  // * G18 - Corrigir Erro Pós-Sincronização
+  "Verificar Relatório de Sincronização. Após sincronizar, abra a aba Sincronização e veja a lista de fichas rejeitadas.": "passos/g18_step1.mp3",
+  "Ler a Mensagem do Erro. Toque na ficha rejeitada para ler exatamente qual campo precisa de correção.": "passos/g18_step2.mp3",
+  "Editar os Campos Indicados. Abra a ficha do cidadão ou domicílio e corrija a informação incorreta.": "passos/g18_step3.mp3",
+  "Sincronizar Novamente. Após salvar as correções, faça uma nova sincronização para reenviar as fichas.": "passos/g18_step4.mp3",
+
+  // * G19 - Cadastros Ausentes no Sistema da Unidade
+  "Verificar Fichas Pendentes. Abra o menu Sincronização no tablet e confira se há fichas acumuladas sem enviar.": "passos/g19_step1.mp3",
+  "Checar Conexão Wi-Fi da UBS. Certifique-se de que o tablet está conectado à rede de internet oficial da UBS.": "passos/g19_step2.mp3",
+  "Aguardar Processamento do PEC. O sistema da unidade pode levar alguns minutos para importar o lote recebido.": "passos/g19_step3.mp3",
+  "Solicitar Reimportação. Se as fichas foram enviadas mas não aparecem, peça ao digitador ou enfermeiro para checar o lote no PEC.": "passos/g19_step4.mp3",
+
+  // * G20 - Sincronizar Dados do Tablet com a Unidade
+  "Conectar ao Wi-Fi da UBS. Ao chegar na Unidade de Saúde, ligue o Wi-Fi do tablet e conecte à rede autorizada.": "passos/g20_step1.mp3",
+  "Abrir o Menu Sincronização. Abra o aplicativo e-SUS Território e toque no menu lateral na opção 'Sincronizar'.": "passos/g20_step2.mp3",
+  "Iniciar o Envio de Fichas. Toque no botão 'Enviar Dados' e aguarde a barra de progresso ser concluída.": "passos/g20_step3.mp3",
+  "Receber Atualizações da Base. Após enviar, toque em 'Receber Dados' para baixar novidades do PEC no seu tablet.": "passos/g20_step4.mp3",
+  "Confirmar Mensagem de Sucesso. Certifique-se de que a mensagem 'Sincronização realizada com sucesso' foi exibida.": "passos/g20_step5.mp3",
 
   // G21 - Acompanhamento de Pré-natal
   "Identificar Gestante. Confirme a suspeita de gravidez e a data da última menstruação (DUM).": "passos/g21_step1.mp3",
