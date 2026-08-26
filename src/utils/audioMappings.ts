@@ -110,6 +110,10 @@ export const audioMappings: AudioMapping = {
   "\"Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?\"": "confirmacao/desenvolvimento-infantil.mp3",
   "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?": "confirmacao/desenvolvimento-infantil.mp3",
 
+  // * G42 - Avaliação IVCF-20 (Pessoa Idosa)
+  "\"Entendi. Você quer saber como preencher e aplicar o IVCF-20 da pessoa idosa no e-SUS Território. Posso continuar para o guia?\"": "confirmacao/ivcf-20-idoso.mp3",
+  "Entendi. Você quer saber como preencher e aplicar o IVCF-20 da pessoa idosa no e-SUS Território. Posso continuar para o guia?": "confirmacao/ivcf-20-idoso.mp3",
+
   // === GUIAS - TÍTULOS E RESUMOS ===
   // G1 - Cadastrar Casa Nova no Sistema
   "Cadastrar Casa Nova no Sistema": "guias/g1_title.mp3",
@@ -274,6 +278,9 @@ export const audioMappings: AudioMapping = {
   "Desenvolvimento Infantil": "guias/g41_title.mp3",
   "Marcos de crescimento e aprendizagem da criança.": "guias/g41_summary.mp3",
 
+  // * G42 - Aplicação do IVCF-20 (Saúde da Pessoa Idosa)
+  "Aplicação do IVCF-20 (Saúde da Pessoa Idosa)": "guias/g42_title.mp3",
+  "Orientações do Ministério da Saúde para preenchimento e aplicação do Índice de Vulnerabilidade Clínico-Funcional (IVCF-20) no e-SUS Território.": "guias/g42_summary.mp3",
 
   // === PASSOS DOS GUIAS ===
   // G1 - Cadastrar Casa Nova no Sistema
@@ -440,6 +447,98 @@ export const audioMappings: AudioMapping = {
   "Polifarmácia. Verifique se o idoso toma mais de 5 medicamentos e se há confusão nas doses.": "passos/g27_step2.mp3",
   "Caderneta do Idoso. Atualize os dados de saúde na Caderneta da Pessoa Idosa.": "passos/g27_step3.mp3",
   "Atividades Diárias. Avalie se o idoso consegue comer, tomar banho e se vestir sozinho.": "passos/g27_step4.mp3",
+
+  // * G28 - Vacinação em Atraso
+  "Conferir Caderneta. Compare as vacinas tomadas com o calendário nacional vigente.": "passos/g28_step1.mp3",
+  "Identificar Faltosas. Anote quais doses estão atrasadas (Ex: Penta, VIP/VOP, SCR).": "passos/g28_step2.mp3",
+  "Orientar Família. Explique a importância da proteção e os riscos das doenças.": "passos/g28_step3.mp3",
+  "Encaminhamento. Direcione a família imediatamente à sala de vacina da UBS de referência.": "passos/g28_step4.mp3",
+
+  // * G29 - Planejamento Familiar
+  "Abordagem. Inicie a conversa sobre o desejo de ter filhos ou evitar gravidez no momento.": "passos/g29_step1.mp3",
+  "Métodos Disponíveis. Informe sobre camisinha, pílula, injetável, DIU e métodos definitivos no SUS.": "passos/g29_step2.mp3",
+  "Grupo de Apoio. Convide o casal para as reuniões de planejamento familiar na unidade.": "passos/g29_step3.mp3",
+  "Distribuição. Lembre que preservativos podem ser retirados livremente na UBS.": "passos/g29_step4.mp3",
+
+  // * G30 - Cuidados no Puerpério
+  "Sinais de Infecção. Observe febre, dor intensa ou sangramento com odor forte (loquiação).": "passos/g30_step1.mp3",
+  "Saúde Mental. Identifique sinais de tristeza profunda ou desinteresse pelo bebê (Depressão Pós-parto).": "passos/g30_step2.mp3",
+  "Exame Ginecológico. Garanta que a consulta de revisão (42 dias) esteja agendada.": "passos/g30_step3.mp3",
+  "Amamentação. Avalie a saúde das mamas (fissuras ou mastite) e apoie a puérpera.": "passos/g30_step4.mp3",
+
+  // * G31 - Sintomáticos Respiratórios e Pele
+  "Identificar Tosse. Questione sobre tosse por 3 semanas ou mais (Tuberculose).": "passos/g31_step1.mp3",
+  "Manchas na Pele. Observe manchas claras ou avermelhadas com perda de sensibilidade (Hanseníase).": "passos/g31_step2.mp3",
+  "Contatos Próximos. Identifique se familiares de casos confirmados estão sendo avaliados.": "passos/g31_step3.mp3",
+  "Encaminhamento. Direcione para coleta de escarro ou avaliação médica na UBS.": "passos/g31_step4.mp3",
+
+  // * G32 - Orientações de Saúde Bucal
+  "Higiene Diária. Oriente sobre escovação após as refeições e uso do fio dental.": "passos/g32_step1.mp3",
+  "Bebês e Crianças. Explique que a limpeza deve começar antes mesmo dos primeiros dentes.": "passos/g32_step2.mp3",
+  "Lesões Suspeitas. Observe feridas na boca que não cicatrizam em 15 dias (risco de câncer).": "passos/g32_step3.mp3",
+  "Próteses. Oriente idosos sobre a limpeza correta e retirada da dentadura para dormir.": "passos/g32_step4.mp3",
+
+  // * G33 - Identificação de Violência
+  "Sinais Físicos. Observe hematomas em locais incomuns ou marcas de queimadura.": "passos/g33_step1.mp3",
+  "Comportamento. Note isolamento repentino, medo excessivo ou regressão no desenvolvimento.": "passos/g33_step2.mp3",
+  "Escuta Protegida. Não force o relato; acolha o que for dito voluntariamente.": "passos/g33_step3.mp3",
+  "Notificação. Informe imediatamente à sua enfermeira supervisora para conduta sigilosa.": "passos/g33_step4.mp3",
+
+  // * G34 - Saneamento e Meio Ambiente
+  "Água e Esgoto. Verifique a origem da água e o destino dos dejetos (fossa ou rede).": "passos/g34_step1.mp3",
+  "Lixo e Entulho. Oriente sobre o descarte correto para evitar ratos e escorpiões.": "passos/g34_step2.mp3",
+  "Animais Sinantrópicos. Observe presença de morcegos, barbeiros ou caramujos africanos.": "passos/g34_step3.mp3",
+  "Manejo Ambiental. Sugira soluções simples como telar ralos e manter quintais limpos.": "passos/g34_step4.mp3",
+
+  // * G35 - Apoio em Cuidados Paliativos
+  "Conforto e Dor. Pergunte sobre a intensidade da dor e se a medicação está aliviando.": "passos/g35_step1.mp3",
+  "Prevenção de Lesões. Oriente a família sobre a mudança de decúbito (virar o paciente) a cada 2h.": "passos/g35_step2.mp3",
+  "Higiene e Nutrição. Auxilie com dicas para banho no leito e alimentação pastosa/líquida.": "passos/g35_step3.mp3",
+  "Apoio ao Cuidador. Observe se o cuidador está exausto e ofereça escuta emocional.": "passos/g35_step4.mp3",
+
+  // * G36 - Mordedura e Raiva Humana
+  "Lavagem Imediata. Oriente lavar o ferimento abundantemente com água e sabão.": "passos/g36_step1.mp3",
+  "Dados do Animal. Identifique se o animal é conhecido e pode ser observado por 10 dias.": "passos/g36_step2.mp3",
+  "Encaminhamento Rápido. Envie o paciente à UBS para avaliar a necessidade de vacina ou soro.": "passos/g36_step3.mp3",
+  "Notificação. Registre o caso de agressão por animal no sistema de vigilância.": "passos/g36_step4.mp3",
+
+  // * G37 - Saúde do Homem
+  "Rastreamento. Oriente sobre a importância dos exames de rotina (PA, glicemia, colesterol).": "passos/g37_step1.mp3",
+  "Prevenção de Câncer. Fale sobre o câncer de próstata e pênis (higiene e sinais de alerta).": "passos/g37_step2.mp3",
+  "Saúde Sexual. Aborde o uso de preservativos e o teste rápido para ISTs.": "passos/g37_step3.mp3",
+  "Acesso à UBS. Estimule o comparecimento à unidade, mesmo sem sintomas agudos.": "passos/g37_step4.mp3",
+
+  // * G38 - Álcool e Drogas (Redução de Danos)
+  "Vínculo e Escuta. Aproxime-se sem julgamentos para entender o padrão de uso.": "passos/g38_step1.mp3",
+  "Hidratação e Alimentação. Oriente sobre cuidados básicos para diminuir o impacto físico.": "passos/g38_step2.mp3",
+  "Rede de Cuidado. Informe sobre o CAPS AD e grupos de apoio na comunidade.": "passos/g38_step3.mp3",
+  "Segurança. Em caso de overdose ou abstinência grave, saiba como acionar o SAMU.": "passos/g38_step4.mp3",
+
+  // * G39 - Prevenção de Câncer Feminino
+  "Autoexame. Ensine a mulher a observar as mamas e identificar alterações.": "passos/g39_step1.mp3",
+  "Preventivo. Verifique se o Papanicolau está em dia (recomendado a cada 1 a 3 anos).": "passos/g39_step2.mp3",
+  "Critérios de Idade. Oriente sobre a mamografia para mulheres entre 50 e 69 anos.": "passos/g39_step3.mp3",
+  "Encaminhamento. Agende ou direcione para a coleta na Unidade de Saúde.": "passos/g39_step4.mp3",
+
+  // * G40 - Sintomas Gripais e COVID
+  "Isolamento. Oriente o afastamento de outras pessoas e o uso de máscara em casa.": "passos/g40_step1.mp3",
+  "Sinais de Gravidade. Monitore se há falta de ar, cansaço extremo ou febre persistente.": "passos/g40_step2.mp3",
+  "Testagem. Informe sobre onde e quando realizar o teste (COVID ou Influenza).": "passos/g40_step3.mp3",
+  "Notificação. Registre o caso como suspeito na planilha de monitoramento da equipe.": "passos/g40_step4.mp3",
+
+  // * G41 - Desenvolvimento Infantil
+  "Puericultura. Verifique se as consultas de rotina no médico/enfermeiro estão em dia.": "passos/g41_step1.mp3",
+  "Marcos Motores. Observe se a criança já senta, engatinha ou anda conforme a idade.": "passos/g41_step2.mp3",
+  "Linguagem. Note se a criança interage, balbucia ou já fala palavras simples.": "passos/g41_step3.mp3",
+  "Estímulos. Oriente os pais sobre a importância de brincar e conversar com o bebê.": "passos/g41_step4.mp3",
+
+  // * G42 - Aplicação do IVCF-20 (Saúde da Pessoa Idosa)
+  "Acessar o Questionário no e-SUS. Na ficha individual do morador idoso (60 anos ou mais), abra a aba de questionários e selecione 'Avaliação da Pessoa Idosa - IVCF-20'.": "passos/g42_step1.mp3",
+  "Envolver Familiar ou Cuidador. Convide um familiar ou o cuidador principal para acompanhar a conversa, ajudando a validar as informações sobre uso de remédios, histórico de quedas e dificuldades na rotina.": "passos/g42_step2.mp3",
+  "Compreender o Impacto do seu Papel. ACS, ao preencher o IVCF-20 você é os olhos do SUS dentro da casa: muitas famílias não percebem a tempo o risco de quedas, esquecimentos ou sobrecarga de quem cuida. Seu preenchimento garante que a equipe de saúde chegue antes de uma internação grave e dá à família a certeza de que não está desamparada.": "passos/g42_step3.mp3",
+  "Avaliar as 8 Dimensões Clínicas. Faça as perguntas diretamente ao idoso com calma sobre: autopercepção da saúde, atividades diárias (AVDs), cognição/memória, humor, mobilidade, visão/audição e comorbidades.": "passos/g42_step4.mp3",
+  "Interpretar o Escore (0 a 40 pontos). O e-SUS calcula a pontuação: 0 a 6 pontos (Idoso Robusto), 7 a 14 pontos (Risco de Fragilização) e 15 ou mais pontos (Idoso Frágil).": "passos/g42_step5.mp3",
+  "Notificar a Equipe de Saúde da Família. Salve a avaliação e comunique imediatamente à enfermeira ou médico da UBS os idosos com escore ≥ 7 para elaboração do plano de cuidados prioritário.": "passos/g42_step6.mp3",
 
   // === MOTIVAÇÃO ===
   "\"Missão cumprida! O Ministério da Saúde agradece seu empenho. Você é a peça fundamental que leva o SUS para dentro da casa dos brasileiros. Seu trabalho de hoje garante um futuro com mais saúde para toda a sua comunidade. Orgulhe-se de ser ACS!\"":
