@@ -122,6 +122,22 @@ export const audioMappings: AudioMapping = {
   "Corrigir Erro de Endereço ou CEP": "guias/g3_title.mp3",
   "O que fazer quando a rua, o bairro ou o CEP não aparecem corretamente no aplicativo.": "guias/g3_summary.mp3",
 
+  // * G4 - Cadastrar Morador no Domicílio
+  "Cadastrar Morador no Domicílio": "guias/g4_title.mp3",
+  "Passo a passo para incluir e vincular um novo morador a um domicílio já existente.": "guias/g4_summary.mp3",
+
+  // * G5 - Cadastrar Morador sem CPF ou CNS
+  "Cadastrar Morador sem CPF ou CNS": "guias/g5_title.mp3",
+  "Como cadastrar um cidadão que não possui CPF nem Cartão do SUS no momento da visita.": "guias/g5_summary.mp3",
+
+  // * G6 - Verificar Duplicação de Cidadão
+  "Verificar Duplicação de Cidadão": "guias/g6_title.mp3",
+  "Como buscar e confirmar se a pessoa já possui cadastro no sistema antes de criar outro.": "guias/g6_summary.mp3",
+
+  // * G7 - Cadastrar Recém-Nascido
+  "Cadastrar Recém-Nascido": "guias/g7_title.mp3",
+  "Orientações para cadastrar um recém-nascido no e-SUS Território vinculando-o à família.": "guias/g7_summary.mp3",
+
   // G8 - Registrar Mudança de Morador (Saída)
   "Registrar Mudança de Morador (Saída)": "guias/g8_title.mp3",
   "Como atualizar o sistema quando um morador se muda do domicílio ou da microárea.": "guias/g8_summary.mp3",
@@ -227,6 +243,32 @@ export const audioMappings: AudioMapping = {
   "Buscar por Nome Similar. Digite parte do nome da rua na busca de logradouro para localizar a grafia cadastrada.": "passos/g3_step1.mp3",
   "Usar CEP Geral do Município. Se o CEP específico não funcionar, tente o CEP geral da cidade cadastrado na UBS.": "passos/g3_step2.mp3",
   "Editar Ficha de Domicílio. Se o erro for em casa existente, abra o domicílio e toque no lápis para atualizar o endereço.": "passos/g3_step3.mp3",
+
+  // * G4 - Cadastrar Morador no Domicílio
+  "Abrir o Domicílio. Localize a casa no aplicativo e toque na ficha do domicílio correspondente.": "passos/g4_step1.mp3",
+  "Adicionar Morador. Toque na opção 'Adicionar Família' ou 'Adicionar Morador' dentro da casa.": "passos/g4_step2.mp3",
+  "Preencher Dados Pessoais. Insira nome completo, data de nascimento, sexo e nome da mãe.": "passos/g4_step3.mp3",
+  "Vincular ao Responsável. Defina o parentesco do morador em relação ao responsável familiar.": "passos/g4_step4.mp3",
+  "Salvar Morador. Confirme as informações e salve para concluir a inclusão do morador.": "passos/g4_step5.mp3",
+
+  // * G5 - Cadastrar Morador sem CPF ou CNS
+  "Prosseguir sem Documento. Sim, é possível realizar o cadastro no e-SUS mesmo sem o CPF ou CNS do morador.": "passos/g5_step1.mp3",
+  "Usar CNS se Houver. Se a pessoa não tiver CPF, verifique se ela possui o Cartão Nacional do SUS.": "passos/g5_step2.mp3",
+  "Preencher Nome e Nascimento. Se não houver nenhum documento, registre com precisão o nome completo e a data de nascimento.": "passos/g5_step3.mp3",
+  "Solicitar Atualização Posterior. Oriente a família a providenciar o documento e levar à unidade para atualizar depois.": "passos/g5_step4.mp3",
+
+  // * G6 - Verificar Duplicação de Cidadão
+  "Buscar por CPF ou CNS. Utilize o campo de busca digitando o CPF ou o número do Cartão SUS da pessoa.": "passos/g6_step1.mp3",
+  "Buscar por Nome e Nascimento. Se não tiver o documento, busque pelo nome completo e data de nascimento.": "passos/g6_step2.mp3",
+  "Conferir Nome da Mãe. Compare o nome da mãe no cadastro encontrado para confirmar se é a mesma pessoa.": "passos/g6_step3.mp3",
+  "Vincular Cadastro Existente. Se o cadastro for encontrado, apenas vincule a pessoa ao domicílio atual.": "passos/g6_step4.mp3",
+
+  // * G7 - Cadastrar Recém-Nascido
+  "Abrir a Ficha Familiar. Acesse o domicílio cadastrado onde a mãe ou responsável reside.": "passos/g7_step1.mp3",
+  "Adicionar Novo Membro. Toque em Adicionar Morador e selecione a opção de dependente ou filho.": "passos/g7_step2.mp3",
+  "Preencher Registro de Nascimento. Informe a data de nascimento, peso ao nascer e a Declaração de Nascido Vivo se houver.": "passos/g7_step3.mp3",
+  "Vincular à Mãe. Selecione o cadastro da mãe no campo correspondente para garantir o vínculo.": "passos/g7_step4.mp3",
+  "Salvar e Agendar Visita. Salve a ficha do recém-nascido e já programe a primeira visita de puericultura.": "passos/g7_step5.mp3",
 
   // G8 - Registrar Mudança de Morador (Saída)
   "Acesse o Cadastro do Cidadão. Localize o morador dentro da ficha do domicílio atual.": "passos/g8_step1.mp3",
