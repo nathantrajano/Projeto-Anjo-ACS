@@ -25,92 +25,125 @@ export const audioMappings: AudioMapping = {
   "Você está no Anjo ACS, seu assistente digital. Como posso ajudar você hoje?":
     "header/welcome.mp3",
 
-  // === CONFIRMAÇÃO DE INTENÇÕES (25 ARQUIVOS MP3 EXISTENTES) ===
+  // === CONFIRMAÇÃO DE INTENÇÕES ===
+  // G1 - Cadastrar Casa Nova no Sistema
   "\"Entendi. Você quer saber como cadastrar uma casa nova no sistema. Posso continuar para o guia?\"":
     "confirmacao/cadastro-casa-nova.mp3",
   "Entendi. Você quer saber como cadastrar uma casa nova no sistema. Posso continuar para o guia?":
     "confirmacao/cadastro-casa-nova.mp3",
 
-  "\"Entendi. Você quer saber como registrar que fez uma visita hoje. Posso continuar para o guia?\"":
-    "confirmacao/registrar-visita-hoje.mp3",
-  "Entendi. Você quer saber como registrar que fez uma visita hoje. Posso continuar para o guia?":
-    "confirmacao/registrar-visita-hoje.mp3",
+  // G2 - Verificar Duplicação de Domicílio
+  "\"Entendi. Você quer saber como checar se uma casa já foi cadastrada. Posso continuar para o guia?\"":
+    "confirmacao/verificar-duplicacao-domicilio.mp3",
+  "Entendi. Você quer saber como checar se uma casa já foi cadastrada. Posso continuar para o guia?":
+    "confirmacao/verificar-duplicacao-domicilio.mp3",
 
+
+
+  // G3 - Corrigir Erro de Endereço ou CEP
   "\"Entendi. Você quer saber o que fazer quando o endereço ou CEP não aparece certo. Posso continuar para o guia?\"":
     "confirmacao/erro-endereco-cep.mp3",
   "Entendi. Você quer saber o que fazer quando o endereço ou CEP não aparece certo. Posso continuar para o guia?":
     "confirmacao/erro-endereco-cep.mp3",
 
+  // G8 - Registrar Mudança de Morador (Saída)
   "\"Entendi. Você quer saber como registrar a mudança de uma pessoa que saiu da casa. Posso continuar para o guia?\"":
     "confirmacao/mudanca-morador-saida.mp3",
   "Entendi. Você quer saber como registrar a mudança de uma pessoa que saiu da casa. Posso continuar para o guia?":
     "confirmacao/mudanca-morador-saida.mp3",
 
+  // G11 - Registrar Visita Domiciliar
+  "\"Entendi. Você quer saber como registrar que fez uma visita hoje. Posso continuar para o guia?\"":
+    "confirmacao/registrar-visita-hoje.mp3",
+  "Entendi. Você quer saber como registrar que fez uma visita hoje. Posso continuar para o guia?":
+    "confirmacao/registrar-visita-hoje.mp3",
+
+  // G21 - Acompanhamento de Pré-natal
   "\"Entendi. Você quer saber sobre o pré-natal. Posso continuar para o guia?\"": "confirmacao/pre-natal.mp3",
   "Entendi. Você quer saber sobre o pré-natal. Posso continuar para o guia?": "confirmacao/pre-natal.mp3",
 
+  // G22 - Acompanhamento Hiperdia
   "\"Entendi. Você quer saber sobre o Hiperdia. Posso continuar para o guia?\"": "confirmacao/hiperdia.mp3",
   "Entendi. Você quer saber sobre o Hiperdia. Posso continuar para o guia?": "confirmacao/hiperdia.mp3",
 
+  // G23 - Acompanhamento Bolsa Família
   "\"Entendi. Você quer saber sobre o Bolsa Família. Posso continuar para o guia?\"": "confirmacao/bolsa-familia.mp3",
   "Entendi. Você quer saber sobre o Bolsa Família. Posso continuar para o guia?": "confirmacao/bolsa-familia.mp3",
 
+  // G24 - Visita ao Recém-nascido (Cuidados)
   // TODO: Regravar este áudio. O arquivo antigo ("visita-recem-nascido.mp3") dizia "sobre a visita ao recém-nascido" (sem "os cuidados na").
   // "\"Entendi. Você quer saber sobre os cuidados na visita ao recém-nascido. Posso continuar para o guia?\"": "confirmacao/cuidados-visita-recem-nascido.mp3",
   // "Entendi. Você quer saber sobre os cuidados na visita ao recém-nascido. Posso continuar para o guia?": "confirmacao/cuidados-visita-recem-nascido.mp3",
 
+  // G25 - Prevenção de Arboviroses
   "\"Entendi. Você quer saber sobre dengue e focos. Posso continuar para o guia?\"": "confirmacao/combate-dengue.mp3",
   "Entendi. Você quer saber sobre dengue e focos. Posso continuar para o guia?": "confirmacao/combate-dengue.mp3",
 
+  // G26 - Saúde Mental na Comunidade
   "\"Entendi. Você quer saber sobre saúde mental. Posso continuar para o guia?\"": "confirmacao/saude-mental.mp3",
   "Entendi. Você quer saber sobre saúde mental. Posso continuar para o guia?": "confirmacao/saude-mental.mp3",
 
+  // G27 - Saúde do Idoso
   "\"Entendi. Você quer saber sobre a saúde do idoso. Posso continuar para o guia?\"": "confirmacao/saude-idoso.mp3",
   "Entendi. Você quer saber sobre a saúde do idoso. Posso continuar para o guia?": "confirmacao/saude-idoso.mp3",
 
+  // G28 - Vacinação em Atraso
   "\"Entendi. Você quer saber sobre vacina atrasada. Posso continuar para o guia?\"": "confirmacao/vacinacao-atraso.mp3",
   "Entendi. Você quer saber sobre vacina atrasada. Posso continuar para o guia?": "confirmacao/vacinacao-atraso.mp3",
 
+  // G29 - Planejamento Familiar
   "\"Entendi. Você quer saber sobre planejamento familiar. Posso continuar para o guia?\"": "confirmacao/planejamento-familiar.mp3",
   "Entendi. Você quer saber sobre planejamento familiar. Posso continuar para o guia?": "confirmacao/planejamento-familiar.mp3",
 
+  // G30 - Cuidados no Puerpério
   "\"Entendi. Você quer saber sobre pós-parto e puerpério. Posso continuar para o guia?\"": "confirmacao/puerperio.mp3",
   "Entendi. Você quer saber sobre pós-parto e puerpério. Posso continuar para o guia?": "confirmacao/puerperio.mp3",
 
+  // G31 - Sintomáticos Respiratórios e Pele
   "\"Entendi. Você quer saber sobre tuberculose e hanseníase. Posso continuar para o guia?\"": "confirmacao/busca-ativa-tb-hanseniase.mp3",
   "Entendi. Você quer saber sobre tuberculose e hanseníase. Posso continuar para o guia?": "confirmacao/busca-ativa-tb-hanseniase.mp3",
 
+  // G32 - Orientações de Saúde Bucal
   "\"Entendi. Você quer saber sobre saúde bucal. Posso continuar para o guia?\"": "confirmacao/saude-bucal.mp3",
   "Entendi. Você quer saber sobre saúde bucal. Posso continuar para o guia?": "confirmacao/saude-bucal.mp3",
 
+  // G33 - Identificação de Violência
   "\"Entendi. Você quer saber sobre identificação de violência. Posso continuar para o guia?\"": "confirmacao/identificar-violencia.mp3",
   "Entendi. Você quer saber sobre identificação de violência. Posso continuar para o guia?": "confirmacao/identificar-violencia.mp3",
 
+  // G34 - Saneamento e Meio Ambiente
   "\"Entendi. Você quer saber sobre riscos ambientais. Posso continuar para o guia?\"": "confirmacao/riscos-ambientais.mp3",
   "Entendi. Você quer saber sobre riscos ambientais. Posso continuar para o guia?": "confirmacao/riscos-ambientais.mp3",
 
+  // G35 - Apoio em Cuidados Paliativos
   "\"Entendi. Você quer saber sobre cuidados paliativos. Posso continuar para o guia?\"": "confirmacao/cuidados-paliativos.mp3",
   "Entendi. Você quer saber sobre cuidados paliativos. Posso continuar para o guia?": "confirmacao/cuidados-paliativos.mp3",
 
+  // G36 - Mordedura e Raiva Humana
   "\"Entendi. Você quer saber sobre mordida de animal. Posso continuar para o guia?\"": "confirmacao/mordedura-animais.mp3",
   "Entendi. Você quer saber sobre mordida de animal. Posso continuar para o guia?": "confirmacao/mordedura-animais.mp3",
 
+  // G37 - Saúde do Homem
   "\"Entendi. Você quer saber sobre a saúde do homem. Posso continuar para o guia?\"": "confirmacao/saude-homem.mp3",
   "Entendi. Você quer saber sobre a saúde do homem. Posso continuar para o guia?": "confirmacao/saude-homem.mp3",
 
+  // G38 - Álcool e Drogas (Redução de Danos)
   "\"Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?\"": "confirmacao/reducao-danos.mp3",
   "Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?": "confirmacao/reducao-danos.mp3",
 
+  // G39 - Prevenção de Câncer Feminino
   "\"Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?\"": "confirmacao/prevencao-cancer.mp3",
   "Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?": "confirmacao/prevencao-cancer.mp3",
 
+  // G40 - Sintomas Gripais e COVID
   "\"Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?\"": "confirmacao/sintomas-gripais.mp3",
   "Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?": "confirmacao/sintomas-gripais.mp3",
 
+  // G41 - Desenvolvimento Infantil
   "\"Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?\"": "confirmacao/desenvolvimento-infantil.mp3",
   "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?": "confirmacao/desenvolvimento-infantil.mp3",
 
-  // * G42 - Avaliação IVCF-20 (Pessoa Idosa)
+  // G42 - Avaliação IVCF-20 (Pessoa Idosa)
   "\"Entendi. Você quer saber como preencher e aplicar o IVCF-20 da pessoa idosa no e-SUS Território. Posso continuar para o guia?\"": "confirmacao/ivcf-20-idoso.mp3",
   "Entendi. Você quer saber como preencher e aplicar o IVCF-20 da pessoa idosa no e-SUS Território. Posso continuar para o guia?": "confirmacao/ivcf-20-idoso.mp3",
 
@@ -119,26 +152,27 @@ export const audioMappings: AudioMapping = {
   "Cadastrar Casa Nova no Sistema": "guias/g1_title.mp3",
   "Passo a passo para realizar o cadastro inicial de um novo domicílio no e-SUS Território.": "guias/g1_summary.mp3",
 
+  // G2 - Verificar Duplicação de Domicílio
   "Verificar Duplicação de Domicílio": "guias/g2_title.mp3",
   "Como checar se uma casa já foi cadastrada antes de criar um novo registro no e-SUS.": "guias/g2_summary.mp3",
 
-  // G3 - Corrigir Erro de Endereço ou CEP
+  // erro de audio * G3 - Corrigir Erro de Endereço ou CEP
   "Corrigir Erro de Endereço ou CEP": "guias/g3_title.mp3",
   "O que fazer quando a rua, o bairro ou o CEP não aparecem corretamente no aplicativo.": "guias/g3_summary.mp3",
 
-  // * G4 - Cadastrar Morador no Domicílio
+  // G4 - Cadastrar Morador no Domicílio
   "Cadastrar Morador no Domicílio": "guias/g4_title.mp3",
   "Passo a passo para incluir e vincular um novo morador a um domicílio já existente.": "guias/g4_summary.mp3",
 
-  // * G5 - Cadastrar Morador sem CPF ou CNS
+  // G5 - Cadastrar Morador sem CPF ou CNS
   "Cadastrar Morador sem CPF ou CNS": "guias/g5_title.mp3",
   "Como cadastrar um cidadão que não possui CPF nem Cartão do SUS no momento da visita.": "guias/g5_summary.mp3",
 
-  // * G6 - Verificar Duplicação de Cidadão
+  // G6 - Verificar Duplicação de Cidadão
   "Verificar Duplicação de Cidadão": "guias/g6_title.mp3",
   "Como buscar e confirmar se a pessoa já possui cadastro no sistema antes de criar outro.": "guias/g6_summary.mp3",
 
-  // * G7 - Cadastrar Recém-Nascido
+  // G7 - Cadastrar Recém-Nascido
   "Cadastrar Recém-Nascido": "guias/g7_title.mp3",
   "Orientações para cadastrar um recém-nascido no e-SUS Território vinculando-o à família.": "guias/g7_summary.mp3",
 
@@ -146,11 +180,11 @@ export const audioMappings: AudioMapping = {
   "Registrar Mudança de Morador (Saída)": "guias/g8_title.mp3",
   "Como atualizar o sistema quando um morador se muda do domicílio ou da microárea.": "guias/g8_summary.mp3",
 
-  // * G9 - Atualizar Novo Morador na Família
+  // G9 - Atualizar Novo Morador na Família
   "Atualizar Novo Morador na Família": "guias/g9_title.mp3",
   "Passo a passo para incluir um morador recém-chegado à composição familiar.": "guias/g9_summary.mp3",
 
-  // * G10 - Registrar Óbito no Sistema
+  // G10 - Registrar Óbito no Sistema
   "Registrar Óbito no Sistema": "guias/g10_title.mp3",
   "Como proceder para dar baixa por óbito na ficha do cidadão com respeito e precisão.": "guias/g10_summary.mp3",
 
