@@ -608,50 +608,562 @@ export const GUIDES: Guide[] = [
 
 export const INTENTS: Intent[] = [
   // Intents 1 a 20 Mapeadas 1:1 com as 20 Perguntas do Documento Projeto Anjo ACS
-  { id: "i1", title: "1. Cadastro de Casa Nova", keywords: ["casa nova", "cadastrar casa", "cadastro domicílio", "primeira visita", "novo domicílio", "cadastrar uma casa"], guideId: "g1", confirmationPhrase: "Entendi. Você quer saber como cadastrar uma casa nova no sistema. Posso continuar para o guia?" },
-  { id: "i2", title: "2. Duplicação de Domicílio", keywords: ["casa cadastrada", "duplicação de domicílio", "já cadastrada", "cadastrar de novo", "verificar casa"], guideId: "g2", confirmationPhrase: "Entendi. Você quer saber se a casa já está cadastrada ou se precisa cadastrar de novo. Posso continuar para o guia?" },
-  { id: "i3", title: "3. Erro de Endereço ou CEP", keywords: ["endereço não aparece", "erro de rua", "bairro errado", "cep", "logradouro", "endereço errado"], guideId: "g3", confirmationPhrase: "Entendi. Você quer saber o que fazer quando o endereço ou CEP não aparece certo. Posso continuar para o guia?" },
-  { id: "i4", title: "4. Cadastrar Morador", keywords: ["cadastrar morador", "adicionar morador", "novo morador nessa casa", "cadastrar cidadão no domicílio"], guideId: "g4", confirmationPhrase: "Entendi. Você quer saber como cadastrar um morador em uma casa já registrada. Posso continuar para o guia?" },
-  { id: "i5", title: "5. Cadastro sem CPF ou Cartão SUS", keywords: ["sem cpf", "sem cartão do sus", "sem cns", "cadastrar sem documento", "não tem cpf"], guideId: "g5", confirmationPhrase: "Entendi. Você quer saber se pode cadastrar uma pessoa mesmo sem CPF nem cartão do SUS. Posso continuar para o guia?" },
-  { id: "i6", title: "6. Verificar Duplicação de Cidadão", keywords: ["pessoa já cadastrada", "verificar cadastro", "duplicação de pessoa", "já tá no sistema", "checar cidadão"], guideId: "g6", confirmationPhrase: "Entendi. Você quer saber como verificar se a pessoa já está cadastrada no sistema. Posso continuar para o guia?" },
-  { id: "i7", title: "7. Cadastrar Recém-nascido", keywords: ["recém-nascido", "cadastrar bebê", "rn", "nasceu bebê", "cadastrar recem nascido"], guideId: "g7", confirmationPhrase: "Entendi. Você quer saber como cadastrar um recém-nascido no sistema. Posso continuar para o guia?" },
-  { id: "i8", title: "8. Mudança de Morador (Saída)", keywords: ["mudou da casa", "pessoa se mudou", "saída de morador", "retirar da casa", "mudança territorial"], guideId: "g8", confirmationPhrase: "Entendi. Você quer saber como registrar a mudança de uma pessoa que saiu da casa. Posso continuar para o guia?" },
-  { id: "i9", title: "9. Chegada de Novo Morador", keywords: ["chegou novo morador", "novo morador na casa", "atualizar família", "adicionar parente", "morador novo"], guideId: "g9", confirmationPhrase: "Entendi. Você quer saber como atualizar a família quando chega um novo morador. Posso continuar para o guia?" },
-  { id: "i10", title: "10. Registrar Óbito", keywords: ["registrar óbito", "óbito", "morreu", "faleceu", "desligar por óbito"], guideId: "g10", confirmationPhrase: "Entendi. Você quer saber como registrar um óbito no e-SUS Território. Posso continuar para o guia?" },
-  { id: "i11", title: "11. Registrar Visita Realizada", keywords: ["registro de visita", "fiz visita hoje", "registrar visita", "visita domiciliar", "marcar visita"], guideId: "g11", confirmationPhrase: "Entendi. Você quer saber como registrar que fez uma visita hoje. Posso continuar para o guia?" },
-  { id: "i12", title: "12. Escolher Motivo de Visita", keywords: ["motivo de visita", "qual motivo marcar", "opção de visita", "motivos da visita", "marcar na visita"], guideId: "g12", confirmationPhrase: "Entendi. Você quer saber qual motivo de visita deve marcar no aplicativo. Posso continuar para o guia?" },
-  { id: "i13", title: "13. Visita Ausente ou Recusada", keywords: ["não encontrei ninguém", "ninguém em casa", "morador ausente", "visita recusada", "casa fechada"], guideId: "g13", confirmationPhrase: "Entendi. Você quer saber se precisa registrar a visita quando não encontra ninguém em casa. Posso continuar para o guia?" },
-  { id: "i14", title: "14. Alerta de Cadastro Duplicado", keywords: ["mensagem de cadastro duplicado", "cadastro duplicado", "o que significa duplicado", "aviso duplicado"], guideId: "g14", confirmationPhrase: "Entendi. Você quer saber o que significa a mensagem de cadastro duplicado. Posso continuar para o guia?" },
-  { id: "i15", title: "15. Pessoas com Mesmo Nome", keywords: ["mesmo nome", "duas pessoas mesmo nome", "homônimo", "como saber se é a mesma", "nome igual"], guideId: "g15", confirmationPhrase: "Entendi. Você quer saber como verificar se duas pessoas com o mesmo nome são a mesma pessoa. Posso continuar para o guia?" },
-  { id: "i16", title: "16. Ruas com Nome Parecido", keywords: ["duas ruas com nome parecido", "rua parecida", "qual rua escolher", "nome de rua parecido", "logradouro parecido"], guideId: "g16", confirmationPhrase: "Entendi. Você quer saber qual rua escolher quando há duas ruas com nomes parecidos. Posso continuar para o guia?" },
-  { id: "i17", title: "17. Entender Inconsistência", keywords: ["tem uma inconsistência", "o que é inconsistência", "sistema disse inconsistência", "inconsistência no cadastro"], guideId: "g17", confirmationPhrase: "Entendi. Você quer saber o que é uma inconsistência informada pelo sistema. Posso continuar para o guia?" },
-  { id: "i18", title: "18. Corrigir Erro Pós-Sincronização", keywords: ["erro depois da sincronização", "corrigir erro pós sincronização", "erro de sincronização", "relatório de inconsistência pós sync"], guideId: "g18", confirmationPhrase: "Entendi. Você quer saber como corrigir um erro que apareceu após a sincronização. Posso continuar para o guia?" },
-  { id: "i19", title: "19. Cadastros Não Aparecem na UBS", keywords: ["cadastros não aparecem", "não aparece no sistema da unidade", "não foi pro pec", "cadastros sumiram", "falha no envio"], guideId: "g19", confirmationPhrase: "Entendi. Você quer saber por que seus cadastros não estão aparecendo no sistema da unidade. Posso continuar para o guia?" },
-  { id: "i20", title: "20. Sincronizar Tablet com Unidade", keywords: ["como sincronizar", "sincronizar tablet", "enviar dados unidade", "sincronização com pec", "enviar fichas"], guideId: "g20", confirmationPhrase: "Entendi. Você quer saber como sincronizar os dados do tablet com a unidade. Posso continuar para o guia?" },
+  {
+    id: "i1",
+    title: "1. Cadastro de Casa Nova",
+    keywords: [
+      "casa nova", "cadastrar casa", "cadastro domicílio", "cadastro domicilio", "primeira visita", "novo domicílio", "novo domicilio",
+      "cadastrar uma casa", "novo imóvel", "novo imovel", "cadastrar residência", "cadastrar residencia", "adicionar casa",
+      "adicionar domicílio", "adicionar domicilio", "adicionar imóvel", "adicionar imovel", "incluir casa", "incluir domicílio",
+      "incluir domicilio", "abrir ficha de casa", "cadastrar endereço novo", "cadastrar endereco novo", "moradia nova",
+      "construção nova", "construcao nova", "primeiro cadastro domiciliar", "ficha de domicílio", "ficha de domicilio", "nova moradia", "cadastrar habitação", "cadastrar habitacao"
+    ],
+    guideId: "g1",
+    confirmationPhrase: "Entendi. Você quer saber como cadastrar uma casa nova no sistema. Posso continuar para o guia?"
+  },
+  {
+    id: "i2",
+    title: "2. Duplicação de Domicílio",
+    keywords: [
+      "casa cadastrada", "duplicação de domicílio", "duplicacao de domicilio", "já cadastrada", "ja cadastrada", "cadastrar de novo",
+      "verificar casa", "casa já existe", "casa ja existe", "domicílio duplicado", "domicilio duplicado", "conferir se casa já tem cadastro",
+      "saber se a casa está cadastrada", "imóvel duplicado", "imovel duplicado", "residência já cadastrada", "residencia ja cadastrada",
+      "checar domicílio", "checar domicilio", "verificar imóvel", "verificar imovel", "duplicidade de casa", "duplicidade de domicílio",
+      "duplicidade de domicilio", "mesmo endereço", "mesmo endereco", "casa repetida", "endereço repetido", "endereco repetido",
+      "pesquisar casa existente", "consultar domicílio", "consultar domicilio"
+    ],
+    guideId: "g2",
+    confirmationPhrase: "Entendi. Você quer saber se a casa já está cadastrada ou se precisa cadastrar de novo. Posso continuar para o guia?"
+  },
+  {
+    id: "i3",
+    title: "3. Erro de Endereço ou CEP",
+    keywords: [
+      "endereço não aparece", "endereco nao aparece", "erro de rua", "bairro errado", "cep", "logradouro", "endereço errado",
+      "endereco errado", "cep não encontrado", "cep nao encontrado", "rua não encontrada", "rua nao encontrada", "rua não aparece",
+      "rua nao aparece", "não acho a rua", "nao acho a rua", "corrigir endereço", "corrigir endereco", "alterar cep", "mudar rua",
+      "nome da rua errado", "cep inválido", "cep invalido", "logradouro inexistente", "atualizar endereço da casa",
+      "atualizar endereco da casa", "trocar bairro", "nome de rua inexistente", "rua sem cep", "editar logradouro", "corrigir domicílio", "corrigir domicilio"
+    ],
+    guideId: "g3",
+    confirmationPhrase: "Entendi. Você quer saber o que fazer quando o endereço ou CEP não aparece certo. Posso continuar para o guia?"
+  },
+  {
+    id: "i4",
+    title: "4. Cadastrar Morador",
+    keywords: [
+      "cadastrar morador", "adicionar morador", "novo morador nessa casa", "cadastrar cidadão no domicílio", "cadastrar cidadao no domicilio",
+      "incluir morador", "novo cidadão", "novo cidadao", "cadastrar pessoa na casa", "adicionar pessoa na casa", "adicionar cidadão",
+      "adicionar cidadao", "cadastrar familiar", "adicionar parente", "novo morador", "morador novo", "inserir pessoa no domicílio",
+      "inserir pessoa no domicilio", "cadastrar morador novo", "adicionar membro familiar", "vincular morador ao domicílio",
+      "vincular morador ao domicilio", "colocar pessoa na casa", "registrar morador", "registrar cidadão", "registrar cidadao",
+      "ficha individual nova", "cadastrar habitante"
+    ],
+    guideId: "g4",
+    confirmationPhrase: "Entendi. Você quer saber como cadastrar um morador em uma casa já registrada. Posso continuar para o guia?"
+  },
+  {
+    id: "i5",
+    title: "5. Cadastro sem CPF ou Cartão SUS",
+    keywords: [
+      "sem cpf", "sem cartão do sus", "sem cartao do sus", "sem cns", "cadastrar sem documento", "não tem cpf", "nao tem cpf",
+      "não tem cartão sus", "nao tem cartao sus", "perdeu os documentos", "sem documento nenhum", "pessoa sem cpf",
+      "morador sem documento", "cadastrar sem cartão sus", "cadastrar sem cartao sus", "não tem cns", "nao tem cns",
+      "cidadão sem documento", "cidadao sem documento", "sem certidão", "sem certidao", "sem rg", "cadastrar morador sem documento",
+      "cadastrar sem identificação", "cadastrar sem identificacao", "pode cadastrar sem documento", "falta de documento",
+      "sem número de sus", "sem numero de sus"
+    ],
+    guideId: "g5",
+    confirmationPhrase: "Entendi. Você quer saber se pode cadastrar uma pessoa mesmo sem CPF nem cartão do SUS. Posso continuar para o guia?"
+  },
+  {
+    id: "i6",
+    title: "6. Verificar Duplicação de Cidadão",
+    keywords: [
+      "pessoa já cadastrada", "pessoa ja cadastrada", "verificar cadastro", "duplicação de pessoa", "duplicacao de pessoa",
+      "já tá no sistema", "ja ta no sistema", "checar cidadão", "checar cidadao", "cidadão duplicado", "cidadao duplicado",
+      "saber se pessoa já tem cadastro", "saber se pessoa ja tem cadastro", "conferir cadastro de morador", "pessoa repetida",
+      "duplicidade de cidadão", "duplicidade de cidadao", "buscar cidadão existente", "buscar cidadao existente",
+      "verificar se já existe", "verificar se ja existe", "consultar morador", "consultar cpf", "consultar cartão sus",
+      "consultar cartao sus", "morador já registrado", "morador ja registrado", "evitar duplicar pessoa"
+    ],
+    guideId: "g6",
+    confirmationPhrase: "Entendi. Você quer saber como verificar se a pessoa já está cadastrada no sistema. Posso continuar para o guia?"
+  },
+  {
+    id: "i7",
+    title: "7. Cadastrar Recém-nascido",
+    keywords: [
+      "recém-nascido", "recem-nascido", "recem nascido", "cadastrar bebê", "cadastrar bebe", "rn", "nasceu bebê", "nasceu bebe",
+      "cadastrar recem nascido", "cadastrar recém nascido", "cadastrar criança nova", "cadastrar crianca nova", "novo bebê",
+      "novo bebe", "bebezinho", "registro de recém-nascido", "registro de recem nascido", "declaracao de nascido vivo",
+      "declaração de nascido vivo", "dnv", "adicionar bebê na família", "adicionar bebe na familia", "cadastrar filho novo",
+      "bebê que acabou de nascer", "bebe que acabou de nascer", "incluir recém-nascido", "incluir recem-nascido", "cadastrar neném",
+      "cadastrar nenem", "certidão de nascimento do bebê", "certidao de nascimento do bebe"
+    ],
+    guideId: "g7",
+    confirmationPhrase: "Entendi. Você quer saber como cadastrar um recém-nascido no sistema. Posso continuar para o guia?"
+  },
+  {
+    id: "i8",
+    title: "8. Mudança de Morador (Saída)",
+    keywords: [
+      "mudou da casa", "pessoa se mudou", "saída de morador", "saida de morador", "retirar da casa", "mudança territorial",
+      "mudanca territorial", "morador foi embora", "mudou de bairro", "mudou de cidade", "tirar pessoa da casa",
+      "desvincular morador", "excluir morador da residência", "excluir morador da residencia", "mudou-se", "mudou se",
+      "transferência de morador", "transferencia de morador", "registro de mudança", "registro de mudanca",
+      "pessoa não mora mais aqui", "pessoa nao mora mais aqui", "saiu da residência", "saiu da residencia",
+      "dar baixa no morador", "remover morador da família", "remover morador da familia", "mudança de endereço do morador",
+      "mudanca de endereco do morador"
+    ],
+    guideId: "g8",
+    confirmationPhrase: "Entendi. Você quer saber como registrar a mudança de uma pessoa que saiu da casa. Posso continuar para o guia?"
+  },
+  {
+    id: "i9",
+    title: "9. Chegada de Novo Morador",
+    keywords: [
+      "chegou novo morador", "novo morador na casa", "atualizar família", "atualizar familia", "adicionar parente",
+      "morador novo", "veio morar aqui", "morador transferido", "parente que veio morar", "atualizar composição familiar",
+      "atualizar composicao familiar", "entrou gente nova na casa", "membro novo na família", "membro novo na familia",
+      "chegou parente", "incluir novo integrante", "atualizar dados da família", "atualizar dados da familia",
+      "veio de outra cidade", "veio de outro bairro", "mudou pra essa casa", "chegada de morador",
+      "nova pessoa na residência", "nova pessoa na residencia"
+    ],
+    guideId: "g9",
+    confirmationPhrase: "Entendi. Você quer saber como atualizar a família quando chega um novo morador. Posso continuar para o guia?"
+  },
+  {
+    id: "i10",
+    title: "10. Registrar Óbito",
+    keywords: [
+      "registrar óbito", "registrar obito", "óbito", "obito", "morreu", "faleceu", "desligar por óbito", "desligar por obito",
+      "dar baixa por morte", "falecimento", "declaração de óbito", "declaracao de obito", "certidão de óbito", "certidao de obito",
+      "morador faleceu", "morador morreu", "informar falecimento", "pessoa morreu", "baixa por falecimento", "desvincular por óbito",
+      "desvincular por obito", "registrar morte no esus", "registrar morte no tablet", "cidadão falecido", "cidadao falecido",
+      "notificar óbito", "notificar obito", "baixa de cadastro por morte"
+    ],
+    guideId: "g10",
+    confirmationPhrase: "Entendi. Você quer saber como registrar um óbito no e-SUS Território. Posso continuar para o guia?"
+  },
+  {
+    id: "i11",
+    title: "11. Registrar Visita Realizada",
+    keywords: [
+      "registro de visita", "fiz visita hoje", "registrar visita", "visita domiciliar", "marcar visita", "visita realizada",
+      "visitei a casa", "lançar visita", "lancar visita", "preencher ficha de visita", "visita do dia", "salvar visita",
+      "anotar visita no esus", "anotar visita no tablet", "visita feita", "registrar acompanhamento", "visitei o morador",
+      "visitei o cidadão", "visitei o cidadao", "fazer visita no aplicativo", "concluir visita", "ficha de visita domiciliar",
+      "registrar atendimento do acs", "visita efetuada", "visitar família", "visitar familia"
+    ],
+    guideId: "g11",
+    confirmationPhrase: "Entendi. Você quer saber como registrar que fez uma visita hoje. Posso continuar para o guia?"
+  },
+  {
+    id: "i12",
+    title: "12. Escolher Motivo de Visita",
+    keywords: [
+      "motivo de visita", "qual motivo marcar", "opção de visita", "opcao de visita", "motivos da visita", "marcar na visita",
+      "tipo de visita", "escolher motivo da visita", "o que marcar na visita", "opções de acompanhamento na visita",
+      "opcoes de acompanhamento na visita", "qual desfecho marcar", "qual opção escolher na visita", "qual opcao escolher na visita",
+      "motivo de consulta", "busca ativa na visita", "acompanhamento periódico", "acompanhamento periodico",
+      "motivo do atendimento domiciliar", "como classificar a visita", "campo motivo de visita", "marcar gestante ou hipertenso na visita"
+    ],
+    guideId: "g12",
+    confirmationPhrase: "Entendi. Você quer saber qual motivo de visita deve marcar no aplicativo. Posso continuar para o guia?"
+  },
+  {
+    id: "i13",
+    title: "13. Visita Ausente ou Recusada",
+    keywords: [
+      "não encontrei ninguém", "nao encontrei ninguem", "ninguém em casa", "ninguem em casa", "morador ausente",
+      "visita recusada", "casa fechada", "não quiseram atender", "nao quiseram atender", "recusa de visita",
+      "morador não atendeu", "morador nao atendeu", "casa trancada", "ninguém atendeu", "ninguem atendeu",
+      "morador não estava", "morador nao estava", "visita não realizada", "visita nao realizada", "registrar casa fechada",
+      "registrar morador ausente", "recusou a visita", "morador viajou", "não estava em casa", "nao estava em casa",
+      "desfecho ausente", "desfecho recusada"
+    ],
+    guideId: "g13",
+    confirmationPhrase: "Entendi. Você quer saber se precisa registrar a visita quando não encontra ninguém em casa. Posso continuar para o guia?"
+  },
+  {
+    id: "i14",
+    title: "14. Alerta de Cadastro Duplicado",
+    keywords: [
+      "mensagem de cadastro duplicado", "cadastro duplicado", "o que significa duplicado", "aviso duplicado",
+      "alerta de duplicidade", "sistema deu duplicado", "erro de cadastro duplicado", "cpf já existe no sistema",
+      "cpf ja existe no sistema", "cartão sus duplicado", "cartao sus duplicado", "apareceu cadastro duplicado",
+      "aviso de morador duplicado", "registro duplicado", "tela de duplicidade", "por que deu duplicado",
+      "o que fazer com cadastro duplicado", "notificação de duplicidade", "notificacao de duplicidade", "mensagem duplicada no esus"
+    ],
+    guideId: "g14",
+    confirmationPhrase: "Entendi. Você quer saber o que significa a mensagem de cadastro duplicado. Posso continuar para o guia?"
+  },
+  {
+    id: "i15",
+    title: "15. Pessoas com Mesmo Nome",
+    keywords: [
+      "mesmo nome", "duas pessoas mesmo nome", "homônimo", "homonimo", "como saber se é a mesma", "como saber se e a mesma",
+      "nome igual", "pessoas com nomes iguais", "dois moradores com mesmo nome", "homônimos no esus", "homonimos no esus",
+      "como diferenciar homônimo", "como diferenciar homonimo", "como saber se é o mesmo morador", "conferir nome da mãe",
+      "conferir nome da mae", "duvida de nome igual", "diferenciar cadastros", "mesmo nome e sobrenome",
+      "homônimo no território", "homonimo no territorio", "confirmar identidade do morador"
+    ],
+    guideId: "g15",
+    confirmationPhrase: "Entendi. Você quer saber como verificar se duas pessoas com o mesmo nome são a mesma pessoa. Posso continuar para o guia?"
+  },
+  {
+    id: "i16",
+    title: "16. Ruas com Nome Parecido",
+    keywords: [
+      "duas ruas com nome parecido", "rua parecida", "qual rua escolher", "nome de rua parecido", "logradouro parecido",
+      "ruas com nomes iguais", "ruas parecidas", "duvida no nome da rua", "qual logradouro selecionar",
+      "ruas com mesma nomenclatura", "avenida ou rua parecida", "endereços semelhantes", "enderecos semelhantes",
+      "como escolher a rua certa", "bairro com ruas parecidas", "logradouro com mesmo nome", "confusão de nome de rua",
+      "confusao de nome de rua", "escolher rua certa no tablet"
+    ],
+    guideId: "g16",
+    confirmationPhrase: "Entendi. Você quer saber qual rua escolher quando há duas ruas com nomes parecidos. Posso continuar para o guia?"
+  },
+  {
+    id: "i17",
+    title: "17. Entender Inconsistência",
+    keywords: [
+      "tem uma inconsistência", "tem uma inconsistencia", "o que é inconsistência", "o que e inconsistencia",
+      "sistema disse inconsistência", "sistema disse inconsistencia", "inconsistência no cadastro", "inconsistencia no cadastro",
+      "o que significa inconsistência", "o que significa inconsistencia", "ficha inconsistente", "alerta de inconsistência",
+      "alerta de inconsistencia", "dados inconsistentes", "aviso amarelo no esus", "cadastro com pendência",
+      "cadastro com pendencia", "erro de inconsistência", "erro de inconsistencia", "campo obrigatório faltando",
+      "campo obrigatorio faltando", "o que é dado inconsistente"
+    ],
+    guideId: "g17",
+    confirmationPhrase: "Entendi. Você quer saber o que é uma inconsistência informada pelo sistema. Posso continuar para o guia?"
+  },
+  {
+    id: "i18",
+    title: "18. Corrigir Erro Pós-Sincronização",
+    keywords: [
+      "erro depois da sincronização", "erro depois da sincronizacao", "corrigir erro pós sincronização", "corrigir erro pos sincronizacao",
+      "erro de sincronização", "erro de sincronizacao", "relatório de inconsistência pós sync", "relatorio de inconsistencia pos sync",
+      "ficha rejeitada", "fichas rejeitadas", "erro após envio", "erro apos envio", "sincronizou com erro",
+      "corrigir ficha recusada", "ficha devolvida", "relatório de erros da sincronização", "relatorio de erros da sincronizacao",
+      "arrumar erro depois de sincronizar", "corrigir fichas pós sincronização", "corrigir fichas pos sincronizacao", "mensagem de erro na sincronização"
+    ],
+    guideId: "g18",
+    confirmationPhrase: "Entendi. Você quer saber como corrigir um erro que apareceu após a sincronização. Posso continuar para o guia?"
+  },
+  {
+    id: "i19",
+    title: "19. Cadastros Não Aparecem na UBS",
+    keywords: [
+      "cadastros não aparecem", "cadastros nao aparecem", "não aparece no sistema da unidade", "nao aparece no sistema da unidade",
+      "não foi pro pec", "nao foi pro pec", "cadastros sumiram", "falha no envio", "fichas não chegaram na ubs",
+      "fichas nao chegaram na ubs", "enfermeira não achou o cadastro", "enfermeira nao achou o cadastro", "cadastro não subiu",
+      "cadastro nao subiu", "dados não constam no pec", "dados nao constam no pec", "enviei mas não aparece",
+      "enviei mas nao aparece", "cadastros sumiram do sistema", "fichas pendentes não entram no pec",
+      "fichas pendentes nao entram no pec", "onde foram parar os cadastros", "sistema da ubs não recebeu"
+    ],
+    guideId: "g19",
+    confirmationPhrase: "Entendi. Você quer saber por que seus cadastros não estão aparecendo no sistema da unidade. Posso continuar para o guia?"
+  },
+  {
+    id: "i20",
+    title: "20. Sincronizar Tablet com Unidade",
+    keywords: [
+      "como sincronizar", "sincronizar tablet", "enviar dados unidade", "sincronização com pec", "sincronizacao com pec",
+      "enviar fichas", "passar dados pro pec", "sincronizar aplicativo", "descarregar tablet", "transmitir visitas",
+      "enviar cadastros pra unidade", "enviar cadastros pra ubs", "sincronismo", "receber dados do pec", "como mandar as fichas",
+      "sincronizar esus", "conectar no wifi da ubs para enviar", "atualizar base do tablet", "fazer sincronização diária", "fazer sincronizacao diaria"
+    ],
+    guideId: "g20",
+    confirmationPhrase: "Entendi. Você quer saber como sincronizar os dados do tablet com a unidade. Posso continuar para o guia?"
+  },
 
   // Intents Adicionais de Programas de Saúde
-  { id: "i21", title: "Pré-natal", keywords: ["gestante", "grávida", "gravida", "gravidez", "prenatal", "pré-natal", "buchuda", "neném", "bebê"], guideId: "g21", confirmationPhrase: "Entendi. Você quer saber sobre o pré-natal. Posso continuar para o guia?" },
-  { id: "i22", title: "Hiperdia", keywords: ["pressão", "diabetes", "açúcar", "hipertenso", "diabético", "hiperdia", "insulina", "remédio"], guideId: "g22", confirmationPhrase: "Entendi. Você quer saber sobre o Hiperdia. Posso continuar para o guia?" },
-  { id: "i23", title: "Bolsa Família", keywords: ["bolsa família", "bolsa familia", "pesagem", "peso", "medir", "benefício", "auxílio", "pobreza"], guideId: "g23", confirmationPhrase: "Entendi. Você quer saber sobre o Bolsa Família. Posso continuar para o guia?" },
-  { id: "i24", title: "Visita RN (Cuidados)", keywords: ["cuidados rn", "umbigo", "pezinho", "visita recem nascido"], guideId: "g24", confirmationPhrase: "Entendi. Você quer saber sobre os cuidados na visita ao recém-nascido. Posso continuar para o guia?" },
-  { id: "i25", title: "Dengue e Focos", keywords: ["dengue", "mosquito", "larva", "água parada", "quintal", "zika", "chikungunya", "febre"], guideId: "g25", confirmationPhrase: "Entendi. Você quer saber sobre dengue e focos. Posso continuar para o guia?" },
-  { id: "i26", title: "Saúde Mental", keywords: ["depressão", "tristeza", "ansiedade", "surto", "caps", "remédio controlado", "saúde mental", "sofrimento"], guideId: "g26", confirmationPhrase: "Entendi. Você quer saber sobre saúde mental. Posso continuar para o guia?" },
-  { id: "i27", title: "Saúde do Idoso", keywords: ["velho", "vovó", "vovô", "idoso", "queda", "remédios", "esquecimento", "fragilidade"], guideId: "g27", confirmationPhrase: "Entendi. Você quer saber sobre a saúde do idoso. Posso continuar para o guia?" },
-  { id: "i28", title: "Vacina atrasada", keywords: ["vacina", "atrasada", "gotinha", "injeção", "calendário", "faltando", "imunização"], guideId: "g28", confirmationPhrase: "Entendi. Você quer saber sobre vacina atrasada. Posso continuar para o guia?" },
-  { id: "i29", title: "Planejamento Familiar", keywords: ["filho", "evitar", "camisinha", "anticoncepcional", "laqueadura", "vasectomia", "diu"], guideId: "g29", confirmationPhrase: "Entendi. Você quer saber sobre planejamento familiar. Posso continuar para o guia?" },
-  { id: "i30", title: "Pós-parto / Puerpério", keywords: ["pós-parto", "puerpério", "resguardo", "quarentena", "depressão pós-parto", "sangramento"], guideId: "g30", confirmationPhrase: "Entendi. Você quer saber sobre pós-parto e puerpério. Posso continuar para o guia?" },
-  { id: "i31", title: "TB e Hanseníase", keywords: ["tosse", "pulmão", "escarro", "mancha", "pele", "hanseníase", "tuberculose", "perda de força"], guideId: "g31", confirmationPhrase: "Entendi. Você quer saber sobre tuberculose e hanseníase. Posso continuar para o guia?" },
-  { id: "i32", title: "Saúde Bucal", keywords: ["dente", "boca", "limpeza", "escova", "ferida na boca", "dentadura", "prótese", "gengiva"], guideId: "g32", confirmationPhrase: "Entendi. Você quer saber sobre saúde bucal. Posso continuar para o guia?" },
-  { id: "i33", title: "Violência", keywords: ["apanhou", "violência", "bater", "abuso", "hematoma", "medo", "agressão", "doméstica"], guideId: "g33", confirmationPhrase: "Entendi. Você quer saber sobre identificação de violência. Posso continuar para o guia?" },
-  { id: "i34", title: "Riscos Ambientais", keywords: ["lixo", "esgoto", "água", "rato", "escorpião", "entulho", "fossa", "poluição"], guideId: "g34", confirmationPhrase: "Entendi. Você quer saber sobre riscos ambientais. Posso continuar para o guia?" },
-  { id: "i35", title: "Cuidados Paliativos", keywords: ["cama", "leito", "morrer", "terminal", "câncer", "ferida", "conforto", "paliativo"], guideId: "g35", confirmationPhrase: "Entendi. Você quer saber sobre cuidados paliativos. Posso continuar para o guia?" },
-  { id: "i36", title: "Mordida de Animal", keywords: ["mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva"], guideId: "g36", confirmationPhrase: "Entendi. Você quer saber sobre mordida de animal. Posso continuar para o guia?" },
-  { id: "i37", title: "Saúde do Homem", keywords: ["homem", "próstata", "novembro azul", "ereção", "exame homem", "masculino"], guideId: "g37", confirmationPhrase: "Entendi. Você quer saber sobre a saúde do homem. Posso continuar para o guia?" },
-  { id: "i38", title: "Drogas e Álcool", keywords: ["bebida", "droga", "cachaça", "vício", "alcoolismo", "redução de danos", "fumando"], guideId: "g38", confirmationPhrase: "Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?" },
-  { id: "i39", title: "Prevenção Câncer", keywords: ["preventivo", "papanicolau", "mama", "mamografia", "câncer de mama", "câncer de colo"], guideId: "g39", confirmationPhrase: "Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?" },
-  { id: "i40", title: "Gripe e COVID", keywords: ["gripe", "covid", "tosse", "falta de ar", "resfriado", "corona", "catarro"], guideId: "g40", confirmationPhrase: "Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?" },
-  { id: "i41", title: "Puericultura", keywords: ["desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar"], guideId: "g41", confirmationPhrase: "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?" },
-  { id: "i42", title: "Avaliação IVCF-20 (Pessoa Idosa)", keywords: ["ivcf", "ivcf 20", "ivcf-20", "idoso fragil", "fragilidade idoso", "vulnerabilidade idoso", "questionario idoso", "avaliação idoso", "escore idoso", "preenchimento ivcf"], guideId: "g42", confirmationPhrase: "Entendi. Você quer saber como preencher e aplicar o IVCF-20 da pessoa idosa no e-SUS Território. Posso continuar para o guia?" }
+  {
+    id: "i21",
+    title: "Pré-natal",
+    keywords: [
+      "gestante", "grávida", "gravida", "gravidez", "prenatal", "pré-natal", "pre-natal", "buchuda", "neném", "nenem",
+      "bebê", "bebe", "barriguda", "mulher grávida", "mulher gravida", "acompanhar gestante", "dum",
+      "data da última menstruação", "data da ultima menstruacao", "caderneta da gestante", "consulta pré-natal",
+      "consulta pre-natal", "semana gestacional", "enjoo de gravidez", "primeira consulta de gestante", "exames da gestante",
+      "acompanhamento de gravidez", "acompanhar grávida", "acompanhar gravida"
+    ],
+    guideId: "g21",
+    confirmationPhrase: "Entendi. Você quer saber sobre o pré-natal. Posso continuar para o guia?"
+  },
+  {
+    id: "i22",
+    title: "Hiperdia",
+    keywords: [
+      "pressão", "pressao", "diabetes", "açúcar", "acucar", "hipertenso", "hipertensa", "diabético", "diabetico",
+      "diabética", "diabetica", "hiperdia", "insulina", "remédio", "remedio", "pressão alta", "pressao alta",
+      "glicose", "glicemia", "aferir pressão", "aferir pressao", "fita de glicemia", "pé diabético", "pe diabetico",
+      "remédio de pressão", "remedio de pressao", "remédio de diabetes", "remedio de diabetes",
+      "acompanhamento de pressão", "acompanhamento de pressao", "acompanhar hipertenso", "acompanhar diabético", "acompanhar diabetico", "hipertensão", "hipertensao"
+    ],
+    guideId: "g22",
+    confirmationPhrase: "Entendi. Você quer saber sobre o Hiperdia. Posso continuar para o guia?"
+  },
+  {
+    id: "i23",
+    title: "Bolsa Família",
+    keywords: [
+      "bolsa família", "bolsa familia", "pesagem", "peso", "medir", "benefício", "beneficio", "auxílio", "auxilio",
+      "pobreza", "pesagem do bolsa família", "pesagem do bolsa familia", "acompanhamento bolsa família",
+      "acompanhamento bolsa familia", "pesar criança", "pesar crianca", "medir altura", "estatura",
+      "condicionalidades de saúde", "condicionalidades de saude", "mapa do bolsa família", "mapa do bolsa familia",
+      "auxílio brasil", "auxilio brasil", "vigência bolsa família", "vigencia bolsa familia", "pesar e medir",
+      "cumprir condicionalidade", "beneficiário bolsa família", "beneficiario bolsa familia"
+    ],
+    guideId: "g23",
+    confirmationPhrase: "Entendi. Você quer saber sobre o Bolsa Família. Posso continuar para o guia?"
+  },
+  {
+    id: "i24",
+    title: "Visita RN (Cuidados)",
+    keywords: [
+      "cuidados rn", "umbigo", "pezinho", "visita recem nascido", "visita recém nascido", "visita recém-nascido",
+      "visita recem-nascido", "teste do pezinho", "coto umbilical", "álcool 70 no umbigo", "alcool 70 no umbigo",
+      "primeira visita do bebê", "primeira visita do bebe", "visita até 5 dias", "visita ate 5 dias",
+      "amamentação do rn", "amamentacao do rn", "pega da mama", "leite materno exclusivo",
+      "cuidados com o recém-nascido", "cuidados com o recem-nascido", "triagem neonatal",
+      "visitar bebê recém-nascido", "visitar bebe recem-nascido", "visita neonatal", "icterícia no bebê", "ictericia no bebe"
+    ],
+    guideId: "g24",
+    confirmationPhrase: "Entendi. Você quer saber sobre os cuidados na visita ao recém-nascido. Posso continuar para o guia?"
+  },
+  {
+    id: "i25",
+    title: "Dengue e Focos",
+    keywords: [
+      "dengue", "mosquito", "larva", "água parada", "agua parada", "quintal", "zika", "chikungunya", "chicungunha",
+      "febre", "aedes aegypti", "aedes", "foco de dengue", "foco de mosquito", "caixa d'água destampada",
+      "caixa dagua destampada", "prato de planta", "pneu velho", "larvas na água", "larvas na agua",
+      "combate à dengue", "combate a dengue", "arbovirose", "arboviroses", "inspeção de quintal", "inspecao de quintal",
+      "febre alta e dor no corpo", "manchas na pele dengue", "controle de vetores"
+    ],
+    guideId: "g25",
+    confirmationPhrase: "Entendi. Você quer saber sobre dengue e focos. Posso continuar para o guia?"
+  },
+  {
+    id: "i26",
+    title: "Saúde Mental",
+    keywords: [
+      "depressão", "depressao", "tristeza", "ansiedade", "surto", "caps", "remédio controlado", "remedio controlado",
+      "saúde mental", "saude mental", "sofrimento", "sofrimento psíquico", "sofrimento psiquico", "ideação suicida",
+      "ideacao suicida", "quer se matar", "crise de ansiedade", "ataque de pânico", "ataque de panico", "choro frequente",
+      "isolamento", "angústia", "angustia", "apoio emocional", "escuta qualificada", "tarja preta", "psiquiatra",
+      "psicólogo", "psicologo", "saúde emocional", "saude emocional", "problema de cabeça", "problema de cabeca"
+    ],
+    guideId: "g26",
+    confirmationPhrase: "Entendi. Você quer saber sobre saúde mental. Posso continuar para o guia?"
+  },
+  {
+    id: "i27",
+    title: "Saúde do Idoso",
+    keywords: [
+      "velho", "velha", "vovó", "vovo", "vovô", "idoso", "idosa", "terceira idade", "melhor idade", "queda",
+      "caiu", "risco de queda", "remédios", "remedios", "muitos remédios", "muitos remedios", "polifarmácia",
+      "polifarmacia", "esquecimento", "memória", "memoria", "fragilidade", "caderneta do idoso", "idoso acamado",
+      "idoso dependente", "cuidados com idoso", "acompanhar idoso", "avaliação da pessoa idosa", "avaliacao da pessoa idosa", "perda de equilíbrio", "perda de equilibrio"
+    ],
+    guideId: "g27",
+    confirmationPhrase: "Entendi. Você quer saber sobre a saúde do idoso. Posso continuar para o guia?"
+  },
+  {
+    id: "i28",
+    title: "Vacina atrasada",
+    keywords: [
+      "vacina", "atrasada", "gotinha", "injeção", "injecao", "calendário", "calendario", "faltando", "imunização",
+      "imunizacao", "vacina atrasada", "vacinação em atraso", "vacinacao em atraso", "caderneta de vacina",
+      "caderneta de vacinação", "caderneta de vacinacao", "doses pendentes", "vacinar criança", "vacinar crianca",
+      "busca ativa de vacina", "faltou vacina", "imunizar", "sala de vacina", "penta atrasada", "polio", "sarampo",
+      "febre amarela", "conferir caderneta de vacina", "atraso vacinal"
+    ],
+    guideId: "g28",
+    confirmationPhrase: "Entendi. Você quer saber sobre vacina atrasada. Posso continuar para o guia?"
+  },
+  {
+    id: "i29",
+    title: "Planejamento Familiar",
+    keywords: [
+      "filho", "evitar", "camisinha", "anticoncepcional", "laqueadura", "vasectomia", "diu", "planejamento familiar",
+      "planejamento reprodutivo", "método contraceptivo", "metodo contraceptivo", "evitar gravidez", "evitar filhos",
+      "pílula", "pilula", "injeção anticoncepcional", "injecao anticoncepcional", "preservativo", "saúde reprodutiva",
+      "saude reprodutiva", "ligadura de trompas", "reunião de planejamento familiar", "reuniao de planejamento familiar",
+      "pegar camisinha", "anticoncepção", "anticoncepcao"
+    ],
+    guideId: "g29",
+    confirmationPhrase: "Entendi. Você quer saber sobre planejamento familiar. Posso continuar para o guia?"
+  },
+  {
+    id: "i30",
+    title: "Pós-parto / Puerpério",
+    keywords: [
+      "pós-parto", "pos-parto", "pos parto", "puerpério", "puerperio", "resguardo", "quarentena", "depressão pós-parto",
+      "depressao pos-parto", "depressao pos parto", "sangramento", "puérpera", "puerpera", "mulher que acabou de ter filho",
+      "cuidados puerpério", "cuidados puerperio", "consulta de 42 dias", "revisão de parto", "revisao de parto",
+      "dor na mama", "mastite", "fissura no peito", "leite empedrado", "lóquios", "loquios", "febre puerperal",
+      "saúde da puérpera", "saude da puerpera"
+    ],
+    guideId: "g30",
+    confirmationPhrase: "Entendi. Você quer saber sobre pós-parto e puerpério. Posso continuar para o guia?"
+  },
+  {
+    id: "i31",
+    title: "TB e Hanseníase",
+    keywords: [
+      "tosse", "pulmão", "pulmao", "escarro", "mancha", "pele", "hanseníase", "hanseniase", "tuberculose", "perda de força",
+      "perda de forca", "tosse de mais de 3 semanas", "tosse persistente", "tossindo muito", "tosse com sangue",
+      "escarro com sangue", "baciloscopia", "exame de escarro", "mancha dormente", "mancha que não sente",
+      "mancha que nao sente", "perda de sensibilidade", "lepra", "sintomático respiratório", "sintomatico respiratorio",
+      "contato de tuberculose", "contato de hanseníase", "contato de hanseniase", "mancha branca ou vermelha"
+    ],
+    guideId: "g31",
+    confirmationPhrase: "Entendi. Você quer saber sobre tuberculose e hanseníase. Posso continuar para o guia?"
+  },
+  {
+    id: "i32",
+    title: "Saúde Bucal",
+    keywords: [
+      "dente", "boca", "limpeza", "escova", "ferida na boca", "dentadura", "prótese", "protese", "gengiva", "saúde bucal",
+      "saude bucal", "dor de dente", "cárie", "carie", "escovação", "escovacao", "fio dental", "dentista", "higiene bucal",
+      "afta que não sara", "afta que nao sara", "ferida nos lábios", "ferida nos labios", "sangramento na gengiva",
+      "limpeza da boca do bebê", "limpeza da boca do bebe", "câncer de boca", "cancer de boca", "consulta odontológica", "consulta odontologica"
+    ],
+    guideId: "g32",
+    confirmationPhrase: "Entendi. Você quer saber sobre saúde bucal. Posso continuar para o guia?"
+  },
+  {
+    id: "i33",
+    title: "Violência",
+    keywords: [
+      "apanhou", "violência", "violencia", "bater", "abuso", "hematoma", "medo", "agressão", "agressao", "doméstica",
+      "domestica", "violência doméstica", "violencia domestica", "violência contra mulher", "violencia contra mulher",
+      "violência infantil", "violencia infantil", "maus tratos", "maus-tratos", "marcas roxas", "queimadura suspeita",
+      "abuso sexual", "criança espancada", "crianca espancada", "idoso agredido", "marido bateu",
+      "notificação de violência", "notificacao de violencia", "escuta protegida", "machucado suspeito"
+    ],
+    guideId: "g33",
+    confirmationPhrase: "Entendi. Você quer saber sobre identificação de violência. Posso continuar para o guia?"
+  },
+  {
+    id: "i34",
+    title: "Riscos Ambientais",
+    keywords: [
+      "lixo", "esgoto", "água", "agua", "rato", "escorpião", "escorpiao", "entulho", "fossa", "poluição", "poluicao",
+      "riscos ambientais", "saneamento básico", "saneamento basico", "água contaminada", "agua contaminada",
+      "esgoto a céu aberto", "esgoto a ceu aberto", "fossa estourada", "animais peçonhentos", "animais peconhentos",
+      "barbeiro", "doença de chagas", "doenca de chagas", "caramujo", "caramujo africano", "morcego", "lixo acumulado",
+      "pragas urbanas", "entulho no quintal"
+    ],
+    guideId: "g34",
+    confirmationPhrase: "Entendi. Você quer saber sobre riscos ambientais. Posso continuar para o guia?"
+  },
+  {
+    id: "i35",
+    title: "Cuidados Paliativos",
+    keywords: [
+      "cama", "leito", "morrer", "terminal", "câncer", "cancer", "ferida", "conforto", "paliativo", "cuidados paliativos",
+      "paciente em leito", "paciente acamado", "doente terminal", "alívio da dor", "alivio da dor", "escaras",
+      "úlcera de pressão", "ulcera de pressao", "mudar de posição", "mudar de posicao", "virar no leito",
+      "banho no leito", "apoio ao cuidador", "doença sem cura", "doenca sem cura", "fim de vida", "suporte paliativo", "cuidar de acamado"
+    ],
+    guideId: "g35",
+    confirmationPhrase: "Entendi. Você quer saber sobre cuidados paliativos. Posso continuar para o guia?"
+  },
+  {
+    id: "i36",
+    title: "Mordida de Animal",
+    keywords: [
+      "mordida", "cachorro", "gato", "morcego", "raiva", "animal", "ferimento", "vacina raiva", "mordedura de animal",
+      "mordida de cachorro", "mordida de cão", "mordida de cao", "mordida de gato", "mordida de morcego",
+      "arranhão de gato", "arranhao de gato", "ataque de animal", "raiva humana", "soro antirrábico", "soro antirrabico",
+      "vacina antirrábica", "vacina antirrabica", "lavar com água e sabão", "lavar com agua e sabao",
+      "observar animal 10 dias", "agressão por animal", "agressao por animal", "mordida sangrando"
+    ],
+    guideId: "g36",
+    confirmationPhrase: "Entendi. Você quer saber sobre mordida de animal. Posso continuar para o guia?"
+  },
+  {
+    id: "i37",
+    title: "Saúde do Homem",
+    keywords: [
+      "homem", "próstata", "prostata", "novembro azul", "ereção", "erecao", "exame homem", "masculino", "saúde do homem",
+      "saude do homem", "câncer de próstata", "cancer de prostata", "câncer de pênis", "cancer de penis",
+      "exame de sangue psa", "psa", "pré-natal do parceiro", "pre-natal do parceiro", "saúde sexual masculina",
+      "saude sexual masculina", "higiene íntima masculina", "higiene intima masculina", "testes rápidos homem",
+      "testes rapidos homem", "atrair homem pra ubs", "atrair homem pra unidade", "exames de rotina do homem"
+    ],
+    guideId: "g37",
+    confirmationPhrase: "Entendi. Você quer saber sobre a saúde do homem. Posso continuar para o guia?"
+  },
+  {
+    id: "i38",
+    title: "Drogas e Álcool",
+    keywords: [
+      "bebida", "droga", "cachaça", "cachaca", "vício", "vicio", "alcoolismo", "redução de danos", "reducao de danos",
+      "fumando", "álcool", "alcool", "drogas", "usuário de drogas", "usuario de drogas", "beber demais", "viciado",
+      "cigarro", "tabagismo", "caps ad", "caps-ad", "overdose", "abstinência", "abstinencia", "dependência química",
+      "dependencia quimica", "crack", "maconha", "orientação de redução de danos", "orientacao de reducao de danos"
+    ],
+    guideId: "g38",
+    confirmationPhrase: "Entendi. Você quer saber sobre drogas e álcool. Posso continuar para o guia?"
+  },
+  {
+    id: "i39",
+    title: "Prevenção Câncer",
+    keywords: [
+      "preventivo", "papanicolau", "mama", "mamografia", "câncer de mama", "cancer de mama", "câncer de colo",
+      "cancer de colo", "câncer de colo de útero", "cancer de colo de utero", "câncer feminino", "cancer feminino",
+      "autoexame da mama", "nódulo na mama", "nodulo na mama", "outubro rosa", "exame de lâmina", "exame de lamina",
+      "exame citopatológico", "exame citopatologico", "rastreamento de câncer", "rastreamento de cancer",
+      "fazer preventivo", "fazer mamografia", "saúde da mulher", "saude da mulher"
+    ],
+    guideId: "g39",
+    confirmationPhrase: "Entendi. Você quer saber sobre prevenção de câncer. Posso continuar para o guia?"
+  },
+  {
+    id: "i40",
+    title: "Gripe e COVID",
+    keywords: [
+      "gripe", "covid", "covid-19", "covid 19", "tosse", "falta de ar", "resfriado", "corona", "catarro", "sintomas gripais",
+      "síndrome gripal", "sindrome gripal", "febre e tosse", "coriza", "dor de garganta", "teste de covid",
+      "teste rápido covid", "teste rapido covid", "isolamento", "máscara", "mascara", "influenza", "vírus respiratório",
+      "virus respiratorio", "dificuldade de respirar", "cansaço e falta de ar", "cansaco e falta de ar", "suspeita de covid"
+    ],
+    guideId: "g40",
+    confirmationPhrase: "Entendi. Você quer saber sobre gripe e COVID. Posso continuar para o guia?"
+  },
+  {
+    id: "i41",
+    title: "Puericultura",
+    keywords: [
+      "desenvolvimento", "crescer", "puericultura", "aprendizado", "marcos", "sentar", "falar", "desenvolvimento infantil",
+      "crescimento da criança", "crescimento da crianca", "marcos motores", "marcos do desenvolvimento",
+      "caderneta da criança", "caderneta da crianca", "consulta de puericultura", "andar", "engatinhar",
+      "estímulo infantil", "estimulo infantil", "peso e altura da criança", "peso e altura da crianca",
+      "desenvolvimento da fala", "atraso no desenvolvimento", "acompanhar criança", "acompanhar crianca"
+    ],
+    guideId: "g41",
+    confirmationPhrase: "Entendi. Você quer saber sobre puericultura. Posso continuar para o guia?"
+  },
+  {
+    id: "i42",
+    title: "Avaliação IVCF-20 (Pessoa Idosa)",
+    keywords: [
+      "ivcf", "ivcf 20", "ivcf-20", "idoso fragil", "idoso frágil", "fragilidade idoso", "fragilidade da pessoa idosa",
+      "vulnerabilidade idoso", "vulnerabilidade clínico-funcional", "vulnerabilidade clinico funcional", "questionario idoso",
+      "questionário idoso", "questionário da pessoa idosa", "questionario da pessoa idosa", "avaliação idoso", "avaliacao idoso",
+      "escore idoso", "preenchimento ivcf", "preencher ivcf", "aplicar ivcf", "como preencher ivcf", "como aplicar ivcf",
+      "pontuação ivcf", "pontuacao ivcf", "idoso robusto", "risco de fragilização", "risco de fragilizacao", "avds idoso",
+      "índice de vulnerabilidade", "indice de vulnerabilidade"
+    ],
+    guideId: "g42",
+    confirmationPhrase: "Entendi. Você quer saber como preencher e aplicar o IVCF-20 da pessoa idosa no e-SUS Território. Posso continuar para o guia?"
+  }
 ];
 
 export const CATEGORIES: Category[] = [
