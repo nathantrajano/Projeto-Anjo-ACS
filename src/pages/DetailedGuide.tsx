@@ -134,13 +134,23 @@ const DetailedGuide = () => {
         <ExternalLink size={18} className="text-emerald-700 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform shrink-0" />
       </a>
 
-      <button 
-        onClick={() => navigate('/sucesso-guia')}
-        className="pill-button bg-[#1B4332] text-white mt-2"
-      >
-        Agora eu consegui!
-        <ChevronRight size={20} />
-      </button>
+      <div className="flex flex-col gap-3 mt-2">
+        <button 
+          onClick={() => navigate('/sucesso-guia')}
+          className="pill-button bg-[#1B4332] text-white"
+        >
+          Agora eu consegui!
+          <ChevronRight size={20} />
+        </button>
+        
+        <button 
+          onClick={() => navigate('/ajuda')}
+          className="pill-button bg-transparent text-[#1B4332] border-2 border-[#1B4332]"
+        >
+          Ainda não consegui, enviar dúvida
+          <ChevronRight size={20} />
+        </button>
+      </div>
     </div>
   );
 };
