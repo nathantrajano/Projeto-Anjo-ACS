@@ -11,26 +11,64 @@ const Listening = () => {
   const [text, setText] = useState("");
   const [isListening, setIsListening] = useState(false);
   const recognitionRef = useRef<any>(null);
+  
+  // Referências para controlar a auto-reinicialização e acúmulo de texto
+  const shouldListenRef = useRef(false);
+  const finalizedTextRef = useRef("");
 
   useEffect(() => {
     const recognition = getSpeechRecognition();
     if (recognition) {
       recognition.onresult = (event: any) => {
-        const transcript = Array.from(event.results)
-          .map((result: any) => result[0])
-          .map((result) => result.transcript)
-          .join("");
-        setText(transcript);
+        let interimTranscript = "";
+        let finalTranscript = "";
+
+        for (let i = event.resultIndex; i < event.results.length; ++i) {
+          if (event.results[i].isFinal) {
+            finalTranscript += event.results[i][0].transcript;
+          } else {
+            interimTranscript += event.results[i][0].transcript;
+          }
+        }
+
+        // Se houver texto final, adicionamos ao nosso acumulador
+        if (finalTranscript) {
+          finalizedTextRef.current += finalizedTextRef.current ? " " + finalTranscript : finalTranscript;
+        }
+
+        // O texto visível é a junção do finalizado com o que ainda está sendo interpretado
+        const currentText = finalizedTextRef.current + (interimTranscript ? " " + interimTranscript : "");
+        setText(currentText.trim());
       };
 
       recognition.onend = () => {
-        setIsListening(false);
+        // Se ainda deveria estar ouvindo, o navegador parou sozinho. Vamos reiniciar.
+        if (shouldListenRef.current) {
+          try {
+            recognition.start();
+          } catch (e) {
+            console.error("Erro ao reiniciar o reconhecimento", e);
+            setIsListening(false);
+            shouldListenRef.current = false;
+          }
+        } else {
+          setIsListening(false);
+        }
+      };
+
+      recognition.onerror = (event: any) => {
+        console.error("Erro no reconhecimento de voz:", event.error);
+        if (event.error === 'not-allowed' || event.error === 'service-not-allowed') {
+          shouldListenRef.current = false;
+          setIsListening(false);
+        }
       };
 
       recognitionRef.current = recognition;
     }
 
     return () => {
+      shouldListenRef.current = false;
       if (recognitionRef.current) {
         recognitionRef.current.stop();
       }
@@ -39,15 +77,22 @@ const Listening = () => {
 
   const toggleListening = () => {
     if (isListening) {
+      shouldListenRef.current = false;
       recognitionRef.current?.stop();
       setIsListening(false);
     } else {
+      // Se não tinha texto antes, garante que limpamos para começar do zero
+      if (!text.trim()) {
+        finalizedTextRef.current = "";
+      }
+      shouldListenRef.current = true;
       setIsListening(true);
       try {
         recognitionRef.current?.start();
       } catch (e) {
         console.error("Erro ao iniciar reconhecimento", e);
         setIsListening(false);
+        shouldListenRef.current = false;
       }
     }
   };
