@@ -33,9 +33,9 @@ export const audioMappings: AudioMapping = {
     "confirmacao/cadastro-casa-nova.mp3",
 
   // G2 - Verificar Duplicação de Domicílio
-  "\"Entendi. Você quer saber como checar se uma casa já foi cadastrada. Posso continuar para o guia?\"":
+  "\"Entendi. Você quer saber se a casa já está cadastrada ou se precisa cadastrar de novo. Posso continuar para o guia?\"":
     "confirmacao/verificar-duplicacao-domicilio.mp3",
-  "Entendi. Você quer saber como checar se uma casa já foi cadastrada. Posso continuar para o guia?":
+  "Entendi. Você quer saber se a casa já está cadastrada ou se precisa cadastrar de novo. Posso continuar para o guia?":
     "confirmacao/verificar-duplicacao-domicilio.mp3",
 
 
@@ -424,6 +424,7 @@ export const audioMappings: AudioMapping = {
   "Buscar por Nome Similar. Digite parte do nome da rua na busca de logradouro para localizar a grafia cadastrada.": "passos/g3_step1.mp3",
   "Usar CEP Geral do Município. Se o CEP específico não funcionar, tente o CEP geral da cidade cadastrado na UBS.": "passos/g3_step2.mp3",
   "Editar Ficha de Domicílio. Se o erro for em casa existente, abra o domicílio e toque no lápis para atualizar o endereço.": "passos/g3_step3.mp3",
+  "Anotar Logradouro Ausente. Caso a rua não exista na lista oficial, anote e informe à coordenação para atualização da base.": "passos/g3_step4.mp3",
 
   // * G4 - Cadastrar Morador no Domicílio
   "Abrir o Domicílio. Localize a casa no aplicativo e toque na ficha do domicílio correspondente.": "passos/g4_step1.mp3",
@@ -687,6 +688,72 @@ export const audioMappings: AudioMapping = {
 
   "\"O SUS acontece através das suas mãos e dos seus pés no campo.\"": "motivacional/msg6.mp3",
   "O SUS acontece através das suas mãos e dos seus pés no campo.": "motivacional/msg6.mp3",
+
+  // Mensagens Motivacionais Regionais
+  "\"Oxente, você é porreta demais! Mais uma tarefa concluída.\"": "motivacional/msg7.mp3",
+  "Oxente, você é porreta demais! Mais uma tarefa concluída.": "motivacional/msg7.mp3",
+
+  "\"Eita que deu certo! Missão cumprida com sucesso.\"": "motivacional/msg8.mp3",
+  "Eita que deu certo! Missão cumprida com sucesso.": "motivacional/msg8.mp3",
+
+  "\"Arretado (a)! Você acaba de ter mais uma visita registrada.\"": "motivacional/",
+  "Arretado (a)! Você acaba de ter mais uma visita registrada.": "motivacional/msg9.mp3",
+
+  "\"Tá fazendo bonito no território, viu?. Parabéns.\"": "motivacional/msg10.mp3",
+  "Tá fazendo bonito no território, viu?. Parabéns.": "motivacional/msg10.mp3",
+
+  "\"É disso que o povo gosta! Meta alcançada.\"": "motivacional/msg11.mp3",
+  "É disso que o povo gosta! Meta alcançada.": "motivacional/msg11.mp3",
+
+  "\"Bora cuidar que ainda tem chão, mas você tá no rumo certo.\"": "motivacional/msg12.mp3",
+  "Bora cuidar que ainda tem chão, mas você tá no rumo certo.": "motivacional/msg12.mp3",
+
+  "\"Tá deixando tudo nos trinques.\"": "motivacional/msg13.mp3",
+  "Tá deixando tudo nos trinques.": "motivacional/msg13.mp3",
+
+  "\"Se organização fosse forró, você era o sanfoneiro.\"": "motivacional/msg14.mp3",
+  "Se organização fosse forró, você era o sanfoneiro.": "motivacional/msg14.mp3",
+
+  // === MENSAGENS DE ACOLHIMENTO (GUIA DETALHADO) ===
+  "\"Calma, tá tudo bem! É super comum ter dúvidas na rotina de campo. Vamos ver juntos esse passo a passo mais detalhado para te ajudar!\"":
+    "motivacional/acolhimento1.mp3",
+  "Calma, tá tudo bem! É super comum ter dúvidas na rotina de campo. Vamos ver juntos esse passo a passo mais detalhado para te ajudar!":
+    "motivacional/acolhimento1.mp3",
+
+  "\"Não se avexe não! Todo mundo tem dúvida de vez em quando. Vamos olhar o passo a passo com calma que vai dar tudo certo.\"":
+    "motivacional/acolhimento2.mp3",
+  "Não se avexe não! Todo mundo tem dúvida de vez em quando. Vamos olhar o passo a passo com calma que vai dar tudo certo.":
+    "motivacional/acolhimento2.mp3",
+
+  "\"Fique tranquilo(a)! A rotina do ACS é cheia de detalhes. Separamos esse guia mastigadinho para facilitar seu trabalho.\"":
+    "motivacional/acolhimento3.mp3",
+  "Fique tranquilo(a)! A rotina do ACS é cheia de detalhes. Separamos esse guia mastigadinho para facilitar seu trabalho.":
+    "motivacional/acolhimento3.mp3",
+
+  "\"Sem aperreio! Dúvida a gente resolve é juntos. Dá uma olhada nesse passo a passo detalhado que preparamos para você.\"":
+    "motivacional/acolhimento4.mp3",
+  "Sem aperreio! Dúvida a gente resolve é juntos. Dá uma olhada nesse passo a passo detalhado que preparamos para você.":
+    "motivacional/acolhimento4.mp3",
+
+  "\"Respire fundo, tá tudo sob controle! O trabalho em campo é desafiador, mas você não está sozinho(a). Vamos passo a passo!\"":
+    "motivacional/acolhimento5.mp3",
+  "Respire fundo, tá tudo sob controle! O trabalho em campo é desafiador, mas você não está sozinho(a). Vamos passo a passo!":
+    "motivacional/acolhimento5.mp3",
+
+  "\"Calma o coração! Ninguém nasce sabendo tudo. Vamos revisar esse procedimento detalhadamente juntinhos!\"":
+    "motivacional/acolhimento6.mp3",
+  "Calma o coração! Ninguém nasce sabendo tudo. Vamos revisar esse procedimento detalhadamente juntinhos!":
+    "motivacional/acolhimento6.mp3",
+
+  "\"Tá em dúvida? Avexado nada! Vamos conferir o passo a passo na prática pra você fazer bonito no território.\"":
+    "motivacional/acolhimento7.mp3",
+  "Tá em dúvida? Avexado nada! Vamos conferir o passo a passo na prática pra você fazer bonito no território.":
+    "motivacional/acolhimento7.mp3",
+
+  "\"Fique em paz! Ter dúvida mostra que você se importa em fazer o melhor pela comunidade. Vamos esclarecer isso agora mesmo!\"":
+    "motivacional/acolhimento8.mp3",
+  "Fique em paz! Ter dúvida mostra que você se importa em fazer o melhor pela comunidade. Vamos esclarecer isso agora mesmo!":
+    "motivacional/acolhimento8.mp3",
 };
 
 /**
