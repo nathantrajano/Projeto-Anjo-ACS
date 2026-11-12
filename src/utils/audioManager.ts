@@ -3,71 +3,149 @@
  * Sistema para reprodução de arquivos de áudio pré-gravados
  */
 
+export interface AudioPlaybackState {
+  isPlaying: boolean;
+  audioPath: string | null;
+  sourceId: string | null;
+}
+
+type AudioStateListener = (state: AudioPlaybackState) => void;
+
+const INITIAL_STATE: AudioPlaybackState = {
+  isPlaying: false,
+  audioPath: null,
+  sourceId: null,
+};
+
 let currentAudioPlayer: HTMLAudioElement | null = null;
-let onPlayingCallback: ((isPlaying: boolean) => void) | null = null;
+let resolveCurrentAudio: (() => void) | null = null;
+let currentState: AudioPlaybackState = { ...INITIAL_STATE };
+const stateListeners = new Set<AudioStateListener>();
+
+const emitAudioState = (nextState: AudioPlaybackState) => {
+  currentState = nextState;
+  stateListeners.forEach((listener) => listener(currentState));
+};
 
 /**
- * Define callback para atualizar estado de reprodução
+ * Atualiza o estado global de reprodução (usado também pelo fallback TTS)
  */
-export const setAudioPlayingCallback = (callback: (isPlaying: boolean) => void) => {
-  onPlayingCallback = callback;
+export const setAudioPlaybackState = (nextState: AudioPlaybackState) => {
+  emitAudioState(nextState);
+};
+
+/**
+ * Retorna o estado atual de reprodução de áudio
+ */
+export const getAudioPlaybackState = (): AudioPlaybackState => currentState;
+
+/**
+ * Inscreve um listener para receber atualizações do estado de reprodução
+ * Retorna a função para cancelar a inscrição
+ */
+export const subscribeAudioState = (listener: AudioStateListener): (() => void) => {
+  stateListeners.add(listener);
+  listener(currentState);
+  return () => {
+    stateListeners.delete(listener);
+  };
 };
 
 /**
  * Reproduz um arquivo de áudio MP3 e retorna uma Promise
- * A Promise resolve quando o áudio termina ou ocorre erro
+ * A Promise resolve quando o áudio termina, é interrompido ou ocorre erro
  * @param audioPath - Caminho relativo ao /public/audios/
+ * @param sourceId - Identificador opcional do componente/fluxo que iniciou a reprodução
  * @returns Promise que resolve quando áudio termina
  * @example await playAudio('confirmacao/entendi.mp3')
  */
-export const playAudio = (audioPath: string): Promise<void> => {
+export const playAudio = (audioPath: string, sourceId?: string): Promise<void> => {
   return new Promise((resolve) => {
-    // Cancela áudio anterior
+    // Cancela áudio anterior e resolve sua Promise pendente
     stopAudio();
 
     const audioElement = new Audio(`/audios/${audioPath}`);
-    
+    const resolvedSourceId = sourceId ?? null;
+    let settled = false;
+
+    const finish = () => {
+      if (!settled) {
+        settled = true;
+        if (resolveCurrentAudio === finish) {
+          resolveCurrentAudio = null;
+        }
+        resolve();
+      }
+    };
+
+    const resetIfCurrent = () => {
+      if (currentAudioPlayer === audioElement) {
+        currentAudioPlayer = null;
+        emitAudioState({ ...INITIAL_STATE });
+      }
+      finish();
+    };
+
     audioElement.addEventListener('play', () => {
-      onPlayingCallback?.(true);
+      if (currentAudioPlayer === audioElement) {
+        emitAudioState({
+          isPlaying: true,
+          audioPath,
+          sourceId: resolvedSourceId,
+        });
+      } else {
+        audioElement.pause();
+        audioElement.currentTime = 0;
+      }
     });
 
-    audioElement.addEventListener('ended', () => {
-      onPlayingCallback?.(false);
-      currentAudioPlayer = null;
-      resolve(); // Resolve quando áudio termina
-    });
-
-    audioElement.addEventListener('pause', () => {
-      onPlayingCallback?.(false);
-    });
+    audioElement.addEventListener('ended', resetIfCurrent);
+    audioElement.addEventListener('pause', resetIfCurrent);
 
     audioElement.addEventListener('error', (e) => {
       console.error(`Erro ao reproduzir áudio: ${audioPath}`, e);
-      onPlayingCallback?.(false);
-      currentAudioPlayer = null;
-      resolve(); // Resolve também em caso de erro para não travar
+      resetIfCurrent();
     });
 
     currentAudioPlayer = audioElement;
-    audioElement.play().catch(err => {
-      console.error(`Erro ao iniciar reprodução: ${audioPath}`, err);
-      onPlayingCallback?.(false);
-      currentAudioPlayer = null;
-      resolve(); // Resolve em caso de erro de play
-    });
+    resolveCurrentAudio = finish;
+
+    audioElement
+      .play()
+      .then(() => {
+        if (currentAudioPlayer !== audioElement) {
+          audioElement.pause();
+          audioElement.currentTime = 0;
+          finish();
+        }
+      })
+      .catch((err) => {
+        console.error(`Erro ao iniciar reprodução: ${audioPath}`, err);
+        resetIfCurrent();
+      });
   });
 };
 
 /**
- * Para a reprodução de áudio
+ * Para a reprodução de áudio atual
  */
 export const stopAudio = () => {
-  if (currentAudioPlayer) {
-    currentAudioPlayer.pause();
-    currentAudioPlayer.currentTime = 0;
-    currentAudioPlayer = null;
-    onPlayingCallback?.(false);
+  const player = currentAudioPlayer;
+  const pendingResolve = resolveCurrentAudio;
+
+  currentAudioPlayer = null;
+  resolveCurrentAudio = null;
+
+  if (player) {
+    player.pause();
+    player.currentTime = 0;
   }
+
+  if (currentState.isPlaying || player) {
+    emitAudioState({ ...INITIAL_STATE });
+  }
+
+  pendingResolve?.();
 };
 
 /**

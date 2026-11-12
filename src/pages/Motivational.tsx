@@ -1,15 +1,12 @@
 "use client";
 
-import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Heart, Play, Pause, ArrowLeft, MessageSquare, Sun, Share2, Sparkles } from "lucide-react";
+import { Heart, ArrowLeft, MessageSquare, Sun, Share2, Sparkles } from "lucide-react";
 import { MOTIVATIONAL_MESSAGES } from "@/data/mockData";
 import { AudioButton } from "@/components/AudioButton";
-import { cn } from "@/lib/utils";
 
 const Motivational = () => {
   const navigate = useNavigate();
-  const [isPlayingAudio, setIsPlayingAudio] = useState(false);
   const randomMsg = MOTIVATIONAL_MESSAGES[Math.floor(Math.random() * MOTIVATIONAL_MESSAGES.length)];
 
   return (
@@ -60,38 +57,6 @@ const Motivational = () => {
               variant="ghost"
               className="!bg-white/20 !text-white border border-white/30 !py-2 !px-6 hover:!bg-white/30"
             />
-          </div>
-        </div>
-      </div>
-
-      {/* Player de Áudio do Dia (Simulado) */}
-      <div className="w-full animate-in slide-in-from-bottom-8 duration-700 delay-500 fill-mode-both">
-        <div className="p-6 flex items-center gap-5 bg-white rounded-[2rem] border border-emerald-100 shadow-xl shadow-emerald-900/5">
-          <button 
-            onClick={() => setIsPlayingAudio(!isPlayingAudio)}
-            className={cn(
-              "w-14 h-14 rounded-full flex items-center justify-center text-white shrink-0 transition-all shadow-md active:scale-95",
-              isPlayingAudio ? "bg-rose-500" : "bg-[#1B4332]"
-            )}
-          >
-            {isPlayingAudio ? <Pause size={24} fill="currentColor" /> : <Play size={24} fill="currentColor" className="ml-1" />}
-          </button>
-          <div className="flex-1">
-            <div className="flex justify-between items-end mb-2">
-              <div>
-                <p className="text-[10px] font-black text-[#1B4332] uppercase tracking-widest opacity-50">Áudio do Ministério</p>
-                <p className="text-sm font-bold text-[#1B4332]">Palavra do Secretário</p>
-              </div>
-              <p className="text-[10px] text-gray-400 font-bold">01:42 / 03:00</p>
-            </div>
-            <div className="w-full h-2 bg-emerald-50 rounded-full relative overflow-hidden">
-              <div 
-                className={cn(
-                  "absolute inset-y-0 left-0 bg-[#2D6A4F] rounded-full transition-all duration-1000",
-                  isPlayingAudio ? "w-1/2" : "w-1/3"
-                )}
-              ></div>
-            </div>
           </div>
         </div>
       </div>

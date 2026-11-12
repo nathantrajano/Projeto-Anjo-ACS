@@ -1,11 +1,14 @@
 "use client";
 
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from "react-router-dom";
 import { GUIDES } from "@/data/mockData";
 import { ArrowLeft, ChevronRight, HelpCircle } from "lucide-react";
 import { AudioButton } from "@/components/AudioButton";
 import { speakAsync, stopSpeaking } from "@/utils/speech";
+
+const getStepPlaybackId = (guideId: string, stepId: number | string) =>
+  `guide-${guideId}-step-${stepId}`;
 
 const GuideSteps = () => {
   const { id } = useParams();
@@ -13,6 +16,40 @@ const GuideSteps = () => {
   const guide = GUIDES.find(g => g.id === id);
   const [isPlayingFullGuide, setIsPlayingFullGuide] = useState(false);
   const shouldContinueRef = useRef(true);
+  const sequenceRunIdRef = useRef(0);
+
+  const cancelFullGuideSequence = useCallback(() => {
+    sequenceRunIdRef.current += 1;
+    shouldContinueRef.current = false;
+    setIsPlayingFullGuide(false);
+  }, []);
+
+  const stopFullGuideSequence = useCallback(() => {
+    cancelFullGuideSequence();
+    stopSpeaking();
+  }, [cancelFullGuideSequence]);
+
+  useEffect(() => {
+    return () => {
+      stopFullGuideSequence();
+    };
+  }, [id, stopFullGuideSequence]);
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.hidden) {
+        stopFullGuideSequence();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('pagehide', stopFullGuideSequence);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('pagehide', stopFullGuideSequence);
+    };
+  }, [stopFullGuideSequence]);
 
   if (!guide) {
     return (
@@ -32,43 +69,45 @@ const GuideSteps = () => {
    * Aguarda cada áudio terminar antes de iniciar o próximo
    */
   const playFullGuideSequence = async () => {
+    const runId = ++sequenceRunIdRef.current;
     shouldContinueRef.current = true;
     setIsPlayingFullGuide(true);
     
     try {
-      const textsToPlay = [
-        `${guide.title}`, // Título
-        guide.summary,    // Resumo
-        ...guide.steps.map(s => `${s.title}. ${s.description}`), // Cada passo
+      const itemsToPlay = [
+        { text: `${guide.title}`, sourceId: `guide-${guide.id}-title` },
+        { text: guide.summary, sourceId: `guide-${guide.id}-summary` },
+        ...guide.steps.map(s => ({
+          text: `${s.title}. ${s.description}`,
+          sourceId: getStepPlaybackId(guide.id, s.id),
+        })),
       ];
 
-      console.log(`[Audio] Iniciando sequência com ${textsToPlay.length} itens`);
+      console.log(`[Audio] Iniciando sequência com ${itemsToPlay.length} itens`);
 
-      for (let i = 0; i < textsToPlay.length; i++) {
-        if (!shouldContinueRef.current) {
+      for (let i = 0; i < itemsToPlay.length; i++) {
+        if (!shouldContinueRef.current || sequenceRunIdRef.current !== runId) {
           console.log(`[Audio] Sequência cancelada pelo usuário`);
           break;
         }
         
-        const text = textsToPlay[i];
-        console.log(`[Audio] Passo ${i + 1}/${textsToPlay.length}: "${text.substring(0, 50)}..."`);
+        const { text, sourceId } = itemsToPlay[i];
+        console.log(`[Audio] Passo ${i + 1}/${itemsToPlay.length}: "${text.substring(0, 50)}..."`);
         
-        await speakAsync(text);
+        await speakAsync(text, sourceId);
       }
       
-      console.log(`[Audio] Sequência concluída!`);
+      if (shouldContinueRef.current && sequenceRunIdRef.current === runId) {
+        console.log(`[Audio] Sequência concluída!`);
+      }
     } catch (error) {
       console.error(`[Audio] Erro durante sequência:`, error);
     } finally {
-      setIsPlayingFullGuide(false);
-      shouldContinueRef.current = false;
+      if (sequenceRunIdRef.current === runId) {
+        setIsPlayingFullGuide(false);
+        shouldContinueRef.current = false;
+      }
     }
-  };
-
-  const stopFullGuideSequence = () => {
-    shouldContinueRef.current = false;
-    stopSpeaking();
-    setIsPlayingFullGuide(false);
   };
 
   return (
@@ -89,7 +128,7 @@ const GuideSteps = () => {
           onClick={() => isPlayingFullGuide ? stopFullGuideSequence() : playFullGuideSequence()}
           className="mt-6 w-full justify-center !bg-white/20 !text-white border border-white/20 hover:!bg-white/30 px-4 py-2 rounded-lg font-medium transition-all active:scale-95 flex items-center justify-center gap-2"
         >
-          {isPlayingFullGuide ? "⏸ Parando..." : "🔊 Ouvir guia completo"}
+          {isPlayingFullGuide ? "⏹ Parar guia completo" : "🔊 Ouvir guia completo"}
         </button>
       </div>
 
@@ -105,7 +144,9 @@ const GuideSteps = () => {
                 <AudioButton 
                   text={`${step.title}. ${step.description}`} 
                   variant="icon" 
-                  className="-mt-1 -mr-2" 
+                  className="-mt-1 -mr-2"
+                  playbackId={getStepPlaybackId(guide.id, step.id)}
+                  onBeforeToggle={cancelFullGuideSequence}
                 />
               </div>
               <p className="text-sm text-gray-500 font-medium leading-relaxed">{step.description}</p>

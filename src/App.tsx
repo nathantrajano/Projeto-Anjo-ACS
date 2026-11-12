@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -22,6 +22,7 @@ import DetailedGuide from "./pages/DetailedGuide";
 import NotFound from "./pages/NotFound";
 import { AppHeader } from "./components/AppHeader";
 import { BottomNav } from "./components/BottomNav";
+import { stopSpeaking } from "./utils/speech";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,12 @@ const AppLayout = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   const hideHeaderPaths = ['/confirmacao', '/ouvir', '/sucesso-guia', '/ocr', '/feedback-duvida'];
   const hideBottomNavPaths = ['/ouvir', '/ajuda/sucesso', '/sucesso-guia', '/ocr', '/feedback-duvida', '/guia-detalhado'];
+
+  useEffect(() => {
+    return () => {
+      stopSpeaking();
+    };
+  }, [location.pathname, location.search]);
   
   const shouldHideHeader = hideHeaderPaths.some(path => location.pathname.startsWith(path));
   const shouldHideBottomNav = hideBottomNavPaths.some(path => location.pathname.startsWith(path));
