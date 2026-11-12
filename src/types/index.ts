@@ -16,6 +16,8 @@ export interface Guide {
   steps: Step[];
   relatedManuals?: string[];
   hasDetailedGuide?: boolean;
+  tags?: string[];
+  confirmationPhrase?: string;
 }
 
 export interface Manual {
@@ -39,4 +41,27 @@ export interface Category {
   title: string;
   icon: string;
   intents: string[];
+}
+
+export type GuideSearchMatchField = 'title' | 'tags' | 'category' | 'summary' | 'steps';
+
+export interface GuideIndexEntry {
+  guideId: string;
+  guide: Guide;
+  intent: Intent;
+  titleNormalized: string;
+  categoryNormalized: string;
+  summaryNormalized: string;
+  stepsNormalized: string;
+  compoundTags: string[];
+  tokensByField: Record<GuideSearchMatchField, Set<string>>;
+  allTokens: string[];
+}
+
+export interface GuideSearchResult {
+  guide: Guide;
+  intent: Intent;
+  score: number;
+  matchedFields: GuideSearchMatchField[];
+  matchedTerms: string[];
 }

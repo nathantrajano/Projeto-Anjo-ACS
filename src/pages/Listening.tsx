@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Mic, X, ArrowRight, MicOff } from "lucide-react";
 import { useNavigate } from "react-router-dom";
-import { resolveIntent } from "@/utils/decisionEngine";
+import { getQueryNavigationTarget } from "@/utils/decisionEngine";
 import { getSpeechRecognition } from "@/utils/recognition";
 
 const Listening = () => {
@@ -99,13 +99,9 @@ const Listening = () => {
 
   const handleProceed = () => {
     if (!text.trim() || isListening) return;
-    
-    const intent = resolveIntent(text);
-    if (intent) {
-      navigate('/confirmacao', { state: { intent } });
-    } else {
-      navigate('/selecionar-intencao', { state: { fallbackText: text } });
-    }
+
+    const target = getQueryNavigationTarget(text);
+    navigate(target.path, { state: target.state });
   };
 
   return (

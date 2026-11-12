@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { Camera, Upload, ArrowLeft, Scan, ArrowRight, Loader2, FileText, RefreshCw } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { createWorker } from "tesseract.js";
-import { resolveIntent } from "@/utils/decisionEngine";
+import { getQueryNavigationTarget } from "@/utils/decisionEngine";
 import { showSuccess, showError } from "@/utils/toast";
 
 const OCRScanner = () => {
@@ -54,13 +54,9 @@ const OCRScanner = () => {
 
   const handleProceed = () => {
     if (!text.trim()) return;
-    
-    const intent = resolveIntent(text);
-    if (intent) {
-      navigate('/confirmacao', { state: { intent } });
-    } else {
-      navigate('/selecionar-intencao', { state: { fallbackText: text } });
-    }
+
+    const target = getQueryNavigationTarget(text);
+    navigate(target.path, { state: target.state });
   };
 
   const reset = () => {
